@@ -4,24 +4,25 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    
     private string moveInputAxis = "Vertical";
     private string turnInputAxis = "Horizontal";
     public float moveSpeedX;
     public float moveSpeedY;
     private bool grounded;
     [SerializeField] Collider collider;
-
     public Animator anim;
-
     public SpriteRenderer playerSprite;
     Vector3 movement;
-   
+
+
+
     void Start()
     {
         collider = GetComponent<Collider>();
     }
 
-    
+
     void Update()
     {
         Move();
@@ -38,8 +39,8 @@ public class PlayerController : MonoBehaviour
         //movement = movement.normalized;
 
 
-        transform.Translate(movement * moveSpeedX *Time.deltaTime);
-        
+        transform.Translate(movement * moveSpeedX * Time.deltaTime);
+
 
 
         if (moveAxis != 0)
@@ -51,9 +52,9 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("animMove", false);
         }
-        
 
-         //Controla a direção do sprite quando o player está se movendo
+
+        //Controla a direção do sprite quando o player está se movendo
         if (turnAxis != 0 && turnAxis < 0)
         {
             playerSprite.flipX = true;
@@ -64,10 +65,12 @@ public class PlayerController : MonoBehaviour
             playerSprite.flipX = false;
             anim.SetBool("animMove", true);
         }
-        
+
     }
 
-    public bool Grounded()
+
+
+    /* public bool Grounded()
     {
         if (verticalVelocity > 0)
             return false;
@@ -111,6 +114,7 @@ public class PlayerController : MonoBehaviour
 
         return false;
     }
+    */
 
 
 }
