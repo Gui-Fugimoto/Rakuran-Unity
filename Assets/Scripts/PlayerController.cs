@@ -7,26 +7,80 @@ public class PlayerController : MonoBehaviour
     
     private string moveInputAxis = "Vertical";
     private string turnInputAxis = "Horizontal";
+
     public float moveSpeedX;
     public float moveSpeedY;
+
+    [SerializeField] private float gravity = 0.25f;
+    [SerializeField] private float jumpForce = 8.0f;
+    [SerializeField] private float terminalVelocity = 5.0f;
+    private float verticalVelocity;
+
     private bool grounded;
-    [SerializeField] Collider collider;
+
+    private CharacterController controller;
+    private Vector3 slopeNormal;
+
     public Animator anim;
     public SpriteRenderer playerSprite;
+
     Vector3 movement;
 
+    [Header("Ground Check Raycast")]
+    [SerializeField] private float extremitiesOffset = 0.05f;
+    [SerializeField] private float innerVerticalOffset = 0.25f;
+    [SerializeField] private float distanceGrounded = 0.15f;
+    [SerializeField] private float slopeThreshold = 0.55f;
 
-
+    private void Awake()
+    {
+        controller = GetComponent<CharacterController>();
+    }
     void Start()
     {
-        collider = GetComponent<Collider>();
+        
     }
 
 
     void Update()
     {
         Move();
-       
+
+        grounded = Grounded();
+        anim?.SetBool("Grounded", grounded);
+        if (grounded)
+        {
+            // Apply slight gravity
+            verticalVelocity = -1;
+
+            // If spacebar, apply high negative gravity, and forget about the floor
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                verticalVelocity = jumpForce;
+                slopeNormal = Vector3.up;
+                anim?.SetTrigger("Jump");
+            }
+        }
+        else
+        {
+            // Gradualy increment gravity
+            verticalVelocity -= gravity;
+            slopeNormal = Vector3.up;
+
+            // Clamp to match terminal velocity, if faster
+            if (verticalVelocity < -terminalVelocity)
+                verticalVelocity = -terminalVelocity;
+        }
+
+        // Apply verticalVelocity to our movement vector
+        movement.y = verticalVelocity;
+        anim?.SetFloat("VerticalVelocity", verticalVelocity);
+
+        // If we're on the floor, angle our vector to match its curves
+        if (slopeNormal != Vector3.up) movement = FollowFloor(movement);
+
+        // Finaly move the controller, this also checks for collisions
+        controller.Move(movement * Time.deltaTime);
     }
 
     private void Move()
@@ -34,12 +88,12 @@ public class PlayerController : MonoBehaviour
         float moveAxis = Input.GetAxis(moveInputAxis);
         float turnAxis = Input.GetAxis(turnInputAxis);
 
-        movement = new Vector3(turnAxis, 0, moveAxis);
+        movement = new Vector3(turnAxis  * moveSpeedX, 0, moveAxis * moveSpeedY);
         movement = Vector3.ClampMagnitude(movement, moveSpeedX);
-        //movement = movement.normalized;
+        
 
 
-        transform.Translate(movement * moveSpeedX * Time.deltaTime);
+        transform.Translate(movement * Time.deltaTime);
 
 
 
@@ -54,7 +108,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        //Controla a direção do sprite quando o player está se movendo
+        //Controla a direï¿½ï¿½o do sprite quando o player estï¿½ se movendo
         if (turnAxis != 0 && turnAxis < 0)
         {
             playerSprite.flipX = true;
@@ -70,12 +124,12 @@ public class PlayerController : MonoBehaviour
 
 
 
-    /* public bool Grounded()
+    public bool Grounded()
     {
         if (verticalVelocity > 0)
             return false;
 
-        float yRay = (collider.bounds.center.y - (collider * 0.5f)) // Bottom of the character controller
+        float yRay = (controller.bounds.center.y - (controller.height * 0.5f)) // Bottom of the character controller
                      + innerVerticalOffset;
 
         RaycastHit hit;
@@ -114,7 +168,12 @@ public class PlayerController : MonoBehaviour
 
         return false;
     }
-    */
 
+    private Vector3 FollowFloor(Vector3 moveVector)
+    {
+        Vector3 right = new Vector3(slopeNormal.y, -slopeNormal.x, 0).normalized;
+        Vector3 forward = new Vector3(0, -slopeNormal.z, slopeNormal.y).normalized;
+        return right * moveVector.x + forward * moveVector.z;
+    }
 
 }
