@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    #region variáveis
     private string moveInputAxis = "Vertical";
     private string turnInputAxis = "Horizontal";
 
@@ -32,8 +32,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float distanceGrounded = 0.15f;
     [SerializeField] private float slopeThreshold = 0.55f;
 
+  
     private float initialSprintTimer;
     private float holdButtonSprintTimer;
+    
+    #endregion
 
     private void Awake()
     {

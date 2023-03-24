@@ -9,6 +9,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] int Combo;
     [SerializeField] bool Cooldown;
     [SerializeField] Animator anim;
+    [SerializeField] float FirstAttackTimer;
+    [SerializeField] float AttackTimer;
 
     #endregion
 
@@ -25,6 +27,7 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
+            AttackTimer = Time.time;
         }
     }
 
@@ -34,14 +37,13 @@ public class PlayerAttack : MonoBehaviour
         {
             anim.SetTrigger("Attack");
             Debug.Log("Atacou kk");
-            StartCoroutine(ComboCounter());
             Combo++;
             StartCoroutine(ClickCooldown());
             Cooldown = true;
-
+            FirstAttackTimer = Time.time;
         }
 
-        if (Combo == 1 && Cooldown == false)
+        if (Combo == 1 && Cooldown == false && FirstAttackTimer - AttackTimer < 3f)
         {
             anim.SetTrigger("Attack");
             Debug.Log("Ataque 2");
@@ -50,20 +52,17 @@ public class PlayerAttack : MonoBehaviour
             Cooldown = true;
         }
 
-        if (Combo == 2 && Cooldown == false)
+        if (Combo == 2 && Cooldown == false && FirstAttackTimer - AttackTimer < 3f)
         {
             anim.SetTrigger("AttackEndCombo");
             Debug.Log("Ataque 3 - Fim de combo");
-            Combo = 0;
             StartCoroutine(ClickCooldown());
             Cooldown = true;
-        }
-    }
+            FirstAttackTimer = 0;
+            Combo = 0;
 
-    IEnumerator ComboCounter()
-    {
-        yield return new WaitForSeconds(3f);
-        Combo = 0;
+        }
+
     }
 
     IEnumerator ClickCooldown()
