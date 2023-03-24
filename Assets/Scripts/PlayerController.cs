@@ -32,6 +32,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float distanceGrounded = 0.15f;
     [SerializeField] private float slopeThreshold = 0.55f;
 
+    private float initialSprintTimer;
+    private float holdButtonSprintTimer;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -45,32 +48,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-
         grounded = Grounded();
-        anim?.SetBool("Grounded", grounded);
-        if (grounded)
-        {
-            // Apply slight gravity
-            verticalVelocity = -1;
-
-            // If spacebar, apply high negative gravity, and forget about the floor
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                verticalVelocity = jumpForce;
-                slopeNormal = Vector3.up;
-                anim?.SetTrigger("Jump");
-            }
-        }
-        else
-        {
-            // Gradualy increment gravity
-            verticalVelocity -= gravity;
-            slopeNormal = Vector3.up;
-
-            // Clamp to match terminal velocity, if faster
-            if (verticalVelocity < -terminalVelocity)
-                verticalVelocity = -terminalVelocity;
-        }
+        Jump();
+        PegasusSprint();
 
         // Apply verticalVelocity to our movement vector
         movement.y = verticalVelocity;
@@ -174,6 +154,63 @@ public class PlayerController : MonoBehaviour
         Vector3 right = new Vector3(slopeNormal.y, -slopeNormal.x, 0).normalized;
         Vector3 forward = new Vector3(0, -slopeNormal.z, slopeNormal.y).normalized;
         return right * moveVector.x + forward * moveVector.z;
+    }
+
+    private void PegasusSprint()
+    {
+        holdButtonSprintTimer = 3f;
+        if (Input.GetKeyDown(KeyCode.LeftShift)) //Depois, criar input Sprint no input manager Input.GetAxis("Sprint") != 0)
+        {
+            initialSprintTimer = Time.time;
+            Debug.Log("Carregando");
+        }
+
+        else if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (Time.time - initialSprintTimer > holdButtonSprintTimer)
+            {
+                //by making it positive inf, we won't subsequently run this code by accident,
+                //since X - +inf = -inf, which is always less than holdDur
+                initialSprintTimer = float.PositiveInfinity;
+
+
+                //perform your action
+                Debug.Log("Correndo");
+            }
+        }
+        else
+        {
+            initialSprintTimer = float.PositiveInfinity;
+        }
+    }
+
+    private void Jump()
+    {
+        
+        anim?.SetBool("Grounded", grounded);
+        if (grounded)
+        {
+            // Apply slight gravity
+            verticalVelocity = -1;
+
+            // If spacebar, apply high negative gravity, and forget about the floor
+            if (Input.GetAxis("Jump") != 0)
+            {
+                verticalVelocity = jumpForce;
+                slopeNormal = Vector3.up;
+                anim?.SetTrigger("Jump");
+            }
+        }
+        else
+        {
+            // Gradualy increment gravity
+            verticalVelocity -= gravity;
+            slopeNormal = Vector3.up;
+
+            // Clamp to match terminal velocity, if faster
+            if (verticalVelocity < -terminalVelocity)
+                verticalVelocity = -terminalVelocity;
+        }
     }
 
 }
