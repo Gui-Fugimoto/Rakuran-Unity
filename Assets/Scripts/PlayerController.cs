@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeedX;
     public float moveSpeedY;
-    private bool lookAtRight;
     public bool flipped;
 
     [SerializeField] private float gravity = 0.25f;
@@ -22,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController controller;
     private Vector3 slopeNormal;
-
+    public bool sprinting = false;
     public Animator anim;
     public SpriteRenderer playerSprite;
 
@@ -52,10 +51,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
-        Move();
-        grounded = Grounded();
+        if (sprinting == false)
+        {
+            Move();
+            
+        }
         Jump();
+        grounded = Grounded();
+        
         PegasusSprint();
 
         // Apply verticalVelocity to our movement vector
@@ -100,13 +103,11 @@ public class PlayerController : MonoBehaviour
             playerSprite.flipX = true;
             anim.SetBool("animMove", true);
             flipped = true;
-            lookAtRight = false;
         }
         else if (turnAxis != 0 && turnAxis > 0)
         {
             playerSprite.flipX = false;
             anim.SetBool("animMove", true);
-            lookAtRight = true;
             flipped = false;
         }
 
@@ -182,24 +183,26 @@ public class PlayerController : MonoBehaviour
             {
                 //by making it positive inf, we won't subsequently run this code by accident,
                 //since X - +inf = -inf, which is always less than holdDur
-                initialSprintTimer = float.PositiveInfinity;
-                
+                //initialSprintTimer = float.PositiveInfinity;
+
 
                 //perform your action
                 Debug.Log("Correndo");
-                if (lookAtRight == true)
+                float moveAxis = Input.GetAxis(moveInputAxis);
+                sprinting = true;
+                if (flipped == false)
                 {
-                    moveSpeedX = 9;
+                    moveSpeedX = 20;
                     moveSpeedY = 3;
-                    movement = new Vector3(moveSpeedX, 0, moveSpeedY);
+                    movement = new Vector3(moveSpeedX, 0, moveAxis * moveSpeedY);
                     movement = Vector3.ClampMagnitude(movement, moveSpeedX);
                     transform.Translate(movement * Time.deltaTime);
                 }
-                else if (lookAtRight == false)
+                else if (flipped == true)
                 {
-                    moveSpeedX = 9;
+                    moveSpeedX = 20;
                     moveSpeedY = 3;
-                    movement = new Vector3(moveSpeedX, 0, moveSpeedY);
+                    movement = new Vector3(-moveSpeedX, 0, moveAxis * moveSpeedY);
                     movement = Vector3.ClampMagnitude(movement, moveSpeedX);
                     transform.Translate(movement * Time.deltaTime);
                 }
@@ -212,6 +215,9 @@ public class PlayerController : MonoBehaviour
         {
             initialSprintTimer = float.PositiveInfinity;
             Debug.Log("parou");
+            sprinting = false;
+            moveSpeedX = 5;
+            moveSpeedY = 5;
             //anim.SetBool("sprintRun", false);
             //anim.SetBool("sprintCharge", false);
         }
@@ -231,7 +237,7 @@ public class PlayerController : MonoBehaviour
             verticalVelocity = -1;
 
             // If spacebar, apply high negative gravity, and forget about the floor
-            if (Input.GetAxis("Jump") != 0)
+            if (Input.GetAxis("Jump") != 0 && sprinting == false)
             {
                 verticalVelocity = jumpForce;
                 slopeNormal = Vector3.up;
