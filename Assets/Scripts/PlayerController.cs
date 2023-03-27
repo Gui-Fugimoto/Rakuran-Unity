@@ -189,14 +189,17 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Correndo");
                 if (lookAtRight == true)
                 {
-
+                    moveSpeedX = 9;
+                    moveSpeedY = 3;
                     movement = new Vector3(moveSpeedX, 0, moveSpeedY);
                     movement = Vector3.ClampMagnitude(movement, moveSpeedX);
                     transform.Translate(movement * Time.deltaTime);
                 }
                 else if (lookAtRight == false)
                 {
-                    movement = new Vector3(turnAxis * moveSpeedX, 0, moveAxis * moveSpeedY);
+                    moveSpeedX = 9;
+                    moveSpeedY = 3;
+                    movement = new Vector3(moveSpeedX, 0, moveSpeedY);
                     movement = Vector3.ClampMagnitude(movement, moveSpeedX);
                     transform.Translate(movement * Time.deltaTime);
                 }
