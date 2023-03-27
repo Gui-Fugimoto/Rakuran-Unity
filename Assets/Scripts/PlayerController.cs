@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeedX;
     public float moveSpeedY;
+    private bool lookAtRight;
 
     [SerializeField] private float gravity = 0.25f;
     [SerializeField] private float jumpForce = 8.0f;
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        
         Move();
         grounded = Grounded();
         Jump();
@@ -68,9 +70,9 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
+
         float moveAxis = Input.GetAxis(moveInputAxis);
         float turnAxis = Input.GetAxis(turnInputAxis);
-
         movement = new Vector3(turnAxis  * moveSpeedX, 0, moveAxis * moveSpeedY);
         movement = Vector3.ClampMagnitude(movement, moveSpeedX);
         
@@ -96,11 +98,13 @@ public class PlayerController : MonoBehaviour
         {
             playerSprite.flipX = true;
             anim.SetBool("animMove", true);
+            lookAtRight = false;
         }
         else if (turnAxis != 0 && turnAxis > 0)
         {
             playerSprite.flipX = false;
             anim.SetBool("animMove", true);
+            lookAtRight = true;
         }
 
     }
@@ -161,11 +165,12 @@ public class PlayerController : MonoBehaviour
 
     private void PegasusSprint()
     {
-        holdButtonSprintTimer = 3f;
+        holdButtonSprintTimer = 1f;
         if (Input.GetKeyDown(KeyCode.LeftShift)) //Depois, criar input Sprint no input manager Input.GetAxis("Sprint") != 0)
         {
             initialSprintTimer = Time.time;
             Debug.Log("Carregando");
+            //anim.SetBool("sprintCharge", true);
         }
 
         else if (Input.GetKey(KeyCode.LeftShift))
@@ -175,11 +180,34 @@ public class PlayerController : MonoBehaviour
                 //by making it positive inf, we won't subsequently run this code by accident,
                 //since X - +inf = -inf, which is always less than holdDur
                 initialSprintTimer = float.PositiveInfinity;
-
+                
 
                 //perform your action
                 Debug.Log("Correndo");
+                if (lookAtRight == true)
+                {
+
+                    movement = new Vector3(moveSpeedX, 0, moveSpeedY);
+                    movement = Vector3.ClampMagnitude(movement, moveSpeedX);
+                    transform.Translate(movement * Time.deltaTime);
+                }
+                else if (lookAtRight == false)
+                {
+                    movement = new Vector3(turnAxis * moveSpeedX, 0, moveAxis * moveSpeedY);
+                    movement = Vector3.ClampMagnitude(movement, moveSpeedX);
+                    transform.Translate(movement * Time.deltaTime);
+                }
+
+                //anim.SetBool("sprintRun", true);
+                //anim.SetBool("sprintCharge", false);
             }
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            initialSprintTimer = float.PositiveInfinity;
+            Debug.Log("parou");
+            //anim.SetBool("sprintRun", false);
+            //anim.SetBool("sprintCharge", false);
         }
         else
         {
