@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeedX;
     public float moveSpeedY;
     private bool lookAtRight;
+    public bool flipped;
 
     [SerializeField] private float gravity = 0.25f;
     [SerializeField] private float jumpForce = 8.0f;
@@ -98,6 +99,7 @@ public class PlayerController : MonoBehaviour
         {
             playerSprite.flipX = true;
             anim.SetBool("animMove", true);
+            flipped = true;
             lookAtRight = false;
         }
         else if (turnAxis != 0 && turnAxis > 0)
@@ -105,6 +107,7 @@ public class PlayerController : MonoBehaviour
             playerSprite.flipX = false;
             anim.SetBool("animMove", true);
             lookAtRight = true;
+            flipped = false;
         }
 
     }
