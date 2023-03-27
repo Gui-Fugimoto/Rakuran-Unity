@@ -9,16 +9,16 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] int Combo;
     [SerializeField] bool Cooldown;
     [SerializeField] Animator anim;
-    [SerializeField] float FirstAttackTimer;
-    [SerializeField] float AttackTimer;
+    private IEnumerator ComboCourotine;
 
     #endregion
-
 
     // Start is called before the first frame update
     void Start()
     {
         AttackBox.SetActive(false);
+        ComboCourotine = ComboOff();
+        
     }
 
     // Update is called once per frame
@@ -27,7 +27,6 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
-            AttackTimer = Time.time;
         }
     }
 
@@ -39,11 +38,11 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("Atacou kk");
             Combo++;
             StartCoroutine(ClickCooldown());
+            StartCoroutine(ComboOff());
             Cooldown = true;
-            FirstAttackTimer = Time.time;
         }
 
-        if (Combo == 1 && Cooldown == false && FirstAttackTimer - AttackTimer < 3f)
+        if (Combo == 1 && Cooldown == false)
         {
             anim.SetTrigger("Attack");
             Debug.Log("Ataque 2");
@@ -52,19 +51,23 @@ public class PlayerAttack : MonoBehaviour
             Cooldown = true;
         }
 
-        if (Combo == 2 && Cooldown == false && FirstAttackTimer - AttackTimer < 3f)
+        if (Combo == 2 && Cooldown == false)
         {
             anim.SetTrigger("AttackEndCombo");
             Debug.Log("Ataque 3 - Fim de combo");
             StartCoroutine(ClickCooldown());
             Cooldown = true;
-            FirstAttackTimer = 0;
             Combo = 0;
-
+            StopCoroutine(ComboOff());
         }
 
     }
-
+    IEnumerator ComboOff()
+    {
+        yield return new WaitForSeconds(3f);
+        Combo = 0;
+    }
+    
     IEnumerator ClickCooldown()
     {
         yield return new WaitForSeconds(0.5f);
