@@ -56,8 +56,7 @@ public class PlayerController : MonoBehaviour
             Move();
             
         }
-        Jump();
-        grounded = Grounded();
+      
         
         PegasusSprint();
 
@@ -70,6 +69,13 @@ public class PlayerController : MonoBehaviour
 
         // Finaly move the controller, this also checks for collisions
         controller.Move(movement * Time.deltaTime);
+    }
+
+    private void FixedUpdate()
+    {
+
+        Jump();
+        grounded = Grounded();
     }
 
     private void Move()
@@ -237,7 +243,7 @@ public class PlayerController : MonoBehaviour
             verticalVelocity = -1;
 
             // If spacebar, apply high negative gravity, and forget about the floor
-            if (Input.GetAxis("Jump") != 0 && sprinting == false)
+            if (Input.GetAxis("Jump") != 0) //&& sprinting == false)
             {
                 verticalVelocity = jumpForce;
                 slopeNormal = Vector3.up;

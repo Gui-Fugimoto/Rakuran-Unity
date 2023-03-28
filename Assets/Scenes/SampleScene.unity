@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -729,7 +729,7 @@ Transform:
   m_GameObject: {fileID: 846328846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.72577, y: -1.71, z: -0.24281}
-  m_LocalScale: {x: 131.17633, y: 1, z: 37.527}
+  m_LocalScale: {x: 304.10608, y: 1, z: 37.527}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -825,7 +825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024675408}
   m_LocalRotation: {x: -0.20878217, y: 0.9779622, z: -0, w: 0}
-  m_LocalPosition: {x: 40.7, y: -0.72, z: -0.37857112}
+  m_LocalPosition: {x: 45.1, y: 1.2, z: -0.37857112}
   m_LocalScale: {x: 44.210205, y: 1, z: 12.745}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -963,12 +963,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875c88462a4c6fa4dabb257ea553fa3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedX: 5
-  moveSpeedY: 5
+  moveSpeedX: 4
+  moveSpeedY: 4
   flipped: 0
   gravity: 0.3
   jumpForce: 12
   terminalVelocity: 10
+  sprinting: 0
   anim: {fileID: 128823545}
   playerSprite: {fileID: 128823543}
   extremitiesOffset: 0.05
@@ -1057,8 +1058,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3484c3accc6982548825964bc799a23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackPos1: {fileID: 0}
-  AttackPos2: {fileID: 0}
+  AttackPos1: {fileID: 787112757}
+  AttackPos2: {fileID: 1475986946}
   AttackBox: {fileID: 92074696}
   Combo: 0
   Cooldown: 0
