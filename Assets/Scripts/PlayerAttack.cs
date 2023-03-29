@@ -8,22 +8,24 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] GameObject AttackPos1;
     [SerializeField] GameObject AttackPos2;
     [SerializeField] GameObject AttackBox;
-    [SerializeField] int Combo;
+    
+    public int Combo;
     [SerializeField] bool Cooldown;
+    
     [SerializeField] Animator anim;
-    private IEnumerator ComboCourotine;
+    public int Dano; //<-- not final , for testing
+
     [SerializeField] PlayerController Player;
+    [SerializeField] DamageParameter ArmaEquipada;
+    
 
     #endregion
 
-    // Start is called before the first frame update
     void Start()
     {
-        ComboCourotine = ComboOff();
         Player = GetComponent<PlayerController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -77,6 +79,7 @@ public class PlayerAttack : MonoBehaviour
             StartCoroutine(ClickCooldown());
             Cooldown = true;
             Combo = 0;
+            
             StopCoroutine(ComboOff());
         }
 
@@ -93,7 +96,7 @@ public class PlayerAttack : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         Cooldown = false;
-        
+
     }
 
 }
