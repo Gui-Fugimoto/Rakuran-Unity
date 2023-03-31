@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController controller;
     private Vector3 slopeNormal;
-    public bool sprinting = false;
+    public bool isSprinting;
+    public bool isJumping;
     public Animator anim;
     public SpriteRenderer playerSprite;
 
@@ -36,12 +37,36 @@ public class PlayerController : MonoBehaviour
   
     private float initialSprintTimer;
     private float holdButtonSprintTimer;
+
+    //Variaveis Dodge
+    public float rollDistance = 3f; // distance to roll
+    public float rollDuration = 0.5f; // duration of the roll
+    public float staminaCost = 10f; // stamina cost of the roll
+    public float invulnerabilityDuration = 1f; // duration of invulnerability after the roll
+    public KeyCode dodgeKey = KeyCode.E; // key to trigger the dodge roll
+
+    private bool isRolling = false; // whether the player is currently rolling
+    private Vector3 rollDirection; // direction of the roll
+    private float rollStartTime; // time when the roll started
+    public float rollSpeedBoost = 5f;
+    private float invulnerabilityEndTime; // time when invulnerability ends
+
+    //Stamina system variaveis
+
+    public float maxStamina = 100f;
+    public float staminaRegenRate = 10f;
+
+    public float currentStamina;
+
     
+
+
     #endregion
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        currentStamina = maxStamina;
     }
     void Start()
     {
@@ -51,13 +76,17 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (sprinting == false)
+        if (isSprinting == false)
         {
             Move();
-            
+            DodgeRoll();
         }
-      
-        
+
+        if (Input.GetAxis(turnInputAxis) == 0 && Input.GetAxis(moveInputAxis) == 0)
+        {
+            isRolling = false;
+        }
+        currentStamina = Mathf.Clamp(currentStamina + staminaRegenRate * Time.deltaTime, 0f, maxStamina);
         PegasusSprint();
 
         // Apply verticalVelocity to our movement vector
@@ -95,7 +124,7 @@ public class PlayerController : MonoBehaviour
         if (moveAxis != 0)
         {
             anim.SetBool("animMove", true);
-            Debug.Log("teste");
+            
         }
         else if (moveAxis == 0)
         {
@@ -179,7 +208,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift)) //Depois, criar input Sprint no input manager Input.GetAxis("Sprint") != 0)
         {
             initialSprintTimer = Time.time;
-            Debug.Log("Carregando");
+            //Debug.Log("Carregando");
             //anim.SetBool("sprintCharge", true);
         }
 
@@ -193,9 +222,9 @@ public class PlayerController : MonoBehaviour
 
 
                 //perform your action
-                Debug.Log("Correndo");
+                //Debug.Log("Correndo");
                 float moveAxis = Input.GetAxis(moveInputAxis);
-                sprinting = true;
+                isSprinting = true;
                 if (flipped == false)
                 {
                     moveSpeedX = 20;
@@ -220,8 +249,8 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             initialSprintTimer = float.PositiveInfinity;
-            Debug.Log("parou");
-            sprinting = false;
+            //Debug.Log("parou");
+            isSprinting  = false;
             moveSpeedX = 5;
             moveSpeedY = 5;
             //anim.SetBool("sprintRun", false);
@@ -259,6 +288,70 @@ public class PlayerController : MonoBehaviour
             // Clamp to match terminal velocity, if faster
             if (verticalVelocity < -terminalVelocity)
                 verticalVelocity = -terminalVelocity;
+        }
+    }
+    private void DodgeRoll()
+    {
+
+        if (Input.GetKeyDown(dodgeKey) && !isRolling && UseStamina(staminaCost))
+        {
+            // Calculate the direction of the roll based on the player's movement direction
+            Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            if (movementDirection.magnitude > 0)
+            {
+                rollDirection = movementDirection.normalized;
+                isRolling = true;
+                rollStartTime = Time.time;
+                invulnerabilityEndTime = Time.time + invulnerabilityDuration;
+
+                // Deduct stamina cost
+                //PlayerStamina.DeductStamina(staminaCost);
+            }
+        }
+
+        // Perform the roll
+        if (isRolling)
+        {
+            float rollProgress = (Time.time - rollStartTime) / rollDuration;
+            if (rollProgress < 1)
+            {
+                // Move the player in the roll direction and apply a speed boost
+                Vector3 rollVelocity = rollDirection * rollDistance / rollDuration;
+                controller.Move((rollVelocity + rollDirection * rollSpeedBoost) * Time.deltaTime);
+
+                // Rotate the player to face the roll direction
+                //transform.rotation = Quaternion.LookRotation(rollDirection);
+
+            }
+            else
+            {
+                isRolling = false;
+            }
+        }
+
+        // Set invulnerability
+        if (Time.time < invulnerabilityEndTime)
+        {
+            Physics.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("Enemy"), true);
+        }
+        else
+        {
+            Physics.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("Enemy"), false);
+        }
+    }
+
+
+    
+    public bool UseStamina(float amount)
+    {
+        if (currentStamina >= amount)
+        {
+            currentStamina -= amount;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
