@@ -32,6 +32,14 @@ public class PlayerAttack : MonoBehaviour
         {
             Attack();
             AttackBox.SetActive(true);
+            Dano = ArmaEquipada.Dano;
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            HeavyAttack();
+            AttackBox.SetActive(true);
+            Dano = ArmaEquipada.DanoPesado;
         }
 
         if (Player.flipped == true)
@@ -80,6 +88,39 @@ public class PlayerAttack : MonoBehaviour
             Cooldown = true;
             Combo = 0;
             
+            StopCoroutine(ComboOff());
+        }
+
+    }
+    private void HeavyAttack()
+    {
+        if (Combo == 0 && Cooldown == false)
+        {
+            anim.SetTrigger("HeavyAttack");
+            Debug.Log("Atacou Pesado");
+            Combo++;
+            StartCoroutine(ClickCooldown());
+            StartCoroutine(ComboOff());
+            Cooldown = true;
+        }
+
+        if (Combo == 1 && Cooldown == false)
+        {
+            anim.SetTrigger("HeavyAttack");
+            Debug.Log("Ataque Pesado" + Combo);
+            Combo++;
+            StartCoroutine(ClickCooldown());
+            Cooldown = true;
+        }
+
+        if (Combo == 2 && Cooldown == false)
+        {
+            anim.SetTrigger("HeavyAttackEndCombo");
+            Debug.Log("Ataque Pesado 3 - Fim de combo");
+            StartCoroutine(ClickCooldown());
+            Cooldown = true;
+            Combo = 0;
+
             StopCoroutine(ComboOff());
         }
 

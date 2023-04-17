@@ -12,14 +12,13 @@ public class HItBoxBehaviour : MonoBehaviour
     {
         //RefDamage = GetComponent<PlayerAttack>();
 
-        Str = RefDamage.Dano;
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
+        Str = RefDamage.Dano;
     }
 
     private void OnTriggerEnter(Collider other)

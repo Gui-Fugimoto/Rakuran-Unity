@@ -7,9 +7,10 @@ using UnityEngine;
 public class DamageParameter : ScriptableObject
 {
     [SerializeField] int dano = default;
-    //[SerializeField]
+    [SerializeField] int danoPesado = default; 
 
     public int Dano => dano;
+    public int DanoPesado => danoPesado;
 
     void EffectDOT()
     {
