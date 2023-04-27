@@ -242,7 +242,7 @@ public class PlayerController : MonoBehaviour
                     transform.Translate(movement * Time.deltaTime);
                 }
 
-                anim.SetBool("Run", true);
+                //anim.SetBool("sprintRun", true);
                 //anim.SetBool("sprintCharge", false);
             }
         }
@@ -253,7 +253,7 @@ public class PlayerController : MonoBehaviour
             isSprinting  = false;
             moveSpeedX = 5;
             moveSpeedY = 5;
-            anim.SetBool("Run", false);
+            //anim.SetBool("sprintRun", false);
             //anim.SetBool("sprintCharge", false);
         }
         else

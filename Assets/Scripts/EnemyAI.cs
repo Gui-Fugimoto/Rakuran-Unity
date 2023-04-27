@@ -16,10 +16,6 @@ public class EnemyAI : MonoBehaviour
     private bool isAttacking = false;
     private Rigidbody rb;
 
-    private Animator anim;
-    private Transform spriteTransform;
-    private SpriteRenderer spriteRend;
-
     void Start()
     {
         // Set a random target location for wandering
@@ -28,16 +24,12 @@ public class EnemyAI : MonoBehaviour
 
         // Get the Rigidbody component for physics
         rb = GetComponent<Rigidbody>();
-
-        anim = GetComponentInChildren<Animator>();
-        spriteTransform = this.gameObject.transform.GetChild(0);
-        spriteRend = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
     {
         timeSinceLastAttack += Time.deltaTime;
-        spriteTransform.rotation = Quaternion.Euler(0, 0, 0);
+
         // Update the state machine based on the current state
         switch (currentState)
         {
@@ -103,7 +95,7 @@ public class EnemyAI : MonoBehaviour
         {
             isAttacking = true;
             timeSinceLastAttack = 0f;
-            anim.SetBool("Attack", true);
+
             // Play attack animation or perform attack action
             StartCoroutine(EndAttack());
         }
@@ -114,7 +106,6 @@ public class EnemyAI : MonoBehaviour
         if (distanceToPlayer > attackRange || Mathf.Abs(directionToPlayer.x) >= Mathf.Abs(directionToPlayer.z))
         {
             currentState = 1; // Switch back to pursuit state
-            
         }
     }
 
@@ -125,7 +116,6 @@ public class EnemyAI : MonoBehaviour
         yield return new WaitForSeconds(0.5f); // Insert animation length or attack duration here
         isAttacking = false;
         currentState = 1; // Switch back to pursuit state
-        anim.SetBool("Attack", false);
     }
 
 }
