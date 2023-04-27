@@ -6,17 +6,15 @@ public class EnemyAI : MonoBehaviour
 {
     public Transform player;
     public float moveSpeed = 5f;
-    public float attackRange = 0.5f;
-    public float pursuitRange;
+    public float attackRange = 1f;
     public float wanderRange = 10f;
     public float attackCooldown = 2f;
 
     private Vector3 wanderTarget;
     private float timeSinceLastAttack = 0f;
-    public int currentState = 0; // 0 = wander, 1 = pursuit, 2 = attack
+    private int currentState = 0; // 0 = wander, 1 = pursuit, 2 = attack
     private bool isAttacking = false;
     private Rigidbody rb;
-    private Vector3 targetPosition;
 
     private Animator anim;
     private Transform spriteTransform;
@@ -60,7 +58,7 @@ public class EnemyAI : MonoBehaviour
     {
         // Move towards wander target
         float distanceToTarget = Vector3.Distance(transform.position, wanderTarget);
-        if (distanceToTarget < 3f)
+        if (distanceToTarget < 1f)
         {
             // Set a new random target location for wandering
             wanderTarget = Random.insideUnitSphere * wanderRange;
@@ -68,14 +66,13 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-
             transform.LookAt(wanderTarget);
             rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
         }
 
         // Check if player is within pursuit range
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayer < pursuitRange)
+        if (distanceToPlayer < attackRange * 2)
         {
             currentState = 1; // Switch to pursuit state
         }
@@ -84,17 +81,17 @@ public class EnemyAI : MonoBehaviour
     void PursuitState()
     {
         // Move towards player
-        transform.LookAt(targetPosition);//player);
+        transform.LookAt(player);
         rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
 
-        // Check if player is within attack range and facing on Z axis
+        // Check if player is within attack range and facing on X axis
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         Vector3 directionToPlayer = player.position - transform.position;
-        if (distanceToPlayer < attackRange && Mathf.Abs(directionToPlayer.z) < Mathf.Abs(directionToPlayer.x))
+        if (distanceToPlayer < attackRange && Mathf.Abs(directionToPlayer.x) < Mathf.Abs(directionToPlayer.z))
         {
             currentState = 2; // Switch to attack state
         }
-        else if (distanceToPlayer > pursuitRange)
+        else if (distanceToPlayer > attackRange * 2)
         {
             currentState = 0; // Switch back to wander state
         }
@@ -112,10 +109,10 @@ public class EnemyAI : MonoBehaviour
             StartCoroutine(EndAttack());
         }
 
-        // Check if player is still within attack range and facing on Z axis
+        // Check if player is still within attack range and facing on X axis
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         Vector3 directionToPlayer = player.position - transform.position;
-        if (distanceToPlayer > attackRange || Mathf.Abs(directionToPlayer.z) >= Mathf.Abs(directionToPlayer.x))
+        if (distanceToPlayer > attackRange || Mathf.Abs(directionToPlayer.x) >= Mathf.Abs(directionToPlayer.z))
         {
             currentState = 1; // Switch back to pursuit state
             
