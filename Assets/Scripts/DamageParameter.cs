@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Damage", menuName = "ParametersRaku")]
+[CreateAssetMenu(fileName = "Damage", menuName = "DamageParameter")]
 
 public class DamageParameter : ScriptableObject
 {
