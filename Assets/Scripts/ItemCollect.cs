@@ -24,20 +24,22 @@ public class ItemCollect : MonoBehaviour
         {
             Grab = true;
         }
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            Grab = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && Grab == true)
         {
-
             if(other.GetComponent<Inventory>().itens.Count < other.GetComponent<Inventory>().inventorySize)
             {
                 StartCoroutine(Die());
                 other.gameObject.SendMessage("AddItem", Item);
                 Debug.Log("Pegou Iten");
             }
-            
         }
     }
 

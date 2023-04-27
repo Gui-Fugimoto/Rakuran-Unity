@@ -6,8 +6,11 @@ using UnityEngine;
 
 public class ItemParameter : ScriptableObject
 {
-    [SerializeField] GameObject ItemMundo = default;
-    [SerializeField] GameObject ItemInventario = default;
+   public GameObject ItemMundo = default;
+   public int Vida;
+   public int Escudo;
+   public int Veneno;
+   public Sprite Icon;
 
     //public GameObject ItemMundo => itemmundo;
     //public int DanoPesado => danoPesado;
