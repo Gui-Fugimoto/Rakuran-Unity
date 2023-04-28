@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemMundo: {fileID: 2767730873314279299, guid: 630db9f0585508043adfa9bb00ab95b4,
     type: 3}
-  Vida: 0
+  Vida: 1
   Escudo: 3
-  Veneno: 1
+  Veneno: 0
   Icon: {fileID: 21300000, guid: f90295bff763092488363178a98b095b, type: 3}

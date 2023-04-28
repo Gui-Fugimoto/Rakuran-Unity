@@ -330,14 +330,14 @@ public class PlayerController : MonoBehaviour
         }
 
         // Set invulnerability
-        if (Time.time < invulnerabilityEndTime)
-        {
-            Physics.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("Enemy"), true);
-        }
-        else
-        {
-            Physics.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("Enemy"), false);
-        }
+        //if (Time.time < invulnerabilityEndTime)
+        //{
+        //    Physics.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("Enemy"), true);
+        //}
+        //else
+        //{
+        //    Physics.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("Enemy"), false);
+        //}
     }
 
 

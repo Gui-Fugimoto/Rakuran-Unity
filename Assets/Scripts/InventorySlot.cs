@@ -3,28 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class InventorySlot : MonoBehaviour
 {
     public Image Icon;
     ItemParameter item;
-
+    public DraggableItem child;
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Icon.enabled = false;
     }
 
     public void AddItem(ItemParameter novoItem)
     {
         item = novoItem;
+        child.Item = novoItem;
 
         Icon.sprite = item.Icon;
         Icon.enabled = true;
+        
     }
 
     public void ClearSlot()
