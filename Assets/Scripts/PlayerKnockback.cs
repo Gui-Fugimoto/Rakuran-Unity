@@ -6,15 +6,33 @@ public class PlayerKnockback : MonoBehaviour
 {
     public float knockbackForce = 10f;
     public float knockTime = 1f;
+    public GameObject player;
+    private PlayerController playerScript;
+    void Start()
+    {
+        playerScript = player.GetComponent<PlayerController>();
+    }
     
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Enemy")
+        if (playerScript.flipped == false)
         {
-            Vector3 direction = col.transform.position - transform.position;
-            col.gameObject.GetComponent<EnemyAI>().Knockback(-direction, knockbackForce, knockTime);
-            Debug.Log("colidiu");
+            if (col.gameObject.tag == "Enemy")
+            {
+                Vector3 direction = transform.position - col.transform.position;
+                col.gameObject.GetComponent<EnemyAI>().Knockback(direction, knockbackForce, knockTime);
+                Debug.Log("dota");
+            }
+        }
+        else if (playerScript.flipped == true)
+        {
+            if (col.gameObject.tag == "Enemy")
+            {
+                Vector3 direction = col.transform.position - transform.position;
+                col.gameObject.GetComponent<EnemyAI>().Knockback(direction, knockbackForce, knockTime);
+
+            }
         }
     }
 
