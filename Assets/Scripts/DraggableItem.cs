@@ -30,8 +30,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         if (collision.tag == "CraftingCanvas")
         {
-            collision.SendMessage("NewItenAdded", Item);
-            StartCoroutine(Remove());
+            if(collision.GetComponent<PotionCrafting>().ingUsadsos < collision.GetComponent<PotionCrafting>().ingTotal)
+            {
+                collision.SendMessage("NewItenAdded", Item);
+                StartCoroutine(Remove());
+            }
         }
     }
 

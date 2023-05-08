@@ -7,18 +7,12 @@ public class PotionCrafting : MonoBehaviour
     [SerializeField] int vida;
     [SerializeField] int escudo;
     [SerializeField] int veneno;
-    [SerializeField] int ingUsadsos;
-    [SerializeField] int ingTotal;
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    public int ingUsadsos;
+    public int ingTotal;
+    public Inventory inventory;
+    [SerializeField] ItemParameter PotCura;
+    [SerializeField] ItemParameter PotEscudo;
+    [SerializeField] ItemParameter PotVeneno;
 
     void NewItenAdded(ItemParameter Item)
     {
@@ -28,5 +22,30 @@ public class PotionCrafting : MonoBehaviour
         veneno += Item.Veneno;
 
         ingUsadsos++;
+    }
+
+    public void FinishPotion()
+    {
+        if(vida > escudo && vida > escudo)
+        {
+            inventory.AddItem(PotCura);
+            vida = 0;
+            escudo = 0;
+            veneno = 0;
+        }
+        if(escudo > vida && escudo > veneno)
+        {
+            inventory.AddItem(PotEscudo);
+            vida = 0;
+            escudo = 0;
+            veneno = 0;
+        }
+        if(veneno > vida && veneno > escudo)
+        {
+            inventory.AddItem(PotVeneno);
+            vida = 0;
+            escudo = 0;
+            veneno = 0;
+        }
     }
 }
