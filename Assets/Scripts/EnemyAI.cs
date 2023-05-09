@@ -58,28 +58,35 @@ public class EnemyAI : MonoBehaviour
 
     void WanderState()
     {
-        // Move towards wander target
-        float distanceToTarget = Vector3.Distance(transform.position, wanderTarget);
-        if (distanceToTarget < 3f)
         {
-            // Set a new random target location for wandering
-            wanderTarget = Random.insideUnitSphere * wanderRange;
-            wanderTarget.y = transform.position.y;
-        }
-        else
-        {
+            // Move towards wander target
+            float distanceToTarget = Vector3.Distance(transform.position, wanderTarget);
+            if (distanceToTarget < 3f)
+            {
+                // Set a new random target location for wandering
+                wanderTarget = Random.insideUnitSphere * wanderRange;
+                wanderTarget.y = transform.position.y;
+            }
+            else
+            {
+                // Check the direction of movement and flip the sprite if necessary
+                Vector3 direction = wanderTarget - transform.position;
+                bool isMovingRight = direction.x > 0f;
+                spriteRend.flipX = isMovingRight;
 
-            transform.LookAt(wanderTarget);
-            rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
-        }
+                transform.LookAt(wanderTarget);
+                rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
+            }
 
-        // Check if player is within pursuit range
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayer < pursuitRange)
-        {
-            currentState = 1; // Switch to pursuit state
+            // Check if player is within pursuit range
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+            if (distanceToPlayer < pursuitRange)
+            {
+                currentState = 1; // Switch to pursuit state
+            }
         }
     }
+
 
     void PursuitState()
     {
@@ -98,7 +105,18 @@ public class EnemyAI : MonoBehaviour
         {
             currentState = 0; // Switch back to wander state
         }
+
+        if (directionToPlayer.x > 0)
+        {
+            spriteRend.flipX = true;
+        }
+        else if (directionToPlayer.x <= 0)
+        {
+            spriteRend.flipX = false;
+        }
+            
     }
+
 
     void AttackState()
     {
