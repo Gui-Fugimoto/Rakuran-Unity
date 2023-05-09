@@ -16,24 +16,29 @@ public class PlayerKnockback : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
         if (playerScript.flipped == false)
         {
-            if (col.gameObject.tag == "Enemy")
+            if (other.gameObject.tag == "Enemy")
             {
-                Vector3 direction = transform.position - col.transform.position;
-                col.gameObject.GetComponent<EnemyAI>().Knockback(direction, knockbackForce, knockTime);
+                Vector3 direction = transform.position - other.transform.position;
+                other.gameObject.GetComponent<EnemyAI>().Knockback(direction, knockbackForce, knockTime);
                 Debug.Log("dota");
             }
         }
         else if (playerScript.flipped == true)
         {
-            if (col.gameObject.tag == "Enemy")
-            {
-                Vector3 direction = col.transform.position - transform.position;
-                col.gameObject.GetComponent<EnemyAI>().Knockback(direction, knockbackForce, knockTime);
-
-            }
-        }
+            if (other.gameObject.tag == "Enemy")
+            { 
+              Vector3 direction = other.transform.position - transform.position;
+              other.gameObject.GetComponent<EnemyAI>().Knockback(direction, knockbackForce, knockTime);
+              
+            } 
+        }     
     }
 
 
