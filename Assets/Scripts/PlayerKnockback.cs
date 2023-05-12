@@ -14,10 +14,7 @@ public class PlayerKnockback : MonoBehaviour
     }
     
 
-    void OnCollisionEnter(Collision col)
-    {
-        
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {

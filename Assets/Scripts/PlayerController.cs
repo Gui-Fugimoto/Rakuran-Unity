@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         currentStamina = maxStamina;
+        //knockbackScript = sphere.GetComponent<PlayerController>();
     }
     void Start()
     {

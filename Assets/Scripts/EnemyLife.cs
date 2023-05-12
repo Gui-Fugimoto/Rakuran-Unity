@@ -20,5 +20,7 @@ public class EnemyLife : MonoBehaviour
     {
         vida -= str;
         Debug.Log("tomou dano, vida atual " + (vida));
+
+        GetComponentInParent<SimpleFlash>().Flash();
     }
 }
