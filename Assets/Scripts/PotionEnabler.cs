@@ -27,8 +27,9 @@ public class PotionEnabler : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
+
         if (other.tag == "Player" && Grab == true)
         {
             if (other.GetComponent<Inventory>().itens.Count < other.GetComponent<Inventory>().inventorySize)
@@ -40,3 +41,5 @@ public class PotionEnabler : MonoBehaviour
         }
     }
 }
+
+

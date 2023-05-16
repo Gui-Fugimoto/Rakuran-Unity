@@ -6,8 +6,8 @@ public class ItemCollect : MonoBehaviour
 {
     #region variáveis
     [SerializeField] bool Grab;
-    bool Foipego;
     [SerializeField] ItemParameter Item;
+    bool Collected;
 
     #endregion
 
@@ -30,15 +30,16 @@ public class ItemCollect : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player" && Grab == true)
+        if (other.tag == "Player" && Grab == true && Collected == false)
         {
             if(other.GetComponent<Inventory>().itens.Count < other.GetComponent<Inventory>().inventorySize)
             {
                 StartCoroutine(Die());
                 other.gameObject.SendMessage("AddItem", Item);
                 Debug.Log("Pegou Iten");
+                Collected = true;
             }
         }
     }
