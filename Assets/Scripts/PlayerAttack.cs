@@ -140,5 +140,10 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
+    public void PlayerTakeDamage()
+    {
+
+    }
+
 }
 

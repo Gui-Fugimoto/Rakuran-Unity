@@ -22,6 +22,14 @@ public class EnemyAI : MonoBehaviour
     private Transform spriteTransform;
     private SpriteRenderer spriteRend;
 
+    [SerializeField] GameObject hitBox;
+    [SerializeField] GameObject hitBoxPosLeft;
+    [SerializeField] GameObject hitBoxPosRight;
+
+    float pauseDuration = 2f;
+    float pauseTimer = 0f;
+    bool isPaused = false;
+
     void Start()
     {
         // Set a random target location for wandering
@@ -34,6 +42,8 @@ public class EnemyAI : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         spriteTransform = this.gameObject.transform.GetChild(0);
         spriteRend = GetComponentInChildren<SpriteRenderer>();
+
+        hitBox.SetActive(false);
     }
 
     void Update()
@@ -58,32 +68,58 @@ public class EnemyAI : MonoBehaviour
 
     void WanderState()
     {
+        // Check if the enemy is currently paused
+        if (isPaused)
         {
-            // Move towards wander target
-            float distanceToTarget = Vector3.Distance(transform.position, wanderTarget);
-            if (distanceToTarget < 3f)
+            // Increment the pause timer
+            pauseTimer += Time.deltaTime;
+
+            // Check if the pause duration has been reached
+            if (pauseTimer >= pauseDuration)
             {
+                // Reset the pause timer and resume movement
+                pauseTimer = 0f;
+                isPaused = false;
+
                 // Set a new random target location for wandering
                 wanderTarget = Random.insideUnitSphere * wanderRange;
                 wanderTarget.y = transform.position.y;
+
+                // Set the "Walk" animation to true
+                anim.SetBool("Walk", true);
             }
             else
             {
-                // Check the direction of movement and flip the sprite if necessary
-                Vector3 direction = wanderTarget - transform.position;
-                bool isMovingRight = direction.x > 0f;
-                spriteRend.flipX = isMovingRight;
-
-                transform.LookAt(wanderTarget);
-                rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
+                // Set the "Walk" animation to false during the pause
+                anim.SetBool("Walk", false);
             }
 
-            // Check if player is within pursuit range
-            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-            if (distanceToPlayer < pursuitRange)
-            {
-                currentState = 1; // Switch to pursuit state
-            }
+            return;
+        }
+
+        // Move towards wander target
+        float distanceToTarget = Vector3.Distance(transform.position, wanderTarget);
+        if (distanceToTarget < 3f)
+        {
+            // Set the enemy to a paused state
+            isPaused = true;
+        }
+        else
+        {
+            // Check the direction of movement and flip the sprite if necessary
+            Vector3 direction = wanderTarget - transform.position;
+            bool isMovingRight = direction.x > 0f;
+            spriteRend.flipX = isMovingRight;
+
+            transform.LookAt(wanderTarget);
+            rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
+        }
+
+        // Check if player is within pursuit range
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        if (distanceToPlayer < pursuitRange)
+        {
+            currentState = 1; // Switch to pursuit state
         }
     }
 
@@ -93,7 +129,7 @@ public class EnemyAI : MonoBehaviour
         // Move towards player
         transform.LookAt(targetPosition);//player);
         rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
-
+        anim.SetBool("Walk", true);
         // Check if player is within attack range and facing on Z axis
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         Vector3 directionToPlayer = player.position - transform.position;
@@ -114,7 +150,7 @@ public class EnemyAI : MonoBehaviour
         {
             spriteRend.flipX = false;
         }
-            
+
     }
 
 
@@ -126,6 +162,9 @@ public class EnemyAI : MonoBehaviour
             isAttacking = true;
             timeSinceLastAttack = 0f;
             anim.SetBool("Attack", true);
+            anim.SetBool("Walk", false);
+            hitBox.SetActive(true);
+
             // Play attack animation or perform attack action
             StartCoroutine(EndAttack());
         }
@@ -136,11 +175,11 @@ public class EnemyAI : MonoBehaviour
         if (distanceToPlayer > attackRange || Mathf.Abs(directionToPlayer.z) >= Mathf.Abs(directionToPlayer.x))
         {
             currentState = 1; // Switch back to pursuit state
-            
+
         }
     }
 
-    
+
 
     IEnumerator EndAttack()
     {
@@ -148,14 +187,15 @@ public class EnemyAI : MonoBehaviour
         isAttacking = false;
         currentState = 1; // Switch back to pursuit state
         anim.SetBool("Attack", false);
+        hitBox.SetActive(false);
     }
 
     public void Knockback(Vector3 direction, float force, float duration)
     {
-        
+
         Vector3 horizontal = direction.x * transform.forward;
         Vector3 vertical = direction.y * transform.up;
-        
+
         Vector3 newDirection = new Vector3(horizontal.x, -vertical.y, 0);
         Vector3 knockbackVector = (newDirection.normalized * force);
         Debug.Log("lançado");
