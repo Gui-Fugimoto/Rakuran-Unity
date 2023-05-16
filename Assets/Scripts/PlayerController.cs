@@ -356,4 +356,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Knockback(Vector3 direction, float force, float duration)
+    {
+
+        Vector3 horizontal = direction.x * transform.forward;
+        Vector3 vertical = direction.y * transform.up;
+
+        Vector3 newDirection = new Vector3(horizontal.x, -vertical.y, 0);
+        Vector3 knockbackVector = (newDirection.normalized * force);
+        Debug.Log("lançado");
+
+        StartCoroutine(MoveOverTime(knockbackVector, duration));
+    }
+    private IEnumerator MoveOverTime(Vector3 knockbackVector, float duration)
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            transform.position += knockbackVector * Time.deltaTime / duration;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+    }
+
 }

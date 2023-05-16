@@ -34,7 +34,7 @@ public class EnemyDamage : MonoBehaviour
             {
                 Vector3 direction = other.transform.position - transform.position;
                 other.gameObject.GetComponent<EnemyAI>().Knockback(direction, knockbackForce, knockTime);
-
+                Debug.Log("dota");
             }
         }
     }

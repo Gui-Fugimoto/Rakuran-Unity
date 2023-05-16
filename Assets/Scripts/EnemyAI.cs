@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour
     private SpriteRenderer spriteRend;
 
     [SerializeField] GameObject hitBox;
-    [SerializeField] GameObject hitBoxPosLeft;
+    [SerializeField] GameObject hitBoxPosLeft; //mudar pra transform
     [SerializeField] GameObject hitBoxPosRight;
 
     float pauseDuration = 2f;
@@ -46,7 +46,7 @@ public class EnemyAI : MonoBehaviour
         hitBox.SetActive(false);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         timeSinceLastAttack += Time.deltaTime;
         spriteTransform.rotation = Quaternion.Euler(0, 0, 0);
@@ -64,6 +64,16 @@ public class EnemyAI : MonoBehaviour
                 AttackState();
                 break;
         }
+        /*
+        if (d.flipped == false)
+        {
+            hitBox.transform.position = hitBoxPosRight.transform.position;
+        }
+        if (spriteRend.flipped == true)
+        {
+            hitBox.transform.position = hitBoxPosLeft.transform.position;
+        }
+        */
     }
 
     void WanderState()
@@ -185,7 +195,7 @@ public class EnemyAI : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f); // Insert animation length or attack duration here
         isAttacking = false;
-        currentState = 1; // Switch back to pursuit state
+        currentState = 2; // Switch back to attack state
         anim.SetBool("Attack", false);
         hitBox.SetActive(false);
     }
