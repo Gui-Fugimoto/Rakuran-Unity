@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text Nome;
     public TMP_Text Fala;
     private bool proxFala;
+    public Animator DialogueBox;
+
     void Start()
     {
         sentences = new Queue<string>();
@@ -29,14 +31,15 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-
+        
         DisplayNextSentece();
-
     }
 
     public void DisplayNextSentece()
     {
-        if(sentences.Count == 0)
+        DialogueBox.SetBool("Isopen", true);
+
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;
@@ -44,16 +47,18 @@ public class DialogueManager : MonoBehaviour
 
         string sentence = sentences.Dequeue();
         Fala.text = sentence;
+        
     }
 
     void EndDialogue()
     {
         DialogoFim = true;
+        DialogueBox.SetBool("Isopen", false);
     }
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.F) && DialogoFim == false && proxFala == true)
+        if (Input.GetKey(KeyCode.F) && proxFala == true)
         {
             DisplayNextSentece();
             proxFala = false;
@@ -63,8 +68,20 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator PressCoolDown()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         proxFala = true;
     }
+
+    //IEnumerator TypeSentence(string sentence)
+    //{
+    //    Fala.text = "";
+    //
+    //    foreach (char letter in sentence.ToCharArray())
+    //    {
+    //        Fala.text += letter;
+    //        yield return null;
+    //       
+    //    }
+    //}
 
 }
