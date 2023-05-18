@@ -32,6 +32,7 @@ public class PotionCrafting : MonoBehaviour
             vida = 0;
             escudo = 0;
             veneno = 0;
+            ingUsadsos = 0;
         }
         if(escudo > vida && escudo > veneno)
         {
@@ -39,6 +40,7 @@ public class PotionCrafting : MonoBehaviour
             vida = 0;
             escudo = 0;
             veneno = 0;
+            ingUsadsos = 0;
         }
         if(veneno > vida && veneno > escudo)
         {
@@ -46,6 +48,7 @@ public class PotionCrafting : MonoBehaviour
             vida = 0;
             escudo = 0;
             veneno = 0;
+            ingUsadsos = 0;
         }
     }
 }
