@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 4655577368621150933}
   - component: {fileID: 8589549101892107632}
   - component: {fileID: 5823367829555841466}
+  - component: {fileID: 5503557882819233366}
   m_Layer: 6
   m_Name: Poste
   m_TagString: Untagged
@@ -199,3 +200,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5503557882819233366
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462934929160710255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: 89092c96d6af3fa408c17033f65a6a99, type: 3}
