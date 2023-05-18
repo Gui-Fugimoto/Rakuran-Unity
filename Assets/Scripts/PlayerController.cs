@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     public float rollDuration = 0.5f; // duration of the roll
     public float staminaCost = 10f; // stamina cost of the roll
     public float invulnerabilityDuration = 1f; // duration of invulnerability after the roll
-    public KeyCode dodgeKey = KeyCode.E; // key to trigger the dodge roll
+    public KeyCode dodgeKey = KeyCode.LeftShift; // key to trigger the dodge roll
 
     private bool isRolling = false; // whether the player is currently rolling
     private Vector3 rollDirection; // direction of the roll
@@ -206,14 +206,14 @@ public class PlayerController : MonoBehaviour
     private void PegasusSprint()
     {
         holdButtonSprintTimer = 1f;
-        if (Input.GetKeyDown(KeyCode.LeftShift)) //Depois, criar input Sprint no input manager Input.GetAxis("Sprint") != 0)
+        if (Input.GetKeyDown(KeyCode.LeftControl)) //Depois, criar input Sprint no input manager Input.GetAxis("Sprint") != 0)
         {
             initialSprintTimer = Time.time;
             //Debug.Log("Carregando");
             //anim.SetBool("sprintCharge", true);
         }
 
-        else if (Input.GetKey(KeyCode.LeftShift))
+        else if (Input.GetKey(KeyCode.LeftControl))
         {
             if (Time.time - initialSprintTimer > holdButtonSprintTimer)
             {
@@ -247,7 +247,7 @@ public class PlayerController : MonoBehaviour
                 //anim.SetBool("sprintCharge", false);
             }
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        else if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             initialSprintTimer = float.PositiveInfinity;
             //Debug.Log("parou");

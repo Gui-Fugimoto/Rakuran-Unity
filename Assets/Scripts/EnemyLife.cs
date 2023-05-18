@@ -14,6 +14,7 @@ public class EnemyLife : MonoBehaviour
         if(vida <= 0)
         {
             Debug.Log("morreu");
+            Destroy(gameObject, 0.1f);
         }
     }
     public void Damage(int str)

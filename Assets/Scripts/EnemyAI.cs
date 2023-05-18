@@ -64,17 +64,22 @@ public class EnemyAI : MonoBehaviour
                 AttackState();
                 break;
         }
-        /*
-        if (d.flipped == false)
+
+        hitBoxPosLeft.transform.position = new Vector3 (transform.position.x +0.95f, transform.position.y, transform.position.z);
+        hitBoxPosRight.transform.position = new Vector3(transform.position.x - 0.828f, transform.position.y, transform.position.z);
+        
+        if (spriteRend.flipX == false)
         {
             hitBox.transform.position = hitBoxPosRight.transform.position;
         }
-        if (spriteRend.flipped == true)
+        if (spriteRend.flipX == true)
         {
             hitBox.transform.position = hitBoxPosLeft.transform.position;
         }
-        */
+        
     }
+
+    
 
     void WanderState()
     {

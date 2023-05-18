@@ -24,7 +24,8 @@ public class EnemyDamage : MonoBehaviour
             if (other.gameObject.tag == "Player")
             {
                 Vector3 direction = transform.position - other.transform.position;
-                other.gameObject.GetComponent<EnemyAI>().Knockback(direction, knockbackForce, knockTime);
+                other.gameObject.GetComponent<PlayerController>().Knockback(direction, knockbackForce, knockTime);
+                other.gameObject.GetComponent<PlayerHealthController>().TakeDamage(1);
                 Debug.Log("dota");
             }
         }
@@ -33,7 +34,8 @@ public class EnemyDamage : MonoBehaviour
             if (other.gameObject.tag == "Player")
             {
                 Vector3 direction = other.transform.position - transform.position;
-                other.gameObject.GetComponent<EnemyAI>().Knockback(direction, knockbackForce, knockTime);
+                other.gameObject.GetComponent<PlayerController>().Knockback(direction, knockbackForce, knockTime);
+                other.gameObject.GetComponent<PlayerHealthController>().TakeDamage(1);
                 Debug.Log("dota");
             }
         }
