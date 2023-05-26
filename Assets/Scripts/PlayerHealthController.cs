@@ -6,11 +6,12 @@ public class PlayerHealthController : MonoBehaviour
 {
     public float currentHP;
     public float maxHP;
+    public GameController gameC;
     // Start is called before the first frame update
     void Awake()
     {
         currentHP = maxHP;
-        
+        gameC = FindObjectOfType<GameController>();
     }
 
     // Update is called once per frame
@@ -30,8 +31,8 @@ public class PlayerHealthController : MonoBehaviour
     {
         if (currentHP <= 0)
         {
+            gameC.GameOver();
             
-            //Gamecontrolller reference to gameOver too
         }
     }
 }
