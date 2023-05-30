@@ -9,6 +9,7 @@ TagManager:
   - CraftingCanvas
   - EnemyHitbox
   - Chest
+  - Inventory
   layers:
   - Default
   - TransparentFX

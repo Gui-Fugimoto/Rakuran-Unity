@@ -8,7 +8,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     Transform parentAfterDrag;
     public ItemParameter Item;
     public Inventory inventory;
-    int teste = 1;
+    public ChestInventory chestInventory;
+   // public bool InChest;
+   // public bool InInventory;
     
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -37,13 +39,24 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             }
         }
 
-        if(collision.tag == "Chest")
+        if(collision.tag == "Chest" )
         {
-            if(collision.GetComponent<UItoChest>().Inventario.inventorySize > 25)
+            if(chestInventory == null)
             {
                 collision.SendMessage("AddItem", Item);
                 StartCoroutine(Remove());
             }
+
+        }
+
+        if (collision.tag == "Inventory")
+        {
+            if (inventory == null)
+            {
+                collision.SendMessage("AddItem", Item);
+                StartCoroutine(ChestRemove());
+            }
+
         }
     }
 
@@ -51,5 +64,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         yield return new WaitForSeconds(0.2f);
         inventory.RemoveItem(Item);
+    }
+
+    IEnumerator ChestRemove()
+    {
+        yield return new WaitForSeconds(0.2f);
+        chestInventory.RemoveItem(Item);
     }
 }

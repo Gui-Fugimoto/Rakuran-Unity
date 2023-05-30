@@ -2774,9 +2774,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2941,7 +2951,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28758
+  m_Name: pb_Mesh28872
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4060,9 +4070,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -5120,7 +5140,7 @@ PrefabInstance:
     - target: {fileID: 1116477543437352208, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1116477543437352217, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}
@@ -5193,9 +5213,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -5363,9 +5393,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -6216,9 +6256,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -6392,9 +6442,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -6963,9 +7023,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -8316,9 +8386,12 @@ GameObject:
   - component: {fileID: 695078309}
   - component: {fileID: 695078312}
   - component: {fileID: 695078311}
+  - component: {fileID: 695078315}
+  - component: {fileID: 695078314}
+  - component: {fileID: 695078313}
   m_Layer: 5
   m_Name: Inventory
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8382,6 +8455,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695078308}
   m_CullTransparentMesh: 1
+--- !u!114 &695078313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695078308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8846159af4b831749b55a979d779fdcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inventario: {fileID: 1457585977}
+--- !u!50 &695078314
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695078308}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!61 &695078315
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695078308}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0018157959, y: -0.35316658}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 85.31468, y: 120.368576}
+  m_EdgeRadius: 0
 --- !u!4 &698931377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cbb36e5cd9dc752489f536b597942d86,
@@ -9728,9 +9861,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -10001,9 +10144,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -10663,7 +10816,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-143638
+  m_Name: pb_Mesh27660
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11483,9 +11636,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -12785,9 +12948,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -13950,9 +14123,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -14467,9 +14650,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -14987,9 +15180,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -18561,9 +18764,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -18974,9 +19187,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -21517,9 +21740,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -24176,9 +24409,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -24386,9 +24629,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -24795,9 +25048,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -25149,9 +25412,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -25670,9 +25943,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -25866,9 +26149,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -26238,9 +26531,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -27459,7 +27762,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28332
+  m_Name: pb_Mesh28412
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27716,7 +28019,7 @@ PrefabInstance:
     - target: {fileID: 1116477543437352208, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1116477543437352217, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}
@@ -27789,9 +28092,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: InChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: chestInventory
+      value: 
+      objectReference: {fileID: 683980479}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
