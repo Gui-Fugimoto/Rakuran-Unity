@@ -8,7 +8,7 @@ public class ChestInventory : MonoBehaviour
     #region Variáveis
 
     public List<ItemParameter> itens = new List<ItemParameter>();
-    public int inventorySize = 10;
+    public int inventorySize = 25;
     public GameObject InventoryUI;
     public GameObject ChestUI;
     public bool Aberto;

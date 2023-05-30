@@ -36,6 +36,15 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                 StartCoroutine(Remove());
             }
         }
+
+        if(collision.tag == "Chest")
+        {
+            if(collision.GetComponent<UItoChest>().Inventario.inventorySize > 25)
+            {
+                collision.SendMessage("AddItem", Item);
+                StartCoroutine(Remove());
+            }
+        }
     }
 
     IEnumerator Remove()
