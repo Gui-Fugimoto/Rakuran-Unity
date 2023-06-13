@@ -10,7 +10,11 @@ public class Inventory : MonoBehaviour
     public List<ItemParameter> itens = new List<ItemParameter>();
     public int inventorySize = 10;
     public GameObject InventoryUI;
+    public GameObject quickslotsUI;
     public bool Aberto;
+    public bool isInventoryOpen;
+    public List<ItemParameter> quickslots = new List<ItemParameter>();
+    public int quickslotCount = 4;
 
     #endregion
 
@@ -61,6 +65,33 @@ public class Inventory : MonoBehaviour
     public void RemoveItem(ItemParameter item)
     {
         itens.Remove(item);
+
+        if (MudouItemCallback != null)
+            MudouItemCallback.Invoke();
+    }
+    public void MoveToQuickslot(ItemParameter item)
+    {
+        if (quickslots.Count >= quickslotCount)
+        {
+            Debug.Log("No space in quickslots!");
+            return;
+        }
+
+        itens.Remove(item);
+        quickslots.Add(item);
+
+        if (MudouItemCallback != null)
+            MudouItemCallback.Invoke();
+    }
+
+    public void ConsumeQuickslot(int index)
+    {
+        if (index < 0 || index >= quickslots.Count)
+            return;
+
+        ItemParameter item = quickslots[index];
+        quickslots.RemoveAt(index);
+        // Consume the item here
 
         if (MudouItemCallback != null)
             MudouItemCallback.Invoke();
