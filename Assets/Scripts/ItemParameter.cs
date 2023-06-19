@@ -11,6 +11,7 @@ public class ItemParameter : ScriptableObject
    public int Escudo;
    public int Veneno;
    public Sprite Icon;
+   public bool Consumivel;
 
     //public GameObject ItemMundo => itemmundo;
     //public int DanoPesado => danoPesado;

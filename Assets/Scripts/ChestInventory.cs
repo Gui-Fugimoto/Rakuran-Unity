@@ -20,6 +20,7 @@ public class ChestInventory : MonoBehaviour
     public delegate void MudouItem();
     public MudouItem MudouItemCallback;
 
+
     // Update is called once per frame
     private void Start()
     {
@@ -60,15 +61,16 @@ public class ChestInventory : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            InventoryUI.SetActive(false);
-            ChestUI.SetActive(false);
-            Aberto = false;
-        }
-    }
+
+   private void OnTriggerExit(Collider other)
+   {
+       if(other.tag == "Player" && Vector3.Distance(other.transform.position,transform.position) > 2)
+       {
+           InventoryUI.SetActive(false);
+           ChestUI.SetActive(false);
+           Aberto = false;
+       }
+   }
 
     void ToggleInventory()
     {
@@ -78,12 +80,12 @@ public class ChestInventory : MonoBehaviour
             ChestUI.SetActive(true);
             Aberto = true;
         }
-        else
-        {
-            InventoryUI.SetActive(false);
-            ChestUI.SetActive(false);
-            Aberto = false;
-        }
+       // else
+       // {
+       //     InventoryUI.SetActive(false);
+       //     ChestUI.SetActive(false);
+       //     Aberto = false;
+       // }
     }
 
     public void RemoveItem(ItemParameter item)

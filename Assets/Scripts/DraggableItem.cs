@@ -58,6 +58,12 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             }
 
         }
+        
+        if (collision.tag == "QuickSlot" && Item.)
+        {
+            collision.SendMessage("AddItem", Item);
+            StartCoroutine(Remove());
+        }
     }
 
     IEnumerator Remove()

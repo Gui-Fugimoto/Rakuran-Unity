@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeedX;
     public float moveSpeedY;
     public bool flipped;
+    public bool InInventory;
 
     [SerializeField] private float gravity = 0.25f;
     [SerializeField] private float jumpForce = 8.0f;
@@ -79,8 +80,12 @@ public class PlayerController : MonoBehaviour
     {
         if (isSprinting == false)
         {
-            Move();
-            DodgeRoll();
+            if(InInventory == false)
+            {
+                Move();
+                DodgeRoll();
+            }
+           
         }
 
         if (Input.GetAxis(turnInputAxis) == 0 && Input.GetAxis(moveInputAxis) == 0)
@@ -103,9 +108,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        Jump();
-        grounded = Grounded();
+        if(InInventory == false)
+        {
+            Jump();
+            grounded = Grounded();
+        }
     }
 
     private void Move()

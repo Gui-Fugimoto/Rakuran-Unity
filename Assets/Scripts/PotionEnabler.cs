@@ -39,6 +39,7 @@ public class PotionEnabler : MonoBehaviour
                 Debug.Log("Pegou Iten");
             }
         }
+
     }
 }
 
