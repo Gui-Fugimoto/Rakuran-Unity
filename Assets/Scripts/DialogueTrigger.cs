@@ -15,7 +15,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.F) && Falando == false && Conversando == true)
+        if (Input.GetKey(KeyCode.E) && Falando == false && Conversando == true)
         {
             TriggerDialogue();
             Falando = true;
