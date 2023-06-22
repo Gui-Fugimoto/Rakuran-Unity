@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class ChestInventory : MonoBehaviour
     public bool Aberto;
     public bool PlayerPerto;
     public bool Grab;
+    [SerializeField] KeyCode Interact;
 
     #endregion
 
@@ -29,14 +31,7 @@ public class ChestInventory : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Grab = true;
-        }
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            Grab = false;
-        }
+        
     }
 
 
@@ -55,7 +50,7 @@ public class ChestInventory : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Player" && Grab == true)
+        if(other.tag == "Player" && Input.GetKeyDown(Interact))
         {
             ToggleInventory();
         }
@@ -64,7 +59,7 @@ public class ChestInventory : MonoBehaviour
 
    private void OnTriggerExit(Collider other)
    {
-       if(other.tag == "Player" && Vector3.Distance(other.transform.position,transform.position) > 2)
+       if(other.tag == "Player" && Aberto == true)
        {
            InventoryUI.SetActive(false);
            ChestUI.SetActive(false);
@@ -80,12 +75,6 @@ public class ChestInventory : MonoBehaviour
             ChestUI.SetActive(true);
             Aberto = true;
         }
-       // else
-       // {
-       //     InventoryUI.SetActive(false);
-       //     ChestUI.SetActive(false);
-       //     Aberto = false;
-       // }
     }
 
     public void RemoveItem(ItemParameter item)

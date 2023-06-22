@@ -13,7 +13,5 @@ public class ItemParameter : ScriptableObject
    public Sprite Icon;
    public bool Consumivel;
 
-    //public GameObject ItemMundo => itemmundo;
-    //public int DanoPesado => danoPesado;
 
 }

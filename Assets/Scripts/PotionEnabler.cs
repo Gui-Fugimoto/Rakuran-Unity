@@ -6,7 +6,8 @@ public class PotionEnabler : MonoBehaviour
 {
     public GameObject potionUI;
     public GameObject inventoryUI;
-    public bool Grab;
+    [SerializeField] KeyCode Interact;
+    [SerializeField] bool Activate;
     
     // Start is called before the first frame update
     void Start()
@@ -14,33 +15,31 @@ public class PotionEnabler : MonoBehaviour
         potionUI.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Grab = true;
-        }
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            Grab = false;
-        }
-    }
-
     private void OnTriggerStay(Collider other)
     {
 
-        if (other.tag == "Player" && Grab == true)
+        if (other.tag == "Player" && Input.GetKeyDown(Interact) && Activate == false)
         {
             if (other.GetComponent<Inventory>().itens.Count < other.GetComponent<Inventory>().inventorySize)
             {
                 potionUI.SetActive(true);
                 inventoryUI.SetActive(true);
+                Activate = true;
                 Debug.Log("Pegou Iten");
             }
         }
 
     }
-}
+
+
+    private void OnTriggerExit(Collider other)
+    {
+        potionUI.SetActive(false);
+        inventoryUI.SetActive(false);
+        Activate = false;
+    }
+
+
+}  
 
 

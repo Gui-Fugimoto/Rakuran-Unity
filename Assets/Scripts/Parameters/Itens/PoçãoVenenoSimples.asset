@@ -17,3 +17,4 @@ MonoBehaviour:
   Escudo: 0
   Veneno: 3
   Icon: {fileID: 21300000, guid: 75e1a0bcf3061bb47b8766f8574cc5dd, type: 3}
+  Consumivel: 1

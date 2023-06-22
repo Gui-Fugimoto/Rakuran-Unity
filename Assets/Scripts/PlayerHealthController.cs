@@ -19,6 +19,10 @@ public class PlayerHealthController : MonoBehaviour
     {
         PlayerDeath();
 
+        if (currentHP > maxHP)
+        {
+            currentHP = maxHP;
+        }
     }
 
     public void TakeDamage(float damage)
@@ -26,7 +30,18 @@ public class PlayerHealthController : MonoBehaviour
         currentHP -= damage;
         GetComponentInParent<SimpleFlash>().Flash();
     }
-
+     public void ConsumeItem(ItemParameter consumed)
+    {
+        if(consumed.Vida >= 00 && currentHP != maxHP)
+        {
+            currentHP += consumed.Vida;
+        }
+        if(consumed.Veneno >= 00)
+        {
+            currentHP -= consumed.Veneno;
+        }
+    }
+    
     void PlayerDeath()
     {
         if (currentHP <= 0)

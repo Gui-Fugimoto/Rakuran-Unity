@@ -9,6 +9,8 @@ public class ConsumableItem : MonoBehaviour
     public Image Icon;
     ItemParameter item;
     public DraggableItem child;
+    public PlayerHealthController Health;
+    [SerializeField] KeyCode ConsumeKey;
     void Start()
     {
         Icon.enabled = false;
@@ -22,6 +24,19 @@ public class ConsumableItem : MonoBehaviour
         Icon.sprite = item.Icon;
         Icon.enabled = true;
 
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(ConsumeKey))
+        {
+            Consume();
+        }
+    }
+    public void Consume()
+    {
+        Health.ConsumeItem(item);
+        ClearSlot();
     }
 
     public void ClearSlot()
