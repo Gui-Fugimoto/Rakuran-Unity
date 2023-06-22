@@ -1,18 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PotionCrafting : MonoBehaviour
 {
-    [SerializeField] int vida;
-    [SerializeField] int escudo;
-    [SerializeField] int veneno;
+    [SerializeField] float vida;
+    [SerializeField] float escudo;
+    [SerializeField] float veneno;
     public int ingUsadsos;
     public int ingTotal;
     public Inventory inventory;
     [SerializeField] ItemParameter PotCura;
     [SerializeField] ItemParameter PotEscudo;
     [SerializeField] ItemParameter PotVeneno;
+    [SerializeField] Image HealthMeter;
+    [SerializeField] Image PoisonMeter;
+    [SerializeField] Image ShieldMeter;
+    [SerializeField] KeyCode FinishPotionKey;
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(FinishPotionKey))
+        {
+            FinishPotion();
+        }
+
+        HealthMeter.fillAmount = vida/10;
+        ShieldMeter.fillAmount = escudo/10;
+        PoisonMeter.fillAmount = veneno/10;
+    }
 
     void NewItenAdded(ItemParameter Item)
     {
