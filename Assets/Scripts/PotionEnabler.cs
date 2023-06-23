@@ -17,19 +17,26 @@ public class PotionEnabler : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-
-        if (other.tag == "Player" && Input.GetKeyDown(Interact) && Activate == false)
+        
+        if (other.tag == "Player") 
         {
-            if (other.GetComponent<Inventory>().itens.Count < other.GetComponent<Inventory>().inventorySize)
-            {
-                potionUI.SetActive(true);
-                inventoryUI.SetActive(true);
-                Activate = true;
-                Debug.Log("Pegou Iten");
-            }
+            Activate = true;
+            
         }
 
     }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(Interact) && Activate == true)
+        {
+            potionUI.SetActive(true);
+            inventoryUI.SetActive(true);
+        }
+
+    }
+
+
 
 
     private void OnTriggerExit(Collider other)

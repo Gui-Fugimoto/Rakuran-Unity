@@ -14,7 +14,6 @@ public class ChestInventory : MonoBehaviour
     public GameObject ChestUI;
     public bool Aberto;
     public bool PlayerPerto;
-    public bool Grab;
     [SerializeField] KeyCode Interact;
 
     #endregion
@@ -31,9 +30,12 @@ public class ChestInventory : MonoBehaviour
 
     void Update()
     {
-        
-    }
+        if(Input.GetKeyDown(Interact) && PlayerPerto == true) 
+        {
+            ToggleInventory();
 
+        }
+    }
 
     public void AddItem(ItemParameter item)
     {
@@ -48,33 +50,30 @@ public class ChestInventory : MonoBehaviour
             MudouItemCallback.Invoke();
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && Input.GetKeyDown(Interact))
+        if(other.tag == "Player")
         {
-            ToggleInventory();
+            PlayerPerto = true;
         }
     }
 
 
    private void OnTriggerExit(Collider other)
    {
-       if(other.tag == "Player" && Aberto == true)
+       if(other.tag == "Player")
        {
            InventoryUI.SetActive(false);
            ChestUI.SetActive(false);
-           Aberto = false;
+            PlayerPerto = false;
        }
    }
 
     void ToggleInventory()
     {
-        if(Aberto == false)
-        {
-            InventoryUI.SetActive(true);
-            ChestUI.SetActive(true);
-            Aberto = true;
-        }
+      InventoryUI.SetActive(true);
+      ChestUI.SetActive(true);
+     
     }
 
     public void RemoveItem(ItemParameter item)

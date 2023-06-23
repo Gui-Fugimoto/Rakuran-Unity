@@ -13,5 +13,8 @@ public class ItemParameter : ScriptableObject
    public Sprite Icon;
    public bool Consumivel;
 
+    public enum teste { }
+
+
 
 }
