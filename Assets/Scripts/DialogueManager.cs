@@ -58,7 +58,7 @@ public class DialogueManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.F) && proxFala == true)
+        if (Input.GetKey(KeyCode.E) && proxFala == true)
         {
             DisplayNextSentece();
             proxFala = false;
