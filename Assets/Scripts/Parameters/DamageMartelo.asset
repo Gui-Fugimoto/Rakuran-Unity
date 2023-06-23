@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57cf93befc1862340b3d8db4c7a6587f, type: 3}
-  m_Name: DamageEspada
+  m_Name: DamageMartelo
   m_EditorClassIdentifier: 
-  weaponType: 1
-  Dano: 2
-  DanoPesado: 3
+  weaponType: 0
+  Dano: 3
+  DanoPesado: 4

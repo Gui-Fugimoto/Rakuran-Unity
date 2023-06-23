@@ -2,18 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum WeaponType
+{
+    Axe,
+    Sword,
+    Ranged,
+    Arcane,
+    Polearm
+}
+
 [CreateAssetMenu(fileName = "Damage", menuName = "DamageParameter")]
 
 public class DamageParameter : ScriptableObject
 {
-    [SerializeField] int dano = default;
-    [SerializeField] int danoPesado = default; 
+    public WeaponType weaponType;
 
-    public int Dano => dano;
-    public int DanoPesado => danoPesado;
 
-    void EffectDOT()
-    {
+    public int Dano;
+    public int DanoPesado;
 
-    }
+   
 }
