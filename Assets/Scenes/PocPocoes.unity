@@ -33412,6 +33412,7 @@ GameObject:
   - component: {fileID: 1457585977}
   - component: {fileID: 1457585979}
   - component: {fileID: 1457585978}
+  - component: {fileID: 1457585980}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -33562,8 +33563,11 @@ MonoBehaviour:
   Cooldown: 0
   anim: {fileID: 128823545}
   Dano: 2
+  DanoPesado: 0
   Player: {fileID: 1457585968}
-  ArmaEquipada: {fileID: 11400000, guid: 7b458ef0a05b6ce4a8107ab139aa0993, type: 2}
+  ArmaEquipada1: {fileID: 11400000, guid: 7b458ef0a05b6ce4a8107ab139aa0993, type: 2}
+  ArmaEquipada2: {fileID: 11400000, guid: 8079036c36e931d4da14ae38d6b78463, type: 2}
+  changeWeaponKey: 9
 --- !u!114 &1457585977
 MonoBehaviour:
   m_ObjectHideFlags: 0
