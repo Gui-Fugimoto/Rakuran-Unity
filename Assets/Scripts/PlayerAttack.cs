@@ -25,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
 
     WeaponType weaponType;
 
-    public KeyCode changeWeaponKey = KeyCode.Tab;
+    public KeyCode changeWeaponKey = KeyCode.Q;
     #endregion
 
     void Start()

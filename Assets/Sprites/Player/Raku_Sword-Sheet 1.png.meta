@@ -33,16 +33,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 0
     wrapV: 0
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -103,18 +103,282 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Raku_Sword-Sheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f50d19deef20f42939ff407ad97b8f
+      internalID: -618119990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raku_Sword-Sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb4cc0da26b78b4696f2b942916afc8
+      internalID: -1021153686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raku_Sword-Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6496d6ee028474aa099cf1525dd801
+      internalID: -1050940928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raku_Sword-Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4576d4ef35a9e4f94e89b6ddb800a9
+      internalID: -562014660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raku_Sword-Sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abaea4603278f3841a827d9eab4c3f3e
+      internalID: 138887094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raku_Sword-Sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f784ded17094c745b5d4f6f92eb11cb
+      internalID: -53686926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raku_Sword-Sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb5b7ce0b39b5a4e901559a4f43ae30
+      internalID: 1450901426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raku_Sword-Sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642cbbfd564b59f43aad0c190dc1fbbc
+      internalID: -1281448820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raku_Sword-Sheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f948027060fe8841b4b670b3af5866b
+      internalID: 1615544977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raku_Sword-Sheet 1_9
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 1
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b38c55d4fecae4bb88ea1079a4d732
+      internalID: -1350497120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raku_Sword-Sheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 1
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0885589182acb40b2e000374f28fa7
+      internalID: 947529368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Raku_Sword-Sheet 1_11
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3537322bbe5b0c54ea42e195680bbc05
+      internalID: -237367396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1816fff73feb2dc4e8d2d7c0fa20e7d6
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Raku_Sword-Sheet 1_11: -237367396
+      Raku_Sword-Sheet 1_10: 947529368
+      Raku_Sword-Sheet 1_8: 1615544977
+      Raku_Sword-Sheet 1_0: -618119990
+      Raku_Sword-Sheet 1_7: -1281448820
+      Raku_Sword-Sheet 1_3: -562014660
+      Raku_Sword-Sheet 1_4: 138887094
+      Raku_Sword-Sheet 1_1: -1021153686
+      Raku_Sword-Sheet 1_6: 1450901426
+      Raku_Sword-Sheet 1_9: -1350497120
+      Raku_Sword-Sheet 1_2: -1050940928
+      Raku_Sword-Sheet 1_5: -53686926
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
