@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyAI : MonoBehaviour//, CombatManager.ICombatable
 {
     public Transform player;
     public float moveSpeed = 5f;
@@ -32,11 +32,11 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        // Set a random target location for wandering
+        
         wanderTarget = Random.insideUnitSphere * wanderRange;
         wanderTarget.y = transform.position.y;
 
-        // Get the Rigidbody component for physics
+        
         rb = GetComponent<Rigidbody>();
 
         anim = GetComponentInChildren<Animator>();
@@ -51,7 +51,7 @@ public class EnemyAI : MonoBehaviour
         timeSinceLastAttack += Time.deltaTime;
         spriteTransform.rotation = Quaternion.Euler(0, 0, 0);
         targetPosition = new Vector3(player.position.x, 0, player.position.z);
-        // Update the state machine based on the current state
+        
         switch (currentState)
         {
             case 0:
@@ -83,45 +83,45 @@ public class EnemyAI : MonoBehaviour
 
     void WanderState()
     {
-        // Check if the enemy is currently paused
+        
         if (isPaused)
         {
-            // Increment the pause timer
+            
             pauseTimer += Time.deltaTime;
 
-            // Check if the pause duration has been reached
+            
             if (pauseTimer >= pauseDuration)
             {
-                // Reset the pause timer and resume movement
+                
                 pauseTimer = 0f;
                 isPaused = false;
 
-                // Set a new random target location for wandering
+                
                 wanderTarget = Random.insideUnitSphere * wanderRange;
                 wanderTarget.y = transform.position.y;
 
-                // Set the "Walk" animation to true
+                
                 anim.SetBool("Walk", true);
             }
             else
             {
-                // Set the "Walk" animation to false during the pause
+                
                 anim.SetBool("Walk", false);
             }
 
             return;
         }
 
-        // Move towards wander target
+        
         float distanceToTarget = Vector3.Distance(transform.position, wanderTarget);
         if (distanceToTarget < 3f)
         {
-            // Set the enemy to a paused state
+            
             isPaused = true;
         }
         else
         {
-            // Check the direction of movement and flip the sprite if necessary
+            
             Vector3 direction = wanderTarget - transform.position;
             bool isMovingRight = direction.x > 0f;
             spriteRend.flipX = isMovingRight;
@@ -130,31 +130,31 @@ public class EnemyAI : MonoBehaviour
             rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
         }
 
-        // Check if player is within pursuit range
+        
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         if (distanceToPlayer < pursuitRange)
         {
-            currentState = 1; // Switch to pursuit state
+            currentState = 1; 
         }
     }
 
 
     void PursuitState()
     {
-        // Move towards player
+        
         transform.LookAt(targetPosition);//player);
         rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
         anim.SetBool("Walk", true);
-        // Check if player is within attack range and facing on Z axis
+        
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         Vector3 directionToPlayer = player.position - transform.position;
         if (distanceToPlayer < attackRange && Mathf.Abs(directionToPlayer.z) < Mathf.Abs(directionToPlayer.x))
         {
-            currentState = 2; // Switch to attack state
+            currentState = 2; 
         }
         else if (distanceToPlayer > pursuitRange)
         {
-            currentState = 0; // Switch back to wander state
+            currentState = 0; 
         }
 
         if (directionToPlayer.x > 0)
@@ -171,7 +171,7 @@ public class EnemyAI : MonoBehaviour
 
     void AttackState()
     {
-        // Attack if not already attacking and cooldown has expired
+        
         if (!isAttacking && timeSinceLastAttack >= attackCooldown)
         {
             isAttacking = true;
@@ -180,16 +180,16 @@ public class EnemyAI : MonoBehaviour
             anim.SetBool("Walk", false);
             hitBox.SetActive(true);
 
-            // Play attack animation or perform attack action
+            
             StartCoroutine(EndAttack());
         }
 
-        // Check if player is still within attack range and facing on Z axis
+        
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         Vector3 directionToPlayer = player.position - transform.position;
         if (distanceToPlayer > attackRange || Mathf.Abs(directionToPlayer.z) >= Mathf.Abs(directionToPlayer.x))
         {
-            currentState = 1; // Switch back to pursuit state
+            currentState = 1; 
 
         }
     }
@@ -198,13 +198,14 @@ public class EnemyAI : MonoBehaviour
 
     IEnumerator EndAttack()
     {
-        yield return new WaitForSeconds(0.5f); // Insert animation length or attack duration here
+        yield return new WaitForSeconds(0.5f); 
         isAttacking = false;
-        currentState = 2; // Switch back to attack state
+        currentState = 2; 
         anim.SetBool("Attack", false);
         hitBox.SetActive(false);
     }
-
+    
+    
     public void Knockback(Vector3 direction, float force, float duration)
     {
 
@@ -217,6 +218,7 @@ public class EnemyAI : MonoBehaviour
 
         StartCoroutine(MoveOverTime(knockbackVector, duration));
     }
+    
     private IEnumerator MoveOverTime(Vector3 knockbackVector, float duration)
     {
         float elapsedTime = 0f;
