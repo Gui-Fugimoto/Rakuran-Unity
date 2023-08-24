@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    #region Variaveis
+    #region Variaveis]
+    //hitboxes provisorias
     [SerializeField] GameObject AttackPos1;
     [SerializeField] GameObject AttackPos2;
     [SerializeField] GameObject AttackBox;

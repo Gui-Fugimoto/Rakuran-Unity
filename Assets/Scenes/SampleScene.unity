@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 92074701}
   - component: {fileID: 92074702}
   - component: {fileID: 92074703}
+  - component: {fileID: 92074704}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: PlayerAttack
@@ -273,6 +274,19 @@ MonoBehaviour:
   knockbackForce: 2
   knockTime: 0.3
   player: {fileID: 1457585967}
+--- !u!114 &92074704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92074696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58611fd4f3c693742beff79ea058462d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!4 &94798409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6dffca40a56317d4eb9a88fda4a312b3,
@@ -682,6 +696,7 @@ GameObject:
   - component: {fileID: 128823544}
   - component: {fileID: 128823543}
   - component: {fileID: 128823545}
+  - component: {fileID: 128823546}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Player
@@ -776,6 +791,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &128823546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128823542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6a69c0ccb7df442bff51a854dc4577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combo:
+  - {fileID: 11400000, guid: 0f41b73aa89a63d48a27f59d463e1a62, type: 2}
+  - {fileID: 11400000, guid: f1d7b118e3f211648a7936ba3445a039, type: 2}
+  - {fileID: 11400000, guid: df20e20c5a5509d46b01769f867008f7, type: 2}
+  comboCounter: 0
+  anim: {fileID: 0}
+  weapon: {fileID: 92074704}
 --- !u!4 &188342617 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6dffca40a56317d4eb9a88fda4a312b3,
@@ -3378,6 +3412,7 @@ MonoBehaviour:
   moveSpeedX: 4
   moveSpeedY: 4
   flipped: 0
+  InInventory: 0
   gravity: 0.3
   jumpForce: 8
   terminalVelocity: 10
@@ -3493,7 +3528,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457585967}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3484c3accc6982548825964bc799a23e, type: 3}
   m_Name: 
@@ -3505,8 +3540,12 @@ MonoBehaviour:
   Cooldown: 0
   anim: {fileID: 128823545}
   Dano: 2
+  DanoPesado: 0
+  mainHand: 0
   Player: {fileID: 1457585968}
-  ArmaEquipada: {fileID: 11400000, guid: 7b458ef0a05b6ce4a8107ab139aa0993, type: 2}
+  ArmaEquipada1: {fileID: 0}
+  ArmaEquipada2: {fileID: 0}
+  changeWeaponKey: 113
 --- !u!114 &1457585977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3523,6 +3562,8 @@ MonoBehaviour:
   inventorySize: 10
   InventoryUI: {fileID: 695078308}
   Aberto: 0
+  isInventoryOpen: 0
+  QuickSlots: {fileID: 0}
 --- !u!114 &1457585978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3537,6 +3578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHP: 0
   maxHP: 0
+  gameC: {fileID: 0}
 --- !u!114 &1457585979
 MonoBehaviour:
   m_ObjectHideFlags: 0
