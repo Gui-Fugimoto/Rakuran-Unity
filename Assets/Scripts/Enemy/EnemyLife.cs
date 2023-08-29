@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyLife : MonoBehaviour
 {
-    [SerializeField] int vida;
+    [SerializeField] float vida;
     void Start()
     {
         
@@ -17,7 +17,7 @@ public class EnemyLife : MonoBehaviour
             Destroy(gameObject, 0.1f);
         }
     }
-    public void Damage(int str)
+    public void Damage(float str)
     {
         vida -= str;
         Debug.Log("tomou dano, vida atual " + (vida));

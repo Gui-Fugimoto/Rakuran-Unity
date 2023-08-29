@@ -138,15 +138,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 92074700}
+  - component: {fileID: 92074704}
   - component: {fileID: 92074699}
   - component: {fileID: 92074698}
   - component: {fileID: 92074697}
   - component: {fileID: 92074701}
   - component: {fileID: 92074702}
   - component: {fileID: 92074703}
-  - component: {fileID: 92074704}
   m_Layer: 0
-  m_Name: Hitbox
+  m_Name: WeaponHitbox
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92074696}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b93c7c67c15b5614c9d3c9a36c14c4c8, type: 3}
   m_Name: 
@@ -286,7 +286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58611fd4f3c693742beff79ea058462d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  baseDamage: 1
+  damage: 0
+  weaponType: 1
 --- !u!4 &94798409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6dffca40a56317d4eb9a88fda4a312b3,
@@ -803,13 +805,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6a69c0ccb7df442bff51a854dc4577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  combo:
+  isAttacking: 0
+  basicCombo:
   - {fileID: 11400000, guid: 0f41b73aa89a63d48a27f59d463e1a62, type: 2}
   - {fileID: 11400000, guid: f1d7b118e3f211648a7936ba3445a039, type: 2}
   - {fileID: 11400000, guid: df20e20c5a5509d46b01769f867008f7, type: 2}
+  upwardCombo:
+  - {fileID: 11400000, guid: 0fe878f5d7b515e4193761bb8db1708b, type: 2}
+  - {fileID: 11400000, guid: b95b661ddd188b046b5e8f61597b7f32, type: 2}
   comboCounter: 0
-  anim: {fileID: 0}
-  weapon: {fileID: 92074704}
+  mainWeapon: {fileID: 0}
+  offhandWeapon: {fileID: 0}
+  AttackPosLeft: {fileID: 1475986946}
+  AttackPosRight: {fileID: 787112757}
+  anim: {fileID: 128823545}
+  equippedWeapon: {fileID: 92074704}
+  attackInput: 323
+  changeWeaponKey: 9
 --- !u!4 &188342617 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6dffca40a56317d4eb9a88fda4a312b3,
@@ -2212,7 +2224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 787112758}
   m_Layer: 0
-  m_Name: AttackPos1
+  m_Name: AttackPosRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3545,7 +3557,6 @@ MonoBehaviour:
   Player: {fileID: 1457585968}
   ArmaEquipada1: {fileID: 0}
   ArmaEquipada2: {fileID: 0}
-  changeWeaponKey: 113
 --- !u!114 &1457585977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3553,7 +3564,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457585967}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34bd723c0b85cfd4394c7635f6218b09, type: 3}
   m_Name: 
@@ -3571,7 +3582,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457585967}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0890229007549c40b5674a7a50485c7, type: 3}
   m_Name: 
@@ -3603,7 +3614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1475986947}
   m_Layer: 0
-  m_Name: AttackPos2
+  m_Name: AttackPosLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

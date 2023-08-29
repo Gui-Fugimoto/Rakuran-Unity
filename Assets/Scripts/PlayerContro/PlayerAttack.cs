@@ -25,8 +25,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] DamageParameter ArmaEquipada2;
 
     WeaponType weaponType;
-
-    public KeyCode changeWeaponKey = KeyCode.Q;
+    private KeyCode changeWeaponKey = KeyCode.Tab;
+    //public KeyCode changeWeaponKey = KeyCode.Q;
     #endregion
 
     void Start()

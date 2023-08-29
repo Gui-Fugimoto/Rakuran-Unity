@@ -6,5 +6,16 @@ using UnityEngine;
 public class AttackSO : ScriptableObject
 {
     public AnimatorOverrideController animatorOV;
-    public float damage;
+    public float damageMultiplier;
+
+    //knockback
+    public float kbForce;
+    public float kbDuration;
+    public Vector3 kbDirection;
+
+    //Attack Duration
+    public float animSpeed;
+    public float endLag;
+    public float startUp;
+    
 }

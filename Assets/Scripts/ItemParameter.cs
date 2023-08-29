@@ -12,9 +12,10 @@ public class ItemParameter : ScriptableObject
    public int Veneno;
    public Sprite Icon;
    public bool Consumivel;
+   
 
-    public enum teste { }
-
+   
+   
 
 
 }

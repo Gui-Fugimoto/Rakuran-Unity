@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeedX;
     public float moveSpeedY;
+    private float baseMoveSpeedX;
+    private float baseMoveSpeedY;
     public bool flipped;
     public bool InInventory;
 
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public bool isJumping;
     public Animator anim;
     public SpriteRenderer playerSprite;
+    public PlayerCombat playerCombatScript;
 
     Vector3 movement;
 
@@ -72,20 +75,32 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
-        
+        baseMoveSpeedX = moveSpeedX;
+        baseMoveSpeedY = moveSpeedY;
+        playerCombatScript = GetComponentInChildren<PlayerCombat>();
     }
 
 
     void Update()
     {
-        if (isSprinting == false)
+        if (isSprinting == false && playerCombatScript.isAttacking == false)
         {
-            if(InInventory == false)
+            moveSpeedX = baseMoveSpeedX;
+            moveSpeedY = baseMoveSpeedY;
+            if (InInventory == false)
             {
+                
                 Move();
                 DodgeRoll();
             }
            
+        }       
+        else if (playerCombatScript.isAttacking == true)
+        {
+            //continuar dps
+            moveSpeedX = 0;
+            moveSpeedY = 0;
+            transform.Translate(movement * 0);
         }
 
         if (Input.GetAxis(turnInputAxis) == 0 && Input.GetAxis(moveInputAxis) == 0)
