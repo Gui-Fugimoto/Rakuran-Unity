@@ -83,25 +83,19 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (isSprinting == false && playerCombatScript.isAttacking == false)
+        if (isSprinting == false)
         {
             moveSpeedX = baseMoveSpeedX;
             moveSpeedY = baseMoveSpeedY;
             if (InInventory == false)
             {
-                
-                Move();
+               
+                Move(!playerCombatScript.isAttacking);
                 DodgeRoll();
             }
            
         }       
-        else if (playerCombatScript.isAttacking == true)
-        {
-            //continuar dps
-            moveSpeedX = 0;
-            moveSpeedY = 0;
-            transform.Translate(movement * 0);
-        }
+       
 
         if (Input.GetAxis(turnInputAxis) == 0 && Input.GetAxis(moveInputAxis) == 0)
         {
@@ -118,7 +112,11 @@ public class PlayerController : MonoBehaviour
         if (slopeNormal != Vector3.up) movement = FollowFloor(movement);
 
         // Finaly move the controller, this also checks for collisions
-        controller.Move(movement * Time.deltaTime);
+        if (!playerCombatScript.isAttacking)
+        {
+            controller.Move(movement * Time.deltaTime);
+        }
+        
     }
 
     private void FixedUpdate()
@@ -130,17 +128,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Move()
+    private void Move(bool canmove)
     {
 
         float moveAxis = Input.GetAxis(moveInputAxis);
         float turnAxis = Input.GetAxis(turnInputAxis);
         movement = new Vector3(turnAxis  * moveSpeedX, 0, moveAxis * moveSpeedY);
         movement = Vector3.ClampMagnitude(movement, moveSpeedX);
-        
 
 
-        transform.Translate(movement * Time.deltaTime);
+        if (canmove)
+        {
+          // transform.Translate(movement * Time.deltaTime);
+
+        }
+        else
+        {
+            Debug.Log("not");
+        }
 
 
 
