@@ -24,7 +24,8 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         InventoryUI.SetActive(false);
-        QuickSlots.SetActive(false);   
+        //QuickSlots.SetActive(false);   
+        MudouItemCallback.Invoke();
     }
 
     public void Update()
@@ -53,13 +54,13 @@ public class Inventory : MonoBehaviour
         if(Aberto == false)
         {
             InventoryUI.SetActive(true);
-            QuickSlots.SetActive(true);
+           // QuickSlots.SetActive(true);
             Aberto = true;
         }
         else
         {
             InventoryUI.SetActive(false);
-            QuickSlots.SetActive(false);
+           // QuickSlots.SetActive(false);
             Aberto = false;
         }
     }

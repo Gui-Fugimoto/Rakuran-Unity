@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class PotionCrafting : MonoBehaviour
 {
     [SerializeField] float vida;
-    [SerializeField] float escudo;
     [SerializeField] float veneno;
+    [SerializeField] Effect Effect;
     public int ingUsadsos;
     public int ingTotal;
     public Inventory inventory;
@@ -16,8 +16,13 @@ public class PotionCrafting : MonoBehaviour
     [SerializeField] ItemParameter PotVeneno;
     [SerializeField] Image HealthMeter;
     [SerializeField] Image PoisonMeter;
-    [SerializeField] Image ShieldMeter;
+    [SerializeField] Image EffectIcon;
     [SerializeField] KeyCode FinishPotionKey;
+
+    private void Start()
+    {
+        EffectIcon.enabled = false;
+    }
 
     private void Update()
     {
@@ -27,43 +32,39 @@ public class PotionCrafting : MonoBehaviour
         }
 
         HealthMeter.fillAmount = vida/10;
-        ShieldMeter.fillAmount = escudo/10;
         PoisonMeter.fillAmount = veneno/10;
+
     }
 
     void NewItenAdded(ItemParameter Item)
     {
 
         vida += Item.Vida;
-        escudo += Item.Escudo;
         veneno += Item.Veneno;
-
+        
+        if(Item.Effect != Effect.None)
+        {
+            EffectIcon.enabled = true;
+            Effect = Item.Effect;
+            EffectIcon.sprite = Item.EffectIcon;
+        }
+        
         ingUsadsos++;
     }
 
     public void FinishPotion()
     {
-        if(vida > escudo && vida > escudo)
+        if(vida > veneno)
         {
             inventory.AddItem(PotCura);
             vida = 0;
-            escudo = 0;
             veneno = 0;
             ingUsadsos = 0;
         }
-        if(escudo > vida && escudo > veneno)
-        {
-            inventory.AddItem(PotEscudo);
-            vida = 0;
-            escudo = 0;
-            veneno = 0;
-            ingUsadsos = 0;
-        }
-        if(veneno > vida && veneno > escudo)
+        if(veneno > vida)
         {
             inventory.AddItem(PotVeneno);
             vida = 0;
-            escudo = 0;
             veneno = 0;
             ingUsadsos = 0;
         }

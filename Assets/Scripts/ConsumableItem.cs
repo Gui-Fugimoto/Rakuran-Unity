@@ -7,6 +7,7 @@ public class ConsumableItem : MonoBehaviour
 {
     
     public Image Icon;
+    [SerializeField] Collider2D Box;
     ItemParameter item;
     public DraggableItem child;
     public PlayerHealthController Health;
@@ -23,6 +24,7 @@ public class ConsumableItem : MonoBehaviour
 
         Icon.sprite = item.Icon;
         Icon.enabled = true;
+        Box.enabled = false;
 
     }
 
@@ -37,6 +39,7 @@ public class ConsumableItem : MonoBehaviour
     {
         Health.ConsumeItem(item);
         ClearSlot();
+        
     }
 
     public void ClearSlot()
@@ -45,6 +48,7 @@ public class ConsumableItem : MonoBehaviour
 
         Icon.sprite = null;
         Icon.enabled = false;
+        Box.enabled = true;
     }
 }
 
