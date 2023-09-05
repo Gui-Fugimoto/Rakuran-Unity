@@ -12,8 +12,9 @@ public class PotionCrafting : MonoBehaviour
     public int ingTotal;
     public Inventory inventory;
     [SerializeField] ItemParameter PotCura;
-    [SerializeField] ItemParameter PotEscudo;
+    [SerializeField] ItemParameter PotRecupera;
     [SerializeField] ItemParameter PotVeneno;
+    [SerializeField] ItemParameter PotVenenoOT;
     [SerializeField] Image HealthMeter;
     [SerializeField] Image PoisonMeter;
     [SerializeField] Image EffectIcon;
@@ -54,19 +55,49 @@ public class PotionCrafting : MonoBehaviour
 
     public void FinishPotion()
     {
-        if(vida > veneno)
+       if(Effect == Effect.None)
         {
-            inventory.AddItem(PotCura);
-            vida = 0;
-            veneno = 0;
-            ingUsadsos = 0;
+            if (vida > veneno)
+            {
+                inventory.AddItem(PotCura);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+            if (veneno > vida)
+            {
+                inventory.AddItem(PotVeneno);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
         }
-        if(veneno > vida)
+
+       if (Effect == Effect.OverTime)
         {
-            inventory.AddItem(PotVeneno);
-            vida = 0;
-            veneno = 0;
-            ingUsadsos = 0;
+            if (vida > veneno)
+            {
+                inventory.AddItem(PotRecupera);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+            if (veneno > vida)
+            {
+                inventory.AddItem(PotVenenoOT);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
         }
+        
     }
 }

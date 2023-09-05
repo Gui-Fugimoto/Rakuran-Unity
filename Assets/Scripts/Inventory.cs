@@ -71,6 +71,8 @@ public class Inventory : MonoBehaviour
 
         if (MudouItemCallback != null)
             MudouItemCallback.Invoke();
-    }
 
+    }
+     
+    
 }

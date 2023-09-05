@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour
 {
     public Image Icon;
-    ItemParameter item;
+    public ItemParameter item;
     public DraggableItem child;
     void Start()
     {

@@ -17,4 +17,5 @@ MonoBehaviour:
   Veneno: 0
   Icon: {fileID: 21300000, guid: c9c8551008f086940b60f05d0f696bce, type: 3}
   Consumivel: 1
-  Effect: 0
+  Effect: 3
+  EffectIcon: {fileID: 0}
