@@ -143,7 +143,6 @@ GameObject:
   - component: {fileID: 92074698}
   - component: {fileID: 92074697}
   - component: {fileID: 92074701}
-  - component: {fileID: 92074702}
   - component: {fileID: 92074703}
   m_Layer: 0
   m_Name: WeaponHitbox
@@ -246,19 +245,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &92074702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 92074696}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93c7c67c15b5614c9d3c9a36c14c4c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RefDamage: {fileID: 1457585976}
 --- !u!114 &92074703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,9 +272,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58611fd4f3c693742beff79ea058462d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 1
+  baseDamage: 0
   damage: 0
-  weaponType: 1
+  weaponType: 5
+  knockbackForce: 0
+  knockDuration: 0
+  knockDirection: {x: 0, y: 0, z: 0}
 --- !u!4 &94798409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6dffca40a56317d4eb9a88fda4a312b3,
@@ -806,21 +795,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttacking: 0
-  basicCombo:
+  basicLightCombo: []
+  upwardLightCombo: []
+  downwardLightCombo: []
+  jumpingLightCombo: []
+  swordLightBasicCombo:
   - {fileID: 11400000, guid: 0f41b73aa89a63d48a27f59d463e1a62, type: 2}
   - {fileID: 11400000, guid: f1d7b118e3f211648a7936ba3445a039, type: 2}
   - {fileID: 11400000, guid: df20e20c5a5509d46b01769f867008f7, type: 2}
-  upwardCombo:
+  swordLightUpwardCombo: []
+  swordLightDownwardCombo: []
+  swordLightJumpingCombo: []
+  swordHeavyBasicCombo: []
+  swordHeavyUpwardCombo: []
+  swordHeavyDownwardCombo: []
+  swordHeavyJumpingCombo: []
+  hammerLightBasicCombo:
   - {fileID: 11400000, guid: 0fe878f5d7b515e4193761bb8db1708b, type: 2}
   - {fileID: 11400000, guid: b95b661ddd188b046b5e8f61597b7f32, type: 2}
-  comboCounter: 0
-  mainWeapon: {fileID: 0}
-  offhandWeapon: {fileID: 0}
+  hammerLightUpwardCombo: []
+  hammerLightDownwardCombo: []
+  hammerLightJumpingCombo: []
+  hammerHeavyBasicCombo: []
+  hammerHeavyUpwardCombo: []
+  hammerHeavyDownwardCombo: []
+  hammerHeavyJumpingCombo: []
+  polearmLightBasicCombo: []
+  polearmLightUpwardCombo: []
+  polearmLightDownwardCombo: []
+  polearmLightJumpingCombo: []
+  polearmHeavyBasicCombo: []
+  polearmHeavyUpwardCombo: []
+  polearmHeavyDownwardCombo: []
+  polearmHeavyJumpingCombo: []
+  basicComboCounter: 0
+  upwardComboCounter: 0
+  downwardComboCounter: 0
+  jumpingComboCounter: 0
+  basicHeavyComboCounter: 0
+  upwardHeavyComboCounter: 0
+  downwardHeavyComboCounter: 0
+  jumpingHeavyComboCounter: 0
+  mainWeapon: {fileID: 11400000, guid: a69be95f0f2d51d419cad82cd0d7a680, type: 2}
+  offhandWeapon: {fileID: 11400000, guid: 5dd734f8c87ac674eac3cdd3eb6b2c7e, type: 2}
   AttackPosLeft: {fileID: 1475986946}
   AttackPosRight: {fileID: 787112757}
   anim: {fileID: 128823545}
   equippedWeapon: {fileID: 92074704}
-  attackInput: 323
+  playerController: {fileID: 1457585968}
+  lightAttackInput: 323
+  heavyAttackInput: 324
   changeWeaponKey: 9
 --- !u!4 &188342617 stripped
 Transform:
@@ -3432,6 +3456,7 @@ MonoBehaviour:
   isJumping: 0
   anim: {fileID: 128823545}
   playerSprite: {fileID: 128823543}
+  playerCombatScript: {fileID: 0}
   extremitiesOffset: 0.05
   innerVerticalOffset: 0.25
   distanceGrounded: 0.15

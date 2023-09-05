@@ -28,18 +28,14 @@ public class WeaponHitbox : MonoBehaviour
         }
         if (other.gameObject.tag == "Enemy")
         {
-            Vector3 direction = transform.position - other.transform.position;
-            other.gameObject.GetComponent<EnemyAI>().Knockback(direction, knockbackForce, knockDuration);
+            //Vector3 direction = transform.position - other.transform.position;
+            other.gameObject.GetComponent<EnemyAI>().Knockback(knockDirection, knockbackForce, knockDuration);
+            Debug.Log("KNOCKBACK");
 
         }
 
 
-        if (other.gameObject.tag == "Enemy")
-        {
-            Vector3 direction = other.transform.position - transform.position;
-            other.gameObject.GetComponent<EnemyAI>().Knockback(direction, knockbackForce, knockDuration);
 
-        }
 
     }
 

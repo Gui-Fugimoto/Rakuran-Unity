@@ -38198,6 +38198,7 @@ MonoBehaviour:
   isJumping: 0
   anim: {fileID: 128823545}
   playerSprite: {fileID: 128823543}
+  playerCombatScript: {fileID: 0}
   extremitiesOffset: 0.05
   innerVerticalOffset: 0.25
   distanceGrounded: 0.15
@@ -38323,7 +38324,6 @@ MonoBehaviour:
   Player: {fileID: 1457585968}
   ArmaEquipada1: {fileID: 11400000, guid: 7b458ef0a05b6ce4a8107ab139aa0993, type: 2}
   ArmaEquipada2: {fileID: 11400000, guid: 8079036c36e931d4da14ae38d6b78463, type: 2}
-  changeWeaponKey: 113
 --- !u!114 &1457585977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51242,7 +51242,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31094
+  m_Name: pb_Mesh56078
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

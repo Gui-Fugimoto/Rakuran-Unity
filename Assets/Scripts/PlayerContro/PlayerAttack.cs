@@ -110,7 +110,7 @@ public class PlayerAttack : MonoBehaviour
                 }
                 break;
 
-            case WeaponType.Axe:
+            case WeaponType.Hammer:
 
                 if (Combo == 0 && Cooldown == false)
                 {
@@ -180,7 +180,7 @@ public class PlayerAttack : MonoBehaviour
                 break;
 
 
-            case WeaponType.Axe:
+            case WeaponType.Hammer:
                 if (Combo == 0 && Cooldown == false)
                 {
                     anim.SetTrigger("HeavyAttack");

@@ -125,6 +125,14 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
             grounded = Grounded();
+            if (!grounded)
+            {
+                isJumping = true;
+            }
+            else
+            {
+                isJumping = false;
+            }
         }
     }
 
@@ -298,13 +306,14 @@ public class PlayerController : MonoBehaviour
         {
             // Apply slight gravity
             verticalVelocity = -1;
-
+            
             // If spacebar, apply high negative gravity, and forget about the floor
             if (Input.GetAxis("Jump") != 0) //&& sprinting == false)
             {
                 verticalVelocity = jumpForce;
                 slopeNormal = Vector3.up;
                 anim?.SetTrigger("Jump");
+                
             }
         }
         else
