@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ee5f8133daa5ae49bfff9d092e5edcf, type: 3}
-  m_Name: Attack2
+  m_Name: SwordUpTeste
   m_EditorClassIdentifier: 
-  animatorOV: {fileID: 22100000, guid: 942a06bab494355478e035dc6439f345, type: 2}
-  damageMultiplier: 0.75
-  kbForce: 0.5
-  kbDuration: 0.5
-  kbDirection: {x: -1, y: 0, z: 0}
+  animatorOV: {fileID: 22100000, guid: 76994dd43d6078b40aad01e0d51555fb, type: 2}
+  damageMultiplier: 1
+  kbForce: 10
+  kbDuration: 2
+  kbDirection: {x: -1, y: -20, z: 0}
   animSpeed: 0
   endLag: 0
   startUp: 0

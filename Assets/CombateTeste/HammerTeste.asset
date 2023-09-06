@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HammerTeste
   m_EditorClassIdentifier: 
   weaponType: 0
-  damage: 2
+  damage: 5

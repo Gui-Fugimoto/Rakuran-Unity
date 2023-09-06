@@ -84,6 +84,7 @@ public class PlayerCombat : MonoBehaviour
         equippedWeapon.weaponType = mainWeapon.weaponType;
         equippedWeapon.baseDamage = mainWeapon.damage;
         ChangeWeaponCombos();
+        equippedWeapon.DisableTriggerBox();
     }
 
     // Update is called once per frame
@@ -255,7 +256,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = jumpingLightCombo[jumpingComboCounter].kbDuration;
                 equippedWeapon.knockDirection = jumpingLightCombo[jumpingComboCounter].kbDirection;
                 equippedWeapon.EnableTriggerBox();
-                downwardComboCounter++;
+                jumpingComboCounter++;
                 lastClickedTime = Time.time;
 
                 if (jumpingComboCounter >= jumpingLightCombo.Count)
