@@ -10,9 +10,18 @@ public class IngredientExam : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public StatsDisplayer StatsDisplayer;
     public InventorySlot InventorySlot;
     public GameObject Examiner;
-    
+
+
+    private void Start()
+    {
+        Examiner.SetActive(false);
+    }
     public void OnPointerExit(PointerEventData eventData)
     {
+
+        StatsDisplayer.EndInspect();
+        Examiner.SetActive(false);
+       
         Debug.Log("Saiu");
     }
 
@@ -20,8 +29,8 @@ public class IngredientExam : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
        if(InventorySlot.item != null)
         {
-            StatsDisplayer.Item = InventorySlot.item;
             StatsDisplayer.Self.SetActive(true);
+            StatsDisplayer.OnInspect(InventorySlot.item);
         }
         Debug.Log("Entrou");
     }
