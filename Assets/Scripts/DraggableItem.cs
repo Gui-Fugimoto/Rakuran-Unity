@@ -9,24 +9,36 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public ItemParameter Item;
     public Inventory inventory;
     public ChestInventory chestInventory;
-   // public bool InChest;
+    public bool OnQuickSlot;
    // public bool InInventory;
     
     public void OnBeginDrag(PointerEventData eventData)
     {
-        parentAfterDrag = transform.parent;
-        transform.SetParent(transform.root);
-        transform.SetAsLastSibling();
+       if(OnQuickSlot == false)
+        {
+            parentAfterDrag = transform.parent;
+            transform.SetParent(transform.root);
+            transform.SetAsLastSibling();
+        }
+       
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        if (OnQuickSlot == false)
+        {
+            transform.position = Input.mousePosition;
+        }
+            
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.SetParent(parentAfterDrag);
+        if(OnQuickSlot == false)
+        {
+            transform.SetParent(parentAfterDrag);
+        }
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -68,13 +80,13 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     IEnumerator Remove()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.01f);
         inventory.RemoveItem(Item);
     }
 
     IEnumerator ChestRemove()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.01f);
         chestInventory.RemoveItem(Item);
     }
 }

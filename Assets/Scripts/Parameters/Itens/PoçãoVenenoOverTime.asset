@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f673aec2e978d8a4fb8a3d764eb642e9, type: 3}
-  m_Name: "Po\xE7\xE3oEscudoSimples"
+  m_Name: "Po\xE7\xE3oVenenoOverTime"
   m_EditorClassIdentifier: 
   ItemMundo: {fileID: 0}
   Vida: 0
-  Escudo: 3
-  Veneno: 0
-  Icon: {fileID: 21300000, guid: 19107e2690ac92e4bb24277b865b80bb, type: 3}
+  Veneno: 3
+  Icon: {fileID: 21300000, guid: c1d54a8d6278d73498ba44b8e39d047d, type: 3}
   Consumivel: 1
+  Effect: 2
+  EffectIcon: {fileID: 0}
