@@ -10754,7 +10754,7 @@ PrefabInstance:
     - target: {fileID: 1116477543437352208, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1116477543437352217, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}
@@ -40605,13 +40605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34bd723c0b85cfd4394c7635f6218b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itens:
-  - {fileID: 11400000, guid: 1546dbbf2666e534080f59008a4b0449, type: 2}
-  - {fileID: 11400000, guid: 1546dbbf2666e534080f59008a4b0449, type: 2}
-  - {fileID: 11400000, guid: 451d04d0df9728749b9febbed7508f5a, type: 2}
-  - {fileID: 11400000, guid: 451d04d0df9728749b9febbed7508f5a, type: 2}
-  - {fileID: 11400000, guid: d739b987009c5cf4cab68734f3a2a210, type: 2}
-  - {fileID: 11400000, guid: d739b987009c5cf4cab68734f3a2a210, type: 2}
+  itens: []
   inventorySize: 10
   InventoryUI: {fileID: 695078308}
   Aberto: 0
@@ -54346,7 +54340,7 @@ PrefabInstance:
     - target: {fileID: 1116477543437352208, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1116477543437352217, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}

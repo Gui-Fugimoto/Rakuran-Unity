@@ -18,14 +18,13 @@ public class Inventory : MonoBehaviour
 
     #endregion
 
-
-
     // Update is called once per frame
     private void Start()
     {
+        MudouItemCallback.Invoke();
         InventoryUI.SetActive(false);
         //QuickSlots.SetActive(false);   
-        MudouItemCallback.Invoke();
+        
     }
 
     public void Update()
