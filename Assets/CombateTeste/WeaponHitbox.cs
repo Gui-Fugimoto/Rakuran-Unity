@@ -7,7 +7,7 @@ public class WeaponHitbox : MonoBehaviour
 {
     public float baseDamage;
     public float damage;
-    SphereCollider triggerBox;
+    BoxCollider triggerBox;
     public WeaponType weaponType;
 
     public float knockbackForce = 0;
@@ -16,7 +16,7 @@ public class WeaponHitbox : MonoBehaviour
 
     private void Start()
     {
-        triggerBox = GetComponent<SphereCollider>();
+        triggerBox = GetComponent<BoxCollider>();
     }
 
     private void OnTriggerEnter(Collider other)

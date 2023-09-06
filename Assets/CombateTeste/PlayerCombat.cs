@@ -109,21 +109,19 @@ public class PlayerCombat : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.W) && Input.GetKey(heavyAttackInput) && !playerController.isJumping) //trocar para inputmanager
         {
-            
-
+            UpwardHeavyAttack();
         }
         else if (Input.GetKey(KeyCode.S) && Input.GetKey(heavyAttackInput) && !playerController.isJumping) //trocar para inputmanager
         {
-
-
+            DownwardHeavyAttack();
         }
         else if (Input.GetKey(heavyAttackInput) && playerController.isJumping) //trocar para inputmanager
         {
-            
+            JumpingHeavyAttack();
         }
         else if (Input.GetKey(heavyAttackInput) && !playerController.isJumping) //trocar para inputmanager
         {
-            
+            BasicHeavyAttack();
         }
 
         ExitAttack();
@@ -268,6 +266,146 @@ public class PlayerCombat : MonoBehaviour
         }
 
     }
+    void BasicHeavyAttack()
+    {
+        isAttacking = true;
+        upwardComboCounter = 0;
+        downwardComboCounter = 0;
+        jumpingComboCounter = 0;
+        basicComboCounter = 0;
+        upwardHeavyComboCounter = 0;
+        downwardHeavyComboCounter = 0;
+        jumpingHeavyComboCounter = 0;
+        if (Time.time - lastComboEnd > 0.5f && basicHeavyComboCounter <= basicHeavyCombo.Count)
+        {
+            CancelInvoke("EndCombo");
+
+            if (Time.time - lastClickedTime >= 0.5f)
+            {
+                anim.runtimeAnimatorController = basicHeavyCombo[basicHeavyComboCounter].animatorOV;
+                anim.Play("Attack", 0, 0);
+                equippedWeapon.damage = equippedWeapon.baseDamage * basicHeavyCombo[basicHeavyComboCounter].damageMultiplier;
+                equippedWeapon.knockbackForce = basicHeavyCombo[basicHeavyComboCounter].kbForce;
+                equippedWeapon.knockDuration = basicHeavyCombo[basicHeavyComboCounter].kbDuration;
+                equippedWeapon.knockDirection = basicHeavyCombo[basicHeavyComboCounter].kbDirection;
+                equippedWeapon.EnableTriggerBox();
+                Knockback();
+                basicHeavyComboCounter++;
+                lastClickedTime = Time.time;
+
+                if (basicHeavyComboCounter >= basicHeavyCombo.Count)
+                {
+                    basicHeavyComboCounter = 0;
+                }
+            }
+        }
+
+    }
+    void UpwardHeavyAttack()
+    {
+        isAttacking = true;
+        upwardComboCounter = 0;
+        downwardComboCounter = 0;
+        jumpingComboCounter = 0;
+        basicComboCounter = 0;
+        basicHeavyComboCounter = 0;
+        downwardHeavyComboCounter = 0;
+        jumpingHeavyComboCounter = 0;
+        if (Time.time - lastComboEnd > 0.5f && upwardHeavyComboCounter <= upwardHeavyCombo.Count)
+        {
+            CancelInvoke("EndCombo");
+
+            if (Time.time - lastClickedTime >= 0.5f)
+            {
+                anim.runtimeAnimatorController = upwardHeavyCombo[upwardHeavyComboCounter].animatorOV;
+                anim.Play("Attack", 0, 0);
+                equippedWeapon.damage = equippedWeapon.baseDamage * upwardHeavyCombo[upwardHeavyComboCounter].damageMultiplier;
+                equippedWeapon.knockbackForce = upwardHeavyCombo[upwardHeavyComboCounter].kbForce;
+                equippedWeapon.knockDuration = upwardHeavyCombo[upwardHeavyComboCounter].kbDuration;
+                equippedWeapon.knockDirection = upwardHeavyCombo[upwardHeavyComboCounter].kbDirection;
+                equippedWeapon.EnableTriggerBox();
+                Knockback();
+                upwardHeavyComboCounter++;
+                lastClickedTime = Time.time;
+
+                if (upwardHeavyComboCounter >= upwardHeavyCombo.Count)
+                {
+                    upwardHeavyComboCounter = 0;
+                }
+            }
+        }
+
+    }
+    void DownwardHeavyAttack()
+    {
+        isAttacking = true;
+        upwardComboCounter = 0;
+        downwardComboCounter = 0;
+        jumpingComboCounter = 0;
+        basicComboCounter = 0;
+        basicHeavyComboCounter = 0;
+        upwardHeavyComboCounter = 0;
+        jumpingHeavyComboCounter = 0;
+        if (Time.time - lastComboEnd > 0.5f && downwardHeavyComboCounter <= downwardHeavyCombo.Count)
+        {
+            CancelInvoke("EndCombo");
+
+            if (Time.time - lastClickedTime >= 0.5f)
+            {
+                anim.runtimeAnimatorController = downwardHeavyCombo[downwardHeavyComboCounter].animatorOV;
+                anim.Play("Attack", 0, 0);
+                equippedWeapon.damage = equippedWeapon.baseDamage * downwardHeavyCombo[downwardHeavyComboCounter].damageMultiplier;
+                equippedWeapon.knockbackForce = downwardHeavyCombo[downwardHeavyComboCounter].kbForce;
+                equippedWeapon.knockDuration = downwardHeavyCombo[downwardHeavyComboCounter].kbDuration;
+                equippedWeapon.knockDirection = downwardHeavyCombo[downwardHeavyComboCounter].kbDirection;
+                equippedWeapon.EnableTriggerBox();
+                Knockback();
+                downwardHeavyComboCounter++;
+                lastClickedTime = Time.time;
+
+                if (downwardHeavyComboCounter >= downwardHeavyCombo.Count)
+                {
+                    downwardHeavyComboCounter = 0;
+                }
+            }
+        }
+
+    }
+    void JumpingHeavyAttack()
+    {
+        isAttacking = true;
+        upwardComboCounter = 0;
+        downwardComboCounter = 0;
+        jumpingComboCounter = 0;
+        basicComboCounter = 0;
+        basicHeavyComboCounter = 0;
+        upwardHeavyComboCounter = 0;
+        downwardHeavyComboCounter = 0;
+        if (Time.time - lastComboEnd > 0.5f && jumpingHeavyComboCounter <= jumpingHeavyCombo.Count)
+        {
+            CancelInvoke("EndCombo");
+
+            if (Time.time - lastClickedTime >= 0.5f)
+            {
+                anim.runtimeAnimatorController = jumpingHeavyCombo[jumpingHeavyComboCounter].animatorOV;
+                anim.Play("Attack", 0, 0);
+                equippedWeapon.damage = equippedWeapon.baseDamage * jumpingHeavyCombo[jumpingHeavyComboCounter].damageMultiplier;
+                equippedWeapon.knockbackForce = jumpingHeavyCombo[jumpingHeavyComboCounter].kbForce;
+                equippedWeapon.knockDuration = jumpingHeavyCombo[jumpingHeavyComboCounter].kbDuration;
+                equippedWeapon.knockDirection = jumpingHeavyCombo[jumpingHeavyComboCounter].kbDirection;
+                equippedWeapon.EnableTriggerBox();
+                Knockback();
+                jumpingHeavyComboCounter++;
+                lastClickedTime = Time.time;
+
+                if (jumpingHeavyComboCounter >= jumpingHeavyCombo.Count)
+                {
+                    jumpingHeavyComboCounter = 0;
+                }
+            }
+        }
+
+    }
     void ExitAttack()
     {
         if(anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.9f && anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
@@ -329,6 +467,10 @@ public class PlayerCombat : MonoBehaviour
         upwardComboCounter = 0;
         downwardComboCounter = 0;
         jumpingComboCounter = 0;
+        basicHeavyComboCounter = 0;
+        downwardHeavyComboCounter = 0;
+        upwardHeavyComboCounter = 0;
+        jumpingHeavyComboCounter = 0;
     }
 
 
