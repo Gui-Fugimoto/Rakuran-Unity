@@ -11,10 +11,10 @@ public class PlayerCombat : MonoBehaviour
     public List<AttackSO> downwardLightCombo;
     public List<AttackSO> jumpingLightCombo;
 
-    private List<AttackSO> basicHeavyCombo;
-    private List<AttackSO> upwardHeavyCombo;
-    private List<AttackSO> downwardHeavyCombo;
-    private List<AttackSO> jumpingHeavyCombo;
+    public List<AttackSO> basicHeavyCombo;
+    public List<AttackSO> upwardHeavyCombo;
+    public List<AttackSO> downwardHeavyCombo;
+    public List<AttackSO> jumpingHeavyCombo;
     
     public List<AttackSO> swordLightBasicCombo;
     public List<AttackSO> swordLightUpwardCombo;
@@ -61,8 +61,8 @@ public class PlayerCombat : MonoBehaviour
 
     bool mainHand;
 
-    [SerializeField] WeaponItem mainWeapon;
-    [SerializeField] WeaponItem offhandWeapon;
+    [SerializeField] ItemParameter mainWeapon;
+    [SerializeField] ItemParameter offhandWeapon;
 
     [SerializeField] GameObject AttackPosLeft;
     [SerializeField] GameObject AttackPosRight;
@@ -491,6 +491,10 @@ public class PlayerCombat : MonoBehaviour
                 upwardLightCombo = swordLightUpwardCombo;
                 downwardLightCombo = swordLightDownwardCombo;
                 jumpingLightCombo = swordLightJumpingCombo;
+                basicHeavyCombo = swordHeavyBasicCombo;
+                upwardHeavyCombo = swordHeavyUpwardCombo;
+                downwardHeavyCombo = swordHeavyDownwardCombo;
+                jumpingHeavyCombo = swordHeavyJumpingCombo;
                 break;
 
             case WeaponType.Hammer:
@@ -498,6 +502,10 @@ public class PlayerCombat : MonoBehaviour
                 upwardLightCombo = hammerLightUpwardCombo;
                 downwardLightCombo = hammerLightDownwardCombo;
                 jumpingLightCombo = hammerLightJumpingCombo;
+                basicHeavyCombo = hammerHeavyBasicCombo;
+                upwardHeavyCombo = hammerHeavyUpwardCombo;
+                downwardHeavyCombo = hammerHeavyDownwardCombo;
+                jumpingHeavyCombo = hammerHeavyJumpingCombo;
                 break;
 
             case WeaponType.Polearm:
@@ -505,6 +513,10 @@ public class PlayerCombat : MonoBehaviour
                 upwardLightCombo = polearmLightUpwardCombo;
                 downwardLightCombo = polearmLightDownwardCombo;
                 jumpingLightCombo = polearmLightJumpingCombo;
+                basicHeavyCombo = polearmHeavyBasicCombo;
+                upwardHeavyCombo = polearmHeavyUpwardCombo;
+                downwardHeavyCombo = polearmHeavyDownwardCombo;
+                jumpingHeavyCombo = polearmHeavyJumpingCombo;
                 break;
         }
 

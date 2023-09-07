@@ -13,6 +13,9 @@ public class ItemParameter : ScriptableObject
     public bool Consumivel;
     public Effect Effect;
     public Sprite EffectIcon;
+    public WeaponType weaponType;
+    public float damage;
+    //add elemental type, damage type, base damage value, etc.
 
 }
 public enum Effect
@@ -21,5 +24,14 @@ public enum Effect
     Speed,
     OverTime,
     None,
+}
+public enum WeaponType
+{
+    Hammer,
+    Sword,
+    Ranged,
+    Arcane,
+    Polearm,
+    None
 }
 

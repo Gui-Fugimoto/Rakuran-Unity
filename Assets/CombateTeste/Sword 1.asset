@@ -9,8 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c127df702138fd4469f57c7ac58482be, type: 3}
-  m_Name: SwordTeste
+  m_Script: {fileID: 11500000, guid: f673aec2e978d8a4fb8a3d764eb642e9, type: 3}
+  m_Name: Sword 1
   m_EditorClassIdentifier: 
+  ItemMundo: {fileID: 0}
+  Vida: 0
+  Veneno: 0
+  Icon: {fileID: 0}
+  Consumivel: 0
+  Effect: 0
+  EffectIcon: {fileID: 0}
   weaponType: 1
-  damage: 1
+  damage: 0

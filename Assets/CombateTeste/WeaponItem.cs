@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public enum WeaponType
 {
     Hammer,
@@ -12,7 +12,6 @@ public enum WeaponType
     None
 }
 
-
 [CreateAssetMenu(menuName = "Weapon/WeaponItem")]
 public class WeaponItem : ScriptableObject
 {
@@ -20,3 +19,4 @@ public class WeaponItem : ScriptableObject
     public float damage;
     //add elemental type, damage type, base damage value, etc.
 }
+*/

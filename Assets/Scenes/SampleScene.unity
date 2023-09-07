@@ -799,6 +799,10 @@ MonoBehaviour:
   upwardLightCombo: []
   downwardLightCombo: []
   jumpingLightCombo: []
+  basicHeavyCombo: []
+  upwardHeavyCombo: []
+  downwardHeavyCombo: []
+  jumpingHeavyCombo: []
   swordLightBasicCombo:
   - {fileID: 11400000, guid: 0f41b73aa89a63d48a27f59d463e1a62, type: 2}
   - {fileID: 11400000, guid: 0fe878f5d7b515e4193761bb8db1708b, type: 2}
@@ -808,7 +812,9 @@ MonoBehaviour:
   swordLightDownwardCombo: []
   swordLightJumpingCombo:
   - {fileID: 11400000, guid: b95b661ddd188b046b5e8f61597b7f32, type: 2}
-  swordHeavyBasicCombo: []
+  swordHeavyBasicCombo:
+  - {fileID: 11400000, guid: 0f41b73aa89a63d48a27f59d463e1a62, type: 2}
+  - {fileID: 11400000, guid: df20e20c5a5509d46b01769f867008f7, type: 2}
   swordHeavyUpwardCombo: []
   swordHeavyDownwardCombo: []
   swordHeavyJumpingCombo: []
@@ -838,8 +844,8 @@ MonoBehaviour:
   upwardHeavyComboCounter: 0
   downwardHeavyComboCounter: 0
   jumpingHeavyComboCounter: 0
-  mainWeapon: {fileID: 11400000, guid: a69be95f0f2d51d419cad82cd0d7a680, type: 2}
-  offhandWeapon: {fileID: 11400000, guid: 5dd734f8c87ac674eac3cdd3eb6b2c7e, type: 2}
+  mainWeapon: {fileID: 11400000, guid: bca1739ce6f9c044d8a5dfecaa93b760, type: 2}
+  offhandWeapon: {fileID: 11400000, guid: 153bb27e4a737354789ad81a9f43d651, type: 2}
   AttackPosLeft: {fileID: 1475986946}
   AttackPosRight: {fileID: 787112757}
   anim: {fileID: 128823545}
