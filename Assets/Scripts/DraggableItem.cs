@@ -76,6 +76,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             collision.SendMessage("AddItem", Item);
             StartCoroutine(Remove());
         }
+
+        if(collision.tag == "WeaponSlot" && Item.weaponType != WeaponType.None)
+        {
+
+        }
     }
 
     IEnumerator Remove()
