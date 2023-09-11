@@ -21,10 +21,8 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        MudouItemCallback.Invoke();
         InventoryUI.SetActive(false);
-        //QuickSlots.SetActive(false);   
-        
+        MudouItemCallback.Invoke();
     }
 
     public void Update()
@@ -53,13 +51,13 @@ public class Inventory : MonoBehaviour
         if(Aberto == false)
         {
             InventoryUI.SetActive(true);
-           // QuickSlots.SetActive(true);
+            MudouItemCallback.Invoke();
             Aberto = true;
         }
         else
         {
             InventoryUI.SetActive(false);
-           // QuickSlots.SetActive(false);
+          
             Aberto = false;
         }
     }
@@ -72,6 +70,5 @@ public class Inventory : MonoBehaviour
             MudouItemCallback.Invoke();
 
     }
-     
-    
+
 }

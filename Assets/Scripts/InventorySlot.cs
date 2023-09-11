@@ -10,7 +10,7 @@ public class InventorySlot : MonoBehaviour
     public ItemParameter item;
     public DraggableItem child;
     void Start()
-    {
+    {   
         Icon.enabled = false;
     }
 
@@ -31,4 +31,12 @@ public class InventorySlot : MonoBehaviour
         Icon.sprite = null;
         Icon.enabled = false;
     }
+
+   private void FixedUpdate()
+   {
+       if (item != null)
+       {
+           Icon.enabled = true;
+       }
+   }
 }

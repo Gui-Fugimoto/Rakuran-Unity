@@ -11,10 +11,10 @@ public class InventoryUI : MonoBehaviour
     InventorySlot[] slots;
     void Start()
     {
-        inventory.MudouItemCallback += UpdateUI;
-
-        slots = itensParent.GetComponentsInChildren<InventorySlot>();
-    }
+      inventory.MudouItemCallback += UpdateUI;
+      
+      slots = itensParent.GetComponentsInChildren<InventorySlot>();
+    } 
 
     // Update is called once per frame
     void UpdateUI()
@@ -31,4 +31,5 @@ public class InventoryUI : MonoBehaviour
             }
         }
     }
+
 }
