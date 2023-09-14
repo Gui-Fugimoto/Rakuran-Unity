@@ -34,9 +34,9 @@ public class InventorySlot : MonoBehaviour
 
    private void FixedUpdate()
    {
-       if (item != null)
-       {
-           Icon.enabled = true;
-       }
-   }
+        if (item != null)
+        {
+            Icon.enabled = true;
+        }
+    }
 }
