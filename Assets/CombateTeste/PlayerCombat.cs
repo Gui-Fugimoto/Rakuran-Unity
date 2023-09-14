@@ -61,7 +61,7 @@ public class PlayerCombat : MonoBehaviour
 
     bool mainHand;
 
-    [SerializeField] ItemParameter mainWeapon;
+    [SerializeField] EquipWeapon mainWeapon;
     [SerializeField] ItemParameter offhandWeapon;
 
     [SerializeField] GameObject AttackPosLeft;
@@ -81,8 +81,8 @@ public class PlayerCombat : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        equippedWeapon.weaponType = mainWeapon.weaponType;
-        equippedWeapon.baseDamage = mainWeapon.damage;
+        equippedWeapon.weaponType = mainWeapon.item.weaponType;
+        equippedWeapon.baseDamage = mainWeapon.item.damage;
         ChangeWeaponCombos();
         equippedWeapon.DisableTriggerBox();
     }

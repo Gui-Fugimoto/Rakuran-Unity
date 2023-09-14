@@ -20,3 +20,5 @@ MonoBehaviour:
   Consumivel: 0
   Effect: 3
   EffectIcon: {fileID: 0}
+  weaponType: 5
+  damage: 0
