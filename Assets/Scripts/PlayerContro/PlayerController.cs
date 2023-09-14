@@ -400,7 +400,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 newDirection = new Vector3(horizontal.x, -vertical.y, 0);
         Vector3 knockbackVector = (newDirection.normalized * force);
-        Debug.Log("lançado");
+        //Debug.Log("lançado");
 
         StartCoroutine(MoveOverTime(knockbackVector, duration));
     }

@@ -6,15 +6,15 @@ public class PlayerCombat : MonoBehaviour
 {
     public bool isAttacking;
     #region Combos
-    public List<AttackSO> basicLightCombo;
-    public List<AttackSO> upwardLightCombo;
-    public List<AttackSO> downwardLightCombo;
-    public List<AttackSO> jumpingLightCombo;
+    [HideInInspector] public List<AttackSO> basicLightCombo;
+    [HideInInspector] public List<AttackSO> upwardLightCombo;
+    [HideInInspector] public List<AttackSO> downwardLightCombo;
+    [HideInInspector] public List<AttackSO> jumpingLightCombo;
 
-    public List<AttackSO> basicHeavyCombo;
-    public List<AttackSO> upwardHeavyCombo;
-    public List<AttackSO> downwardHeavyCombo;
-    public List<AttackSO> jumpingHeavyCombo;
+    [HideInInspector] public List<AttackSO> basicHeavyCombo;
+    [HideInInspector] public List<AttackSO> upwardHeavyCombo;
+    [HideInInspector] public List<AttackSO> downwardHeavyCombo;
+    [HideInInspector] public List<AttackSO> jumpingHeavyCombo;
     
     public List<AttackSO> swordLightBasicCombo;
     public List<AttackSO> swordLightUpwardCombo;

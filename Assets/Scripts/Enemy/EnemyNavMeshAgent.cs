@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using System.Collections;
 
-public class EnemyAI : MonoBehaviour//, CombatManager.ICombatable
+public class EnemyNavMeshAgent : MonoBehaviour
 {
-    /*
+    
     public Transform player;
-    public float moveSpeed = 5f;
     public float attackRange = 0.5f;
     public float pursuitRange;
     public float wanderRange = 10f;
@@ -16,16 +15,18 @@ public class EnemyAI : MonoBehaviour//, CombatManager.ICombatable
     private float timeSinceLastAttack = 0f;
     public int currentState = 0; // 0 = wander, 1 = pursuit, 2 = attack
     private bool isAttacking = false;
-    private Rigidbody rb;
-    private Vector3 targetPosition;
 
     private Animator anim;
-    private Transform spriteTransform;
     private SpriteRenderer spriteRend;
 
+    private NavMeshAgent navMeshAgent;
+    private Rigidbody rb;
+
     [SerializeField] GameObject hitBox;
-    [SerializeField] GameObject hitBoxPosLeft; //mudar pra transform
+    [SerializeField] GameObject hitBoxPosLeft;
     [SerializeField] GameObject hitBoxPosRight;
+
+    private Transform spriteTransform;
 
     float pauseDuration = 2f;
     float pauseTimer = 0f;
@@ -33,26 +34,20 @@ public class EnemyAI : MonoBehaviour//, CombatManager.ICombatable
 
     void Start()
     {
-        
-        wanderTarget = Random.insideUnitSphere * wanderRange;
-        wanderTarget.y = transform.position.y;
-
-        
-        rb = GetComponent<Rigidbody>();
-
+        navMeshAgent = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
-        spriteTransform = this.gameObject.transform.GetChild(0);
         spriteRend = GetComponentInChildren<SpriteRenderer>();
+        spriteTransform = this.gameObject.transform.GetChild(0);
 
         hitBox.SetActive(false);
+        wanderTarget = Random.insideUnitSphere * wanderRange;
+        wanderTarget.y = transform.position.y;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         timeSinceLastAttack += Time.deltaTime;
         spriteTransform.rotation = Quaternion.Euler(0, 0, 0);
-        targetPosition = new Vector3(player.position.x, 0, player.position.z);
-        
         switch (currentState)
         {
             case 0:
@@ -66,9 +61,9 @@ public class EnemyAI : MonoBehaviour//, CombatManager.ICombatable
                 break;
         }
 
-        hitBoxPosLeft.transform.position = new Vector3 (transform.position.x +0.95f, transform.position.y, transform.position.z);
+        hitBoxPosLeft.transform.position = new Vector3(transform.position.x + 0.95f, transform.position.y, transform.position.z);
         hitBoxPosRight.transform.position = new Vector3(transform.position.x - 0.828f, transform.position.y, transform.position.z);
-        
+
         if (spriteRend.flipX == false)
         {
             hitBox.transform.position = hitBoxPosRight.transform.position;
@@ -77,85 +72,65 @@ public class EnemyAI : MonoBehaviour//, CombatManager.ICombatable
         {
             hitBox.transform.position = hitBoxPosLeft.transform.position;
         }
-        
     }
-
-    
 
     void WanderState()
     {
-        
         if (isPaused)
         {
-            
             pauseTimer += Time.deltaTime;
-
-            
             if (pauseTimer >= pauseDuration)
             {
-                
                 pauseTimer = 0f;
                 isPaused = false;
-
-                
                 wanderTarget = Random.insideUnitSphere * wanderRange;
                 wanderTarget.y = transform.position.y;
-
-                
                 anim.SetBool("Walk", true);
             }
             else
             {
-                
                 anim.SetBool("Walk", false);
             }
-
             return;
         }
 
-        
         float distanceToTarget = Vector3.Distance(transform.position, wanderTarget);
         if (distanceToTarget < 3f)
         {
-            
             isPaused = true;
         }
         else
         {
-            
             Vector3 direction = wanderTarget - transform.position;
             bool isMovingRight = direction.x > 0f;
             spriteRend.flipX = isMovingRight;
-
-            transform.LookAt(wanderTarget);
-            rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
+           
+            navMeshAgent.SetDestination(wanderTarget);
         }
 
-        
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         if (distanceToPlayer < pursuitRange)
         {
-            currentState = 1; 
+            currentState = 1;
         }
     }
 
-
     void PursuitState()
     {
-        
-        transform.LookAt(targetPosition);//player);
-        rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
         anim.SetBool("Walk", true);
-        
+
+        navMeshAgent.SetDestination(player.position);
+
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         Vector3 directionToPlayer = player.position - transform.position;
+
         if (distanceToPlayer < attackRange && Mathf.Abs(directionToPlayer.z) < Mathf.Abs(directionToPlayer.x))
         {
-            currentState = 2; 
+            currentState = 2;
         }
         else if (distanceToPlayer > pursuitRange)
         {
-            currentState = 0; 
+            currentState = 0;
         }
 
         if (directionToPlayer.x > 0)
@@ -166,13 +141,10 @@ public class EnemyAI : MonoBehaviour//, CombatManager.ICombatable
         {
             spriteRend.flipX = false;
         }
-
     }
-
 
     void AttackState()
     {
-        
         if (!isAttacking && timeSinceLastAttack >= attackCooldown)
         {
             isAttacking = true;
@@ -180,46 +152,36 @@ public class EnemyAI : MonoBehaviour//, CombatManager.ICombatable
             anim.SetBool("Attack", true);
             anim.SetBool("Walk", false);
             hitBox.SetActive(true);
-
-            
             StartCoroutine(EndAttack());
         }
 
-        
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         Vector3 directionToPlayer = player.position - transform.position;
         if (distanceToPlayer > attackRange || Mathf.Abs(directionToPlayer.z) >= Mathf.Abs(directionToPlayer.x))
         {
-            currentState = 1; 
-
+            currentState = 1;
         }
     }
 
-
-
     IEnumerator EndAttack()
     {
-        yield return new WaitForSeconds(0.5f); 
+        yield return new WaitForSeconds(0.5f);
         isAttacking = false;
-        currentState = 2; 
+        currentState = 1;
         anim.SetBool("Attack", false);
         hitBox.SetActive(false);
     }
-    
-    
+
     public void Knockback(Vector3 direction, float force, float duration)
     {
-
         Vector3 horizontal = direction.x * transform.forward;
         Vector3 vertical = direction.y * transform.up;
-
         Vector3 newDirection = new Vector3(horizontal.x, -vertical.y, 0);
         Vector3 knockbackVector = (newDirection.normalized * force);
         Debug.Log("lançado");
-
         StartCoroutine(MoveOverTime(knockbackVector, duration));
     }
-    
+
     private IEnumerator MoveOverTime(Vector3 knockbackVector, float duration)
     {
         float elapsedTime = 0f;
@@ -228,9 +190,24 @@ public class EnemyAI : MonoBehaviour//, CombatManager.ICombatable
         {
             transform.position += knockbackVector * Time.deltaTime / duration;
             elapsedTime += Time.deltaTime;
-            yield return new WaitForEndOfFrame();
+            yield return null;
+            //RigidBodyOnOff(false);
         }
     }
-    */
+    
+
+    void RigidBodyOnOff(bool turnOn)
+    {
+        if (turnOn)
+        {
+            rb.isKinematic = true;
+            navMeshAgent.enabled = false;
+        }
+        else if (!turnOn)
+        {
+            rb.isKinematic = false;
+            navMeshAgent.enabled = true;
+        }
+    }
 }
 

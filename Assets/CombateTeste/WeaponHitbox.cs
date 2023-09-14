@@ -25,18 +25,9 @@ public class WeaponHitbox : MonoBehaviour
         {
             Debug.Log("atingiu inimigo");
             other.GetComponent<EnemyLife>().Damage(damage);
+            other.gameObject.GetComponent<EnemyNavMeshAgent>().Knockback(knockDirection, knockbackForce, knockDuration);
         }
-        if (other.gameObject.tag == "Enemy")
-        {
-            //Vector3 direction = transform.position - other.transform.position;
-            other.gameObject.GetComponent<EnemyAI>().Knockback(knockDirection, knockbackForce, knockDuration);
-            Debug.Log("KNOCKBACK");
-
-        }
-
-
-
-
+        
     }
 
     public void EnableTriggerBox()
