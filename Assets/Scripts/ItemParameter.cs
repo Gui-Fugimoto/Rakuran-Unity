@@ -20,20 +20,18 @@ public class ItemParameter : ScriptableObject
 }
 public enum Effect
 {
-    None,
     Vision,
     Speed,
     OverTime,
-    
+    None,
 }
 public enum WeaponType
 {
-    None,
     Hammer,
     Sword,
     Ranged,
     Arcane,
     Polearm,
-   
+    None
 }
 

@@ -9,7 +9,7 @@ public class EquipWeapon : MonoBehaviour
 {
     public Image Icon;
     [SerializeField] Collider2D Box;
-    public ItemParameter item;
+    ItemParameter item;
     public DraggableItem child;
     public Inventory inventory;
     public TMP_Text Arma;
