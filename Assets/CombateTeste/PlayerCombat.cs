@@ -441,8 +441,8 @@ public class PlayerCombat : MonoBehaviour
         if (Input.GetKey(changeWeaponKey) && mainHand == false)
         {
             ExitAttack();
-            equippedWeapon.weaponType = mainWeapon.weaponType;
-            equippedWeapon.baseDamage = mainWeapon.damage;
+            equippedWeapon.weaponType = mainWeapon.item.weaponType;
+            equippedWeapon.baseDamage = mainWeapon.item.damage;
             ChangeWeaponCombos();
             ResetComboCounters();
             yield return new WaitForSeconds(0.5f);

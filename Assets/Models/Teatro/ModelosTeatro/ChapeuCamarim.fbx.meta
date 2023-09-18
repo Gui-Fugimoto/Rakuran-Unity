@@ -3,7 +3,12 @@ guid: 12ca31621858ec441ab770fe9fe9cf61
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: textureChapeu.png
+    second: {fileID: 2100000, guid: 0cecc1b3cfab5a3418f216e2ffbaa79c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

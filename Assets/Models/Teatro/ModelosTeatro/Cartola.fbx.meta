@@ -3,7 +3,12 @@ guid: 5780e8e26e4c6304c92dfe6b7492d1f0
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: texturaCartola.png
+    second: {fileID: 2100000, guid: e61e54480de8b8e4e8da863dd18588cb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
