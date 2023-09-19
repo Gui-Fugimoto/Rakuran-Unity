@@ -15,7 +15,7 @@ public class PlayerCombat : MonoBehaviour
     [HideInInspector] public List<AttackSO> upwardHeavyCombo;
     [HideInInspector] public List<AttackSO> downwardHeavyCombo;
     [HideInInspector] public List<AttackSO> jumpingHeavyCombo;
-    
+
     public List<AttackSO> swordLightBasicCombo;
     public List<AttackSO> swordLightUpwardCombo;
     public List<AttackSO> swordLightDownwardCombo;
@@ -25,7 +25,7 @@ public class PlayerCombat : MonoBehaviour
     public List<AttackSO> swordHeavyUpwardCombo;
     public List<AttackSO> swordHeavyDownwardCombo;
     public List<AttackSO> swordHeavyJumpingCombo;
-    
+
     public List<AttackSO> hammerLightBasicCombo;
     public List<AttackSO> hammerLightUpwardCombo;
     public List<AttackSO> hammerLightDownwardCombo;
@@ -62,7 +62,7 @@ public class PlayerCombat : MonoBehaviour
     bool mainHand;
 
     [SerializeField] EquipWeapon mainWeapon;
-    [SerializeField] ItemParameter offhandWeapon;
+    [SerializeField] EquipWeapon offhandWeapon;
 
     [SerializeField] GameObject AttackPosLeft;
     [SerializeField] GameObject AttackPosRight;
@@ -75,6 +75,7 @@ public class PlayerCombat : MonoBehaviour
     public KeyCode lightAttackInput = KeyCode.Mouse0;
     public KeyCode heavyAttackInput = KeyCode.Mouse1;
     public KeyCode changeWeaponKey = KeyCode.Tab;
+
 
 
     // Start is called before the first frame update
@@ -91,10 +92,14 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         FlipHitbox();
-        
+        if (mainWeapon.item == null)
+        {
+            isAttacking = false;
+        }
+
         if (Input.GetKey(KeyCode.W) && Input.GetKey(lightAttackInput) && !playerController.isJumping) //trocar para inputmanager
         {
-            UpwardLightAttack();           
+            UpwardLightAttack();
         }
         else if (Input.GetKey(KeyCode.S) && Input.GetKey(lightAttackInput) && !playerController.isJumping) //trocar para inputmanager
         {
@@ -145,26 +150,26 @@ public class PlayerCombat : MonoBehaviour
         {
             CancelInvoke("EndCombo");
 
-            if(Time.time - lastClickedTime >= 0.5f)
+            if (Time.time - lastClickedTime >= 0.5f)
             {
                 anim.runtimeAnimatorController = basicLightCombo[basicComboCounter].animatorOV;
                 anim.Play("Attack", 0, 0);
-                equippedWeapon.damage = equippedWeapon.baseDamage* basicLightCombo[basicComboCounter].damageMultiplier;
+                equippedWeapon.damage = equippedWeapon.baseDamage * basicLightCombo[basicComboCounter].damageMultiplier;
                 equippedWeapon.knockbackForce = basicLightCombo[basicComboCounter].kbForce;
                 equippedWeapon.knockDuration = basicLightCombo[basicComboCounter].kbDuration;
                 equippedWeapon.knockDirection = basicLightCombo[basicComboCounter].kbDirection;
                 equippedWeapon.EnableTriggerBox();
-                Knockback();
+                //Knockback();
                 basicComboCounter++;
                 lastClickedTime = Time.time;
-                
+
                 if (basicComboCounter >= basicLightCombo.Count)
                 {
                     basicComboCounter = 0;
                 }
             }
         }
-        
+
     }
     void UpwardLightAttack()
     {
@@ -290,7 +295,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = basicHeavyCombo[basicHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = basicHeavyCombo[basicHeavyComboCounter].kbDirection;
                 equippedWeapon.EnableTriggerBox();
-                Knockback();
+                //Knockback();
                 basicHeavyComboCounter++;
                 lastClickedTime = Time.time;
 
@@ -325,7 +330,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = upwardHeavyCombo[upwardHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = upwardHeavyCombo[upwardHeavyComboCounter].kbDirection;
                 equippedWeapon.EnableTriggerBox();
-                Knockback();
+                //Knockback();
                 upwardHeavyComboCounter++;
                 lastClickedTime = Time.time;
 
@@ -360,7 +365,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = downwardHeavyCombo[downwardHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = downwardHeavyCombo[downwardHeavyComboCounter].kbDirection;
                 equippedWeapon.EnableTriggerBox();
-                Knockback();
+                //Knockback();
                 downwardHeavyComboCounter++;
                 lastClickedTime = Time.time;
 
@@ -395,7 +400,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = jumpingHeavyCombo[jumpingHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = jumpingHeavyCombo[jumpingHeavyComboCounter].kbDirection;
                 equippedWeapon.EnableTriggerBox();
-                Knockback();
+                //Knockback();
                 jumpingHeavyComboCounter++;
                 lastClickedTime = Time.time;
 
@@ -409,7 +414,7 @@ public class PlayerCombat : MonoBehaviour
     }
     void ExitAttack()
     {
-        if(anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.9f && anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.9f && anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             Invoke("EndCombo", 1);
             equippedWeapon.DisableTriggerBox();
@@ -428,17 +433,17 @@ public class PlayerCombat : MonoBehaviour
         if (gameObject.GetComponent<SpriteRenderer>().flipX == true)
         {
             equippedWeapon.transform.position = AttackPosLeft.transform.position;
-           // basicCombo[basicComboCounter].kbDirection.x = basicCombo[basicComboCounter].kbDirection.x * (-1);
+            // basicCombo[basicComboCounter].kbDirection.x = basicCombo[basicComboCounter].kbDirection.x * (-1);
         }
         else if (gameObject.GetComponent<SpriteRenderer>().flipX == false)
         {
             equippedWeapon.transform.position = AttackPosRight.transform.position;
-           // basicCombo[basicComboCounter].kbDirection.x = basicCombo[basicComboCounter].kbDirection.x * (-1);
+            // basicCombo[basicComboCounter].kbDirection.x = basicCombo[basicComboCounter].kbDirection.x * (-1);
         }
     }
     IEnumerator QuickWeaponChange()
     {
-        if (Input.GetKey(changeWeaponKey) && mainHand == false)
+        if (Input.GetKey(changeWeaponKey) && mainHand == false && mainWeapon != null)
         {
             ExitAttack();
             equippedWeapon.weaponType = mainWeapon.item.weaponType;
@@ -447,18 +452,18 @@ public class PlayerCombat : MonoBehaviour
             ResetComboCounters();
             yield return new WaitForSeconds(0.5f);
             mainHand = true;
-            
+
         }
-        if (Input.GetKey(changeWeaponKey) && mainHand == true)
+        if (Input.GetKey(changeWeaponKey) && mainHand == true && offhandWeapon != null)
         {
             ExitAttack();
-            equippedWeapon.weaponType = offhandWeapon.weaponType;
-            equippedWeapon.baseDamage = offhandWeapon.damage;
+            equippedWeapon.weaponType = offhandWeapon.item.weaponType;
+            equippedWeapon.baseDamage = offhandWeapon.item.damage;
             ChangeWeaponCombos();
             ResetComboCounters();
             yield return new WaitForSeconds(0.5f);
             mainHand = false;
-            
+
         }
     }
 
@@ -475,13 +480,8 @@ public class PlayerCombat : MonoBehaviour
     }
 
 
-    void Knockback()
-    {
-        equippedWeapon.knockDirection = basicLightCombo[basicComboCounter].kbDirection;
-        equippedWeapon.knockDuration = basicLightCombo[basicComboCounter].kbDuration;
-        equippedWeapon.knockbackForce = basicLightCombo[basicComboCounter].kbForce;
-    }
-    
+
+
     void ChangeWeaponCombos()
     {
         switch (equippedWeapon.weaponType)
@@ -524,4 +524,7 @@ public class PlayerCombat : MonoBehaviour
 
 
     }
+
+    
+
 }

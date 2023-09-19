@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemMundo: {fileID: 0}
   Vida: 0
-  Escudo: 0
   Veneno: 0
   Icon: {fileID: 0}
   Consumivel: 0
+  Effect: 0
+  EffectIcon: {fileID: 0}
+  weaponType: 1
+  damage: 0
