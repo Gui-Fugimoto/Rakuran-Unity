@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     public List<ItemParameter> itens = new List<ItemParameter>();
     public int inventorySize = 10;
     public GameObject InventoryUI;
+    public GameObject WeaponEquip;
     public bool Aberto;
     public bool isInventoryOpen;
     public delegate void MudouItem();
@@ -22,6 +23,7 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         InventoryUI.SetActive(false);
+        WeaponEquip.SetActive(false);
         MudouItemCallback.Invoke();
     }
 
@@ -51,13 +53,14 @@ public class Inventory : MonoBehaviour
         if(Aberto == false)
         {
             InventoryUI.SetActive(true);
+            WeaponEquip.SetActive(true);
             MudouItemCallback.Invoke();
             Aberto = true;
         }
         else
         {
             InventoryUI.SetActive(false);
-          
+            WeaponEquip.SetActive(false);
             Aberto = false;
         }
     }
