@@ -312,7 +312,7 @@ public class PlayerController : MonoBehaviour
             {
                 verticalVelocity = jumpForce;
                 slopeNormal = Vector3.up;
-                anim?.SetTrigger("Jump");
+                anim.SetTrigger("Jump");
                 
             }
         }
@@ -321,10 +321,19 @@ public class PlayerController : MonoBehaviour
             // Gradualy increment gravity
             verticalVelocity -= gravity;
             slopeNormal = Vector3.up;
-
+            
+            if (verticalVelocity <= 0 && !playerCombatScript.isAttacking)
+            {
+                
+                anim.SetTrigger("Falling");
+            }
             // Clamp to match terminal velocity, if faster
             if (verticalVelocity < -terminalVelocity)
+            {
                 verticalVelocity = -terminalVelocity;
+                
+            }
+                
         }
     }
     private void DodgeRoll()

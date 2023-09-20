@@ -36,7 +36,7 @@ public class EnemyDamage : MonoBehaviour
                 Vector3 direction = other.transform.position - transform.position;
                 other.gameObject.GetComponent<PlayerController>().Knockback(direction, knockbackForce, knockTime);
                 other.gameObject.GetComponent<PlayerHealthController>().TakeDamage(1);
-                Debug.Log("dota");
+                
             }
         }
     }

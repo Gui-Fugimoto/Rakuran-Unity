@@ -12,6 +12,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
     public float attackCooldown = 2f;
 
     private Vector3 wanderTarget;
+    private Vector3 initialPosition;
     private float timeSinceLastAttack = 0f;
     public int currentState = 0; // 0 = wander, 1 = pursuit, 2 = attack
     private bool isAttacking = false;
@@ -35,13 +36,14 @@ public class EnemyNavMeshAgent : MonoBehaviour
 
     void Start()
     {
+        initialPosition = transform.position;
         navMeshAgent = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
         spriteRend = GetComponentInChildren<SpriteRenderer>();
         spriteTransform = this.gameObject.transform.GetChild(0);
         rb = GetComponent<Rigidbody>();
         hitBox.SetActive(false);
-        wanderTarget = Random.insideUnitSphere * wanderRange;
+        wanderTarget = initialPosition + Random.insideUnitSphere * wanderRange;
         wanderTarget.y = transform.position.y;
     }
 
@@ -84,7 +86,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
             {
                 pauseTimer = 0f;
                 isPaused = false;
-                wanderTarget = Random.insideUnitSphere * wanderRange;
+                wanderTarget = initialPosition + Random.insideUnitSphere * wanderRange;
                 wanderTarget.y = transform.position.y;
                 anim.SetBool("Walk", true);
             }

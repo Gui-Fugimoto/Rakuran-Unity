@@ -160,6 +160,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = basicLightCombo[basicComboCounter].kbForce;
                 equippedWeapon.knockDuration = basicLightCombo[basicComboCounter].kbDuration;
                 equippedWeapon.knockDirection = basicLightCombo[basicComboCounter].kbDirection;
+                FlipKnockback();
                 isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
@@ -450,6 +451,15 @@ public class PlayerCombat : MonoBehaviour
             equippedWeapon.transform.position = AttackPosRight.transform.position;
             // basicCombo[basicComboCounter].kbDirection.x = basicCombo[basicComboCounter].kbDirection.x * (-1);
         }
+    }
+
+    void FlipKnockback()
+    {
+        if (gameObject.GetComponent<SpriteRenderer>().flipX)
+        {
+            equippedWeapon.knockDirection.x = equippedWeapon.knockDirection.x * (-1);
+        }
+        
     }
     IEnumerator QuickWeaponChange()
     {
