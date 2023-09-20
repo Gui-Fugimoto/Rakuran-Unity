@@ -32,13 +32,14 @@ public class EnemyNavMeshAgent : MonoBehaviour
     float pauseTimer = 0f;
     bool isPaused = false;
 
+
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
         spriteRend = GetComponentInChildren<SpriteRenderer>();
         spriteTransform = this.gameObject.transform.GetChild(0);
-
+        rb = GetComponent<Rigidbody>();
         hitBox.SetActive(false);
         wanderTarget = Random.insideUnitSphere * wanderRange;
         wanderTarget.y = transform.position.y;
@@ -183,38 +184,27 @@ public class EnemyNavMeshAgent : MonoBehaviour
         StartCoroutine(MoveOverTime(knockbackVector, duration));
         */
         
+        navMeshAgent.enabled = false;
+        rb.isKinematic = false;
         direction.Normalize();
-
         
-        rb.AddForce(-direction * force, ForceMode.Impulse);
+        
+        rb.AddForce(direction * force, ForceMode.Impulse);        
+        StartCoroutine(ResetKnockback(duration));
+        
     }
-
-    private IEnumerator MoveOverTime(Vector3 knockbackVector, float duration)
+    IEnumerator ResetKnockback(float dur)
     {
-        float elapsedTime = 0f;
-
-        while (elapsedTime < duration)
-        {
-            transform.position += knockbackVector * Time.deltaTime / duration;
-            elapsedTime += Time.deltaTime;
-            yield return null;
-            //RigidBodyOnOff(false);
-        }
+        
+        yield return new WaitForSeconds(dur);
+        navMeshAgent.enabled = true;
+        rb.isKinematic = true;
+        Debug.Log("chegou aqui");
+        
     }
+   
     
 
-    void RigidBodyOnOff(bool turnOn)
-    {
-        if (turnOn)
-        {
-            rb.isKinematic = true;
-            navMeshAgent.enabled = false;
-        }
-        else if (!turnOn)
-        {
-            rb.isKinematic = false;
-            navMeshAgent.enabled = true;
-        }
-    }
+    
 }
 

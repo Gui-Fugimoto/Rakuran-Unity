@@ -15,7 +15,7 @@ public class AttackSO : ScriptableObject
 
     //Attack Duration
     public float animSpeed;
-    public float endLag;
-    public float startUp;
+    public float endLag = 0.5f;
+    public float startUp = 0.5f;
     
 }

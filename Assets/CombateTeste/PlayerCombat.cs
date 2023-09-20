@@ -60,6 +60,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] int jumpingHeavyComboCounter;
 
     bool mainHand;
+    
 
     [SerializeField] EquipWeapon mainWeapon;
     [SerializeField] EquipWeapon offhandWeapon;
@@ -138,7 +139,7 @@ public class PlayerCombat : MonoBehaviour
 
     void BasicLightAttack()
     {
-        isAttacking = true;
+        
         upwardComboCounter = 0;
         downwardComboCounter = 0;
         jumpingComboCounter = 0;
@@ -146,18 +147,20 @@ public class PlayerCombat : MonoBehaviour
         upwardHeavyComboCounter = 0;
         downwardHeavyComboCounter = 0;
         jumpingHeavyComboCounter = 0;
-        if (Time.time - lastComboEnd > 0.5f && basicComboCounter <= basicLightCombo.Count)
+        if (Time.time - lastComboEnd > basicLightCombo[basicComboCounter].endLag && basicComboCounter <= basicLightCombo.Count)
         {
             CancelInvoke("EndCombo");
 
-            if (Time.time - lastClickedTime >= 0.5f)
+            if (Time.time - lastClickedTime >= basicLightCombo[basicComboCounter].startUp)
             {
                 anim.runtimeAnimatorController = basicLightCombo[basicComboCounter].animatorOV;
+                //animationSpeed = basicLightCombo[basicComboCounter].animSpeed;
                 anim.Play("Attack", 0, 0);
                 equippedWeapon.damage = equippedWeapon.baseDamage * basicLightCombo[basicComboCounter].damageMultiplier;
                 equippedWeapon.knockbackForce = basicLightCombo[basicComboCounter].kbForce;
                 equippedWeapon.knockDuration = basicLightCombo[basicComboCounter].kbDuration;
                 equippedWeapon.knockDirection = basicLightCombo[basicComboCounter].kbDirection;
+                isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 basicComboCounter++;
@@ -173,7 +176,7 @@ public class PlayerCombat : MonoBehaviour
     }
     void UpwardLightAttack()
     {
-        isAttacking = true;
+        
         basicComboCounter = 0;
         downwardComboCounter = 0;
         jumpingComboCounter = 0;
@@ -193,6 +196,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = upwardLightCombo[upwardComboCounter].kbForce;
                 equippedWeapon.knockDuration = upwardLightCombo[upwardComboCounter].kbDuration;
                 equippedWeapon.knockDirection = upwardLightCombo[upwardComboCounter].kbDirection;
+                isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 upwardComboCounter++;
                 lastClickedTime = Time.time;
@@ -207,7 +211,7 @@ public class PlayerCombat : MonoBehaviour
     }
     void DownwardLightAttack()
     {
-        isAttacking = true;
+        
         basicComboCounter = 0;
         upwardComboCounter = 0;
         jumpingComboCounter = 0;
@@ -227,6 +231,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = downwardLightCombo[downwardComboCounter].kbForce;
                 equippedWeapon.knockDuration = downwardLightCombo[downwardComboCounter].kbDuration;
                 equippedWeapon.knockDirection = downwardLightCombo[downwardComboCounter].kbDirection;
+                isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 downwardComboCounter++;
                 lastClickedTime = Time.time;
@@ -240,7 +245,7 @@ public class PlayerCombat : MonoBehaviour
     }
     void JumpingLightAttack()
     {
-        isAttacking = true;
+        
         basicComboCounter = 0;
         upwardComboCounter = 0;
         downwardComboCounter = 0;
@@ -260,6 +265,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = jumpingLightCombo[jumpingComboCounter].kbForce;
                 equippedWeapon.knockDuration = jumpingLightCombo[jumpingComboCounter].kbDuration;
                 equippedWeapon.knockDirection = jumpingLightCombo[jumpingComboCounter].kbDirection;
+                isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 jumpingComboCounter++;
                 lastClickedTime = Time.time;
@@ -274,7 +280,7 @@ public class PlayerCombat : MonoBehaviour
     }
     void BasicHeavyAttack()
     {
-        isAttacking = true;
+        
         upwardComboCounter = 0;
         downwardComboCounter = 0;
         jumpingComboCounter = 0;
@@ -294,6 +300,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = basicHeavyCombo[basicHeavyComboCounter].kbForce;
                 equippedWeapon.knockDuration = basicHeavyCombo[basicHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = basicHeavyCombo[basicHeavyComboCounter].kbDirection;
+                isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 basicHeavyComboCounter++;
@@ -309,7 +316,7 @@ public class PlayerCombat : MonoBehaviour
     }
     void UpwardHeavyAttack()
     {
-        isAttacking = true;
+        
         upwardComboCounter = 0;
         downwardComboCounter = 0;
         jumpingComboCounter = 0;
@@ -329,6 +336,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = upwardHeavyCombo[upwardHeavyComboCounter].kbForce;
                 equippedWeapon.knockDuration = upwardHeavyCombo[upwardHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = upwardHeavyCombo[upwardHeavyComboCounter].kbDirection;
+                isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 upwardHeavyComboCounter++;
@@ -344,7 +352,7 @@ public class PlayerCombat : MonoBehaviour
     }
     void DownwardHeavyAttack()
     {
-        isAttacking = true;
+        
         upwardComboCounter = 0;
         downwardComboCounter = 0;
         jumpingComboCounter = 0;
@@ -364,6 +372,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = downwardHeavyCombo[downwardHeavyComboCounter].kbForce;
                 equippedWeapon.knockDuration = downwardHeavyCombo[downwardHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = downwardHeavyCombo[downwardHeavyComboCounter].kbDirection;
+                isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 downwardHeavyComboCounter++;
@@ -379,7 +388,7 @@ public class PlayerCombat : MonoBehaviour
     }
     void JumpingHeavyAttack()
     {
-        isAttacking = true;
+        
         upwardComboCounter = 0;
         downwardComboCounter = 0;
         jumpingComboCounter = 0;
@@ -399,6 +408,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = jumpingHeavyCombo[jumpingHeavyComboCounter].kbForce;
                 equippedWeapon.knockDuration = jumpingHeavyCombo[jumpingHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = jumpingHeavyCombo[jumpingHeavyComboCounter].kbDirection;
+                isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 jumpingHeavyComboCounter++;

@@ -21,10 +21,12 @@ public class WeaponHitbox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+    
         if(other.gameObject.tag == "Enemy")
         {
             Debug.Log("atingiu inimigo");
             other.GetComponent<EnemyLife>().Damage(damage);
+            
             other.gameObject.GetComponent<EnemyNavMeshAgent>().Knockback(knockDirection, knockbackForce, knockDuration);
         }
         
