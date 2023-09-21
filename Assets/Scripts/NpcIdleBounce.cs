@@ -20,7 +20,7 @@ public class NpcIdleBounce : MonoBehaviour
             gameObject.transform.localScale -= ScaleChange;
         }
 
-        if (gameObject.transform.localScale.y >= 5.95)
+        if (gameObject.transform.localScale.y >= 6.05)
         {
             Deflate = true;
         }

@@ -9,6 +9,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public ItemParameter Item;
     public Inventory inventory;
     public ChestInventory chestInventory;
+    //[SerializeField] BoxCollider2D Collider;
     public bool OnQuickSlot;
    // public bool InInventory;
     
@@ -80,6 +81,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if(collision.tag == "WeaponSlot" && Item.weaponType != WeaponType.None)
         {
             collision.SendMessage("AddItem", Item);
+            
             StartCoroutine(Remove());
         }
     }
