@@ -62,6 +62,9 @@ public class EnemyNavMeshAgent : MonoBehaviour
             case 2:
                 AttackState();
                 break;
+            case 3:
+                CooldownState(3);
+                break;
         }
 
         hitBoxPosLeft.transform.position = new Vector3(transform.position.x + 0.95f, transform.position.y, transform.position.z);
@@ -156,6 +159,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
             anim.SetBool("Walk", false);
             hitBox.SetActive(true);
             StartCoroutine(EndAttack());
+            
         }
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
@@ -166,11 +170,22 @@ public class EnemyNavMeshAgent : MonoBehaviour
         }
     }
 
+    void CooldownState(float duration)
+    {
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        Vector3 directionToPlayer = player.position - transform.position;
+        if (distanceToPlayer > attackRange || Mathf.Abs(directionToPlayer.z) >= Mathf.Abs(directionToPlayer.x))
+        {
+            currentState = 1;
+        }
+    }
+
+
     IEnumerator EndAttack()
     {
         yield return new WaitForSeconds(0.5f);
         isAttacking = false;
-        currentState = 1;
+        currentState = 3;
         anim.SetBool("Attack", false);
         hitBox.SetActive(false);
     }
@@ -197,8 +212,14 @@ public class EnemyNavMeshAgent : MonoBehaviour
     }
     IEnumerator ResetKnockback(float dur)
     {
-        
+       
         yield return new WaitForSeconds(dur);
+        /*
+        while ()
+        {
+            yield return WaitForEndOfFrame();
+        }
+        */
         navMeshAgent.enabled = true;
         rb.isKinematic = true;
         Debug.Log("chegou aqui");
