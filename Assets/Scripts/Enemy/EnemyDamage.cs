@@ -34,7 +34,7 @@ public class EnemyDamage : MonoBehaviour
             if (other.gameObject.tag == "Player")
             {
                 Vector3 direction = other.transform.position - transform.position;
-                other.gameObject.GetComponent<PlayerController>().Knockback(direction, knockbackForce, knockTime);
+                //other.gameObject.GetComponent<PlayerController>().Knockback(direction, knockbackForce, knockTime);
                 other.gameObject.GetComponent<PlayerHealthController>().TakeDamage(1);
                 
             }

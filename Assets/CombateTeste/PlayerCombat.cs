@@ -75,7 +75,7 @@ public class PlayerCombat : MonoBehaviour
 
     public KeyCode lightAttackInput = KeyCode.Mouse0;
     public KeyCode heavyAttackInput = KeyCode.Mouse1;
-    public KeyCode changeWeaponKey = KeyCode.Tab;
+    public KeyCode changeWeaponKey = KeyCode.Q;
 
 
 
@@ -97,41 +97,45 @@ public class PlayerCombat : MonoBehaviour
         {
             isAttacking = false;
         }
+        if (!playerController.isSprinting)
+        {
+            if (Input.GetKey(KeyCode.W) && Input.GetKey(lightAttackInput) && !playerController.isJumping) //trocar para inputmanager
+            {
+                UpwardLightAttack();
+            }
+            else if (Input.GetKey(KeyCode.S) && Input.GetKey(lightAttackInput) && !playerController.isJumping) //trocar para inputmanager
+            {
+                DownwardLightAttack();
+            }
+            else if (Input.GetKey(lightAttackInput) && playerController.isJumping) //trocar para inputmanager
+            {
+                JumpingLightAttack();
+            }
+            else if (Input.GetKey(lightAttackInput) && !playerController.isJumping) //trocar para inputmanager
+            {
+                BasicLightAttack();
+            }
+            else if (Input.GetKey(KeyCode.W) && Input.GetKey(heavyAttackInput) && !playerController.isJumping) //trocar para inputmanager
+            {
+                UpwardHeavyAttack();
+            }
+            else if (Input.GetKey(KeyCode.S) && Input.GetKey(heavyAttackInput) && !playerController.isJumping) //trocar para inputmanager
+            {
+                DownwardHeavyAttack();
+            }
+            else if (Input.GetKey(heavyAttackInput) && playerController.isJumping) //trocar para inputmanager
+            {
+                JumpingHeavyAttack();
+            }
+            else if (Input.GetKey(heavyAttackInput) && !playerController.isJumping) //trocar para inputmanager
+            {
+                BasicHeavyAttack();
+            }
+            ExitAttack();
+        }
+        
 
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(lightAttackInput) && !playerController.isJumping) //trocar para inputmanager
-        {
-            UpwardLightAttack();
-        }
-        else if (Input.GetKey(KeyCode.S) && Input.GetKey(lightAttackInput) && !playerController.isJumping) //trocar para inputmanager
-        {
-            DownwardLightAttack();
-        }
-        else if (Input.GetKey(lightAttackInput) && playerController.isJumping) //trocar para inputmanager
-        {
-            JumpingLightAttack();
-        }
-        else if (Input.GetKey(lightAttackInput) && !playerController.isJumping) //trocar para inputmanager
-        {
-            BasicLightAttack();
-        }
-        else if (Input.GetKey(KeyCode.W) && Input.GetKey(heavyAttackInput) && !playerController.isJumping) //trocar para inputmanager
-        {
-            UpwardHeavyAttack();
-        }
-        else if (Input.GetKey(KeyCode.S) && Input.GetKey(heavyAttackInput) && !playerController.isJumping) //trocar para inputmanager
-        {
-            DownwardHeavyAttack();
-        }
-        else if (Input.GetKey(heavyAttackInput) && playerController.isJumping) //trocar para inputmanager
-        {
-            JumpingHeavyAttack();
-        }
-        else if (Input.GetKey(heavyAttackInput) && !playerController.isJumping) //trocar para inputmanager
-        {
-            BasicHeavyAttack();
-        }
-
-        ExitAttack();
+        
 
         StartCoroutine(QuickWeaponChange());
 
