@@ -84,6 +84,13 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             
             StartCoroutine(Remove());
         }
+
+        if(collision.tag == "ForgeSlot" && Item.Forge != Forge.None)
+        {
+            collision.SendMessage("AddItem", Item);
+
+            StartCoroutine(Remove());
+        }
     }
 
     IEnumerator Remove()

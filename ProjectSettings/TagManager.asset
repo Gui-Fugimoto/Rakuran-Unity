@@ -12,6 +12,7 @@ TagManager:
   - Inventory
   - QuickSlot
   - WeaponSlot
+  - ForgeSlot
   layers:
   - Default
   - TransparentFX
