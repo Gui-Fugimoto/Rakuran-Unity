@@ -10663,6 +10663,7 @@ GameObject:
   - component: {fileID: 1457585976}
   - component: {fileID: 1457585977}
   - component: {fileID: 1457585979}
+  - component: {fileID: 1457585980}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -10869,6 +10870,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: b79a239cb9911d248ad8b7d5e1cdc8c4, type: 2}
   duration: 0.3
+--- !u!54 &1457585980
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457585967}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &1475986946
 GameObject:
   m_ObjectHideFlags: 0
@@ -15998,6 +16015,11 @@ PrefabInstance:
         type: 3}
       propertyPath: damageCD
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116477544835161137, guid: 40f16ebc19684ff4b924aca76712ab09,
+        type: 3}
+      propertyPath: damage
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1116477544835161137, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}

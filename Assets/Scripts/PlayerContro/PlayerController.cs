@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     public float staminaCost = 10f; // stamina cost of the roll
     public float invulnerabilityDuration = 1f; // duration of invulnerability after the roll
     public KeyCode dodgeKey = KeyCode.LeftShift; // key to trigger the dodge roll
+    public bool invulnerable;
 
     private bool isRolling = false; // whether the player is currently rolling
     private Vector3 rollDirection; // direction of the roll
@@ -364,14 +365,15 @@ public class PlayerController : MonoBehaviour
                 // Move the player in the roll direction and apply a speed boost
                 Vector3 rollVelocity = rollDirection * rollDistance / rollDuration;
                 controller.Move((rollVelocity + rollDirection * rollSpeedBoost) * Time.deltaTime);
-
+                anim.Play("Raku_Dash");
                 // Rotate the player to face the roll direction
                 //transform.rotation = Quaternion.LookRotation(rollDirection);
-
+                invulnerable = true;
             }
             else
             {
                 isRolling = false;
+                invulnerable = false;
             }
         }
 

@@ -9,12 +9,14 @@ public class PlayerHealthController : MonoBehaviour
     public GameController gameC;
     public Animator anim;
     [SerializeField] int Count = 5;
+    private PlayerController playerC;
     // Start is called before the first frame update
     void Awake()
     {
         currentHP = maxHP;
         gameC = FindObjectOfType<GameController>();
         anim = GetComponentInChildren<Animator>();
+        playerC = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -30,9 +32,14 @@ public class PlayerHealthController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        currentHP -= damage;
-        GetComponentInParent<SimpleFlash>().Flash();
-        anim.SetTrigger("Damaged");
+        if (!playerC.invulnerable)
+        {
+            currentHP -= damage;
+            Debug.Log("tomou dano, vida atual " + (currentHP));
+            GetComponentInParent<SimpleFlash>().Flash();
+            anim.SetTrigger("Damaged");
+        }
+        
     }
      public void ConsumeItem(ItemParameter consumed)
     {

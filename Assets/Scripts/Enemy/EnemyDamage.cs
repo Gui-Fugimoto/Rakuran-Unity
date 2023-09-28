@@ -7,7 +7,7 @@ public class EnemyDamage : MonoBehaviour
     
     public float knockbackForce = 10f;
     public float knockTime = 1f;
-    float damage;
+    public float damage;
     public SpriteRenderer enemySpriteRend;
     
     //variaveis que definem a posicao da hitbox estao no EnemyAi script.
@@ -25,7 +25,7 @@ public class EnemyDamage : MonoBehaviour
             {
                 Vector3 direction = transform.position - other.transform.position;
                 other.gameObject.GetComponent<PlayerController>().Knockback(direction, knockbackForce, knockTime);
-                other.gameObject.GetComponent<PlayerHealthController>().TakeDamage(1);
+                other.gameObject.GetComponent<PlayerHealthController>().TakeDamage(damage);
                 
             }
         }
