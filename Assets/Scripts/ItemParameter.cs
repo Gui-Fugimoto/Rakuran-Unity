@@ -14,6 +14,7 @@ public class ItemParameter : ScriptableObject
     public Effect Effect;
     public Sprite EffectIcon;
     public WeaponType weaponType;
+    public Forge Forge;
     public float damage;
     //add elemental type, damage type, base damage value, etc.
 
@@ -25,6 +26,13 @@ public enum Effect
     Speed,
     OverTime,
     
+}
+public enum Forge
+{ 
+    None,
+    TreeZephir,
+    TreeAlhunz, 
+    TreeOptional,
 }
 public enum WeaponType
 {
