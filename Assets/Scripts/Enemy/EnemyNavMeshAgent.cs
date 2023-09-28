@@ -22,6 +22,9 @@ public class EnemyNavMeshAgent : MonoBehaviour
 
     private NavMeshAgent navMeshAgent;
     private Rigidbody rb;
+    [SerializeField] private bool grounded;
+    private LayerMask Ground;
+    [SerializeField] private float groundCheckDistance = 0.2f;
 
     [SerializeField] GameObject hitBox;
     [SerializeField] GameObject hitBoxPosLeft;
@@ -45,10 +48,12 @@ public class EnemyNavMeshAgent : MonoBehaviour
         hitBox.SetActive(false);
         wanderTarget = initialPosition + Random.insideUnitSphere * wanderRange;
         wanderTarget.y = transform.position.y;
+        Ground = LayerMask.GetMask("Ground");
     }
 
     void Update()
     {
+        CheckGrounded();
         timeSinceLastAttack += Time.deltaTime;
         spriteTransform.rotation = Quaternion.Euler(0, 0, 0);
         switch (currentState)
@@ -214,19 +219,32 @@ public class EnemyNavMeshAgent : MonoBehaviour
     {
        
         yield return new WaitForSeconds(dur);
-        /*
-        while ()
+        
+        while (grounded)
         {
-            yield return WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
+            navMeshAgent.enabled = true;
+            rb.isKinematic = true;
+            Debug.Log("chegou aqui");
         }
-        */
-        navMeshAgent.enabled = true;
-        rb.isKinematic = true;
-        Debug.Log("chegou aqui");
+        
+        
         
     }
-   
-    
+
+    void CheckGrounded()
+    {
+        
+        Vector3 rayOrigin = transform.position + Vector3.up * 0.1f;
+        if (Physics.Raycast(rayOrigin, Vector3.down, groundCheckDistance, Ground))
+        {           
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
+    }
 
     
 }

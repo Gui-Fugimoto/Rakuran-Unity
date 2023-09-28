@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyLife : MonoBehaviour
 {
     [SerializeField] float vida;
+    [SerializeField] bool damageCD = false;
     void Start()
     {
         
@@ -19,9 +20,20 @@ public class EnemyLife : MonoBehaviour
     }
     public void Damage(float str)
     {
-        vida -= str;
-        Debug.Log("tomou dano, vida atual " + (vida));
+        if (!damageCD)
+        {
+            damageCD = true;
+            vida -= str;
+            Debug.Log("tomou dano, vida atual " + (vida));
+            GetComponentInParent<SimpleFlash>().Flash();
+            StartCoroutine(ResetCooldown());
+        }
+        
+    }
 
-        GetComponentInParent<SimpleFlash>().Flash();
+    IEnumerator ResetCooldown()
+    {
+        yield return new WaitForSeconds(0.5f);
+        damageCD = false;
     }
 }

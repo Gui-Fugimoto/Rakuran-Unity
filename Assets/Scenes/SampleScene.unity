@@ -4128,12 +4128,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1633786000}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &593131506 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1116477543557590440, guid: 40f16ebc19684ff4b924aca76712ab09,
-    type: 3}
-  m_PrefabInstance: {fileID: 1116477544386115125}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &611109270
 GameObject:
   m_ObjectHideFlags: 0
@@ -5932,7 +5926,7 @@ GameObject:
   - component: {fileID: 846328849}
   - component: {fileID: 846328848}
   - component: {fileID: 846328847}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8934,12 +8928,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
     type: 3}
   m_PrefabInstance: {fileID: 1631721388}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1154136015 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1116477544690464472, guid: 40f16ebc19684ff4b924aca76712ab09,
-    type: 3}
-  m_PrefabInstance: {fileID: 1116477544386115125}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1170765065 stripped
 RectTransform:
@@ -16001,6 +15989,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1116477543437352223, guid: 40f16ebc19684ff4b924aca76712ab09,
+        type: 3}
+      propertyPath: vida
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116477543437352223, guid: 40f16ebc19684ff4b924aca76712ab09,
+        type: 3}
+      propertyPath: damageCD
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1116477544835161137, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}
       propertyPath: knockTime
@@ -16023,8 +16021,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5928604790689590249, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1457585972}
+    - target: {fileID: 5928604790689590249, guid: 40f16ebc19684ff4b924aca76712ab09,
+        type: 3}
       propertyPath: attackRange
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928604790689590249, guid: 40f16ebc19684ff4b924aca76712ab09,
+        type: 3}
+      propertyPath: pursuitRange
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928604790689590249, guid: 40f16ebc19684ff4b924aca76712ab09,
+        type: 3}
+      propertyPath: groundCheckDistance
+      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -16058,27 +16071,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1116477544386115135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116477544386115126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92617e8a32677545ae6e831ce52f7e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1457585972}
-  attackRange: 3
-  pursuitRange: 5
-  wanderRange: 10
-  attackCooldown: 2
-  currentState: 0
-  hitBox: {fileID: 1092963336}
-  hitBoxPosLeft: {fileID: 593131506}
-  hitBoxPosRight: {fileID: 1154136015}
 --- !u!54 &1116477544386115142
 Rigidbody:
   m_ObjectHideFlags: 0

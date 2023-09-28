@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName ="Attacks/Normal Attack")]
+[CreateAssetMenu(menuName = "Attacks/Normal Attack")]
 public class AttackSO : ScriptableObject
 {
     public AnimatorOverrideController animatorOV;
@@ -17,5 +17,8 @@ public class AttackSO : ScriptableObject
     public float animSpeed;
     public float endLag = 0.5f;
     public float startUp = 0.5f;
+    
+    
+
     
 }
