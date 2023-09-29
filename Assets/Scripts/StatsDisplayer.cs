@@ -17,6 +17,11 @@ public class StatsDisplayer : MonoBehaviour
     public GameObject Self;
     [SerializeField] Effect effect;
 
+    private void Start()
+    {
+        Self.SetActive(false);
+    }
+
     public void OnInspect(ItemParameter Item)
     {
         Vida = Item.Vida;
