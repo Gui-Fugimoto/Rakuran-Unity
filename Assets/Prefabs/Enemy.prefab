@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 10
+  damageCD: 0
 --- !u!54 &1116477543437352222
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,12 +129,12 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116477543437352208}
   serializedVersion: 2
-  m_Mass: 30
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 1
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1116477543437352216
@@ -184,12 +185,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92617e8a32677545ae6e831ce52f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1116477543557590421}
-  attackRange: 0.5
-  pursuitRange: 5
-  wanderRange: 10
+  player: {fileID: 1116477545295552470}
+  attackRange: 2
+  pursuitRange: 7
+  wanderRange: 8
   attackCooldown: 2
   currentState: 0
+  grounded: 0
+  groundCheckDistance: 1.2
   hitBox: {fileID: 1116477544835162059}
   hitBoxPosLeft: {fileID: 1116477543557590440}
   hitBoxPosRight: {fileID: 1116477544690464472}
@@ -469,8 +472,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a512c53c66ebe4298557966365d329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 2
-  knockTime: 0.3
+  knockbackForce: 0
+  knockTime: 0
+  damage: 1
   enemySpriteRend: {fileID: 1116477545295552464}
 --- !u!1 &1116477545295552471
 GameObject:

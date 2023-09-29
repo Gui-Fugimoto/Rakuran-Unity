@@ -1292,6 +1292,7 @@ MonoBehaviour:
   upwardHeavyComboCounter: 0
   downwardHeavyComboCounter: 0
   jumpingHeavyComboCounter: 0
+  mainHand: 0
   mainWeapon: {fileID: 842223606}
   offhandWeapon: {fileID: 476324873}
   AttackPosLeft: {fileID: 1475986946}
@@ -10660,7 +10661,6 @@ GameObject:
   - component: {fileID: 1457585978}
   - component: {fileID: 1457585968}
   - component: {fileID: 1457585975}
-  - component: {fileID: 1457585976}
   - component: {fileID: 1457585977}
   - component: {fileID: 1457585979}
   - component: {fileID: 1457585980}
@@ -10797,30 +10797,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.04, z: 0}
---- !u!114 &1457585976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457585967}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3484c3accc6982548825964bc799a23e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AttackPos1: {fileID: 787112757}
-  AttackPos2: {fileID: 1475986946}
-  AttackBox: {fileID: 92074696}
-  Combo: 0
-  Cooldown: 0
-  anim: {fileID: 128823545}
-  Dano: 2
-  DanoPesado: 0
-  mainHand: 0
-  Player: {fileID: 1457585968}
-  ArmaEquipada1: {fileID: 0}
-  ArmaEquipada2: {fileID: 0}
 --- !u!114 &1457585977
 MonoBehaviour:
   m_ObjectHideFlags: 0

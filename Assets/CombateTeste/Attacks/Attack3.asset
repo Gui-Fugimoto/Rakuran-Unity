@@ -16,7 +16,7 @@ MonoBehaviour:
   damageMultiplier: 1.2
   kbForce: 1.5
   kbDuration: 4
-  kbDirection: {x: 2, y: 2, z: 0}
+  kbDirection: {x: 3, y: 2, z: 0}
   animSpeed: 0
   endLag: 0.5
   startUp: 0.5

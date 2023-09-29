@@ -15,8 +15,8 @@ MonoBehaviour:
   animatorOV: {fileID: 22100000, guid: a752594ba9b026c43bbc66ae29393a7e, type: 2}
   damageMultiplier: 0.75
   kbForce: 1
-  kbDuration: 0.3
-  kbDirection: {x: 1, y: 0.5, z: 0}
+  kbDuration: 0.6
+  kbDirection: {x: 2, y: 0.5, z: 0}
   animSpeed: 0
   endLag: 0.5
   startUp: 0.5

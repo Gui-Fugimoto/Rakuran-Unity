@@ -10,6 +10,7 @@ public class PlayerHealthController : MonoBehaviour
     public Animator anim;
     [SerializeField] int Count = 5;
     private PlayerController playerC;
+    private bool damageDelay;
     // Start is called before the first frame update
     void Awake()
     {
@@ -32,12 +33,13 @@ public class PlayerHealthController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (!playerC.invulnerable)
+        if (!playerC.invulnerable && damageDelay == false)
         {
             currentHP -= damage;
             Debug.Log("tomou dano, vida atual " + (currentHP));
             GetComponentInParent<SimpleFlash>().Flash();
             anim.SetTrigger("Damaged");
+            StartCoroutine(InvulnerableDelay());
         }
         
     }
@@ -110,5 +112,12 @@ public class PlayerHealthController : MonoBehaviour
             gameC.GameOver();
             
         }
+    }
+
+    IEnumerator InvulnerableDelay()
+    {
+        damageDelay = true;
+        yield return new WaitForSeconds(0.5f);
+        damageDelay = false;
     }
 }
