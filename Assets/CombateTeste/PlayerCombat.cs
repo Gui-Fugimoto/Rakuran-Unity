@@ -59,7 +59,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] int downwardHeavyComboCounter;
     [SerializeField] int jumpingHeavyComboCounter;
 
-    bool mainHand;
+    [SerializeField]bool mainHand;
     
 
     [SerializeField] EquipWeapon mainWeapon;
@@ -467,7 +467,19 @@ public class PlayerCombat : MonoBehaviour
     }
     IEnumerator QuickWeaponChange()
     {
-        if (Input.GetKey(changeWeaponKey) && mainHand == false && mainWeapon != null)
+        
+        if(mainHand == false && mainWeapon.item != null && offhandWeapon.item == null)
+        {
+            ExitAttack();
+            equippedWeapon.weaponType = mainWeapon.item.weaponType;
+            equippedWeapon.baseDamage = mainWeapon.item.damage;
+            ChangeWeaponCombos();
+            ResetComboCounters();
+            yield return new WaitForSeconds(0.5f);
+            mainHand = true;
+        }
+
+        if (Input.GetKey(changeWeaponKey) && mainHand == false && mainWeapon.item != null)
         {
             ExitAttack();
             equippedWeapon.weaponType = mainWeapon.item.weaponType;
@@ -478,7 +490,7 @@ public class PlayerCombat : MonoBehaviour
             mainHand = true;
 
         }
-        if (Input.GetKey(changeWeaponKey) && mainHand == true && offhandWeapon != null)
+        if (Input.GetKey(changeWeaponKey) && mainHand == true && offhandWeapon.item != null)
         {
             ExitAttack();
             equippedWeapon.weaponType = offhandWeapon.item.weaponType;
