@@ -15,10 +15,10 @@ MonoBehaviour:
   active: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   intensity:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 5
   scatter:
     m_OverrideState: 0
     m_Value: 0.7
@@ -62,7 +62,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.333
+    m_Value: 0.4
   smoothness:
     m_OverrideState: 1
     m_Value: 0.5
@@ -87,7 +87,7 @@ MonoBehaviour:
     m_Value: {x: 0.97931206, y: 0.9924824, z: 1, w: 0.008826193}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9514057, z: 0.96633625, w: 0}
+    m_Value: {x: 0.90074605, y: 0.94431525, z: 1, w: 0}
   gain:
     m_OverrideState: 0
     m_Value: {x: 1, y: 1, z: 1, w: 0}
@@ -146,10 +146,10 @@ MonoBehaviour:
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 20
+    m_Value: 30
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 200
   gaussianMaxRadius:
     m_OverrideState: 1
     m_Value: 1
@@ -189,10 +189,10 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.9293707, y: 0.9736554, z: 1, w: 0.0794352}
+    m_Value: {x: 0.8327319, y: 0.866883, z: 1, w: 0.044130694}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.97630614, z: 0.78024745, w: 0}
+    m_Value: {x: 1, y: 0.8767304, z: 0.6179197, w: 0}
   highlights:
     m_OverrideState: 0
     m_Value: {x: 1, y: 1, z: 1, w: 0}
@@ -387,7 +387,7 @@ MonoBehaviour:
   lumVsSat:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 6
+      <length>k__BackingField: 5
       m_Loop: 0
       m_ZeroValue: 0.5
       m_Range: 1
@@ -413,17 +413,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.17632242
-          value: 0.4893617
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.8639799
-          value: 0.49468082
+          time: 0.35092348
+          value: 0.8156425
           inSlope: 0
           outSlope: 0
           tangentMode: 0
