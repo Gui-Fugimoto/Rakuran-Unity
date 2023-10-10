@@ -278,7 +278,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
             specialHitBox.SetActive(true);
             CDcontrol = 0f;
             yield return new WaitForSeconds(1f);
-            Vector3 directionToPlayer = (player.position - transform.position).normalized;
+            Vector3 directionToPlayer = (player.position - transform.position).normalized; //usar lerp
             rb.isKinematic = false;
             navMeshAgent.enabled = false;
             
