@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3835253177801478756}
+  - component: {fileID: 2490770909757439249}
   m_Layer: 0
   m_Name: "Pr\xE9dio1"
   m_TagString: Untagged
@@ -44,6 +45,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2490770909757439249
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614941328941567474}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.066898, y: 11.981121, z: 6.312561}
+  m_Center: {x: -8.933714, y: 3.8409672, z: 3.6509895}
 --- !u!1001 &404660995515967572
 PrefabInstance:
   m_ObjectHideFlags: 0
