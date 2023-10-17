@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class potionThrow : MonoBehaviour
 {
-    [SerializeField] float throwspeed;
+    public float throwspeed;
     [SerializeField] float fallDistance;
     public ItemParameter Item;
     [SerializeField] SpriteRenderer Potion;
+    PlayerController playerController;
     
     // Start is called before the first frame update
     void Start()
     {
         Potion.sprite = Item.Icon;
+        playerController = FindObjectOfType<PlayerController>();
+
+        if (playerController.flipped == true)
+        {
+            throwspeed = throwspeed * -1;
+        }
+
+        if (playerController.flipped == false)
+        {
+            throwspeed = throwspeed * +1;
+        }
     }
 
     // Update is called once per frame
@@ -21,11 +33,7 @@ public class potionThrow : MonoBehaviour
         transform.position = transform.position + new Vector3(throwspeed * Time.deltaTime, 0, 0);
         transform.Rotate(0,0, 300 * Time.deltaTime);
 
-      // if (Time.deltaTime >= fallDistance)
-      // {
-      //     transform.position = transform.position + new Vector3(throwspeed * Time.deltaTime, -1 * Time.deltaTime, 0);
-      //     Debug.Log("caindo");
-      // }
+      
     }
 
 
