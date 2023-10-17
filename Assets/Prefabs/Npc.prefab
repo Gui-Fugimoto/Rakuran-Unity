@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8495929846736730833}
   - component: {fileID: 8495929846736730832}
   - component: {fileID: 8495929846736730835}
+  - component: {fileID: 5698301192039779775}
   m_Layer: 0
   m_Name: Npc
   m_TagString: Untagged
@@ -112,8 +113,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.089999996, y: 0.25999996, z: 0.19999999}
-  m_Center: {x: 0, y: 0.12999998, z: 0}
+  m_Size: {x: 0.1642737, y: 0.25999996, z: 0.2}
+  m_Center: {x: 0.003078199, y: 0.12999998, z: 0}
 --- !u!114 &8495929846736730835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,3 +133,16 @@ MonoBehaviour:
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0
+--- !u!65 &5698301192039779775
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8495929846736730838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.090920836, y: 0.25999996, z: 0.018843362}
+  m_Center: {x: -0.00020699398, y: 0.12999998, z: 0.00055865553}
