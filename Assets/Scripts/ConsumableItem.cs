@@ -8,6 +8,11 @@ public class ConsumableItem : MonoBehaviour
     
     public Image Icon;
     [SerializeField] Collider2D Box;
+    [SerializeField] GameObject ThrowPotion;
+    [SerializeField] Vector3 Position;
+    [SerializeField] Transform PlayerPos;
+    [SerializeField] potionThrow potionPass;
+    [SerializeField] PlayerController controller;
     ItemParameter item;
     public DraggableItem child;
     public PlayerHealthController Health;
@@ -30,16 +35,26 @@ public class ConsumableItem : MonoBehaviour
 
     private void Update()
     {
+        Position = PlayerPos.position;
         if (Input.GetKeyDown(ConsumeKey))
         {
             Consume();
         }
+
     }
     public void Consume()
     {
-        Health.ConsumeItem(item);
-        ClearSlot();
-        
+        if(item.Veneno > item.Vida)
+        {
+            potionPass = ThrowPotion.GetComponent<potionThrow>();
+            potionPass.Item = item;
+            Object.Instantiate(ThrowPotion, Position, Quaternion.identity);
+        }
+        if (item.Veneno < item.Vida)
+        {
+            Health.ConsumeItem(item);
+            ClearSlot();
+        }
     }
 
     public void ClearSlot()

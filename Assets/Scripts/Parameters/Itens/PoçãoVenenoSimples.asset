@@ -20,4 +20,5 @@ MonoBehaviour:
   Effect: 3
   EffectIcon: {fileID: 0}
   weaponType: 5
+  Forge: 0
   damage: 0
