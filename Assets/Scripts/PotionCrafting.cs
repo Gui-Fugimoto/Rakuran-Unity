@@ -11,10 +11,16 @@ public class PotionCrafting : MonoBehaviour
     public int ingUsadsos;
     public int ingTotal;
     public Inventory inventory;
-    [SerializeField] ItemParameter PotCura;
-    [SerializeField] ItemParameter PotRecupera;
-    [SerializeField] ItemParameter PotVeneno;
-    [SerializeField] ItemParameter PotVenenoOT;
+#region poções    
+    [SerializeField] ItemParameter PotCuraSimples;
+    [SerializeField] ItemParameter PotRecuperaSimples;
+    [SerializeField] ItemParameter PotVenenoSimples;
+    [SerializeField] ItemParameter PotVenenoOTSimples;
+    [SerializeField] ItemParameter PotCuraMed;
+    [SerializeField] ItemParameter PotRecuperaMed;
+    [SerializeField] ItemParameter PotVenenoMed;
+    [SerializeField] ItemParameter PotVenenoOTMed;
+    #endregion
     [SerializeField] Image HealthMeter;
     [SerializeField] Image PoisonMeter;
     [SerializeField] Image EffectIcon;
@@ -57,18 +63,47 @@ public class PotionCrafting : MonoBehaviour
     {
        if(Effect == Effect.None)
         {
-            if (vida > veneno)
+            if (vida == 1 && veneno <= 0)
             {
-                inventory.AddItem(PotCura);
+                inventory.AddItem(PotCuraSimples);
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
                 EffectIcon.enabled = false;
                 ingUsadsos = 0;
             }
-            if (veneno > vida)
+            if (veneno == 1 && vida <= 0)
             {
-                inventory.AddItem(PotVeneno);
+                inventory.AddItem(PotVenenoSimples);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+
+            if (vida >= 2 && veneno <= 0)
+            {
+                inventory.AddItem(PotCuraMed);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+            if (veneno >= 2 && vida <= 0)
+            {
+                inventory.AddItem(PotVenenoMed);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+           
+            if (veneno > 0 && vida > 0)
+            {
+                Debug.Log("poção Falhou");
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
@@ -79,18 +114,47 @@ public class PotionCrafting : MonoBehaviour
 
        if (Effect == Effect.OverTime)
         {
-            if (vida > veneno)
+            if (vida == 1 && veneno <= 0)
             {
-                inventory.AddItem(PotRecupera);
+                inventory.AddItem(PotRecuperaSimples);
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
                 EffectIcon.enabled = false;
                 ingUsadsos = 0;
             }
-            if (veneno > vida)
+            if (veneno == 1 && vida <= 0)
             {
-                inventory.AddItem(PotVenenoOT);
+                inventory.AddItem(PotVenenoOTSimples);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+
+            if (vida >= 2 && veneno <= 0)
+            {
+                inventory.AddItem(PotRecuperaMed);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+            if (veneno >= 2 && vida <= 0)
+            {
+                inventory.AddItem(PotVenenoOTMed);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+
+            if (veneno > 0 && vida > 0)
+            {
+                Debug.Log("poção Falhou");
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;

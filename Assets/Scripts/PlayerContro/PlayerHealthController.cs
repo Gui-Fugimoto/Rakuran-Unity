@@ -8,7 +8,7 @@ public class PlayerHealthController : MonoBehaviour
     public float maxHP;
     public GameController gameC;
     public Animator anim;
-    [SerializeField] int Count = 5;
+    [SerializeField] int Count;
     private PlayerController playerC;
     private bool damageDelay;
     // Start is called before the first frame update
@@ -62,6 +62,7 @@ public class PlayerHealthController : MonoBehaviour
             if (consumed.Vida > 00 && currentHP != maxHP)
             {
                 InvokeRepeating("OvertimeHealing", 0.0f, 1f);
+                Count = consumed.Vida;
             }
             if (consumed.Veneno > 00)
             {
@@ -81,7 +82,6 @@ public class PlayerHealthController : MonoBehaviour
       
       if(Count == 0)
       {
-          Count = 5;
           CancelInvoke("OvertimeHealing");
       }
 

@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class EnemyLife : MonoBehaviour
 {
     [SerializeField] float vida;
     [SerializeField] bool damageCD = false;
+    [SerializeField] float Count;
     void Start()
     {
         
@@ -29,6 +31,28 @@ public class EnemyLife : MonoBehaviour
             StartCoroutine(ResetCooldown());
         }
         
+    }
+    
+    public void DamageOT(float str)
+    {
+        InvokeRepeating("OvertimePoison", 0.0f, 1f);
+        Count = str;
+    }
+
+    void OvertimePoison()
+    {
+        if (Count > 0)
+        {
+            vida -= 1;
+            GetComponentInParent<SimpleFlash>().Flash();
+            Count -= 1;
+        }
+
+        if (Count == 0)
+        {
+            CancelInvoke("OvertimePoison");
+        }
+
     }
 
     IEnumerator ResetCooldown()
