@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 765c43eadaffa08488daeb0828a7e81a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwspeed: 3
+  throwspeed: 10
   fallDistance: 5
-  Item: {fileID: 11400000, guid: 424d2b74623cd764fb92875f84353884, type: 2}
+  Item: {fileID: 11400000, guid: 4876070bdc968b54eb5f8a74c86130bb, type: 2}
   Potion: {fileID: 1970131732356365575}
 --- !u!65 &1777882781865076139
 BoxCollider:
