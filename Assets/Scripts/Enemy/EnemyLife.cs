@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Rendering;
 
 public class EnemyLife : MonoBehaviour
@@ -9,6 +10,7 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] bool damageCD = false;
     [SerializeField] float Count;
     [SerializeField] float Resist;
+    [SerializeField] NavMeshAgent Enemy;
     void Start()
     {
         
@@ -45,6 +47,10 @@ public class EnemyLife : MonoBehaviour
         StartCoroutine(ResistDebuff());
     }
 
+    public void Slow()
+    {
+        StartCoroutine(SlowDebuff());
+    }
     void OvertimePoison()
     {
         if (Count > 0)
@@ -72,5 +78,12 @@ public class EnemyLife : MonoBehaviour
         Resist = -2;
         yield return new WaitForSeconds(30f);
         Resist = 0;
+    }
+
+    IEnumerator SlowDebuff()
+    {
+        Enemy.speed = Enemy.speed / 2;
+        yield return new WaitForSeconds(10f);
+        Enemy.speed = Enemy.speed * 2;
     }
 }

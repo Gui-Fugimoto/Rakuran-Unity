@@ -50,7 +50,7 @@ public class potionThrow : MonoBehaviour
 
             if(Item.Effect == Effect.OverTime)
             {
-                Debug.Log("VENENOU");
+                Debug.Log("VENENOU Pelo Tempo");
                 other.GetComponent<EnemyLife>().DamageOT(PotionDamage);
                 Destroy(gameObject, 0.1f);
             }
@@ -62,6 +62,12 @@ public class potionThrow : MonoBehaviour
                 Destroy(gameObject, 0.1f);
             }
 
+            if(Item.Effect == Effect.Speed)
+            {
+                Debug.Log("Lentou");
+                other.GetComponent<EnemyLife>().Slow();
+                Destroy(gameObject, 0.1f);
+            }
         }
     }
 

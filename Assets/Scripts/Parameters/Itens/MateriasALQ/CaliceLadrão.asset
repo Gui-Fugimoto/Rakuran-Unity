@@ -20,6 +20,6 @@ MonoBehaviour:
   Consumivel: 0
   Effect: 0
   EffectIcon: {fileID: 0}
-  weaponType: 5
+  weaponType: 0
   Forge: 0
   damage: 0

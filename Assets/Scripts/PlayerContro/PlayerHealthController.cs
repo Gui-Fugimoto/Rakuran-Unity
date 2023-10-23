@@ -75,6 +75,11 @@ public class PlayerHealthController : MonoBehaviour
         {
             StartCoroutine(ResistBuff());
         }
+
+        if(consumed.Effect == Effect.Speed)
+        {
+            playerC.speedPotion();
+        }
        
     }
 

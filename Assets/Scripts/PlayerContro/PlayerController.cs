@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravity = 0.25f;
     [SerializeField] private float jumpForce = 8.0f;
     [SerializeField] private float terminalVelocity = 5.0f;
+    [SerializeField] private float SpeedBonus;
     private float verticalVelocity;
 
     private bool grounded;
@@ -84,13 +85,27 @@ public class PlayerController : MonoBehaviour
         playerCombatScript = GetComponentInChildren<PlayerCombat>();
     }
 
+    public void speedPotion()
+    {
+        StartCoroutine(SpeedBuff());
+        Debug.Log("bebeuVeloz");
+    }
+
+    IEnumerator SpeedBuff()
+    {
+        moveSpeedX = moveSpeedX * SpeedBonus;
+        moveSpeedY = moveSpeedY * SpeedBonus;
+        yield return new WaitForSeconds(10f);
+        moveSpeedX = moveSpeedX/SpeedBonus;
+        moveSpeedY = moveSpeedY/SpeedBonus;
+    }
 
     void Update()
     {
         if (isSprinting == false)
         {
-            moveSpeedX = baseMoveSpeedX;
-            moveSpeedY = baseMoveSpeedY;
+            //moveSpeedX = baseMoveSpeedX;
+            //moveSpeedY = baseMoveSpeedY;
             if (InInventory == false)
             {
                
@@ -305,8 +320,8 @@ public class PlayerController : MonoBehaviour
             initialSprintTimer = float.PositiveInfinity;
             //Debug.Log("parou");
             isSprinting  = false;
-            moveSpeedX = 5;
-            moveSpeedY = 5;
+            moveSpeedX = 4;
+            moveSpeedY = 4;
             anim.SetBool("Run", false);
             //anim.SetBool("sprintCharge", false);
         }
