@@ -55,6 +55,13 @@ public class potionThrow : MonoBehaviour
                 Destroy(gameObject, 0.1f);
             }
 
+            if(Item.Effect == Effect.Resist)
+            {
+                Debug.Log("Fraqueceu");
+                other.GetComponent<EnemyLife>().ResistPerda();
+                Destroy(gameObject, 0.1f);
+            }
+
         }
     }
 

@@ -8,6 +8,7 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] float vida;
     [SerializeField] bool damageCD = false;
     [SerializeField] float Count;
+    [SerializeField] float Resist;
     void Start()
     {
         
@@ -25,7 +26,7 @@ public class EnemyLife : MonoBehaviour
         if (!damageCD)
         {
             damageCD = true;
-            vida -= str;
+            vida -= (str - Resist) ;
             Debug.Log("tomou dano, vida atual " + (vida));
             GetComponentInParent<SimpleFlash>().Flash();
             StartCoroutine(ResetCooldown());
@@ -37,6 +38,11 @@ public class EnemyLife : MonoBehaviour
     {
         InvokeRepeating("OvertimePoison", 0.0f, 1f);
         Count = str;
+    }
+
+    public void ResistPerda()
+    {
+        StartCoroutine(ResistDebuff());
     }
 
     void OvertimePoison()
@@ -59,5 +65,12 @@ public class EnemyLife : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         damageCD = false;
+    }
+
+    IEnumerator ResistDebuff()
+    {
+        Resist = -2;
+        yield return new WaitForSeconds(30f);
+        Resist = 0;
     }
 }

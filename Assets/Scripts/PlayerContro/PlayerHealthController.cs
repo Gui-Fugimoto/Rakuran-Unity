@@ -11,6 +11,7 @@ public class PlayerHealthController : MonoBehaviour
     [SerializeField] int Count;
     private PlayerController playerC;
     private bool damageDelay;
+    [SerializeField] int resist;
     // Start is called before the first frame update
     void Awake()
     {
@@ -35,7 +36,7 @@ public class PlayerHealthController : MonoBehaviour
     {
         if (!playerC.invulnerable && damageDelay == false)
         {
-            currentHP -= damage;
+            currentHP -= (damage - resist);
             Debug.Log("tomou dano, vida atual " + (currentHP));
             GetComponentInParent<SimpleFlash>().Flash();
             anim.SetTrigger("Damaged");
@@ -68,6 +69,11 @@ public class PlayerHealthController : MonoBehaviour
             {
                 InvokeRepeating("OvertimePoison", 0.0f, 1f);
             }
+        }
+
+        if(consumed.Effect == Effect.Resist)
+        {
+            StartCoroutine(ResistBuff());
         }
        
     }
@@ -119,5 +125,12 @@ public class PlayerHealthController : MonoBehaviour
         damageDelay = true;
         yield return new WaitForSeconds(0.5f);
         damageDelay = false;
+    }
+
+    IEnumerator ResistBuff()
+    {
+        resist = +1;
+        yield return new WaitForSeconds(15f);
+        resist = 0;
     }
 }

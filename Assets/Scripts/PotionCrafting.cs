@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,13 +22,15 @@ public class PotionCrafting : MonoBehaviour
     [SerializeField] ItemParameter PotRecuperaMed;
     [SerializeField] ItemParameter PotVenenoMed;
     [SerializeField] ItemParameter PotVenenoOTMed;
+    [SerializeField] ItemParameter PotResist;
+    [SerializeField] ItemParameter PotFraqueza;
     #endregion
     [SerializeField] Image HealthMeter;
     [SerializeField] Image PoisonMeter;
     [SerializeField] Image EffectIcon;
     [SerializeField] KeyCode FinishPotionKey;
 
-    private void Start()
+        private void Start()
     {
         EffectIcon.enabled = false;
     }
@@ -162,6 +166,38 @@ public class PotionCrafting : MonoBehaviour
                 ingUsadsos = 0;
             }
         }
-        
+
+        if (Effect == Effect.OverTime)
+        {
+            if (vida > 1 && veneno <= 0)
+            {
+                inventory.AddItem(PotResist);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+            if (veneno > 1 && vida <= 0)
+            {
+                inventory.AddItem(PotFraqueza);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+
+            if (veneno > 0 && vida > 0)
+            {
+                Debug.Log("poção Falhou");
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+        }
+
     }
 }
