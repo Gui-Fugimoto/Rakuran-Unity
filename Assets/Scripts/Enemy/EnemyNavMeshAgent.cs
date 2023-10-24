@@ -267,7 +267,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
         }
     }
 
-    public virtual IEnumerator SpecialAttack()
+    protected  IEnumerator SpecialAttack()
     {
         if (!isAttacking && timeSinceLastAttack >= attackCooldown)
         {

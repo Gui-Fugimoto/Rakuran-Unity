@@ -9,5 +9,7 @@ public class QuestStage : ScriptableObject
     public string sDescription;
     public List<GameObject> sSpawnList;
     public List<GameObject> sDespawnList;
+
+    public bool isDone;
     
 }

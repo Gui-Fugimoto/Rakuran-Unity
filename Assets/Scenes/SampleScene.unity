@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1702,7 +1702,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206126668}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99ff3203e2c37254d85bb99e8385f628, type: 3}
   m_Name: 
@@ -2688,7 +2688,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366324272}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99ff3203e2c37254d85bb99e8385f628, type: 3}
   m_Name: 
@@ -2916,7 +2916,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411213409}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99ff3203e2c37254d85bb99e8385f628, type: 3}
   m_Name: 
@@ -5385,10 +5385,18 @@ MonoBehaviour:
   ingUsadsos: 0
   ingTotal: 3
   inventory: {fileID: 0}
-  PotCura: {fileID: 11400000, guid: 1498ebbbca3e52e4097bbe6dda3a3996, type: 2}
-  PotRecupera: {fileID: 11400000, guid: fe1058c7eb2c9694583b74fe90b97b13, type: 2}
-  PotVeneno: {fileID: 11400000, guid: 424d2b74623cd764fb92875f84353884, type: 2}
-  PotVenenoOT: {fileID: 11400000, guid: 4876070bdc968b54eb5f8a74c86130bb, type: 2}
+  PotCuraSimples: {fileID: 0}
+  PotRecuperaSimples: {fileID: 0}
+  PotVenenoSimples: {fileID: 0}
+  PotVenenoOTSimples: {fileID: 0}
+  PotCuraMed: {fileID: 0}
+  PotRecuperaMed: {fileID: 0}
+  PotVenenoMed: {fileID: 0}
+  PotVenenoOTMed: {fileID: 0}
+  PotResist: {fileID: 0}
+  PotFraqueza: {fileID: 0}
+  PotSlow: {fileID: 0}
+  PotSpeed: {fileID: 0}
   HealthMeter: {fileID: 623837267}
   PoisonMeter: {fileID: 1006242985}
   EffectIcon: {fileID: 1994420444}
@@ -12044,6 +12052,7 @@ MonoBehaviour:
   gravity: 0.3
   jumpForce: 8
   terminalVelocity: 10
+  SpeedBonus: 0
   isSprinting: 0
   isJumping: 0
   anim: {fileID: 128823545}
@@ -12191,6 +12200,7 @@ MonoBehaviour:
   gameC: {fileID: 1047025472}
   anim: {fileID: 0}
   Count: 5
+  resist: 0
 --- !u!114 &1457585979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13632,9 +13642,8 @@ MonoBehaviour:
   Veneno: 0
   ItemIcon: {fileID: 415749708}
   ItemSelf: {fileID: 0}
-  Effect: {fileID: 1252546446}
+  EffectSprite: {fileID: 0}
   Self: {fileID: 1652062272}
-  effect: 3
 --- !u!1001 &1665873664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16568,7 +16577,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976188696}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99ff3203e2c37254d85bb99e8385f628, type: 3}
   m_Name: 
@@ -18089,7 +18098,7 @@ PrefabInstance:
     - target: {fileID: 1116477543437352208, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1116477543437352211, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}
@@ -18652,7 +18661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1246942414251505979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18681,6 +18690,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 30
   damageCD: 0
+  Count: 0
+  Resist: 0
+  Enemy: {fileID: 0}
 --- !u!33 &1246942414251505982
 MeshFilter:
   m_ObjectHideFlags: 0
