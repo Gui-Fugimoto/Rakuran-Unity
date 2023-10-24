@@ -7,7 +7,7 @@ public class QuestManager : MonoBehaviour
     public List<QuestObject> Quests;
     public int questIndex;
     public int questStageIndex;
-    public int currentStageIndex;
+    public int currentStageIndex = 0;
     
 
     void Start()
@@ -45,10 +45,12 @@ public class QuestManager : MonoBehaviour
     {
         currentStageIndex = quest.stageIndex;
         
-        if (currentStageIndex < quest.qStage.Count - 1)
+        if (quest.qStage[currentStageIndex].isDone && currentStageIndex < quest.qStage.Count - 1)
         {
             quest.stageIndex++;
+            Debug.Log("MAs e agora?/");
             ManageQuests(quest);
+            
         }
     }
 
@@ -59,6 +61,7 @@ public class QuestManager : MonoBehaviour
             //Quests[questIndex].qSpawnList[i].SetActive(true);
             Debug.Log("sasageyo?");
             Instantiate(quest.qSpawnList[i]);
+            Debug.Log(i);
         }
 
         for (int i = 0; i <= quest.qDespawnList.Count; i++)

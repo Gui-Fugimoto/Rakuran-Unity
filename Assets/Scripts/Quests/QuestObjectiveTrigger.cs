@@ -51,7 +51,10 @@ public class QuestObjectiveTrigger : MonoBehaviour
     public void Talk()
     {
         questManager.AdvanceQuestStage(quest);
-        Debug.Log("Quest avançou stage");        
+        quest.qStage[quest.stageIndex].isDone = true;
+        Debug.Log("Quest avançou stage");
+
+        this.enabled = false;
     }
 
     

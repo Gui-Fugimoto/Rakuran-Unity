@@ -5,14 +5,11 @@ using UnityEngine;
 public class EnemyGranadier : EnemyNavMeshAgent
 {
     public GameObject rocketTargetPrefab;
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 
-    protected IEnumerator SpecialAttack() 
+    protected new IEnumerator SpecialAttack() 
     {
+      
         if (!isAttacking && timeSinceLastAttack >= attackCooldown)
         {
             CDcontrol = 0f;
