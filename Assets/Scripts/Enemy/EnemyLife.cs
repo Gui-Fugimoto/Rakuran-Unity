@@ -13,7 +13,7 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] NavMeshAgent Enemy;
     void Start()
     {
-        
+        Enemy = GetComponent<NavMeshAgent>();
     }
     void Update()
     {

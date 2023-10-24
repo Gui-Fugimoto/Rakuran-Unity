@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
         baseMoveSpeedX = moveSpeedX;
         baseMoveSpeedY = moveSpeedY;
         playerCombatScript = GetComponentInChildren<PlayerCombat>();
+        SpeedBonus = 1;
     }
 
     public void speedPotion()
@@ -93,11 +94,9 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator SpeedBuff()
     {
-        moveSpeedX = moveSpeedX * SpeedBonus;
-        moveSpeedY = moveSpeedY * SpeedBonus;
+        SpeedBonus = 1.5f;
         yield return new WaitForSeconds(10f);
-        moveSpeedX = moveSpeedX/SpeedBonus;
-        moveSpeedY = moveSpeedY/SpeedBonus;
+        SpeedBonus = 1;
     }
 
     void Update()
@@ -174,8 +173,8 @@ public class PlayerController : MonoBehaviour
 
         float moveAxis = Input.GetAxis(moveInputAxis);
         float turnAxis = Input.GetAxis(turnInputAxis);
-        movement = new Vector3(turnAxis  * moveSpeedX, 0, moveAxis * moveSpeedY);
-        movement = Vector3.ClampMagnitude(movement, moveSpeedX);
+        movement = new Vector3(turnAxis  * moveSpeedX * SpeedBonus, 0, moveAxis * moveSpeedY * SpeedBonus);
+        movement = Vector3.ClampMagnitude(movement, moveSpeedX*SpeedBonus);
 
 
         if (canmove)
@@ -298,16 +297,16 @@ public class PlayerController : MonoBehaviour
                 {
                     moveSpeedX = 20;
                     moveSpeedY = 3;
-                    movement = new Vector3(moveSpeedX, 0, moveAxis * moveSpeedY);
-                    movement = Vector3.ClampMagnitude(movement, moveSpeedX);
+                    movement = new Vector3(moveSpeedX * SpeedBonus, 0, moveAxis * moveSpeedY);
+                    movement = Vector3.ClampMagnitude(movement, moveSpeedX * SpeedBonus);
                     transform.Translate(movement * Time.deltaTime);
                 }
                 else if (flipped == true)
                 {
                     moveSpeedX = 20;
                     moveSpeedY = 3;
-                    movement = new Vector3(-moveSpeedX, 0, moveAxis * moveSpeedY);
-                    movement = Vector3.ClampMagnitude(movement, moveSpeedX);
+                    movement = new Vector3(-moveSpeedX * SpeedBonus, 0, moveAxis * moveSpeedY);
+                    movement = Vector3.ClampMagnitude(movement, moveSpeedX * SpeedBonus);
                     transform.Translate(movement * Time.deltaTime);
                 }
 
