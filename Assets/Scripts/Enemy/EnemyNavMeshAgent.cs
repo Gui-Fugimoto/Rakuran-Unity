@@ -13,11 +13,11 @@ public class EnemyNavMeshAgent : MonoBehaviour
 
     private Vector3 wanderTarget;
     private Vector3 initialPosition;
-    private float timeSinceLastAttack = 0f;
+    public float timeSinceLastAttack = 0f;
     public int currentState = 0; // 0 = wander, 1 = pursuit, 2 = attack
-    private bool isAttacking = false;
+    public bool isAttacking = false;
 
-    private Animator anim;
+    public Animator anim;
     private SpriteRenderer spriteRend;
 
     private NavMeshAgent navMeshAgent;
@@ -267,7 +267,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
         }
     }
 
-    IEnumerator SpecialAttack()
+    public virtual IEnumerator SpecialAttack()
     {
         if (!isAttacking && timeSinceLastAttack >= attackCooldown)
         {

@@ -16,8 +16,9 @@ MonoBehaviour:
   qStage:
   - {fileID: 11400000, guid: 743d7c90c5d661944b5cb6f8e703f8af, type: 2}
   - {fileID: 11400000, guid: 2c23a136458bf7a44a40bbf199b5a931, type: 2}
-  stageIndex: 1
-  qDescription: " Ol\xE1  eu sou o goku"
-  qDialog: []
-  qObjectives: []
-  qNPCs: []
+  - {fileID: 11400000, guid: 55595682737faec46944b4293c2a1ef0, type: 2}
+  stageIndex: 2
+  qDescription: ' eu sou o goku '
+  qSpawnList:
+  - {fileID: 3567991602758759601, guid: 260ad04868fa96c439b314daf9e2ffe5, type: 3}
+  qDespawnList: []

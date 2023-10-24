@@ -17,7 +17,9 @@ public class AttackSO : ScriptableObject
     public float animSpeed;
     public float endLag = 0.5f;
     public float startUp = 0.5f;
+
     
+    public AudioClip audioClip;
     
 
     

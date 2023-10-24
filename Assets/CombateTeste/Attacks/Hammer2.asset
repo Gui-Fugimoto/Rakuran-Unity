@@ -20,3 +20,4 @@ MonoBehaviour:
   animSpeed: 0
   endLag: 0.5
   startUp: 0.5
+  audioClip: {fileID: 8300000, guid: c833db330bfac5c459e1f015205313a6, type: 3}

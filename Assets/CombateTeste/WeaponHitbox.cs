@@ -14,9 +14,11 @@ public class WeaponHitbox : MonoBehaviour
     public float knockDuration = 0;
     public Vector3 knockDirection;
 
+    public AudioClip audioClip;
     private void Start()
     {
         triggerBox = GetComponent<BoxCollider>();
+        triggerBox.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)

@@ -11,10 +11,9 @@ public class QuestObject : ScriptableObject
     public List<QuestStage> qStage;
     public int stageIndex;
     public string qDescription;
-    public List<string> qDialog;
-    public List<GameObject> qObjectives;
-    public List<GameObject> qNPCs;
-    
+    public List<GameObject> qSpawnList;
+    public List<GameObject> qDespawnList;
+
 }
 
 

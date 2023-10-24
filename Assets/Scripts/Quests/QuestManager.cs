@@ -7,58 +7,64 @@ public class QuestManager : MonoBehaviour
     public List<QuestObject> Quests;
     public int questIndex;
     public int questStageIndex;
-    public bool once;
+    public int currentStageIndex;
+    
 
     void Start()
     {
         questIndex = 0;
+        //ManageQuestObjects();
     }
 
-    // Update is called once per frame
-    void Update()
+    
+
+    public void ManageQuests(QuestObject quest)
     {
-        //chama o manage quest 1 vez pra cada quest na lista
-        foreach (var quest in Quests)
+        //escolhe a quest e o stage dela                
+
+        QuestStage currentStage = quest.qStage[quest.stageIndex];
+        
+
+        
+        quest.qDescription = quest.qDescription + " " + currentStage.sDescription.ToString();
+        ManageQuestObjects(quest);
+        
+        if (quest.stageIndex > 0)
         {
+            //Pegou quest
+            //faz aparecer no menu
+            Debug.Log("Quest Start" + quest.qDescription);              
+        }
+            
+              
+     
+
+    }
+    //chama por evento
+    public void AdvanceQuestStage(QuestObject quest)
+    {
+        currentStageIndex = quest.stageIndex;
+        
+        if (currentStageIndex < quest.qStage.Count - 1)
+        {
+            quest.stageIndex++;
             ManageQuests(quest);
         }
     }
 
-    void ManageQuests(QuestObject quest)
+    void ManageQuestObjects(QuestObject quest)
     {
-        //escolhe a quest e o stage dela
-        quest = Quests[questIndex];
-        int questStageIndex = quest.stageIndex;
-
-        QuestStage currentStage = quest.qStage[questStageIndex];
-        
-
-        if (!once)
+        for(int i = 0; i <= quest.qSpawnList.Count; i++)
         {
-            quest.qDescription = quest.qDescription + " " + currentStage.sDescription.ToString();
-            if(quest.stageIndex > 0)
-            {
-                //Pegou quest
-                //faz aparecer no menu
-                Debug.Log("Quest Start" + quest.qDescription);
-               
-            }
-            once = true;
+            //Quests[questIndex].qSpawnList[i].SetActive(true);
+            Debug.Log("sasageyo?");
+            Instantiate(quest.qSpawnList[i]);
         }
 
-        
-     
-
-    }
-
-    public void AdvanceQuestStage(QuestObject currentQuest)
-    {
-        currentQuest = Quests[questIndex];
-        int currentStageIndex = currentQuest.stageIndex;
-        once = false;
-        if (currentStageIndex < currentQuest.qStage.Count - 1)
+        for (int i = 0; i <= quest.qDespawnList.Count; i++)
         {
-            currentQuest.stageIndex++;
+            quest.qDespawnList[i].SetActive(false);
         }
+
     }
 }

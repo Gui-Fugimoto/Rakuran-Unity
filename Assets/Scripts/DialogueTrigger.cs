@@ -8,9 +8,17 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] DialogueManager Manager;
     public bool Falando;
     public bool Conversando;
+
+    public QuestObjectiveTrigger qTrigger;
     public void TriggerDialogue()
     {
         Manager.StartDialogue(dialogue);
+    }
+
+    private void Start()
+    {
+        qTrigger = gameObject.GetComponent<QuestObjectiveTrigger>();
+        Manager = FindObjectOfType<DialogueManager>();
     }
 
     private void FixedUpdate()
@@ -24,6 +32,14 @@ public class DialogueTrigger : MonoBehaviour
         if(Manager.DialogoFim == true)
         {
             StartCoroutine(CooldownToStart());
+
+            if(qTrigger != null)
+            {
+                qTrigger.Talk();
+
+                Debug.Log("am im being called twice");
+            }
+            Manager.DialogoFim = false;
         }
     }
 
@@ -31,6 +47,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         Falando = false;
+        
     }
 
     private void OnTriggerStay(Collider other)

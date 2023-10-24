@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57cf93befc1862340b3d8db4c7a6587f, type: 3}
   m_Name: DamageEspada
   m_EditorClassIdentifier: 
-  weaponType: 1
+  weaponType: 2
   Dano: 2
   DanoPesado: 3

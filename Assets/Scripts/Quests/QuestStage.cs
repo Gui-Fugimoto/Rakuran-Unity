@@ -7,9 +7,7 @@ public class QuestStage : ScriptableObject
 {
     public int stageNo;
     public string sDescription;
-    public List<string> sDialog;
-    public List<GameObject> sObjectives;
-    public List<GameObject> sNPCs;
-    public bool sCompleted;
+    public List<GameObject> sSpawnList;
+    public List<GameObject> sDespawnList;
     
 }

@@ -77,7 +77,8 @@ public class PlayerCombat : MonoBehaviour
     public KeyCode heavyAttackInput = KeyCode.Mouse1;
     public KeyCode changeWeaponKey = KeyCode.Q;
 
-
+    public AudioSource audioSource;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -87,6 +88,7 @@ public class PlayerCombat : MonoBehaviour
         equippedWeapon.baseDamage = mainWeapon.item.damage;
         ChangeWeaponCombos();
         equippedWeapon.DisableTriggerBox();
+        
     }
 
     // Update is called once per frame
@@ -164,9 +166,12 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = basicLightCombo[basicComboCounter].kbForce;
                 equippedWeapon.knockDuration = basicLightCombo[basicComboCounter].kbDuration;
                 equippedWeapon.knockDirection = basicLightCombo[basicComboCounter].kbDirection;
+                equippedWeapon.audioClip = basicLightCombo[basicComboCounter].audioClip;
                 FlipKnockback();
                 isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
+                audioSource.clip = equippedWeapon.audioClip;
+                audioSource.Play();
                 //Knockback();
                 basicComboCounter++;
                 lastClickedTime = Time.time;
@@ -201,11 +206,13 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = upwardLightCombo[upwardComboCounter].kbForce;
                 equippedWeapon.knockDuration = upwardLightCombo[upwardComboCounter].kbDuration;
                 equippedWeapon.knockDirection = upwardLightCombo[upwardComboCounter].kbDirection;
+                equippedWeapon.audioClip = upwardLightCombo[upwardComboCounter].audioClip;
                 isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 upwardComboCounter++;
                 lastClickedTime = Time.time;
-
+                audioSource.clip = equippedWeapon.audioClip;
+                audioSource.Play();
                 if (upwardComboCounter >= upwardLightCombo.Count)
                 {
                     upwardComboCounter = 0;
@@ -236,11 +243,13 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = downwardLightCombo[downwardComboCounter].kbForce;
                 equippedWeapon.knockDuration = downwardLightCombo[downwardComboCounter].kbDuration;
                 equippedWeapon.knockDirection = downwardLightCombo[downwardComboCounter].kbDirection;
+                equippedWeapon.audioClip = downwardLightCombo[downwardComboCounter].audioClip;
                 isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 downwardComboCounter++;
                 lastClickedTime = Time.time;
-
+                audioSource.clip = equippedWeapon.audioClip;
+                audioSource.Play();
                 if (downwardComboCounter >= downwardLightCombo.Count)
                 {
                     downwardComboCounter = 0;
@@ -270,11 +279,13 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = jumpingLightCombo[jumpingComboCounter].kbForce;
                 equippedWeapon.knockDuration = jumpingLightCombo[jumpingComboCounter].kbDuration;
                 equippedWeapon.knockDirection = jumpingLightCombo[jumpingComboCounter].kbDirection;
+                equippedWeapon.audioClip = jumpingLightCombo[jumpingComboCounter].audioClip;
                 isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 jumpingComboCounter++;
                 lastClickedTime = Time.time;
-
+                audioSource.clip = equippedWeapon.audioClip;
+                audioSource.Play();
                 if (jumpingComboCounter >= jumpingLightCombo.Count)
                 {
                     jumpingComboCounter = 0;
@@ -305,12 +316,14 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = basicHeavyCombo[basicHeavyComboCounter].kbForce;
                 equippedWeapon.knockDuration = basicHeavyCombo[basicHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = basicHeavyCombo[basicHeavyComboCounter].kbDirection;
+                equippedWeapon.audioClip = basicHeavyCombo[basicHeavyComboCounter].audioClip;
                 isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 basicHeavyComboCounter++;
                 lastClickedTime = Time.time;
-
+                audioSource.clip = equippedWeapon.audioClip;
+                audioSource.Play();
                 if (basicHeavyComboCounter >= basicHeavyCombo.Count)
                 {
                     basicHeavyComboCounter = 0;
@@ -341,12 +354,14 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = upwardHeavyCombo[upwardHeavyComboCounter].kbForce;
                 equippedWeapon.knockDuration = upwardHeavyCombo[upwardHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = upwardHeavyCombo[upwardHeavyComboCounter].kbDirection;
+                equippedWeapon.audioClip = upwardHeavyCombo[upwardHeavyComboCounter].audioClip;
                 isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 upwardHeavyComboCounter++;
                 lastClickedTime = Time.time;
-
+                audioSource.clip = equippedWeapon.audioClip;
+                audioSource.Play();
                 if (upwardHeavyComboCounter >= upwardHeavyCombo.Count)
                 {
                     upwardHeavyComboCounter = 0;
@@ -377,12 +392,14 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = downwardHeavyCombo[downwardHeavyComboCounter].kbForce;
                 equippedWeapon.knockDuration = downwardHeavyCombo[downwardHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = downwardHeavyCombo[downwardHeavyComboCounter].kbDirection;
+                equippedWeapon.audioClip = downwardHeavyCombo[downwardHeavyComboCounter].audioClip;
                 isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 downwardHeavyComboCounter++;
                 lastClickedTime = Time.time;
-
+                audioSource.clip = equippedWeapon.audioClip;
+                audioSource.Play();
                 if (downwardHeavyComboCounter >= downwardHeavyCombo.Count)
                 {
                     downwardHeavyComboCounter = 0;
@@ -413,12 +430,14 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockbackForce = jumpingHeavyCombo[jumpingHeavyComboCounter].kbForce;
                 equippedWeapon.knockDuration = jumpingHeavyCombo[jumpingHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = jumpingHeavyCombo[jumpingHeavyComboCounter].kbDirection;
+                equippedWeapon.audioClip = jumpingHeavyCombo[jumpingHeavyComboCounter].audioClip;
                 isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 jumpingHeavyComboCounter++;
                 lastClickedTime = Time.time;
-
+                audioSource.clip = equippedWeapon.audioClip;
+                audioSource.Play();
                 if (jumpingHeavyComboCounter >= jumpingHeavyCombo.Count)
                 {
                     jumpingHeavyComboCounter = 0;
