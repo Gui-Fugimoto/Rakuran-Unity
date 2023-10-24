@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,16 +13,26 @@ public class PotionCrafting : MonoBehaviour
     public int ingUsadsos;
     public int ingTotal;
     public Inventory inventory;
-    [SerializeField] ItemParameter PotCura;
-    [SerializeField] ItemParameter PotRecupera;
-    [SerializeField] ItemParameter PotVeneno;
-    [SerializeField] ItemParameter PotVenenoOT;
+#region poções    
+    [SerializeField] ItemParameter PotCuraSimples;
+    [SerializeField] ItemParameter PotRecuperaSimples;
+    [SerializeField] ItemParameter PotVenenoSimples;
+    [SerializeField] ItemParameter PotVenenoOTSimples;
+    [SerializeField] ItemParameter PotCuraMed;
+    [SerializeField] ItemParameter PotRecuperaMed;
+    [SerializeField] ItemParameter PotVenenoMed;
+    [SerializeField] ItemParameter PotVenenoOTMed;
+    [SerializeField] ItemParameter PotResist;
+    [SerializeField] ItemParameter PotFraqueza;
+    [SerializeField] ItemParameter PotSlow;
+    [SerializeField] ItemParameter PotSpeed;
+    #endregion
     [SerializeField] Image HealthMeter;
     [SerializeField] Image PoisonMeter;
     [SerializeField] Image EffectIcon;
     [SerializeField] KeyCode FinishPotionKey;
 
-    private void Start()
+        private void Start()
     {
         EffectIcon.enabled = false;
     }
@@ -55,42 +67,50 @@ public class PotionCrafting : MonoBehaviour
 
     public void FinishPotion()
     {
-       if(Effect == Effect.None)
+        #region Sem Efeito
+        if (Effect == Effect.None)
         {
-            if (vida > veneno)
+            if (vida == 1 && veneno <= 0)
             {
-                inventory.AddItem(PotCura);
+                inventory.AddItem(PotCuraSimples);
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
                 EffectIcon.enabled = false;
                 ingUsadsos = 0;
             }
-            if (veneno > vida)
+            if (veneno == 1 && vida <= 0)
             {
-                inventory.AddItem(PotVeneno);
+                inventory.AddItem(PotVenenoSimples);
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
                 EffectIcon.enabled = false;
                 ingUsadsos = 0;
             }
-        }
 
-       if (Effect == Effect.OverTime)
-        {
-            if (vida > veneno)
+            if (vida >= 2 && veneno <= 0)
             {
-                inventory.AddItem(PotRecupera);
+                inventory.AddItem(PotCuraMed);
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
                 EffectIcon.enabled = false;
                 ingUsadsos = 0;
             }
-            if (veneno > vida)
+            if (veneno >= 2 && vida <= 0)
             {
-                inventory.AddItem(PotVenenoOT);
+                inventory.AddItem(PotVenenoMed);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+           
+            if (veneno > 0 && vida > 0)
+            {
+                Debug.Log("poção Falhou");
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
@@ -98,6 +118,124 @@ public class PotionCrafting : MonoBehaviour
                 ingUsadsos = 0;
             }
         }
-        
+        #endregion
+        #region Overtime
+        if (Effect == Effect.OverTime)
+        {
+            if (vida == 1 && veneno <= 0)
+            {
+                inventory.AddItem(PotRecuperaSimples);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+            if (veneno == 1 && vida <= 0)
+            {
+                inventory.AddItem(PotVenenoOTSimples);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+
+            if (vida >= 2 && veneno <= 0)
+            {
+                inventory.AddItem(PotRecuperaMed);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+            if (veneno >= 2 && vida <= 0)
+            {
+                inventory.AddItem(PotVenenoOTMed);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+
+            if (veneno > 0 && vida > 0)
+            {
+                Debug.Log("poção Falhou");
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+        }
+        #endregion
+        #region Resist
+        if (Effect == Effect.Resist)
+        {
+            if (vida >= 1 && veneno <= 0)
+            {
+                inventory.AddItem(PotResist);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+            if (veneno >= 1 && vida <= 0)
+            {
+                inventory.AddItem(PotFraqueza);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+
+            if (veneno > 0 && vida > 0)
+            {
+                Debug.Log("poção Falhou");
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+        }
+        #endregion
+        #region Speed
+        if (Effect == Effect.Speed)
+        {
+            if (vida >= 1 && veneno <= 0)
+            {
+                inventory.AddItem(PotSpeed);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+            if (veneno >= 1 && vida <= 0)
+            {
+                inventory.AddItem(PotSlow);
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+
+            if (veneno > 0 && vida > 0)
+            {
+                Debug.Log("poção Falhou");
+                vida = 0;
+                veneno = 0;
+                Effect = Effect.None;
+                EffectIcon.enabled = false;
+                ingUsadsos = 0;
+            }
+            #endregion
+        }
     }
 }

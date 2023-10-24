@@ -13,9 +13,9 @@ public class StatsDisplayer : MonoBehaviour
     public float Veneno;
     public Image ItemIcon;
     public ItemParameter ItemSelf;
-    public Image Effect;
+    public Image EffectSprite;
     public GameObject Self;
-    [SerializeField] Effect effect;
+    //[SerializeField] Effect effect;
 
     private void Start()
     {
@@ -27,12 +27,12 @@ public class StatsDisplayer : MonoBehaviour
         Vida = Item.Vida;
         Veneno = Item.Veneno;
         ItemIcon.sprite = Item.Icon;
-        Effect.sprite = Item.EffectIcon;
-        Effect.color = new Color(1f, 1f, 1f, 1f);
+        EffectSprite.sprite = Item.EffectIcon;
+        EffectSprite.color = new Color(1f, 1f, 1f, 1f);
        
-        if(Item.Effect == effect)
+        if(Item.Effect == Effect.None)
         {
-            Effect.color = new Color(1f, 1f, 1f, 0f);
+            EffectSprite.color = new Color(1f, 1f, 1f, 0f);
         }
     }
 
@@ -40,7 +40,7 @@ public class StatsDisplayer : MonoBehaviour
     {
         Vida = 0;
         Veneno = 0;
-        Effect.color = new Color(1f,1f,1f,0f);
+        EffectSprite.color = new Color(1f,1f,1f,0f);
         ItemIcon.sprite = null;
     }
 

@@ -49,6 +49,7 @@ public class ConsumableItem : MonoBehaviour
             potionPass = ThrowPotion.GetComponent<potionThrow>();
             potionPass.Item = item;
             Object.Instantiate(ThrowPotion, Position, Quaternion.identity);
+            ClearSlot();
         }
         if (item.Veneno < item.Vida)
         {

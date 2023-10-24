@@ -22,10 +22,10 @@ public class ItemParameter : ScriptableObject
 public enum Effect
 {
     None,
-    Vision,
+    Resist,
     Speed,
     OverTime,
-    
+    Invis,
 }
 public enum Forge
 { 

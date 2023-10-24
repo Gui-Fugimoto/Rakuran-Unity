@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravity = 0.25f;
     [SerializeField] private float jumpForce = 8.0f;
     [SerializeField] private float terminalVelocity = 5.0f;
+    [SerializeField] private float SpeedBonus;
     private float verticalVelocity;
 
     private bool grounded;
@@ -82,15 +83,28 @@ public class PlayerController : MonoBehaviour
         baseMoveSpeedX = moveSpeedX;
         baseMoveSpeedY = moveSpeedY;
         playerCombatScript = GetComponentInChildren<PlayerCombat>();
+        SpeedBonus = 1;
     }
 
+    public void speedPotion()
+    {
+        StartCoroutine(SpeedBuff());
+        Debug.Log("bebeuVeloz");
+    }
+
+    IEnumerator SpeedBuff()
+    {
+        SpeedBonus = 1.5f;
+        yield return new WaitForSeconds(10f);
+        SpeedBonus = 1;
+    }
 
     void Update()
     {
         if (isSprinting == false)
         {
-            moveSpeedX = baseMoveSpeedX;
-            moveSpeedY = baseMoveSpeedY;
+            //moveSpeedX = baseMoveSpeedX;
+            //moveSpeedY = baseMoveSpeedY;
             if (InInventory == false)
             {
                
@@ -159,8 +173,8 @@ public class PlayerController : MonoBehaviour
 
         float moveAxis = Input.GetAxis(moveInputAxis);
         float turnAxis = Input.GetAxis(turnInputAxis);
-        movement = new Vector3(turnAxis  * moveSpeedX, 0, moveAxis * moveSpeedY);
-        movement = Vector3.ClampMagnitude(movement, moveSpeedX);
+        movement = new Vector3(turnAxis  * moveSpeedX * SpeedBonus, 0, moveAxis * moveSpeedY * SpeedBonus);
+        movement = Vector3.ClampMagnitude(movement, moveSpeedX*SpeedBonus);
 
 
         if (canmove)
@@ -283,16 +297,16 @@ public class PlayerController : MonoBehaviour
                 {
                     moveSpeedX = 20;
                     moveSpeedY = 3;
-                    movement = new Vector3(moveSpeedX, 0, moveAxis * moveSpeedY);
-                    movement = Vector3.ClampMagnitude(movement, moveSpeedX);
+                    movement = new Vector3(moveSpeedX * SpeedBonus, 0, moveAxis * moveSpeedY);
+                    movement = Vector3.ClampMagnitude(movement, moveSpeedX * SpeedBonus);
                     transform.Translate(movement * Time.deltaTime);
                 }
                 else if (flipped == true)
                 {
                     moveSpeedX = 20;
                     moveSpeedY = 3;
-                    movement = new Vector3(-moveSpeedX, 0, moveAxis * moveSpeedY);
-                    movement = Vector3.ClampMagnitude(movement, moveSpeedX);
+                    movement = new Vector3(-moveSpeedX * SpeedBonus, 0, moveAxis * moveSpeedY);
+                    movement = Vector3.ClampMagnitude(movement, moveSpeedX * SpeedBonus);
                     transform.Translate(movement * Time.deltaTime);
                 }
 
@@ -305,8 +319,8 @@ public class PlayerController : MonoBehaviour
             initialSprintTimer = float.PositiveInfinity;
             //Debug.Log("parou");
             isSprinting  = false;
-            moveSpeedX = 5;
-            moveSpeedY = 5;
+            moveSpeedX = 4;
+            moveSpeedY = 4;
             anim.SetBool("Run", false);
             //anim.SetBool("sprintCharge", false);
         }
