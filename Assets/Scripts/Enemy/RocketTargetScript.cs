@@ -8,11 +8,13 @@ public class RocketTargetScript : MonoBehaviour
     private Transform targetPlayer;
     public float followSpeed = 5.0f;
     public LayerMask Ground;
-   
+    private MeshRenderer mesh;
 
     private void Start()
     {
         targetPlayer = GameObject.FindWithTag("Player").transform;
+        mesh = gameObject.GetComponent<MeshRenderer>();
+        mesh.enabled = false;
         StartCoroutine(Explosion());
     }
     void FixedUpdate()
@@ -44,6 +46,8 @@ public class RocketTargetScript : MonoBehaviour
 
     public IEnumerator Explosion()
     {
+        yield return new WaitForSeconds(0.5f);
+        mesh.enabled = true;
         yield return new WaitForSeconds(7f);
         Destroy(gameObject);
     }

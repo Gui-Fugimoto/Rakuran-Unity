@@ -55,7 +55,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
         Ground = LayerMask.GetMask("Ground");
     }
 
-    void Update()
+    void FixedUpdate()
     {
         CDcontrol = Mathf.Clamp(CDcontrol + 4f * Time.deltaTime, 0f, specialCooldown);
         
@@ -81,6 +81,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
                 break;
             case 5:
                 StartCoroutine(SpecialAttack());
+                
                 break;
         }
 
@@ -267,7 +268,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
         }
     }
 
-    protected  IEnumerator SpecialAttack()
+    protected virtual IEnumerator SpecialAttack()
     {
         if (!isAttacking && timeSinceLastAttack >= attackCooldown)
         {
@@ -294,7 +295,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
     }
 
 
-    IEnumerator EndAttack()
+    public IEnumerator EndAttack()
     {
         yield return new WaitForSeconds(0.5f);
         isAttacking = false;
