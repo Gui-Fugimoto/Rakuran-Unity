@@ -326,6 +326,7 @@ MonoBehaviour:
   Manager: {fileID: 674341007}
   Falando: 0
   Conversando: 0
+  qTrigger: {fileID: 0}
 --- !u!1 &6859270 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a41b455f5f17e242a05ed5d2c7d119d,
@@ -4797,6 +4798,7 @@ MonoBehaviour:
   lightAttackInput: 323
   heavyAttackInput: 324
   changeWeaponKey: 113
+  audioSource: {fileID: 31409232}
 --- !u!1 &134288270
 GameObject:
   m_ObjectHideFlags: 0
@@ -7313,6 +7315,7 @@ MonoBehaviour:
   Manager: {fileID: 674341007}
   Falando: 0
   Conversando: 0
+  qTrigger: {fileID: 0}
 --- !u!1001 &209024207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12374,6 +12377,7 @@ MonoBehaviour:
   Manager: {fileID: 674341007}
   Falando: 0
   Conversando: 0
+  qTrigger: {fileID: 0}
 --- !u!1 &318879663 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a41b455f5f17e242a05ed5d2c7d119d,
@@ -24656,6 +24660,7 @@ MonoBehaviour:
   Manager: {fileID: 674341007}
   Falando: 0
   Conversando: 0
+  qTrigger: {fileID: 0}
 --- !u!1 &634526215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a41b455f5f17e242a05ed5d2c7d119d,
@@ -44677,6 +44682,7 @@ MonoBehaviour:
   Manager: {fileID: 674341007}
   Falando: 0
   Conversando: 0
+  qTrigger: {fileID: 0}
 --- !u!1001 &1139947075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63669,6 +63675,7 @@ MonoBehaviour:
   knockbackForce: 0
   knockDuration: 0
   knockDirection: {x: 0, y: 0, z: 0}
+  audioClip: {fileID: 0}
 --- !u!1 &1440111570 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6142277931fda4b4f830914b3d644c54,
@@ -64275,7 +64282,6 @@ MonoBehaviour:
   itens:
   - {fileID: 11400000, guid: e6191dd27874da048b0e19b8b9ba1684, type: 2}
   - {fileID: 11400000, guid: 84396caa8524be143af768e0d1c75ff3, type: 2}
-  - {fileID: 11400000, guid: c2e9e2ffd25660341bb3a312662b7bac, type: 2}
   inventorySize: 12
   InventoryUI: {fileID: 695078308}
   WeaponEquip: {fileID: 1935697630}
@@ -64295,8 +64301,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHP: 0
+  IsInv: 0
   maxHP: 10
   gameC: {fileID: 943222890}
+  playerSprite: {fileID: 0}
   anim: {fileID: 0}
   Count: 5
   resist: 0
@@ -80006,7 +80014,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31380
+  m_Name: pb_Mesh31384
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -81006,6 +81014,7 @@ MonoBehaviour:
   Manager: {fileID: 674341007}
   Falando: 0
   Conversando: 0
+  qTrigger: {fileID: 0}
 --- !u!4 &1821480127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cbb36e5cd9dc752489f536b597942d86,

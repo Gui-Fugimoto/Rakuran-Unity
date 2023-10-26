@@ -68,6 +68,12 @@ public class potionThrow : MonoBehaviour
                 other.GetComponent<EnemyLife>().Slow();
                 Destroy(gameObject, 0.1f);
             }
+
+            if(Item.Effect == Effect.Invis)
+            {
+                Debug.Log("Stunou");
+                other.GetComponent<EnemyNavMeshAgent>().Stun(Item.Veneno);
+            }
         }
     }
 

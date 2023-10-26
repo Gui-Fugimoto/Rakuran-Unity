@@ -6,6 +6,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
 {
     
     public Transform player;
+    public PlayerHealthController Phc;
     public float attackRange = 2f;
     public float pursuitRange = 8f;
     public float wanderRange = 10f;
@@ -53,6 +54,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
         wanderTarget = initialPosition + Random.insideUnitSphere * wanderRange;
         wanderTarget.y = transform.position.y;
         Ground = LayerMask.GetMask("Ground");
+        Phc = FindObjectOfType<PlayerHealthController>();
     }
 
     void FixedUpdate()
@@ -83,6 +85,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
                 StartCoroutine(SpecialAttack());
                 
                 break;
+              
         }
 
         hitBoxPosLeft.transform.position = new Vector3(transform.position.x + 0.95f, transform.position.y, transform.position.z);
@@ -145,7 +148,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
         }
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayer < pursuitRange)
+        if (distanceToPlayer < pursuitRange && Phc.IsInv == false)
         {
             pursuitTimer = Time.time;
             currentState = 1;
@@ -162,35 +165,45 @@ public class EnemyNavMeshAgent : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         Vector3 directionToPlayer = player.position - transform.position;
 
-        if (distanceToPlayer < attackRange && Mathf.Abs(directionToPlayer.z) < Mathf.Abs(directionToPlayer.x))
+       if(Phc.IsInv == false)
         {
-            currentState = 2;
-        }
-        else if (distanceToPlayer > pursuitRange)
+            if (distanceToPlayer < attackRange && Mathf.Abs(directionToPlayer.z) < Mathf.Abs(directionToPlayer.x))
+            {
+                currentState = 2;
+            }
+            else if (distanceToPlayer > pursuitRange)
+            {
+                currentState = 0;
+            }
+
+            if (directionToPlayer.x > 0)
+            {
+                spriteRend.flipX = true;
+            }
+            else if (directionToPlayer.x <= 0)
+            {
+                spriteRend.flipX = false;
+            }
+
+            if (Time.time - pursuitTimer > Random.Range(3f, 8f))
+            {
+
+                if (CDcontrol == 100f)
+                {
+                    currentState = 5;
+                }
+                else
+                {
+                    currentState = 4;
+                }
+            }
+
+
+
+        } 
+        else if (Phc.IsInv == true)
         {
             currentState = 0;
-        }
-
-        if (directionToPlayer.x > 0)
-        {
-            spriteRend.flipX = true;
-        }
-        else if (directionToPlayer.x <= 0)
-        {
-            spriteRend.flipX = false;
-        }
-
-        if (Time.time - pursuitTimer > Random.Range(3f, 8f))
-        {
-            
-            if (CDcontrol == 100f)
-            {
-                currentState = 5;
-            }
-            else
-            {
-                currentState = 4;
-            }
         }
     }
 
@@ -221,6 +234,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
     {
         navMeshAgent.isStopped = true;
         yield return new WaitForSeconds(hitstun);
+
 
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
@@ -356,6 +370,12 @@ public class EnemyNavMeshAgent : MonoBehaviour
         }
     }
 
-    
+    public void Stun(float TimerStun)
+    {
+        hitstun = TimerStun * 5;
+        currentState = 3;
+    }
+
+
 }
 

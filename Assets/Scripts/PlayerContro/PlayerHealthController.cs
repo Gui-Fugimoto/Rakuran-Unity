@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerHealthController : MonoBehaviour
 {
     public float currentHP;
+    public bool IsInv = false;
     public float maxHP;
     public GameController gameC;
+    [SerializeField] SpriteRenderer playerSprite;
     public Animator anim;
     [SerializeField] int Count;
     private PlayerController playerC;
@@ -16,6 +19,7 @@ public class PlayerHealthController : MonoBehaviour
     void Awake()
     {
         currentHP = maxHP;
+        playerSprite = GetComponentInChildren<SpriteRenderer>();
         gameC = FindObjectOfType<GameController>();
         anim = GetComponentInChildren<Animator>();
         playerC = GetComponent<PlayerController>();
@@ -80,6 +84,11 @@ public class PlayerHealthController : MonoBehaviour
         {
             playerC.speedPotion();
         }
+
+        if(consumed.Effect == Effect.Invis)
+        {
+            StartCoroutine(Invis());
+        }
        
     }
 
@@ -99,22 +108,6 @@ public class PlayerHealthController : MonoBehaviour
         Debug.Log("curou");
     }
 
-    void OvertimePoison()
-    {
-        if (Count > 0)
-        {
-            currentHP -= 1;
-            Count -= 1;
-        }
-
-        if (Count == 0)
-        {
-            Count = 5;
-            CancelInvoke("OvertimePoison");
-        
-        }
-
-    }
 
     void PlayerDeath()
     {
@@ -135,7 +128,18 @@ public class PlayerHealthController : MonoBehaviour
     IEnumerator ResistBuff()
     {
         resist = +1;
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(5f);
         resist = 0;
+    }
+
+    IEnumerator Invis()
+    {
+        IsInv = true;
+        playerSprite.color = new Color(1, 1, 1, 0.5f);
+       
+        yield return new WaitForSeconds(30f);
+        
+        playerSprite.color = new Color(1, 1, 1, 1f);
+        IsInv = false;
     }
 }
