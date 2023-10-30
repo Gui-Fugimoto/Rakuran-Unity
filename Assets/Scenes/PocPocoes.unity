@@ -49069,7 +49069,9 @@ MonoBehaviour:
   PotResist: {fileID: 11400000, guid: 9fa853054a4eda542a1806a73ec90cfb, type: 2}
   PotFraqueza: {fileID: 11400000, guid: 424d2b74623cd764fb92875f84353884, type: 2}
   PotSlow: {fileID: 11400000, guid: c2e9e2ffd25660341bb3a312662b7bac, type: 2}
-  PotSpeed: {fileID: 11400000, guid: 84396caa8524be143af768e0d1c75ff3, type: 2}
+  PotSpeed: {fileID: 11400000, guid: 196bfccb8010def45a62ecbea158e3c5, type: 2}
+  PotStun: {fileID: 11400000, guid: 61c8cee218efe914aa5090757af06f66, type: 2}
+  PotInvis: {fileID: 11400000, guid: 84396caa8524be143af768e0d1c75ff3, type: 2}
   HealthMeter: {fileID: 448926333}
   PoisonMeter: {fileID: 1871927103}
   EffectIcon: {fileID: 602837949}

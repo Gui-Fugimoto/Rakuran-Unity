@@ -18,8 +18,8 @@ MonoBehaviour:
   Veneno: 2
   Icon: {fileID: 21300000, guid: c5b147c7162650c42bb7ede4ace58df5, type: 3}
   Consumivel: 0
-  Effect: 0
-  EffectIcon: {fileID: 0}
+  Effect: 4
+  EffectIcon: {fileID: 21300000, guid: f8531e72b854faa43b82a1bc237ae5b1, type: 3}
   weaponType: 0
   Forge: 0
   damage: 0
