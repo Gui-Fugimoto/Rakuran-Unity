@@ -18,28 +18,7 @@ public class QuestManager : MonoBehaviour
 
     
 
-    public void ManageQuests(QuestObject quest)
-    {
-        //escolhe a quest e o stage dela                
-
-        QuestStage currentStage = quest.qStage[quest.stageIndex];
-        
-
-        
-        quest.qDescription = quest.qDescription + " " + currentStage.sDescription.ToString();
-        ManageQuestObjects(quest);
-        
-        if (quest.stageIndex > 0)
-        {
-            //Pegou quest
-            //faz aparecer no menu
-            Debug.Log("Quest Start" + quest.qDescription);              
-        }
-            
-              
-     
-
-    }
+    
     //chama por evento
     public void AdvanceQuestStage(QuestObject quest)
     {
@@ -53,20 +32,44 @@ public class QuestManager : MonoBehaviour
             
         }
     }
+    public void ManageQuests(QuestObject quest)
+    {
+        //escolhe a quest e o stage dela                
+
+        QuestStage currentStage = quest.qStage[quest.stageIndex];
+
+
+
+        quest.qDescription = quest.qDescription + " " + currentStage.sDescription.ToString();
+        quest.qSpawnList = currentStage.sSpawnList;
+        quest.qDespawnList = currentStage.sDespawnList;
+        ManageQuestObjects(quest);
+
+        if (quest.stageIndex > 0)
+        {
+            //Pegou quest
+            //faz aparecer no menu
+            Debug.Log("Quest Start" + quest.qDescription);
+        }
+
+
+
+
+    }
 
     void ManageQuestObjects(QuestObject quest)
     {
         for(int i = 0; i <= quest.qSpawnList.Count; i++)
         {
-            //Quests[questIndex].qSpawnList[i].SetActive(true);
             Debug.Log("sasageyo?");
             Instantiate(quest.qSpawnList[i]);
-            Debug.Log(i);
+            
         }
 
-        for (int i = 0; i <= quest.qDespawnList.Count; i++)
+        for (int n = 0; n <= quest.qDespawnList.Count; n++)
         {
-            quest.qDespawnList[i].SetActive(false);
+            //quest.qDespawnList[n].SetActive(false);
+            //Destroy(quest.qDespawnList[n]);
         }
 
     }

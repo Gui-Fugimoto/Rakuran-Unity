@@ -165,4 +165,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveType: 0
   quest: {fileID: 11400000, guid: a02d2a8fbccad2842b56e99eb4186ed8, type: 2}
+  stage: {fileID: 11400000, guid: 743d7c90c5d661944b5cb6f8e703f8af, type: 2}
   questManager: {fileID: 0}
