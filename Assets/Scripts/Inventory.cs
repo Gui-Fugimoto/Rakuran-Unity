@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
     #region Variáveis
 
     public List<ItemParameter> itens = new List<ItemParameter>();
+    public SaveFile saveFile;
     public int inventorySize = 10;
     public GameObject InventoryUI;
     public GameObject WeaponEquip;
@@ -22,6 +23,7 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
+        itens = saveFile.Invsave;
         InventoryUI.SetActive(false);
         WeaponEquip.SetActive(false);
         MudouItemCallback.Invoke();
