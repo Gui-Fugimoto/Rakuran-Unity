@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     public int inventorySize = 10;
     public GameObject InventoryUI;
     public GameObject WeaponEquip;
+    public GameObject Inspector;
     public bool Aberto;
     public bool isInventoryOpen;
     public delegate void MudouItem();
@@ -63,6 +64,7 @@ public class Inventory : MonoBehaviour
         {
             InventoryUI.SetActive(false);
             WeaponEquip.SetActive(false);
+            Inspector.SetActive(false);
             Aberto = false;
         }
     }
