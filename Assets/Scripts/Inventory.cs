@@ -24,6 +24,7 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
+        saveFile = FindObjectOfType<GameController>().Save;
         itens = saveFile.Invsave;
         InventoryUI.SetActive(false);
         WeaponEquip.SetActive(false);
