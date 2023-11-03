@@ -9,6 +9,8 @@ public class DialogueTrigger : MonoBehaviour
     public bool Falando;
     public bool Conversando;
 
+    public GameObject Portrait;
+
     public QuestObjectiveTrigger qTrigger;
     public void TriggerDialogue()
     {
@@ -27,6 +29,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             TriggerDialogue();
             Falando = true;
+            Portrait.SetActive(true);
         }
 
         if(Manager.DialogoFim == true)
@@ -40,6 +43,7 @@ public class DialogueTrigger : MonoBehaviour
                 Debug.Log("am im being called twice");
             }
             Manager.DialogoFim = false;
+            Portrait.SetActive(false);
         }
     }
 
