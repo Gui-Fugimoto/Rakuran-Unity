@@ -56,10 +56,11 @@ public class Inventory : MonoBehaviour
     {
         if(Aberto == false)
         {
+            Aberto = true;
             InventoryUI.SetActive(true);
             WeaponEquip.SetActive(true);
             MudouItemCallback.Invoke();
-            Aberto = true;
+            
         }
         else
         {

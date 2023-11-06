@@ -18,6 +18,9 @@ public class MenuController : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene(1);
+        Save.CPpos = new Vector3 (0,0,0);
+        Save.Invsave.Clear();
+        Save.CScene = 0;
     }
 
     public void QuitGame()
