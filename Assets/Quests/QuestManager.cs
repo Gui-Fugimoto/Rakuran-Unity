@@ -8,18 +8,33 @@ public class QuestManager : MonoBehaviour
     public int questIndex;
     public int questStageIndex;
     public int currentStageIndex = 0;
-    
+
+    public List<RemoveByQuest> removableObjects = new List<RemoveByQuest>();
 
     void Start()
     {
         questIndex = 0;
-        //ManageQuestObjects();
+        QuestsOnStart();
+        
     }
 
-    
+    void Update()
+    {
+        
+    }
 
-    
-    //chama por evento
+
+    void QuestsOnStart()
+    {
+        foreach (QuestObject quest in Quests)
+        {
+            QuestStage currentStage = quest.qStage[quest.stageIndex];
+            quest.qDescription = quest.qDescription + currentStage.sDescription.ToString();
+            quest.qSpawnList = currentStage.sSpawnList;
+            SpawnQuestObjects(quest);
+        }
+        
+    }
     public void AdvanceQuestStage(QuestObject quest)
     {
         currentStageIndex = quest.stageIndex;
@@ -42,8 +57,7 @@ public class QuestManager : MonoBehaviour
 
         quest.qDescription = quest.qDescription + " " + currentStage.sDescription.ToString();
         quest.qSpawnList = currentStage.sSpawnList;
-        quest.qDespawnList = currentStage.sDespawnList;
-        ManageQuestObjects(quest);
+        SpawnQuestObjects(quest);
 
         if (quest.stageIndex > 0)
         {
@@ -52,25 +66,46 @@ public class QuestManager : MonoBehaviour
             Debug.Log("Quest Start" + quest.qDescription);
         }
 
+    }
 
+    void SpawnQuestObjects(QuestObject quest)
+    {
+        if(quest.qSpawnList != null)
+        {
+            for (int i = 0; i < quest.qSpawnList.Count; i++)
+            {
 
+                Debug.Log("SpawnOnStart");
+                Instantiate(quest.qSpawnList[i]);
+
+            }
+        }
+        
 
     }
 
-    void ManageQuestObjects(QuestObject quest)
+    void FindRemovableObjects()
     {
-        for(int i = 0; i <= quest.qSpawnList.Count; i++)
-        {
-            Debug.Log("sasageyo?");
-            Instantiate(quest.qSpawnList[i]);
-            
-        }
+        RemoveByQuest[] removeByQuestScripts = FindObjectsOfType<RemoveByQuest>();
 
-        for (int n = 0; n <= quest.qDespawnList.Count; n++)
-        {
-            //quest.qDespawnList[n].SetActive(false);
-            //Destroy(quest.qDespawnList[n]);
-        }
+        removableObjects.AddRange(removeByQuestScripts);
 
+        foreach (QuestObject qts in Quests)
+        {
+            foreach (RemoveByQuest rmbObj in removableObjects)
+            {
+
+            }
+        }
+        
+    }
+
+    
+    void DespawnAllByStage()
+    {
+        foreach (QuestObject qts in Quests)
+        {
+
+        }
     }
 }

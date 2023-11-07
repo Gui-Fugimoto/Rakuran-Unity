@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 731836632509890198}
   - component: {fileID: 3520675929775426042}
   - component: {fileID: 9209749794665202759}
+  - component: {fileID: -373911332425877457}
   m_Layer: 0
   m_Name: QuestNPC 3
   m_TagString: Untagged
@@ -165,3 +166,16 @@ MonoBehaviour:
   quest: {fileID: 11400000, guid: a02d2a8fbccad2842b56e99eb4186ed8, type: 2}
   stage: {fileID: 11400000, guid: 55595682737faec46944b4293c2a1ef0, type: 2}
   questManager: {fileID: 0}
+--- !u!114 &-373911332425877457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731836632509890195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601b5c1e4a8a030429e3362d3fb0a2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: SampleScene

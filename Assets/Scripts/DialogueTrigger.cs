@@ -35,17 +35,18 @@ public class DialogueTrigger : MonoBehaviour
 
             if(qTrigger != null)
             {
+                
                 qTrigger.Talk();
-
+               
                 Debug.Log("am im being called twice");
             }
-            Manager.DialogoFim = false;
+            //Manager.DialogoFim = false;
         }
     }
 
     IEnumerator CooldownToStart()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         Falando = false;
         
     }
@@ -65,4 +66,6 @@ public class DialogueTrigger : MonoBehaviour
             Conversando = false;
         }
     }
+
+    
 }

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d03362aeee566548a48807fd631145f, type: 3}
-  m_Name: TestStage0
+  m_Name: Test2_S1
   m_EditorClassIdentifier: 
-  stageNo: 0
-  sDescription: "ol\xE1"
-  sSpawnList:
-  - {fileID: 3567991602758759601, guid: 260ad04868fa96c439b314daf9e2ffe5, type: 3}
+  stageNo: 1
+  sDescription: 
+  sSpawnList: []
+  sDespawnList: []
   isDone: 0

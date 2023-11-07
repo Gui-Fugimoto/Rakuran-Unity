@@ -16,6 +16,4 @@ MonoBehaviour:
   sDescription: Eu sou o Goku
   sSpawnList:
   - {fileID: 731836632509890195, guid: dbcbb45149635364aa3fe5e605e23562, type: 3}
-  sDespawnList:
-  - {fileID: 3684093064502146225, guid: b5c5e20c55803604998fa423fdbf1035, type: 3}
   isDone: 0

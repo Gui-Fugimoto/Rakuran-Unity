@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3684093064502146228}
   - component: {fileID: 708035527566656472}
   - component: {fileID: 5100076103461031525}
+  - component: {fileID: 6403706821197939915}
+  - component: {fileID: 3370621009196406194}
   m_Layer: 0
   m_Name: QuestNPC 2
   m_TagString: Untagged
@@ -165,3 +167,30 @@ MonoBehaviour:
   quest: {fileID: 11400000, guid: a02d2a8fbccad2842b56e99eb4186ed8, type: 2}
   stage: {fileID: 11400000, guid: 2c23a136458bf7a44a40bbf199b5a931, type: 2}
   questManager: {fileID: 0}
+--- !u!114 &6403706821197939915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3684093064502146225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601b5c1e4a8a030429e3362d3fb0a2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: SampleScene
+--- !u!114 &3370621009196406194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3684093064502146225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775169f5aa71a354eb97857d93923adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: a02d2a8fbccad2842b56e99eb4186ed8, type: 2}
+  stageToDestroy: {fileID: 11400000, guid: 55595682737faec46944b4293c2a1ef0, type: 2}
