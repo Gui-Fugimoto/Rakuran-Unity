@@ -6,7 +6,7 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    Queue<string> sentences;
+    [SerializeField]Queue<string> sentences;
     public bool DialogoFim;
     public TMP_Text Nome;
     public TMP_Text Fala;

@@ -14,6 +14,7 @@ public class DialogueTrigger : MonoBehaviour
     public Sprite portraitChar;
 
     public QuestObjectiveTrigger qTrigger;
+    private bool fabianoOnce = true;
     public void TriggerDialogue()
     {
         Manager.StartDialogue(dialogue);
@@ -27,11 +28,11 @@ public class DialogueTrigger : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.E) && Falando == false && Conversando == true)
+        if (Input.GetKeyDown(KeyCode.E) && Falando == false && Conversando == true)
         {
             TriggerDialogue();
             Falando = true;
-            if(portraitChar != null)
+            if(Portrait != null)
             {
                 Portrait.GetComponent<Image>().sprite = portraitChar;
                 Portrait.SetActive(true);
@@ -43,16 +44,13 @@ public class DialogueTrigger : MonoBehaviour
         {
             StartCoroutine(CooldownToStart());
 
-            if(qTrigger != null)
+            
+
+            if(Portrait != null)
             {
-                
-                qTrigger.Talk();
-               
-                Debug.Log("am im being called twice");
+                Portrait.SetActive(false);
             }
-
-
-            Portrait.SetActive(false);
+            
             //Manager.DialogoFim = false;
 
 
@@ -61,9 +59,17 @@ public class DialogueTrigger : MonoBehaviour
 
     IEnumerator CooldownToStart()
     {
-        yield return new WaitForSeconds(0.1f);
+
+        yield return new WaitForSeconds(0.5f);
         Falando = false;
-        
+        if (qTrigger != null && fabianoOnce)
+        {
+            fabianoOnce = false;
+            qTrigger.Talk();
+            
+            Debug.Log("am im being called twice");
+        }
+
     }
 
     private void OnTriggerStay(Collider other)
