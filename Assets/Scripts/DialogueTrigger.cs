@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueTrigger : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] DialogueManager Manager;
     public bool Falando;
     public bool Conversando;
+
+    public GameObject Portrait;
+    public Sprite portraitChar;
 
     public QuestObjectiveTrigger qTrigger;
     public void TriggerDialogue()
@@ -27,6 +31,12 @@ public class DialogueTrigger : MonoBehaviour
         {
             TriggerDialogue();
             Falando = true;
+            if(portraitChar != null)
+            {
+                Portrait.GetComponent<Image>().sprite = portraitChar;
+                Portrait.SetActive(true);
+
+            }
         }
 
         if(Manager.DialogoFim == true)
@@ -40,7 +50,12 @@ public class DialogueTrigger : MonoBehaviour
                
                 Debug.Log("am im being called twice");
             }
+
+
+            Portrait.SetActive(false);
             //Manager.DialogoFim = false;
+
+
         }
     }
 

@@ -7,7 +7,7 @@ public class ItemCollect : MonoBehaviour
     #region variáveis
     [SerializeField] bool Grab;
     [SerializeField] ItemParameter Item;
-    bool Collected;
+    [SerializeField] bool Collected;
 
     #endregion
 

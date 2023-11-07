@@ -326,6 +326,8 @@ MonoBehaviour:
   Manager: {fileID: 674341007}
   Falando: 0
   Conversando: 0
+  Portrait: {fileID: 0}
+  portraitChar: {fileID: 0}
   qTrigger: {fileID: 0}
 --- !u!1 &6859270 stripped
 GameObject:
@@ -3155,9 +3157,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsInvSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4280,9 +4287,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsInvSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4837,7 +4849,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 42, y: 25.8}
-  m_SizeDelta: {x: 50, y: 25}
+  m_SizeDelta: {x: 50, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134288272
 MonoBehaviour:
@@ -7117,9 +7129,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -7315,6 +7332,8 @@ MonoBehaviour:
   Manager: {fileID: 674341007}
   Falando: 0
   Conversando: 0
+  Portrait: {fileID: 0}
+  portraitChar: {fileID: 0}
   qTrigger: {fileID: 0}
 --- !u!1001 &209024207
 PrefabInstance:
@@ -7711,9 +7730,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsInvSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -9353,9 +9377,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -11605,7 +11634,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30462
+  m_Name: pb_Mesh368782
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12377,6 +12406,8 @@ MonoBehaviour:
   Manager: {fileID: 674341007}
   Falando: 0
   Conversando: 0
+  Portrait: {fileID: 0}
+  portraitChar: {fileID: 0}
   qTrigger: {fileID: 0}
 --- !u!1 &318879663 stripped
 GameObject:
@@ -14886,9 +14917,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -15293,9 +15329,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -17140,7 +17181,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 42, y: -39.999996}
-  m_SizeDelta: {x: 50, y: 25}
+  m_SizeDelta: {x: 50, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &424154969
 MonoBehaviour:
@@ -19837,6 +19878,37 @@ PrefabInstance:
       propertyPath: Manager
       value: 
       objectReference: {fileID: 674341007}
+    - target: {fileID: 8495929846736730835, guid: 4a2bf3d2f721775409c67804a9f733d7,
+        type: 3}
+      propertyPath: Portrait
+      value: 
+      objectReference: {fileID: 1079496798}
+    - target: {fileID: 8495929846736730835, guid: 4a2bf3d2f721775409c67804a9f733d7,
+        type: 3}
+      propertyPath: portraitChar
+      value: 
+      objectReference: {fileID: -409629945, guid: 1b427232ac264474194139c2db4f3cc2,
+        type: 3}
+    - target: {fileID: 8495929846736730835, guid: 4a2bf3d2f721775409c67804a9f733d7,
+        type: 3}
+      propertyPath: dialogue.name
+      value: Caldeirudo, O crisol elemental
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495929846736730835, guid: 4a2bf3d2f721775409c67804a9f733d7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495929846736730835, guid: 4a2bf3d2f721775409c67804a9f733d7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: eu sou o Caldeirudo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495929846736730835, guid: 4a2bf3d2f721775409c67804a9f733d7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: vou te caldeirar
+      objectReference: {fileID: 0}
     - target: {fileID: 8495929846736730838, guid: 4a2bf3d2f721775409c67804a9f733d7,
         type: 3}
       propertyPath: m_Name
@@ -19850,17 +19922,17 @@ PrefabInstance:
     - target: {fileID: 8495929846736730839, guid: 4a2bf3d2f721775409c67804a9f733d7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45.621002
+      value: -114.26
       objectReference: {fileID: 0}
     - target: {fileID: 8495929846736730839, guid: 4a2bf3d2f721775409c67804a9f733d7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.060026348
+      value: -4.587
       objectReference: {fileID: 0}
     - target: {fileID: 8495929846736730839, guid: 4a2bf3d2f721775409c67804a9f733d7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.41
+      value: 8.276
       objectReference: {fileID: 0}
     - target: {fileID: 8495929846736730839, guid: 4a2bf3d2f721775409c67804a9f733d7,
         type: 3}
@@ -20130,9 +20202,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -20421,9 +20498,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -22164,9 +22246,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -24014,7 +24101,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 42, y: 0.1}
-  m_SizeDelta: {x: 55, y: 25}
+  m_SizeDelta: {x: 55, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621960403
 MonoBehaviour:
@@ -24744,6 +24831,8 @@ MonoBehaviour:
   Manager: {fileID: 674341007}
   Falando: 0
   Conversando: 0
+  Portrait: {fileID: 0}
+  portraitChar: {fileID: 0}
   qTrigger: {fileID: 0}
 --- !u!1 &634526215 stripped
 GameObject:
@@ -25997,7 +26086,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32614
+  m_Name: pb_Mesh370966
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26184,9 +26273,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsInvSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -28409,7 +28503,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32960
+  m_Name: pb_Mesh371312
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29055,6 +29149,7 @@ RectTransform:
   - {fileID: 695078309}
   - {fileID: 1605158816}
   - {fileID: 1210340746}
+  - {fileID: 1079496799}
   - {fileID: 1525390090}
   - {fileID: 1146999388}
   - {fileID: 897230832}
@@ -32632,9 +32727,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -33051,9 +33151,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -34615,7 +34720,7 @@ RectTransform:
   m_Children:
   - {fileID: 1104533457}
   m_Father: {fileID: 733430258}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -34635,7 +34740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0.6117647}
+  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 0.003921569}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -34643,7 +34748,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -37912,6 +38017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed75a498fa9e11b4e869ea6f5f9b34aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Save: {fileID: 11400000, guid: 8422ed53e4f7e454691406b63022998c, type: 2}
 --- !u!1 &947952293 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a41b455f5f17e242a05ed5d2c7d119d,
@@ -39100,9 +39206,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsInvSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -39442,9 +39553,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -40344,9 +40460,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsInvSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -43212,6 +43333,82 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2254148391844807068, guid: addbc2efd00afd14aaed981ac1949f47, type: 3}
+--- !u!1 &1079496798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1079496799}
+  - component: {fileID: 1079496802}
+  - component: {fileID: 1079496801}
+  m_Layer: 5
+  m_Name: Portrait
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1079496799
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079496798}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.17500001, y: 0.17500001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 733430258}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 66.49997, y: 6.499939}
+  m_SizeDelta: {x: 1071, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1079496801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079496798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e879f05cbc832ad4d987629d88096181, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1079496802
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079496798}
+  m_CullTransparentMesh: 1
 --- !u!1 &1079629361 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: addbc2efd00afd14aaed981ac1949f47,
@@ -43789,8 +43986,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -53.13597, y: -9.957092}
-  m_SizeDelta: {x: 85, y: 533.4543}
+  m_AnchoredPosition: {x: -53.13597, y: -0.0008382797}
+  m_SizeDelta: {x: 85, y: 179.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1104533458
 MonoBehaviour:
@@ -43977,9 +44174,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -45073,6 +45275,8 @@ MonoBehaviour:
   Manager: {fileID: 674341007}
   Falando: 0
   Conversando: 0
+  Portrait: {fileID: 0}
+  portraitChar: {fileID: 0}
   qTrigger: {fileID: 0}
 --- !u!1001 &1139947075
 PrefabInstance:
@@ -45711,7 +45915,7 @@ RectTransform:
   - {fileID: 2111728386}
   - {fileID: 1011242103}
   m_Father: {fileID: 733430258}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -46616,9 +46820,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -48809,9 +49018,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -51718,9 +51932,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -57864,9 +58083,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -58059,9 +58283,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsInvSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -58825,9 +59054,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -61087,6 +61321,17 @@ PrefabInstance:
       objectReference: {fileID: 674341007}
     - target: {fileID: 8495929846736730835, guid: 4a2bf3d2f721775409c67804a9f733d7,
         type: 3}
+      propertyPath: Portrait
+      value: 
+      objectReference: {fileID: 1079496798}
+    - target: {fileID: 8495929846736730835, guid: 4a2bf3d2f721775409c67804a9f733d7,
+        type: 3}
+      propertyPath: portraitChar
+      value: 
+      objectReference: {fileID: 21300000, guid: e879f05cbc832ad4d987629d88096181,
+        type: 3}
+    - target: {fileID: 8495929846736730835, guid: 4a2bf3d2f721775409c67804a9f733d7,
+        type: 3}
       propertyPath: dialogue.name
       value: Roberto
       objectReference: {fileID: 0}
@@ -62407,7 +62652,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 42, y: 12.8}
-  m_SizeDelta: {x: 50, y: 25}
+  m_SizeDelta: {x: 50, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1414594997
 MonoBehaviour:
@@ -64572,7 +64817,7 @@ MonoBehaviour:
   currentStamina: 0
   explorationCamera: {fileID: 0}
   combatCamera: {fileID: 0}
-  currentSave: {fileID: 11400000, guid: 8422ed53e4f7e454691406b63022998c, type: 2}
+  currentSave: {fileID: 0}
   FirstSpawnPos: {fileID: 2120082443}
 --- !u!23 &1457585970
 MeshRenderer:
@@ -64675,10 +64920,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itens: []
-  saveFile: {fileID: 11400000, guid: 8422ed53e4f7e454691406b63022998c, type: 2}
+  saveFile: {fileID: 0}
   inventorySize: 12
   InventoryUI: {fileID: 695078308}
   WeaponEquip: {fileID: 1935697630}
+  Inspector: {fileID: 903927775}
   Aberto: 0
   isInventoryOpen: 0
   QuickSlots: {fileID: 1856252945}
@@ -67445,18 +67691,18 @@ RectTransform:
   m_GameObject: {fileID: 1525390089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.64529836, y: 0.36063308, z: 1}
+  m_LocalScale: {x: 0.175, y: 0.175, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1893133707}
   - {fileID: 2069281476}
   m_Father: {fileID: 733430258}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 29.955}
-  m_SizeDelta: {x: 320, y: 166.13}
+  m_AnchoredPosition: {x: 0, y: 30}
+  m_SizeDelta: {x: 1580, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525390091
 MonoBehaviour:
@@ -67478,7 +67724,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bddecb835e005084788614f8ecc42782, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 318b228fe337ad546b0778757263eafa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -67790,9 +68036,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsInvSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -69130,9 +69381,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -69977,7 +70233,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29466
+  m_Name: pb_Mesh367786
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -71732,9 +71988,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsInvSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -72259,9 +72520,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsInvSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -73258,7 +73524,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35022
+  m_Name: pb_Mesh373376
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -77537,9 +77803,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -78047,9 +78318,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -79146,9 +79422,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -80105,9 +80386,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -80408,7 +80694,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31404
+  m_Name: pb_Mesh369748
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -81408,6 +81694,8 @@ MonoBehaviour:
   Manager: {fileID: 674341007}
   Falando: 0
   Conversando: 0
+  Portrait: {fileID: 0}
+  portraitChar: {fileID: 0}
   qTrigger: {fileID: 0}
 --- !u!4 &1821480127 stripped
 Transform:
@@ -81679,9 +81967,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -82235,9 +82528,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -83485,7 +83783,7 @@ RectTransform:
   m_GameObject: {fileID: 1893133706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4182588, y: 2.5899355, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1525390090}
@@ -83493,8 +83791,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -11.629733, y: 91.68062}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -550, y: 180}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1893133708
 MonoBehaviour:
@@ -83516,7 +83814,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NPC Name
+  m_text: Npc Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 884d12d288f487e4188ba188db3b4d50, type: 2}
   m_sharedMaterial: {fileID: -2791928705812951584, guid: 884d12d288f487e4188ba188db3b4d50,
@@ -83544,8 +83842,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -83580,7 +83878,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 32.351776}
+  m_margin: {x: 0, y: -3.097046, z: -1102.9438, w: 32.351776}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -83883,9 +84181,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -85438,7 +85741,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31744
+  m_Name: pb_Mesh370088
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -85716,9 +86019,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsInvSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -89719,9 +90027,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsChestSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: chestInventory
       value: 
-      objectReference: {fileID: 683980479}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x
@@ -91230,7 +91543,7 @@ RectTransform:
   m_GameObject: {fileID: 2069281475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4182588, y: 2.5899355, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1525390090}
@@ -91238,8 +91551,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -12.055191, y: 55.680504}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 1500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2069281477
 MonoBehaviour:
@@ -91289,8 +91602,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -93984,7 +94297,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29752
+  m_Name: pb_Mesh368072
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -95850,9 +96163,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
+      propertyPath: IsInvSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Pivot.x

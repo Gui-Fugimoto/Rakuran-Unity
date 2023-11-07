@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     public int inventorySize = 10;
     public GameObject InventoryUI;
     public GameObject WeaponEquip;
+    public GameObject Inspector;
     public bool Aberto;
     public bool isInventoryOpen;
     public delegate void MudouItem();
@@ -23,6 +24,7 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
+        saveFile = FindObjectOfType<GameController>().Save;
         itens = saveFile.Invsave;
         InventoryUI.SetActive(false);
         WeaponEquip.SetActive(false);
@@ -54,15 +56,17 @@ public class Inventory : MonoBehaviour
     {
         if(Aberto == false)
         {
+            Aberto = true;
             InventoryUI.SetActive(true);
             WeaponEquip.SetActive(true);
             MudouItemCallback.Invoke();
-            Aberto = true;
+            
         }
         else
         {
             InventoryUI.SetActive(false);
             WeaponEquip.SetActive(false);
+            Inspector.SetActive(false);
             Aberto = false;
         }
     }

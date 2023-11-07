@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CheckPoint : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class CheckPoint : MonoBehaviour
         {
             Save.CPpos = gameObject.transform.position;
             Save.Invsave = pInv.itens;
+            Save.CScene = SceneManager.GetActiveScene().buildIndex;
+            Debug.Log("cena salva" + Save.CScene);
         }
     }
 }
