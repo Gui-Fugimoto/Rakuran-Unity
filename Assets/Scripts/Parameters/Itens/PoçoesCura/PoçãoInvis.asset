@@ -15,7 +15,7 @@ MonoBehaviour:
   ItemMundo: {fileID: 0}
   Vida: 2
   Veneno: 0
-  Icon: {fileID: 21300000, guid: bfaabb140e1216a46977e1451faf6505, type: 3}
+  Icon: {fileID: 21300000, guid: 8b155f39332ad7241a7c48d1868d2d8c, type: 3}
   Consumivel: 1
   Effect: 4
   EffectIcon: {fileID: 21300000, guid: f8531e72b854faa43b82a1bc237ae5b1, type: 3}

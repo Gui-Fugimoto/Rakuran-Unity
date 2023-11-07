@@ -8,11 +8,24 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     Transform parentAfterDrag;
     public ItemParameter Item;
     public Inventory inventory;
+    [SerializeField] bool IsInvSlot;
     public ChestInventory chestInventory;
-    //[SerializeField] BoxCollider2D Collider;
+    [SerializeField] bool IsChestSlot;
     public bool OnQuickSlot;
-   // public bool InInventory;
-    
+
+    private void Start()
+    {
+        if (IsInvSlot == true)
+        {
+            inventory = FindObjectOfType<Inventory>();
+        }
+
+        if (IsChestSlot == true)
+        {
+            chestInventory = FindObjectOfType<ChestInventory>();
+        }
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
        if(OnQuickSlot == false)

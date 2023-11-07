@@ -67,8 +67,8 @@ public class PlayerController : MonoBehaviour
     public GameObject explorationCamera;
     public GameObject combatCamera;
 
-
-
+    public SaveFile currentSave;
+    public Transform FirstSpawnPos;
 
     #endregion
 
@@ -83,7 +83,13 @@ public class PlayerController : MonoBehaviour
         baseMoveSpeedX = moveSpeedX;
         baseMoveSpeedY = moveSpeedY;
         playerCombatScript = GetComponentInChildren<PlayerCombat>();
+        currentSave = FindObjectOfType<GameController>().Save;
         SpeedBonus = 1;
+        
+        if(currentSave.CPpos != FirstSpawnPos.position)
+        {
+            transform.position = currentSave.CPpos;
+        }
     }
 
     public void speedPotion()
