@@ -10,16 +10,23 @@ public class CheckPoint : MonoBehaviour
     public bool Activate;
     public Inventory pInv;
     [SerializeField] KeyCode Interact;
-
+    private void Start()
+    {
+        Save = FindObjectOfType<GameController>().Save;
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
-            Save = other.GetComponent<PlayerController>().currentSave;
             pInv = other.GetComponent<Inventory>();
             Activate = true;
         }
 
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        pInv = null;
+        Activate = false;
     }
     // Update is called once per frame
     void Update()
@@ -27,7 +34,7 @@ public class CheckPoint : MonoBehaviour
         if (Input.GetKeyDown(Interact) && Activate == true)
         {
             Save.CPpos = gameObject.transform.position;
-            Save.Invsave = pInv.itens;
+            Save.Invsave = new List<ItemParameter>(pInv.itens);
             Save.CScene = SceneManager.GetActiveScene().buildIndex;
             Debug.Log("cena salva" + Save.CScene);
         }

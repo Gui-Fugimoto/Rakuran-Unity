@@ -37,6 +37,7 @@ public class PotionCrafting : MonoBehaviour
     private void Start()
     {
         EffectIcon.enabled = false;
+        inventory = FindObjectOfType<Inventory>();
     }
 
     private void Update()

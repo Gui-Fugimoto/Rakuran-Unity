@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
 
     public List<ItemParameter> itens = new List<ItemParameter>();
     public SaveFile saveFile;
-    public int inventorySize = 10;
+    public int inventorySize = 12;
     public GameObject InventoryUI;
     public GameObject WeaponEquip;
     public GameObject Inspector;
@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         saveFile = FindObjectOfType<GameController>().Save;
-        itens = saveFile.Invsave;
+        itens = new List <ItemParameter>(saveFile.Invsave);
         InventoryUI.SetActive(false);
         WeaponEquip.SetActive(false);
         MudouItemCallback.Invoke();

@@ -18,6 +18,7 @@ public class ForgeResultDisplayer : MonoBehaviour
 
     void Start()
     {
+        inventory = FindObjectOfType<Inventory>(); 
         Icon.enabled = false;
         craftable = false;  
     }

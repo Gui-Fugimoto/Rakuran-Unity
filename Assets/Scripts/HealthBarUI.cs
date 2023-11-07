@@ -9,7 +9,7 @@ public class HealthBarUI : MonoBehaviour
     [SerializeField] private Image healthBarSprite;
     void Start()
     {
-        
+        playerHPScript = FindObjectOfType<PlayerHealthController>();
     }
 
     // Update is called once per frame

@@ -20,6 +20,8 @@ public class ConsumableItem : MonoBehaviour
     void Start()
     {
         Icon.enabled = false;
+        controller = FindObjectOfType<PlayerController>();
+        Health = FindObjectOfType<PlayerHealthController>();
     }
 
     public void AddItem(ItemParameter Item)

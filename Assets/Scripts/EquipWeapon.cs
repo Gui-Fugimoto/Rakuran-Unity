@@ -20,6 +20,7 @@ public class EquipWeapon : MonoBehaviour
         Icon.enabled = false;
         Arma.text = null;
         Dano.text = null;
+        inventory = FindObjectOfType<Inventory>();
     }
 
     public void AddItem(ItemParameter Item)
