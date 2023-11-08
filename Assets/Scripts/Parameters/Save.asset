@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Save
   m_EditorClassIdentifier: 
   CPpos: {x: 0, y: 0, z: 0}
-  Invsave: []
+  Invsave:
+  - {fileID: 11400000, guid: e6191dd27874da048b0e19b8b9ba1684, type: 2}
   CScene: 1
