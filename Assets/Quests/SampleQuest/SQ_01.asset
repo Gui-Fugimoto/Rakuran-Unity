@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: SQ_01
   m_EditorClassIdentifier: 
   stageNo: 1
-  sDescription: "Encontrei Andr\xE9, o gato perdido. Agora devo leva-lo de volta
-    ao cidad\xE3o Vico."
+  sDescription: "O cidad\xE3o Vico perdeu seu gatinho Andr\xE9, ele pediu minha ajuda
+    para encontr\xE1-lo."
   sSpawnList:
   - {fileID: 2083538858669263259, guid: f34a37eedae516d45b9e94954d2f3433, type: 3}
+  - {fileID: 5429232214683726594, guid: 168092ed5c640d84cbcd88ec1617cd4f, type: 3}
   isDone: 0

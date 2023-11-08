@@ -67,12 +67,11 @@ public class DialogueTrigger : MonoBehaviour
 
     IEnumerator CooldownToStart()
     {
+       
+        yield return new WaitForSeconds(0.1f);
         Manager.DialogoFim = false;
         Manager = null;
-        yield return new WaitForSeconds(0.5f);
         Falando = false;
-        
-
 
     }
 

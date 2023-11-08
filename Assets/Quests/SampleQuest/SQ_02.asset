@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SQ_02
   m_EditorClassIdentifier: 
   stageNo: 2
-  sDescription: "Trouxe o Andr\xE9 de volta para seu dono, Vico"
+  sDescription: "Encontrei Andr\xE9, o gato perdido. Agora devo leva-lo de volta
+    ao cidad\xE3o Vico."
   sSpawnList:
   - {fileID: 5256076390043114486, guid: dc69163a9508cd241854001cedbd18c4, type: 3}
   isDone: 0

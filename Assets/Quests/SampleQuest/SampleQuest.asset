@@ -21,4 +21,5 @@ MonoBehaviour:
   stageIndex: 0
   qDescription: 
   qSpawnList:
-  - {fileID: 8008901642220995328, guid: 84611cad641900349bd2183b7da6bfb5, type: 3}
+  - {fileID: 183850206162880897, guid: 27beaa00e3f8019469b75d1d99611b20, type: 3}
+  - {fileID: 7598119971960453014, guid: 865d12a13084d5649ad8849aae26f2da, type: 3}

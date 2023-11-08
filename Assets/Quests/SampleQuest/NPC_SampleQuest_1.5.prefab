@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8008901642220995328
+--- !u!1 &5429232214683726594
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,29 +8,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8008901642220995329}
-  - component: {fileID: 8008901642220995332}
-  - component: {fileID: 8008901642220995335}
-  - component: {fileID: 8008901642220995334}
-  - component: {fileID: 8008901642220995333}
-  - component: {fileID: 6185307114600592489}
-  - component: {fileID: 1928330858507385300}
-  - component: {fileID: 5166164266507283658}
-  - component: {fileID: 97232213739060691}
+  - component: {fileID: 5429232214683726595}
+  - component: {fileID: 5429232214683726598}
+  - component: {fileID: 5429232214683726597}
+  - component: {fileID: 5429232214683726596}
+  - component: {fileID: 5429232214683726599}
+  - component: {fileID: 8190768440248779883}
+  - component: {fileID: 7191179278892866760}
+  - component: {fileID: 2676444800828345809}
   m_Layer: 0
-  m_Name: NPC_SampleQuest_0
+  m_Name: NPC_SampleQuest_1.5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8008901642220995329
+--- !u!4 &5429232214683726595
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8008901642220995328}
+  m_GameObject: {fileID: 5429232214683726594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -60.99631, y: -1.0000248, z: -3.2656374}
   m_LocalScale: {x: 5.75, y: 5.75, z: 5.75}
@@ -39,13 +38,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8008901642220995332
+--- !u!212 &5429232214683726598
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8008901642220995328}
+  m_GameObject: {fileID: 5429232214683726594}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -91,13 +90,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8008901642220995335
+--- !u!114 &5429232214683726597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8008901642220995328}
+  m_GameObject: {fileID: 5429232214683726594}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff219d8f269145d41b8f3eec726e4369, type: 3}
@@ -105,26 +104,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScaleChange: {x: 0, y: 0.001, z: 0}
   Deflate: 0
---- !u!65 &8008901642220995334
+--- !u!65 &5429232214683726596
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8008901642220995328}
+  m_GameObject: {fileID: 5429232214683726594}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1642737, y: 0.25999996, z: 0.2}
   m_Center: {x: 0.003078199, y: 0.12999998, z: 0}
---- !u!114 &8008901642220995333
+--- !u!114 &5429232214683726599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8008901642220995328}
+  m_GameObject: {fileID: 5429232214683726594}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b1371c2e2f700043ac3101f26cfcaf1, type: 3}
@@ -133,69 +132,51 @@ MonoBehaviour:
   dialogue:
     name: Vico
     sentences:
-    - "Eu perdi o Andr\xE9!!!!"
-    - "Andr\xE9 \xE9 o nome do meu gato, ele sumiu pela cidade."
-    - "Por favor, me ajude a encontr\xE1-lo!"
+    - "Acho que a \xFAltima vez que eu o vi, ele estava perto do lixo"
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0
   Portrait: {fileID: 0}
   portraitChar: {fileID: 0}
-  qTrigger: {fileID: 1928330858507385300}
+  qTrigger: {fileID: 0}
   fabianoOnce: 1
---- !u!65 &6185307114600592489
+--- !u!65 &8190768440248779883
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8008901642220995328}
+  m_GameObject: {fileID: 5429232214683726594}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.090920836, y: 0.25999996, z: 0.018843362}
   m_Center: {x: -0.00020699398, y: 0.12999998, z: 0.00055865553}
---- !u!114 &1928330858507385300
+--- !u!114 &7191179278892866760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8008901642220995328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 352c9ff73ad9ef64e9b41a10668debe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectiveType: 0
-  quest: {fileID: 11400000, guid: c08a8cc82eebce24693bf0a05f579325, type: 2}
-  stage: {fileID: 11400000, guid: 7f9e9a200c3b376459dd069d50c68d10, type: 2}
-  questManager: {fileID: 0}
---- !u!114 &5166164266507283658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8008901642220995328}
+  m_GameObject: {fileID: 5429232214683726594}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 601b5c1e4a8a030429e3362d3fb0a2f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scene: PocPocoes
---- !u!114 &97232213739060691
+--- !u!114 &2676444800828345809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8008901642220995328}
+  m_GameObject: {fileID: 5429232214683726594}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 775169f5aa71a354eb97857d93923adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: c08a8cc82eebce24693bf0a05f579325, type: 2}
-  stageToDestroy: {fileID: 11400000, guid: c020434cbb6dcc74f92357073fdcd69f, type: 2}
+  stageToDestroy: {fileID: 11400000, guid: 951838a5f2fb7f44085f77dff54162f6, type: 2}
