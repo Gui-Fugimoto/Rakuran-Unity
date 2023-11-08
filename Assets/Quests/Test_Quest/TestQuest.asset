@@ -19,5 +19,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 55595682737faec46944b4293c2a1ef0, type: 2}
   stageIndex: 0
   qDescription: 
-  qSpawnList:
-  - {fileID: 731836632509890195, guid: dbcbb45149635364aa3fe5e605e23562, type: 3}
+  qSpawnList: []
