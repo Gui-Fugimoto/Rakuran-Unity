@@ -38,7 +38,7 @@ public class ItemCollect : MonoBehaviour
             {
                 StartCoroutine(Die());
                 other.gameObject.SendMessage("AddItem", Item);
-                Debug.Log("Pegou Iten");
+                Debug.Log("Pegou Item " + Item.name);
                 Collected = true;
             }
         }
