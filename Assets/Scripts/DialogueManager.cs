@@ -72,16 +72,18 @@ public class DialogueManager : MonoBehaviour
         proxFala = true;
     }
 
-    //IEnumerator TypeSentence(string sentence)
-    //{
-    //    Fala.text = "";
-    //
-    //    foreach (char letter in sentence.ToCharArray())
-    //    {
-    //        Fala.text += letter;
-    //        yield return null;
-    //       
-    //    }
-    //}
+    /*
+    IEnumerator TypeSentence(string sentence)
+    {
+        Fala.text = "";
+    
+        foreach (char letter in sentence.ToCharArray())
+        {
+            Fala.text += letter;
+            yield return null;
+           
+        }
+    }
+    */
 
 }

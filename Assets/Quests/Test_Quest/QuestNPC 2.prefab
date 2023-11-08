@@ -137,7 +137,10 @@ MonoBehaviour:
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0
+  Portrait: {fileID: 0}
+  portraitChar: {fileID: 0}
   qTrigger: {fileID: 5100076103461031525}
+  fabianoOnce: 1
 --- !u!65 &708035527566656472
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -23,6 +23,10 @@ public class QuestObjectiveTrigger : MonoBehaviour
     {
         questManager = FindObjectOfType<QuestManager>();
     }
+    private void Awake()
+    {
+        questManager = FindObjectOfType<QuestManager>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -60,7 +64,7 @@ public class QuestObjectiveTrigger : MonoBehaviour
         }
         
 
-        this.enabled = false;
+        //this.enabled = false;
     }
 
     
