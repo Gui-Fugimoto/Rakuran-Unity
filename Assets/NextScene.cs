@@ -8,6 +8,7 @@ public class NextScene : MonoBehaviour
     // Start is called before the first frame update
     public SaveFile save;
     public GameController controller;
+    public int NextSceneIndex;
     
     void Start()
     {
@@ -20,7 +21,7 @@ public class NextScene : MonoBehaviour
         if(other.tag == "Player")
         {
             Debug.Log("passouPlayer");
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(NextSceneIndex);
             save.CPpos = new Vector3(0, 0, 0);
         }
     }
