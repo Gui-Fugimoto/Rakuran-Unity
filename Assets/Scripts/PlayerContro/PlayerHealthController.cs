@@ -15,6 +15,9 @@ public class PlayerHealthController : MonoBehaviour
     private PlayerController playerC;
     private bool damageDelay;
     [SerializeField] int resist;
+    public bool inCombat;
+    private float combatTimer;
+    public float combatEndDelay = 4f;
     // Start is called before the first frame update
     void Awake()
     {
@@ -26,10 +29,10 @@ public class PlayerHealthController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         PlayerDeath();
-
+        EndCombat();
         if (currentHP > maxHP)
         {
             currentHP = maxHP;
@@ -141,5 +144,21 @@ public class PlayerHealthController : MonoBehaviour
         
         playerSprite.color = new Color(1, 1, 1, 1f);
         IsInv = false;
+    }
+
+    public void EnterCombat()
+    {
+        combatTimer = Time.time;
+        inCombat = true;
+        
+        
+    }
+    void EndCombat()
+    {
+        if (Time.time - combatTimer > combatEndDelay)
+        {
+            
+            inCombat = false;
+        }
     }
 }

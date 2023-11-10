@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour
     public MudouItem MudouItemCallback;
     public GameObject QuickSlots;
 
+    
     #endregion
 
     // Update is called once per frame
@@ -29,6 +30,7 @@ public class Inventory : MonoBehaviour
         InventoryUI.SetActive(false);
         WeaponEquip.SetActive(false);
         MudouItemCallback.Invoke();
+        
     }
 
     public void Update()
@@ -68,6 +70,7 @@ public class Inventory : MonoBehaviour
             WeaponEquip.SetActive(false);
             Inspector.SetActive(false);
             Aberto = false;
+            
         }
     }
 

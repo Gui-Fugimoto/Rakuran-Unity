@@ -5,7 +5,8 @@ using System.Collections;
 public class EnemyNavMeshAgent : MonoBehaviour
 {
     
-    public Transform player;
+    //public Transform player;
+    public GameObject player;
     public PlayerHealthController Phc;
     public float attackRange = 2f;
     public float pursuitRange = 8f;
@@ -41,6 +42,8 @@ public class EnemyNavMeshAgent : MonoBehaviour
     public float CDcontrol = 0f;
     public GameObject specialHitBox;
 
+    
+
     void Start()
     {
         initialPosition = transform.position;
@@ -54,13 +57,13 @@ public class EnemyNavMeshAgent : MonoBehaviour
         wanderTarget = initialPosition + Random.insideUnitSphere * wanderRange;
         wanderTarget.y = transform.position.y;
         Ground = LayerMask.GetMask("Ground");
-        Phc = FindObjectOfType<PlayerHealthController>();
+        Phc = player.GetComponent<PlayerHealthController>();
     }
 
     void FixedUpdate()
     {
         CDcontrol = Mathf.Clamp(CDcontrol + 4f * Time.deltaTime, 0f, specialCooldown);
-        
+        SendInCombatMessage();
         CheckGrounded();
         timeSinceLastAttack += Time.deltaTime;
         spriteTransform.rotation = Quaternion.Euler(0, 0, 0);
@@ -83,7 +86,6 @@ public class EnemyNavMeshAgent : MonoBehaviour
                 break;
             case 5:
                 StartCoroutine(SpecialAttack());
-                
                 break;
               
         }
@@ -147,7 +149,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
             navMeshAgent.SetDestination(wanderTarget);
         }
 
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
         if (distanceToPlayer < pursuitRange && Phc.IsInv == false)
         {
             pursuitTimer = Time.time;
@@ -159,11 +161,11 @@ public class EnemyNavMeshAgent : MonoBehaviour
     {
         anim.SetBool("Walk", true);
 
-        navMeshAgent.SetDestination(player.position);
+        navMeshAgent.SetDestination(player.transform.position);
         navMeshAgent.isStopped = false;
 
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        Vector3 directionToPlayer = player.position - transform.position;
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        Vector3 directionToPlayer = player.transform.position - transform.position;
 
        if(Phc.IsInv == false)
         {
@@ -221,8 +223,8 @@ public class EnemyNavMeshAgent : MonoBehaviour
             
         }
 
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        Vector3 directionToPlayer = player.position - transform.position;
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        Vector3 directionToPlayer = player.transform.position - transform.position;
         if (distanceToPlayer > attackRange || Mathf.Abs(directionToPlayer.z) >= Mathf.Abs(directionToPlayer.x))
         {
             pursuitTimer = Time.time;
@@ -237,8 +239,8 @@ public class EnemyNavMeshAgent : MonoBehaviour
 
 
 
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        Vector3 directionToPlayer = player.position - transform.position;
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        Vector3 directionToPlayer = player.transform.position - transform.position;
 
         if (distanceToPlayer < attackRange && Mathf.Abs(directionToPlayer.z) < Mathf.Abs(directionToPlayer.x))
         {
@@ -264,8 +266,8 @@ public class EnemyNavMeshAgent : MonoBehaviour
         yield return new WaitForSeconds(duration);
         Debug.Log("back");
         
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        Vector3 directionToPlayer = player.position - transform.position;
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        Vector3 directionToPlayer = player.transform.position - transform.position;
 
         if (distanceToPlayer < attackRange && Mathf.Abs(directionToPlayer.z) < Mathf.Abs(directionToPlayer.x))
         {
@@ -293,7 +295,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
             specialHitBox.SetActive(true);
             CDcontrol = 0f;
             yield return new WaitForSeconds(1f);
-            Vector3 directionToPlayer = (player.position - transform.position).normalized; //usar lerp
+            Vector3 directionToPlayer = (player.transform.position - transform.position).normalized; //usar lerp
             rb.isKinematic = false;
             navMeshAgent.enabled = false;
             
@@ -376,6 +378,13 @@ public class EnemyNavMeshAgent : MonoBehaviour
         currentState = 3;
     }
 
-
+    void SendInCombatMessage()
+    {
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        if (distanceToPlayer < pursuitRange && Phc.IsInv == false)
+        {
+            Phc.EnterCombat();           
+        }
+    }
 }
 
