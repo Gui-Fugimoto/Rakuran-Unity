@@ -60,8 +60,6 @@ public class DialogueTrigger : MonoBehaviour
                 Portrait.SetActive(false);
             }
 
-            
-
         }
     }
 

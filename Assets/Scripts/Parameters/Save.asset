@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: Save
   m_EditorClassIdentifier: 
   CPpos: {x: 0, y: 0, z: 0}
-  Invsave:
-  - {fileID: 11400000, guid: e6191dd27874da048b0e19b8b9ba1684, type: 2}
+  Invsave: []
   CScene: 1
+  Arma1: {fileID: 0}
+  Arma2: {fileID: 0}
+  QuickSlot: {fileID: 0}
+  QuickSlot1: {fileID: 0}
+  QuickSlot2: {fileID: 0}
+  QuickSlot3: {fileID: 0}

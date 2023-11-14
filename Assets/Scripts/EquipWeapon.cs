@@ -14,6 +14,8 @@ public class EquipWeapon : MonoBehaviour
     public Inventory inventory;
     public TMP_Text Arma;
     public TMP_Text Dano;
+    public bool IsFirstWeapon;
+    public SaveFile saveFile;
    
     void Start()
     {
@@ -21,6 +23,18 @@ public class EquipWeapon : MonoBehaviour
         Arma.text = null;
         Dano.text = null;
         inventory = FindObjectOfType<Inventory>();
+        saveFile = FindObjectOfType<GameController>().Save;
+
+        if(saveFile.Arma1 != null && IsFirstWeapon == true)
+        {
+            AddItem(saveFile.Arma1);
+        }
+
+        if(saveFile.Arma2 != null && IsFirstWeapon == false) 
+        {
+            AddItem(saveFile.Arma2);
+        }
+   
     }
 
     public void AddItem(ItemParameter Item)

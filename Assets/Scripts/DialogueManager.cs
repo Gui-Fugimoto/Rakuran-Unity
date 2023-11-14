@@ -7,6 +7,7 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField]Queue<string> sentences;
+    [SerializeField]Queue<string> Names;
     public bool DialogoFim;
     public TMP_Text Nome;
     public TMP_Text Fala;
@@ -16,22 +17,30 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        Names = new Queue<string>();   
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         sentences.Clear();
+        Names.Clear();
         DialogoFim = false;
         proxFala = false;
         StartCoroutine(PressCoolDown());
 
-        Nome.text = dialogue.name;
-
+        
         foreach (string sentence in dialogue.sentences)
         {
+            
             sentences.Enqueue(sentence);
         }
         
+        foreach (string name in dialogue.names)
+        {
+
+            Names.Enqueue(name);
+        }
+
         DisplayNextSentece();
     }
 
@@ -39,14 +48,16 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueBox.SetBool("Isopen", true);
 
-        if (sentences.Count == 0)
+        if (sentences.Count == 0 && Names.Count == 0)
         {
             EndDialogue();
             return;
         }
 
         string sentence = sentences.Dequeue();
+        string names = Names.Dequeue();
         Fala.text = sentence;
+        Nome.text = names;
         
     }
 
