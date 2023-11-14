@@ -131,15 +131,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: "Andr\xE9"
     sentences:
     - Miaaaaaau
+    names:
+    - "Andr\xE9"
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0
+  MoveOn: 0
   Portrait: {fileID: 0}
   portraitChar: {fileID: 0}
   qTrigger: {fileID: 7569896365528314703}
+  Dswitch: {fileID: 0}
   fabianoOnce: 1
 --- !u!65 &2745438879470501618
 BoxCollider:

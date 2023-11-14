@@ -11,6 +11,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [SerializeField] bool IsInvSlot;
     public ChestInventory chestInventory;
     [SerializeField] bool IsChestSlot;
+    [SerializeField] bool onDestination;
     public bool OnQuickSlot;
 
     private void Start()
@@ -43,6 +44,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             transform.position = Input.mousePosition;
         }
+
+        if (onDestination == false)
+        {
+            transform.position = Input.mousePosition;
+        }
             
     }
 
@@ -51,12 +57,15 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if(OnQuickSlot == false)
         {
             transform.SetParent(parentAfterDrag);
+
         }
+
+        onDestination = false;
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "CraftingCanvas")
+        if (collision.tag == "CraftingCanvas" && onDestination == false)
         {
             if(collision.GetComponent<PotionCrafting>().ingUsadsos < collision.GetComponent<PotionCrafting>().ingTotal)
             {
@@ -65,43 +74,46 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             }
         }
 
-        if(collision.tag == "Chest" )
+        if(collision.tag == "Chest" && onDestination == false)
         {
             if(chestInventory == null)
             {
                 collision.SendMessage("AddItem", Item);
+                onDestination = true;
                 StartCoroutine(Remove());
             }
 
         }
 
-        if (collision.tag == "Inventory")
+        if (collision.tag == "Inventory" && onDestination == false)
         {
             if (inventory == null)
             {
                 collision.SendMessage("AddItem", Item);
+                onDestination = true;
                 StartCoroutine(ChestRemove());
             }
 
         }
 
-        if (collision.tag == "QuickSlot" && Item.Consumivel == true && OnQuickSlot == false)
+        if (collision.tag == "QuickSlot" && Item.Consumivel == true && OnQuickSlot == false && onDestination == false)
         {
             collision.SendMessage("AddItem", Item);
+            onDestination = true;
             StartCoroutine(Remove());
         }
 
-        if(collision.tag == "WeaponSlot" && Item.weaponType != WeaponType.None)
+        if(collision.tag == "WeaponSlot" && Item.weaponType != WeaponType.None && onDestination == false)
         {
             collision.SendMessage("AddItem", Item);
-            
+            onDestination = true;
             StartCoroutine(Remove());
         }
 
         if(collision.tag == "ForgeSlot" && Item.Forge != Forge.None)
         {
             collision.SendMessage("AddItem", Item);
-
+            onDestination = true;
             StartCoroutine(Remove());
         }
     }
@@ -110,11 +122,13 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         yield return new WaitForSeconds(0.01f);
         inventory.RemoveItem(Item);
+      
     }
 
     IEnumerator ChestRemove()
     {
         yield return new WaitForSeconds(0.01f);
         chestInventory.RemoveItem(Item);
+       
     }
 }

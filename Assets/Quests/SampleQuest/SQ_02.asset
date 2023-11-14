@@ -17,4 +17,4 @@ MonoBehaviour:
     ao cidad\xE3o Vico."
   sSpawnList:
   - {fileID: 5256076390043114486, guid: dc69163a9508cd241854001cedbd18c4, type: 3}
-  isDone: 0
+  isDone: 1

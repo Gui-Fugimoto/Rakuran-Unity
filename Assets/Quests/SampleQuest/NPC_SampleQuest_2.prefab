@@ -131,16 +131,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Vico
     sentences:
     - "Andr\xE9 meu querido!!! Voc\xEA t\xE1 bem!"
     - Muito Obrigado, Rakuran!!
+    names:
+    - Vico
+    - Vico
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0
+  MoveOn: 0
   Portrait: {fileID: 0}
   portraitChar: {fileID: 0}
   qTrigger: {fileID: 4401932796620693794}
+  Dswitch: {fileID: 0}
   fabianoOnce: 1
 --- !u!65 &8215304798782663839
 BoxCollider:

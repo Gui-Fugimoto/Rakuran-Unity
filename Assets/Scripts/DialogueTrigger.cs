@@ -9,11 +9,13 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] DialogueManager Manager;
     public bool Falando;
     public bool Conversando;
+    public bool MoveOn;
 
     public GameObject Portrait;
     public Sprite portraitChar;
 
     public QuestObjectiveTrigger qTrigger;
+    public DialogueSwitch Dswitch;
     public bool fabianoOnce = true;
     public void TriggerDialogue()
     {
@@ -23,6 +25,8 @@ public class DialogueTrigger : MonoBehaviour
     private void Start()
     {
         qTrigger = gameObject.GetComponent<QuestObjectiveTrigger>();
+        Dswitch = gameObject.GetComponent<DialogueSwitch>();
+        Falando = false;
         
     }
 
@@ -40,6 +44,8 @@ public class DialogueTrigger : MonoBehaviour
 
             }
         }
+        
+        
 
         if(Manager != null && Manager.DialogoFim == true)
         {
@@ -53,7 +59,12 @@ public class DialogueTrigger : MonoBehaviour
 
                 Debug.Log("am im being called twice");
             }
-            
+
+            if (Dswitch != null && fabianoOnce)
+            {
+                Dswitch.carryOn();
+                fabianoOnce = false;
+            }
 
             if (Portrait != null)
             {
@@ -61,16 +72,18 @@ public class DialogueTrigger : MonoBehaviour
             }
 
         }
+
     }
 
     IEnumerator CooldownToStart()
     {
-       
-        yield return new WaitForSeconds(0.1f);
         Manager.DialogoFim = false;
+        yield return new WaitForSeconds(0.1f);
         Manager = null;
+        yield return new WaitForSeconds(0.5f);
         Falando = false;
-
+       
+        
     }
 
     private void OnTriggerStay(Collider other)

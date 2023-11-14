@@ -130,15 +130,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Vico
     sentences:
     - "Acho que a \xFAltima vez que eu o vi, ele estava perto do lixo"
+    names:
+    - Vico
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0
+  MoveOn: 0
   Portrait: {fileID: 0}
   portraitChar: {fileID: 0}
   qTrigger: {fileID: 0}
+  Dswitch: {fileID: 0}
   fabianoOnce: 1
 --- !u!65 &8190768440248779883
 BoxCollider:

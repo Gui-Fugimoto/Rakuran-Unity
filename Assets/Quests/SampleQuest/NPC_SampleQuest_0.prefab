@@ -131,17 +131,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Vico
     sentences:
     - "Eu perdi o Andr\xE9!!!!"
     - "Andr\xE9 \xE9 o nome do meu gato, ele sumiu pela cidade."
     - "Por favor, me ajude a encontr\xE1-lo!"
+    names:
+    - Vico
+    - Vico
+    - Vico
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0
+  MoveOn: 0
   Portrait: {fileID: 0}
   portraitChar: {fileID: 0}
   qTrigger: {fileID: 1928330858507385300}
+  Dswitch: {fileID: 0}
   fabianoOnce: 1
 --- !u!65 &6185307114600592489
 BoxCollider:

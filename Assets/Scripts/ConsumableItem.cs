@@ -21,19 +21,6 @@ public class ConsumableItem : MonoBehaviour
     public int Order;
     public SaveFile saveFile;
 
-    private void FixedUpdate()
-    {
-       if(item != null)
-        {
-            Debug.Log("ola eu sou o " + gameObject.name + " meu item é "  + item.name);
-        }
-       if(item == null)
-        {
-            Debug.Log("ola eu sou o " + gameObject.name + " não tenho item");
-        }
-
-    }
-
     void Start()
     {
         Icon.enabled = false;

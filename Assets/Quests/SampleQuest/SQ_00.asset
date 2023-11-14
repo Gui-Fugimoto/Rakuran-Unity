@@ -17,4 +17,4 @@ MonoBehaviour:
     para encontr\xE1-lo."
   sSpawnList:
   - {fileID: 8008901642220995328, guid: 84611cad641900349bd2183b7da6bfb5, type: 3}
-  isDone: 0
+  isDone: 1

@@ -130,17 +130,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Vico
     sentences:
     - "Rakuran, voc\xEA \xE9 um verdadeiro her\xF3i!"
     - "Gra\xE7as a voc\xEA recuperei o Andr\xE9!"
     - Nunca mais irei perde-lo
+    names:
+    - Vico
+    - Vico
+    - Vico
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0
+  MoveOn: 0
   Portrait: {fileID: 0}
   portraitChar: {fileID: 0}
   qTrigger: {fileID: 0}
+  Dswitch: {fileID: 0}
   fabianoOnce: 1
 --- !u!65 &4070936687472967400
 BoxCollider:

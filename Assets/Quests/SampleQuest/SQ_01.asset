@@ -18,4 +18,4 @@ MonoBehaviour:
   sSpawnList:
   - {fileID: 2083538858669263259, guid: f34a37eedae516d45b9e94954d2f3433, type: 3}
   - {fileID: 5429232214683726594, guid: 168092ed5c640d84cbcd88ec1617cd4f, type: 3}
-  isDone: 0
+  isDone: 1
