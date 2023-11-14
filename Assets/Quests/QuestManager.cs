@@ -8,9 +8,6 @@ public class QuestManager : MonoBehaviour
     public int questIndex;
     public int questStageIndex;
     public int currentStageIndex = 0;
-
-    public List<RemoveByQuest> removableObjects = new List<RemoveByQuest>();
-
     void Start()
     {
         questIndex = 0;
@@ -18,10 +15,7 @@ public class QuestManager : MonoBehaviour
         
     }
 
-    void Update()
-    {
-        
-    }
+    
 
 
     void QuestsOnStart()
@@ -84,28 +78,19 @@ public class QuestManager : MonoBehaviour
 
     }
 
-    void FindRemovableObjects()
+
+   
+
+    public void QuestResetAll()
     {
-        RemoveByQuest[] removeByQuestScripts = FindObjectsOfType<RemoveByQuest>();
-
-        removableObjects.AddRange(removeByQuestScripts);
-
-        foreach (QuestObject qts in Quests)
+        foreach (QuestObject quest in Quests)
         {
-            foreach (RemoveByQuest rmbObj in removableObjects)
+            quest.stageIndex = 0;
+            quest.qDescription = null;
+            for (int i = 0; i < quest.qStage.Count; i++)
             {
-
+                quest.qStage[i].isDone = false;
             }
-        }
-        
-    }
-
-    
-    void DespawnAllByStage()
-    {
-        foreach (QuestObject qts in Quests)
-        {
-
         }
     }
 }

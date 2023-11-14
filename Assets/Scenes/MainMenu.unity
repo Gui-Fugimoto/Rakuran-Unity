@@ -3837,6 +3837,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 469846299}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &474689785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 474689787}
+  - component: {fileID: 474689786}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &474689786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474689785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437bb9495318c2e47a29834e7fa3bec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Quests:
+  - {fileID: 11400000, guid: c08a8cc82eebce24693bf0a05f579325, type: 2}
+  - {fileID: 11400000, guid: a02d2a8fbccad2842b56e99eb4186ed8, type: 2}
+  - {fileID: 11400000, guid: eee265cf2f267314e98cefa315df18b5, type: 2}
+  questIndex: 0
+  questStageIndex: 0
+  currentStageIndex: 0
+--- !u!4 &474689787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474689785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 466.5659, y: 187.12221, z: -14.894254}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &487048518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17478,6 +17529,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1543164112}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: NewGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474689786}
+        m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
+        m_MethodName: QuestResetAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -67,5 +67,8 @@ public class QuestObjectiveTrigger : MonoBehaviour
         //this.enabled = false;
     }
 
-    
+    public void OnDefeat()
+    {
+
+    }
 }
