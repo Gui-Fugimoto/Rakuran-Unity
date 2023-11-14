@@ -9,4 +9,13 @@ public class SaveFile : ScriptableObject
     public Vector3 CPpos;
     public List<ItemParameter> Invsave = new List<ItemParameter>();
     public int CScene;
+    
+    public ItemParameter Arma1;
+    public ItemParameter Arma2;
+    
+    public ItemParameter QuickSlot;
+    public ItemParameter QuickSlot1;
+    public ItemParameter QuickSlot2;
+    public ItemParameter QuickSlot3;
+
 }

@@ -84,8 +84,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             }
 
         }
-        
-        if (collision.tag == "QuickSlot" && Item.Consumivel == true)
+
+        if (collision.tag == "QuickSlot" && Item.Consumivel == true && OnQuickSlot == false)
         {
             collision.SendMessage("AddItem", Item);
             StartCoroutine(Remove());

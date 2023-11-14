@@ -62,8 +62,8 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField]bool mainHand;
     
 
-    [SerializeField] EquipWeapon mainWeapon;
-    [SerializeField] EquipWeapon offhandWeapon;
+    public EquipWeapon mainWeapon;
+    public EquipWeapon offhandWeapon;
 
     [SerializeField] GameObject AttackPosLeft;
     [SerializeField] GameObject AttackPosRight;
