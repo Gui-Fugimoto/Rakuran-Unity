@@ -1,0 +1,453 @@
+fileFormatVersion: 2
+guid: d232eaa36909b204d88cb9f3973eb899
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: adagawalksheet_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.38652408, y: 0.6134756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24edc8c9056d4e41be0445b00dda9f6
+      internalID: -989844781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.37943125, y: 0.62056786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f74475904ec981489db259438bc115d
+      internalID: -694892082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.4738112, y: 0.6098152}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8c3aaa325b6d5449c463d575dd4d3e
+      internalID: -1308462188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.45635283, y: 0.5988336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a688d6690e2d54a844a399e5da5393
+      internalID: 917879618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_4
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.46508086, y: 0.5988336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e60decf043aff46bbca4957121a117
+      internalID: -1540175834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_5
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1
+        width: 13
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48253924, y: 0.60638344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced90deb41d8ef74d9fac93b47626e2a
+      internalID: -1369076059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_6
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1
+        width: 13
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48253924, y: 0.62056786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3baf82090ccfc4c837caa6410cba0d
+      internalID: 140612062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_7
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1
+        width: 13
+        height: 32
+      alignment: 9
+      pivot: {x: 0.45635283, y: 0.6134756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1fbad7d3c0a6c4d8fc1a8502b17f90
+      internalID: -1425052089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_8
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.47380888, y: 0.6098152}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49af3b40974da674c9419ba747e8c7f9
+      internalID: -1297187083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_9
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.48253924, y: 0.6098152}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccc229a4151e174792a21ca55dcf1d1
+      internalID: 517115658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_10
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.48253456, y: 0.6024941}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9baf59ff54b80e4cbcb76613d9966ca
+      internalID: -99201470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_11
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.4650785, y: 0.6098152}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e078e5fbc71304590f4d8a671afda0
+      internalID: -575033093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_12
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1
+        width: 13
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3986ffad2e3606644a856834f7af43c2
+      internalID: -1724295090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_13
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1
+        width: 13
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b63e464fe292df4483df0c5eb6d8731
+      internalID: 2087555812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagawalksheet_14
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc4385c528feb54d8fb6df323849467
+      internalID: 823113189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9e8b7e72020121643bef5c1237416be0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      adagawalksheet_5: -1369076059
+      adagawalksheet_13: 2087555812
+      adagawalksheet_12: -1724295090
+      adagawalksheet_10: -99201470
+      adagawalksheet_3: 917879618
+      adagawalksheet_11: -575033093
+      adagawalksheet_6: 140612062
+      adagawalksheet_14: 823113189
+      adagawalksheet_7: -1425052089
+      adagawalksheet_8: -1297187083
+      adagawalksheet_0: -989844781
+      adagawalksheet_1: -694892082
+      adagawalksheet_4: -1540175834
+      adagawalksheet_2: -1308462188
+      adagawalksheet_9: 517115658
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

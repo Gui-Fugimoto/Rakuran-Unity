@@ -1,0 +1,453 @@
+fileFormatVersion: 2
+guid: 0f4818d629f26db4a834b0f967eb526f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: adagaidlesheet_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.37404084, y: 0.6204831}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3def4df5d6cc11642ab45d8e2ac15c3e
+      internalID: 1812495826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.37951756, y: 0.6204831}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a954a8258555f4e94383aaed692a9b
+      internalID: 1658418040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.47303888, y: 0.6102367}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2299fb727f78946b155738226e4436
+      internalID: -226394742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.45955834, y: 0.601757}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20b447edc720f544ba766bbfb40e579
+      internalID: -943872439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_4
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.4662992, y: 0.6158899}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755bfcee09f10ac4996e7364e19b8474
+      internalID: -1295883280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_5
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.47303888, y: 0.60741013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dab77767ece87c418cce24b3e7b7416
+      internalID: -1221046741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_6
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.45955718, y: 0.60458356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48376d7b8997f6d4abf43201612f5445
+      internalID: 1214113496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_7
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.47303888, y: 0.60458356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08850e1456e56864ca682e6d21064fe1
+      internalID: 212155323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_8
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.47303888, y: 0.60741013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1492a507f77006e4b90da58a8a296cc8
+      internalID: -708997003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_9
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.43933576, y: 0.60741013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa69e646c68bff4eb72cd4867b92161
+      internalID: -1738438478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_10
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.4662992, y: 0.61306334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c0eab8873be2e44a9a135f7b020570
+      internalID: 1631461819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_11
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.47303656, y: 0.60458356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3913c0dfa870b604baf6eaf0fb37c315
+      internalID: 1243075701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_12
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.4662992, y: 0.601757}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be13a398a8ce734428a889cf3dd957ec
+      internalID: 568250132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_13
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.47304124, y: 0.6158899}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfde88e5b92015b429fb13c9eb62cc29
+      internalID: -1322208592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adagaidlesheet_14
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.3685646, y: 0.6314361}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df884f27178acd64ebb20f5343fe5008
+      internalID: -1449067510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: cdc4b77aa133a8a43bea6aad8bd36816
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      adagaidlesheet_14: -1449067510
+      adagaidlesheet_7: 212155323
+      adagaidlesheet_1: 1658418040
+      adagaidlesheet_10: 1631461819
+      adagaidlesheet_12: 568250132
+      adagaidlesheet_13: -1322208592
+      adagaidlesheet_4: -1295883280
+      adagaidlesheet_11: 1243075701
+      adagaidlesheet_6: 1214113496
+      adagaidlesheet_9: -1738438478
+      adagaidlesheet_3: -943872439
+      adagaidlesheet_8: -708997003
+      adagaidlesheet_0: 1812495826
+      adagaidlesheet_2: -226394742
+      adagaidlesheet_5: -1221046741
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

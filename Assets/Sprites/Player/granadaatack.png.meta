@@ -1,0 +1,497 @@
+fileFormatVersion: 2
+guid: 65246ac6bc5cd21428a10f58b14e4e86
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: granadaatack_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 2
+        width: 14
+        height: 24
+      alignment: 9
+      pivot: {x: 0.56957287, y: 0.45629427}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce0d6dfb13d1ab49a399d9a52f1299e
+      internalID: 2033087534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 2
+        width: 14
+        height: 24
+      alignment: 9
+      pivot: {x: 0.56957275, y: 0.45317245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f40bffd4b5409e4d8dcb83b18582dae
+      internalID: -934085256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 2
+        width: 14
+        height: 24
+      alignment: 9
+      pivot: {x: 0.57492447, y: 0.45629427}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a84e11b5d5e94a4aa8996866e2cdc2b
+      internalID: -1514676719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 2
+        width: 14
+        height: 23
+      alignment: 9
+      pivot: {x: 0.569573, y: 0.43159106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33f2dbdb1f4eed4d895441625071caf
+      internalID: -129666474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 2
+        width: 14
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5588695, y: 0.43159106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de44cd04e623966429c13b7dd91b4fa5
+      internalID: 1290938504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_5
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 2
+        width: 14
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5802765, y: 0.4283335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd74d0d72efa0f438c1baff0a4d0919
+      internalID: -243233199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 2
+        width: 14
+        height: 23
+      alignment: 9
+      pivot: {x: 0.57492393, y: 0.4348486}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154bd43749f93354f8b7d3394d24ce26
+      internalID: -1889654810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_7
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 2
+        width: 14
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5802765, y: 0.4348486}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af539a695ba39a4ea7fd50d4564b488
+      internalID: -370073954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_8
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 2
+        width: 14
+        height: 23
+      alignment: 9
+      pivot: {x: 0.56422204, y: 0.43159106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0207b449aba5c43853a8bb5b3d74b0
+      internalID: -364582434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 2
+        width: 14
+        height: 23
+      alignment: 9
+      pivot: {x: 0.56422204, y: 0.4348486}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b9ac535b536ed42a1fbd3f6ffd5c32
+      internalID: 1322088503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_10
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 2
+        width: 14
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5588684, y: 0.4348486}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807008721b38d9a49b964c79d25692f1
+      internalID: 1237793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_11
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 2
+        width: 14
+        height: 23
+      alignment: 9
+      pivot: {x: 0.56422204, y: 0.4348486}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871da7c97ec245446877b30bd53e797e
+      internalID: 1819441068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_12
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 2
+        width: 14
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5695735, y: 0.43159106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd6feea260f9cf498232a2ecef28087
+      internalID: -1969480139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_13
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 2
+        width: 14
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5695735, y: 0.43159106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d68cd5d361ef514b997b9b1ea0d7429
+      internalID: -355730957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_14
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 2
+        width: 14
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5802765, y: 0.45317245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d38249bb416e7a4dae6942b7b6f2956
+      internalID: 12424026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_15
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 2
+        width: 14
+        height: 28
+      alignment: 9
+      pivot: {x: 0.56422204, y: 0.3902898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe17206d422cf134b97e30cabdfa77aa
+      internalID: 552824091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: granadaatack_16
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 2
+        width: 14
+        height: 24
+      alignment: 9
+      pivot: {x: 0.56422204, y: 0.45629427}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f76a2c2a2c053449696a1a5d71928a
+      internalID: 737474740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: af54f6fda5f2f7740991504f1a463a52
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      granadaatack_7: -370073954
+      granadaatack_5: -243233199
+      granadaatack_11: 1819441068
+      granadaatack_13: -355730957
+      granadaatack_0: 2033087534
+      granadaatack_15: 552824091
+      granadaatack_3: -129666474
+      granadaatack_14: 12424026
+      granadaatack_2: -1514676719
+      granadaatack_9: 1322088503
+      granadaatack_4: 1290938504
+      granadaatack_12: -1969480139
+      granadaatack_6: -1889654810
+      granadaatack_8: -364582434
+      granadaatack_1: -934085256
+      granadaatack_16: 737474740
+      granadaatack_10: 1237793
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
