@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 377f3d184d305ca42a92a9548704b6c9
+guid: c05b1c22803404a498bb3451b8b9628c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,274 +105,316 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: porretewalk_0
+      name: TiferinaIdle_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 18
         y: 1
-        width: 28
-        height: 36
+        width: 16
+        height: 32
       alignment: 9
-      pivot: {x: 0.5205156, y: 0.6819058}
+      pivot: {x: 0.37609756, y: 0.6239025}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ef5987ae663cfa49ab8836fb7cb5a3f
-      internalID: -631720905
+      spriteID: 306d5cf793769674594e5cec1878e184
+      internalID: 313068150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: porretewalk_1
+      name: TiferinaIdle_1
       rect:
         serializedVersion: 2
-        x: 55
+        x: 76
         y: 1
-        width: 28
-        height: 36
+        width: 16
+        height: 32
       alignment: 9
-      pivot: {x: 0.5287219, y: 0.6914798}
+      pivot: {x: 0.38086224, y: 0.62151974}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adab91972e16c914caa9b9e2d272607e
-      internalID: -573582399
+      spriteID: cc154f7f190ce2e4497c60d53cdaf889
+      internalID: -1337725158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: porretewalk_2
+      name: TiferinaIdle_2
       rect:
         serializedVersion: 2
-        x: 103
+        x: 134
         y: 1
-        width: 28
-        height: 36
+        width: 13
+        height: 31
       alignment: 9
-      pivot: {x: 0.5287217, y: 0.7010538}
+      pivot: {x: 0.47067377, y: 0.642657}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 114d4981916aa8441b54c2e6742b1a9a
-      internalID: -790325306
+      spriteID: 5d39649e81c95c4449614cb06359a4bd
+      internalID: 749834395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: porretewalk_3
+      name: TiferinaIdle_3
       rect:
         serializedVersion: 2
-        x: 151
+        x: 192
         y: 1
-        width: 28
-        height: 36
+        width: 13
+        height: 31
       alignment: 9
-      pivot: {x: 0.5287219, y: 0.69786245}
+      pivot: {x: 0.47653902, y: 0.6475762}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e5360543d30d54489a59979f54af574
-      internalID: 1992234268
+      spriteID: 98fe658bc26d7cd449d5f7d2ff7b2e87
+      internalID: -1820134110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: porretewalk_4
+      name: TiferinaIdle_4
       rect:
         serializedVersion: 2
-        x: 199
+        x: 250
         y: 1
-        width: 28
-        height: 36
+        width: 13
+        height: 31
       alignment: 9
-      pivot: {x: 0.53282493, y: 0.69786245}
+      pivot: {x: 0.46481088, y: 0.6475764}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e00879cff5016b44a2651c498a5b615
-      internalID: -2042356091
+      spriteID: 9527cc2a2437b104d85b96619a90d6ab
+      internalID: -1261724361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: porretewalk_5
+      name: TiferinaIdle_5
       rect:
         serializedVersion: 2
-        x: 247
+        x: 308
         y: 1
-        width: 28
-        height: 36
+        width: 13
+        height: 31
       alignment: 9
-      pivot: {x: 0.5287214, y: 0.6946711}
+      pivot: {x: 0.46480852, y: 0.6451166}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 593a477ec3f9d504a9cfee6d417d1591
-      internalID: 2109010339
+      spriteID: c75a692816f5874438fb39ed0840bdbd
+      internalID: 114291266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: porretewalk_6
+      name: TiferinaIdle_6
       rect:
         serializedVersion: 2
-        x: 295
+        x: 366
         y: 1
-        width: 28
-        height: 36
+        width: 13
+        height: 31
       alignment: 9
-      pivot: {x: 0.5287214, y: 0.6946711}
+      pivot: {x: 0.47067496, y: 0.6475762}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1af07637662963f478f913e7eb509f15
-      internalID: 479344406
+      spriteID: 98c12bfdca7a8544db64d82018ea4f00
+      internalID: 1578799449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: porretewalk_7
+      name: TiferinaIdle_7
       rect:
         serializedVersion: 2
-        x: 343
+        x: 424
         y: 1
-        width: 28
-        height: 37
+        width: 13
+        height: 31
       alignment: 9
-      pivot: {x: 0.53282493, y: 0.6800944}
+      pivot: {x: 0.4530804, y: 0.6475762}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fffa6cc6779905f4f8a99b48787a6770
-      internalID: 1825281912
+      spriteID: 77ff942ad98b96b48beae11a27e3f389
+      internalID: 114946588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: porretewalk_8
+      name: TiferinaIdle_8
       rect:
         serializedVersion: 2
-        x: 391
+        x: 482
         y: 1
-        width: 28
-        height: 37
+        width: 13
+        height: 31
       alignment: 9
-      pivot: {x: 0.5164119, y: 0.6894097}
+      pivot: {x: 0.46481088, y: 0.642657}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e6feeb595b5d83438b4336582ef9067
-      internalID: -639598789
+      spriteID: b61fb19516c073e45a1555ea2a041414
+      internalID: -987338155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: porretewalk_9
+      name: TiferinaIdle_9
       rect:
         serializedVersion: 2
-        x: 439
+        x: 540
         y: 1
-        width: 28
-        height: 37
+        width: 13
+        height: 31
       alignment: 9
-      pivot: {x: 0.53282493, y: 0.6831995}
+      pivot: {x: 0.46481088, y: 0.6451166}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 798d35fe4b155084fa74da50ca0220fc
-      internalID: -435437664
+      spriteID: c9269ab26e7de2a4d89922acc93f8531
+      internalID: 1970225887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: porretewalk_10
+      name: TiferinaIdle_10
       rect:
         serializedVersion: 2
-        x: 487
+        x: 598
         y: 1
-        width: 28
-        height: 37
+        width: 13
+        height: 31
       alignment: 9
-      pivot: {x: 0.5311345, y: 0.67376196}
+      pivot: {x: 0.45307806, y: 0.6451166}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2359659dc0cd4b34eb542c417fa8f3e4
-      internalID: -1552260281
+      spriteID: 15db85beb744a764d81f96fe421f4633
+      internalID: -727820189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: porretewalk_11
+      name: TiferinaIdle_11
       rect:
         serializedVersion: 2
-        x: 535
+        x: 656
         y: 1
-        width: 28
-        height: 37
+        width: 13
+        height: 31
       alignment: 9
-      pivot: {x: 0.5303258, y: 0.6752569}
+      pivot: {x: 0.46481088, y: 0.6451166}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5a0a7f962e1829438549245ff4e8524
-      internalID: 1728274613
+      spriteID: e417e9e5ffcea444a9e87b0b13cf8e9a
+      internalID: -1067686894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: porretewalk_12
+      name: TiferinaIdle_12
       rect:
         serializedVersion: 2
-        x: 583
+        x: 714
         y: 1
-        width: 28
-        height: 37
+        width: 13
+        height: 31
       alignment: 9
-      pivot: {x: 0.53308326, y: 0.6752568}
+      pivot: {x: 0.47067496, y: 0.6475762}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad1658b6186540c45980005c979c4cf7
-      internalID: -1188180349
+      spriteID: 1c5edeab31d5dc541b7ea4d2c35a5ea7
+      internalID: 2077952183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiferinaIdle_13
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.45894682, y: 0.6475762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fdef08773a40649a35353ca5895d99
+      internalID: 801594709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiferinaIdle_14
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.380867, y: 0.65487814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefe15716731b7e4cbdbeaa0c0ff41d0
+      internalID: 1338710442
       vertices: []
       indices: 
       edges: []
@@ -380,7 +422,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b07731c4928d777419a45804082b9284
+    spriteID: 6b6e87d9b9bf19840bdf083e50f857ac
     internalID: 0
     vertices: []
     indices: 
@@ -388,19 +430,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      porretewalk_10: -1552260281
-      porretewalk_11: 1728274613
-      porretewalk_8: -639598789
-      porretewalk_4: -2042356091
-      porretewalk_0: -631720905
-      porretewalk_6: 479344406
-      porretewalk_2: -790325306
-      porretewalk_9: -435437664
-      porretewalk_7: 1825281912
-      porretewalk_1: -573582399
-      porretewalk_3: 1992234268
-      porretewalk_5: 2109010339
-      porretewalk_12: -1188180349
+      TiferinaIdle_2: 749834395
+      TiferinaIdle_5: 114291266
+      TiferinaIdle_9: 1970225887
+      TiferinaIdle_1: -1337725158
+      TiferinaIdle_13: 801594709
+      TiferinaIdle_14: 1338710442
+      TiferinaIdle_8: -987338155
+      TiferinaIdle_0: 313068150
+      TiferinaIdle_6: 1578799449
+      TiferinaIdle_7: 114946588
+      TiferinaIdle_10: -727820189
+      TiferinaIdle_12: 2077952183
+      TiferinaIdle_11: -1067686894
+      TiferinaIdle_4: -1261724361
+      TiferinaIdle_3: -1820134110
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

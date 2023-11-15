@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1785,9 +1785,12 @@ MonoBehaviour:
   potionPass: {fileID: 1970131732356365574, guid: f60d31e3695527b419c9ec8450140f14,
     type: 3}
   controller: {fileID: 1457585968}
+  item: {fileID: 0}
   child: {fileID: 980304386}
   Health: {fileID: 1457585978}
   ConsumeKey: 52
+  Order: 0
+  saveFile: {fileID: 0}
 --- !u!61 &206126671
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2771,9 +2774,12 @@ MonoBehaviour:
   potionPass: {fileID: 1970131732356365574, guid: f60d31e3695527b419c9ec8450140f14,
     type: 3}
   controller: {fileID: 1457585968}
+  item: {fileID: 0}
   child: {fileID: 1353405754}
   Health: {fileID: 1457585978}
   ConsumeKey: 50
+  Order: 0
+  saveFile: {fileID: 0}
 --- !u!61 &366324275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2999,9 +3005,12 @@ MonoBehaviour:
   potionPass: {fileID: 1970131732356365574, guid: f60d31e3695527b419c9ec8450140f14,
     type: 3}
   controller: {fileID: 1457585968}
+  item: {fileID: 0}
   child: {fileID: 2005098933}
   Health: {fileID: 1457585978}
   ConsumeKey: 51
+  Order: 0
+  saveFile: {fileID: 0}
 --- !u!61 &411213412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5770,6 +5779,8 @@ MonoBehaviour:
   inventory: {fileID: 0}
   Arma: {fileID: 1793523846}
   Dano: {fileID: 1115975047}
+  IsFirstWeapon: 0
+  saveFile: {fileID: 0}
 --- !u!61 &782800745
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6109,6 +6120,8 @@ MonoBehaviour:
   inventory: {fileID: 1457585977}
   Arma: {fileID: 1159817189}
   Dano: {fileID: 932684721}
+  IsFirstWeapon: 0
+  saveFile: {fileID: 0}
 --- !u!61 &852049675
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7638,6 +7651,8 @@ MonoBehaviour:
   inventory: {fileID: 0}
   Arma: {fileID: 0}
   Dano: {fileID: 0}
+  IsFirstWeapon: 0
+  saveFile: {fileID: 0}
 --- !u!61 &972343921
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8268,10 +8283,8 @@ MonoBehaviour:
   Quests:
   - {fileID: 11400000, guid: a02d2a8fbccad2842b56e99eb4186ed8, type: 2}
   - {fileID: 11400000, guid: eee265cf2f267314e98cefa315df18b5, type: 2}
-  questIndex: 0
-  questStageIndex: 0
   currentStageIndex: 0
-  removableObjects: []
+  player: {fileID: 0}
 --- !u!114 &1047025475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11540,7 +11553,7 @@ MonoBehaviour:
   player: {fileID: 1457585967}
   stateCtrl: {fileID: 1047025475}
   exitTimerDelay: 1
-  fixedCamera: {fileID: 0}
+  thisFixedCamera: {fileID: 0}
 --- !u!114 &1353405754 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
@@ -13291,7 +13304,7 @@ MonoBehaviour:
   player: {fileID: 1457585967}
   stateCtrl: {fileID: 1047025475}
   exitTimerDelay: 1
-  fixedCamera: {fileID: 0}
+  thisFixedCamera: {fileID: 0}
 --- !u!65 &1531171536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16986,9 +16999,12 @@ MonoBehaviour:
   potionPass: {fileID: 1970131732356365574, guid: f60d31e3695527b419c9ec8450140f14,
     type: 3}
   controller: {fileID: 1457585968}
+  item: {fileID: 0}
   child: {fileID: 2033702860}
   Health: {fileID: 1457585978}
   ConsumeKey: 49
+  Order: 0
+  saveFile: {fileID: 0}
 --- !u!61 &1976188699
 BoxCollider2D:
   m_ObjectHideFlags: 0
