@@ -20,8 +20,5 @@ MonoBehaviour:
   qDescription: mim de
   qSpawnList:
   - {fileID: 4261399402396129257, guid: 4dc8d186392b45541ad335b8e5c7277d, type: 3}
-  qDeliverItems:
-  - {fileID: 11400000, guid: 451d04d0df9728749b9febbed7508f5a, type: 2}
-  - {fileID: 11400000, guid: d739b987009c5cf4cab68734f3a2a210, type: 2}
-  - {fileID: 11400000, guid: fb47951afbbf307479f0c4cd21692ad4, type: 2}
+  qDeliverItems: []
   qReceiveItems: []

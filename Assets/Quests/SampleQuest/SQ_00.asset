@@ -19,4 +19,5 @@ MonoBehaviour:
   sDeliverItems: []
   sReceiveItems: []
   addedDescription: 1
-  isDone: 1
+  isDone: 0
+  deliveredItem: 1

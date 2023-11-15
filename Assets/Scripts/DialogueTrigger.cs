@@ -15,7 +15,6 @@ public class DialogueTrigger : MonoBehaviour
     public Sprite portraitChar;
 
     public QuestObjectiveTrigger qTrigger;
-    public DialogueSwitch Dswitch;
     public bool fabianoOnce = true;
     public void TriggerDialogue()
     {
@@ -25,8 +24,8 @@ public class DialogueTrigger : MonoBehaviour
     private void Start()
     {
         qTrigger = gameObject.GetComponent<QuestObjectiveTrigger>();
-        Dswitch = gameObject.GetComponent<DialogueSwitch>();
         Falando = false;
+        
         
     }
 
@@ -34,7 +33,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && Falando == false && Conversando == true)
         {
-            Manager = FindObjectOfType<DialogueManager>();
+            Manager = FindObjectOfType<DialogueManager>(); 
             TriggerDialogue();
             Falando = true;
             if(Portrait != null)
@@ -49,7 +48,7 @@ public class DialogueTrigger : MonoBehaviour
 
         if(Manager != null && Manager.DialogoFim == true)
         {
-
+            
             StartCoroutine(CooldownToStart());
             
             if (qTrigger != null && fabianoOnce)
@@ -59,12 +58,6 @@ public class DialogueTrigger : MonoBehaviour
 
                 Debug.Log("am im being called twice");
             }
-            //
-            //if (Dswitch != null && fabianoOnce)
-            //{
-            //    Dswitch.carryOn();
-            //    fabianoOnce = false;
-            //}
 
             if (Portrait != null)
             {
@@ -87,11 +80,12 @@ public class DialogueTrigger : MonoBehaviour
         
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
             Conversando = true;
+           
         }
     }
 
@@ -100,6 +94,7 @@ public class DialogueTrigger : MonoBehaviour
         if (other.tag == "Player")
         {
             Conversando = false;
+            
         }
     }
 

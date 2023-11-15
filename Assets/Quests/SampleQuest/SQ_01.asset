@@ -20,4 +20,6 @@ MonoBehaviour:
   - {fileID: 5429232214683726594, guid: 168092ed5c640d84cbcd88ec1617cd4f, type: 3}
   sDeliverItems: []
   sReceiveItems: []
+  addedDescription: 0
   isDone: 0
+  deliveredItem: 0
