@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77a5efe685e8b7540acb3bbb0cd41c73, type: 3}
-  m_Name: TestQuest
+  m_Name: RanhentaQuest
   m_EditorClassIdentifier: 
-  qName: TESTE
+  qName: 
   qStage:
-  - {fileID: 11400000, guid: 743d7c90c5d661944b5cb6f8e703f8af, type: 2}
-  - {fileID: 11400000, guid: 2c23a136458bf7a44a40bbf199b5a931, type: 2}
-  - {fileID: 11400000, guid: 55595682737faec46944b4293c2a1ef0, type: 2}
+  - {fileID: 11400000, guid: 98bc3c16a662cdd4aa6a0b8561a189b9, type: 2}
+  - {fileID: 11400000, guid: 0aa77280cbbf46c4ab8174e20ccd647b, type: 2}
+  - {fileID: 11400000, guid: 3752616ffc6e80945954c2fd52f74b45, type: 2}
   stageIndex: 0
-  qDescription: 
+  qDescription: '    '
   qSpawnList:
-  - {fileID: 3567991602758759601, guid: 260ad04868fa96c439b314daf9e2ffe5, type: 3}
+  - {fileID: 3358984541528424613, guid: 870789fa1928df442a511af872544401, type: 3}
   qDeliverItems: []
   qReceiveItems: []

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d03362aeee566548a48807fd631145f, type: 3}
-  m_Name: Stage2Maromba
+  m_Name: RanhentaStage0
   m_EditorClassIdentifier: 
-  stageNo: 2
+  stageNo: 0
   sDescription: 
   sSpawnList:
-  - {fileID: 2311060350761919200, guid: adeec7acd2c9ed74dbe6e211c4b2d8fa, type: 3}
+  - {fileID: 3358984541528424613, guid: 870789fa1928df442a511af872544401, type: 3}
   sDeliverItems: []
   sReceiveItems: []
   addedDescription: 1

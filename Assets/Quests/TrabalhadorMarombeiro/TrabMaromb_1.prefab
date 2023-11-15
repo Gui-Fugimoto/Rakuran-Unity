@@ -132,11 +132,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - 'dota1
-
-'
+    - Antigamente tinha oito, OITO ELEVADORES de carga.
+    - "Dois pararam de operar porque todos os engenheiros foram pra guerra. E n\xE3o
+      voltaram!"
+    - "Tr\xEAs explodiram por causa das bombas."
+    - "Dois foram interditados e agora s\xE3o de uso exclusivo dos manda-chuva l\xE1
+      de cima."
+    - "E o \xFAltimo\u2026"
+    - Agora foi pro saco.
+    - "Pois \xE9. Mais um dia de sal\xE1rio perdido."
+    - Tem algo que eu possa fazer, amigo?
+    - "\xC9 claro que n\xE3o. Voc\xEA trabalha no Imp\xE9rio?"
+    - "N\xE3o"
+    - "Voc\xEA conhece uma rota alternativa?"
+    - "N\xE3o\u2026"
+    - "Voc\xEA consegue m\xE1gicamente encontrar as pe\xE7as super espec\xEDficas
+      pra arrumar o elevador?"
+    - "Olha\u2026 Talvez?"
+    - "N\xE3o consegue, cara. Nem eu, nem voc\xEA. Vamos s\xF3 aceitar essa merda
+      toda."
     names:
     - Trabalhador Marombeiro
+    - Trabalhador Marombeiro
+    - Trabalhador Marombeiro
+    - Trabalhador Marombeiro
+    - Trabalhador Marombeiro
+    - Rakuran
+    - Trabalhador Marombeiro
+    - Rakuran
+    - Trabalhador marombeiro
+    - Rakuran
+    - Trabalhador marombeiro
+    - Rakuran
+    - Trabalhador marombeiro
+    - Rakuran
+    - Trabalhador marombeiro
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0

@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77a5efe685e8b7540acb3bbb0cd41c73, type: 3}
-  m_Name: TestQuest
+  m_Name: QuestMarta
   m_EditorClassIdentifier: 
-  qName: TESTE
+  qName: 
   qStage:
-  - {fileID: 11400000, guid: 743d7c90c5d661944b5cb6f8e703f8af, type: 2}
-  - {fileID: 11400000, guid: 2c23a136458bf7a44a40bbf199b5a931, type: 2}
-  - {fileID: 11400000, guid: 55595682737faec46944b4293c2a1ef0, type: 2}
+  - {fileID: 11400000, guid: cd6e9b08d14b2d4478c1c629b6cd6272, type: 2}
+  - {fileID: 11400000, guid: d43e2fa6b218af04abbfbbeb3cb4a28f, type: 2}
+  - {fileID: 11400000, guid: 04ffa7b21317b5a4a9fb463c448a1ae7, type: 2}
   stageIndex: 0
   qDescription: 
   qSpawnList:
-  - {fileID: 3567991602758759601, guid: 260ad04868fa96c439b314daf9e2ffe5, type: 3}
+  - {fileID: 1857388253145956455, guid: 01d19a5e4e1a76048b53b56613bb0777, type: 3}
   qDeliverItems: []
   qReceiveItems: []
