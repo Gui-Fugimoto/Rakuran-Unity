@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77a5efe685e8b7540acb3bbb0cd41c73, type: 3}
+  m_Name: QuestMarombeiro
+  m_EditorClassIdentifier: 
+  qName: Marombeiro
+  qStage:
+  - {fileID: 11400000, guid: 768f1bd29c05edb4d8fbf50461fee0d0, type: 2}
+  - {fileID: 11400000, guid: 30307c07072e1754194175ecee4df968, type: 2}
+  - {fileID: 11400000, guid: 1e2f404fb74fd0b40b48175b5c426672, type: 2}
+  stageIndex: 0
+  qDescription: '   '
+  qSpawnList:
+  - {fileID: 2311060350761919200, guid: adeec7acd2c9ed74dbe6e211c4b2d8fa, type: 3}
+  qDeliverItems: []
+  qReceiveItems: []
