@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee5f8133daa5ae49bfff9d092e5edcf, type: 3}
   m_Name: SWR_H_U1
   m_EditorClassIdentifier: 
-  animatorOV: {fileID: 0}
-  damageMultiplier: 0
-  kbForce: 0
-  kbDuration: 0
-  kbDirection: {x: 0, y: 0, z: 0}
+  animatorOV: {fileID: 22100000, guid: 59ac2e83fa8bbbd428b5f20ba51414ae, type: 2}
+  damageMultiplier: 0.75
+  kbForce: 2
+  kbDuration: 0.4
+  kbDirection: {x: 3, y: 5, z: 0}
   animSpeed: 0
   endLag: 0.5
   startUp: 0.5

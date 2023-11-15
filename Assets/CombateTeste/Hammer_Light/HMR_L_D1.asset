@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee5f8133daa5ae49bfff9d092e5edcf, type: 3}
   m_Name: HMR_L_D1
   m_EditorClassIdentifier: 
-  animatorOV: {fileID: 0}
-  damageMultiplier: 0
-  kbForce: 0
-  kbDuration: 0
-  kbDirection: {x: 0, y: 0, z: 0}
+  animatorOV: {fileID: 22100000, guid: 242ec6265495fc641b65b4fdef4b1386, type: 2}
+  damageMultiplier: 0.8
+  kbForce: 1
+  kbDuration: 0.1
+  kbDirection: {x: 2, y: 0, z: 0}
   animSpeed: 0
   endLag: 0.5
   startUp: 0.5
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: a2fd0f4c57590da42817c4c08ec07084, type: 3}
