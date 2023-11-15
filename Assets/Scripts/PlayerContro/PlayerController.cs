@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float SpeedBonus;
     private float verticalVelocity;
 
-    private bool grounded;
+    [SerializeField] private bool grounded;
+
 
     private CharacterController controller;
     private Vector3 slopeNormal;
@@ -67,6 +68,8 @@ public class PlayerController : MonoBehaviour
     public SaveFile currentSave;
     public Transform FirstSpawnPos;
 
+    private LayerMask Ground;
+
     #endregion
 
     private void Awake()
@@ -82,6 +85,7 @@ public class PlayerController : MonoBehaviour
         playerCombatScript = GetComponentInChildren<PlayerCombat>();
         currentSave = FindObjectOfType<GameController>().Save;
         SpeedBonus = 1;
+        Ground = LayerMask.GetMask("Ground");
         
         if(currentSave.CPpos != FirstSpawnPos.position)
         {

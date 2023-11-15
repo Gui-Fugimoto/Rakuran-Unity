@@ -19,12 +19,21 @@ public class RakuRepel : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (thisCollider.bounds.Contains(player.transform.position))
-        {
-            player.transform.position = save.CPpos;
-
-        }
-
+      if (thisCollider.bounds.Contains(player.transform.position))
+      {
+          player.transform.position = save.CPpos;
+      
+      }
+      
     }
 
+   // private void OnTriggerStay(Collider other)
+   // {
+   //     if(other.gameObject.tag == "Player")
+   //     {
+   //         Debug.Log("entrei na agua");
+   //         player.transform.position = new Vector3 (save.CPpos.x, save.CPpos.y, save.CPpos.z);
+   //     }
+   // }
+   //
 }
