@@ -173,7 +173,6 @@ MonoBehaviour:
   Portrait: {fileID: 0}
   portraitChar: {fileID: 0}
   qTrigger: {fileID: 7791614284019940019}
-  Dswitch: {fileID: 0}
   fabianoOnce: 1
 --- !u!65 &2536988213204580110
 BoxCollider:

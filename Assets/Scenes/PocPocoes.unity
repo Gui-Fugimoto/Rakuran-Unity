@@ -5325,38 +5325,39 @@ MonoBehaviour:
   swordLightBasicCombo:
   - {fileID: 11400000, guid: 0f41b73aa89a63d48a27f59d463e1a62, type: 2}
   - {fileID: 11400000, guid: f1d7b118e3f211648a7936ba3445a039, type: 2}
-  - {fileID: 11400000, guid: df20e20c5a5509d46b01769f867008f7, type: 2}
   swordLightUpwardCombo:
-  - {fileID: 11400000, guid: cf9a44331f693f74a8036d8cebc46d37, type: 2}
+  - {fileID: 11400000, guid: 4bd649d88cd4c6742a5b78f4e62978c5, type: 2}
   swordLightDownwardCombo:
-  - {fileID: 11400000, guid: 0f41b73aa89a63d48a27f59d463e1a62, type: 2}
+  - {fileID: 11400000, guid: cd20e52b1683dc848915f19c39529e7c, type: 2}
   swordLightJumpingCombo:
-  - {fileID: 11400000, guid: 0f41b73aa89a63d48a27f59d463e1a62, type: 2}
+  - {fileID: 11400000, guid: 0980da8a57c36bb408fb479a36ac2d2a, type: 2}
+  - {fileID: 11400000, guid: 32ccc6a7b7c554240b30eedb3dc3488e, type: 2}
   swordHeavyBasicCombo:
-  - {fileID: 11400000, guid: f1d7b118e3f211648a7936ba3445a039, type: 2}
+  - {fileID: 11400000, guid: a332318e2ae0bbd47b770fa54c545d65, type: 2}
   swordHeavyUpwardCombo:
-  - {fileID: 11400000, guid: f1d7b118e3f211648a7936ba3445a039, type: 2}
+  - {fileID: 11400000, guid: b58f962549daf93459c05a5a2f0134d0, type: 2}
   swordHeavyDownwardCombo:
-  - {fileID: 11400000, guid: f1d7b118e3f211648a7936ba3445a039, type: 2}
+  - {fileID: 11400000, guid: 89b608e4b752cf4469f24b5648c52450, type: 2}
   swordHeavyJumpingCombo:
-  - {fileID: 11400000, guid: f1d7b118e3f211648a7936ba3445a039, type: 2}
+  - {fileID: 11400000, guid: e0f830de33a8bf449bd177af26f80ab2, type: 2}
   hammerLightBasicCombo:
-  - {fileID: 11400000, guid: 0fe878f5d7b515e4193761bb8db1708b, type: 2}
-  - {fileID: 11400000, guid: b95b661ddd188b046b5e8f61597b7f32, type: 2}
+  - {fileID: 11400000, guid: 83f9ea84626640e4cb9cb80ed41c239d, type: 2}
+  - {fileID: 11400000, guid: e345127089bfac54abe409e073b7fc93, type: 2}
   hammerLightUpwardCombo:
-  - {fileID: 11400000, guid: 0fe878f5d7b515e4193761bb8db1708b, type: 2}
+  - {fileID: 11400000, guid: e94ea326d8ba5724db0e110a72b1cbc8, type: 2}
   hammerLightDownwardCombo:
-  - {fileID: 11400000, guid: 0fe878f5d7b515e4193761bb8db1708b, type: 2}
+  - {fileID: 11400000, guid: 453ec67c3ff77d348a71ae0f708e07fa, type: 2}
   hammerLightJumpingCombo:
-  - {fileID: 11400000, guid: 0fe878f5d7b515e4193761bb8db1708b, type: 2}
+  - {fileID: 11400000, guid: 0738b3dd1cdd3694485a1c891f6fb8f4, type: 2}
   hammerHeavyBasicCombo:
-  - {fileID: 11400000, guid: b95b661ddd188b046b5e8f61597b7f32, type: 2}
+  - {fileID: 11400000, guid: 83f9ea84626640e4cb9cb80ed41c239d, type: 2}
+  - {fileID: 11400000, guid: e345127089bfac54abe409e073b7fc93, type: 2}
   hammerHeavyUpwardCombo:
-  - {fileID: 11400000, guid: b95b661ddd188b046b5e8f61597b7f32, type: 2}
+  - {fileID: 11400000, guid: e94ea326d8ba5724db0e110a72b1cbc8, type: 2}
   hammerHeavyDownwardCombo:
-  - {fileID: 11400000, guid: b95b661ddd188b046b5e8f61597b7f32, type: 2}
+  - {fileID: 11400000, guid: 453ec67c3ff77d348a71ae0f708e07fa, type: 2}
   hammerHeavyJumpingCombo:
-  - {fileID: 11400000, guid: b95b661ddd188b046b5e8f61597b7f32, type: 2}
+  - {fileID: 11400000, guid: 0738b3dd1cdd3694485a1c891f6fb8f4, type: 2}
   polearmLightBasicCombo: []
   polearmLightUpwardCombo: []
   polearmLightDownwardCombo: []
@@ -12877,7 +12878,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63192
+  m_Name: pb_Mesh264988
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16077,7 +16078,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1457585972}
+      objectReference: {fileID: 1457585967}
     m_RemovedComponents:
     - {fileID: 1116477544835161140, guid: 40f16ebc19684ff4b924aca76712ab09, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 40f16ebc19684ff4b924aca76712ab09, type: 3}
@@ -27383,7 +27384,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1457585972}
+      objectReference: {fileID: 1457585967}
     - target: {fileID: 5928604790689590249, guid: 40f16ebc19684ff4b924aca76712ab09,
         type: 3}
       propertyPath: attackRange
@@ -28979,7 +28980,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh436390
+  m_Name: pb_Mesh267464
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31647,7 +31648,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh65988
+  m_Name: pb_Mesh267816
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42586,7 +42587,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Quests:
   - {fileID: 11400000, guid: c08a8cc82eebce24693bf0a05f579325, type: 2}
-  - {fileID: 11400000, guid: f9cbb990097256b4b9c6e18d7228b98b, type: 2}
   - {fileID: 11400000, guid: 25f9914740980d1448f8f738ef3e82ca, type: 2}
   - {fileID: 11400000, guid: 092b7bc4715307b409d75ab891206247, type: 2}
   - {fileID: 11400000, guid: 3b9f4b5c9ccba4d43a4bdc2091062874, type: 2}
@@ -77206,7 +77206,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh62078
+  m_Name: pb_Mesh263874
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -80526,7 +80526,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh68274
+  m_Name: pb_Mesh270084
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -88581,7 +88581,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh64272
+  m_Name: pb_Mesh266104
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -93994,7 +93994,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh64646
+  m_Name: pb_Mesh266494
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -97606,7 +97606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1457585967}
   stateCtrl: {fileID: 943222892}
-  exitTimerDelay: 1
+  exitTimerDelay: 0.5
   thisFixedCamera: {fileID: 915712055}
 --- !u!65 &2003688256
 BoxCollider:
@@ -97637,8 +97637,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003688254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -125.36, y: 0.48, z: -2.03}
-  m_LocalScale: {x: 30, y: 10, z: 10}
+  m_LocalPosition: {x: -125.36, y: -4.87, z: -2.03}
+  m_LocalScale: {x: 30, y: 17.266, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98841,7 +98841,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1457585972}
+      objectReference: {fileID: 1457585967}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40f16ebc19684ff4b924aca76712ab09, type: 3}
 --- !u!1001 &2027831594
@@ -103340,7 +103340,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh62404
+  m_Name: pb_Mesh264198
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -174,7 +174,6 @@ MonoBehaviour:
   Portrait: {fileID: 0}
   portraitChar: {fileID: 0}
   qTrigger: {fileID: 6591609087064357489}
-  Dswitch: {fileID: 0}
   fabianoOnce: 1
 --- !u!65 &1472245194257758156
 BoxCollider:
@@ -203,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveType: 0
   quest: {fileID: 11400000, guid: 092b7bc4715307b409d75ab891206247, type: 2}
-  stage: {fileID: 11400000, guid: 98bc3c16a662cdd4aa6a0b8561a189b9, type: 2}
+  stage: {fileID: 0}
   questManager: {fileID: 0}
   playerInventory: {fileID: 0}
 --- !u!114 &1799038903787640225

@@ -3871,6 +3871,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a02d2a8fbccad2842b56e99eb4186ed8, type: 2}
   - {fileID: 11400000, guid: eee265cf2f267314e98cefa315df18b5, type: 2}
   - {fileID: 11400000, guid: f9cbb990097256b4b9c6e18d7228b98b, type: 2}
+  - {fileID: 11400000, guid: 3b9f4b5c9ccba4d43a4bdc2091062874, type: 2}
+  - {fileID: 11400000, guid: 092b7bc4715307b409d75ab891206247, type: 2}
+  - {fileID: 11400000, guid: 25f9914740980d1448f8f738ef3e82ca, type: 2}
   currentStageIndex: 0
   player: {fileID: 0}
 --- !u!4 &474689787
@@ -15343,6 +15346,7 @@ MonoBehaviour:
   Save: {fileID: 11400000, guid: 8422ed53e4f7e454691406b63022998c, type: 2}
   ContinueButton: {fileID: 509727789}
   firstWeapon: {fileID: 11400000, guid: e6191dd27874da048b0e19b8b9ba1684, type: 2}
+  secondWeapon: {fileID: 11400000, guid: 1e847db5870f9cc4485c223cc6f58fd1, type: 2}
 --- !u!1001 &1547156767
 PrefabInstance:
   m_ObjectHideFlags: 0

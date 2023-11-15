@@ -11,6 +11,7 @@ public class MenuController : MonoBehaviour
     public SaveFile Save;
     public GameObject ContinueButton;
     public ItemParameter firstWeapon;
+    public ItemParameter secondWeapon;
     public void PlayGame()
     {
         SceneManager.LoadScene(Save.CScene);
@@ -23,7 +24,7 @@ public class MenuController : MonoBehaviour
         Save.Invsave.Clear();
         Save.CScene = 0;
         Save.Arma1 = firstWeapon;
-        Save.Arma2 = null;
+        Save.Arma2 = secondWeapon;
         Save.QuickSlot = null;
         Save.QuickSlot1 = null;
         Save.QuickSlot2 = null;
