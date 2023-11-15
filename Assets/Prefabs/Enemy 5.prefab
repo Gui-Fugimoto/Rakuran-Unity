@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 1116477543437352220}
   - component: {fileID: 1116477543437352221}
   - component: {fileID: 1116477543437352210}
-  - component: {fileID: 1116477543437352211}
   - component: {fileID: 1116477543437352223}
   - component: {fileID: 1116477543437352222}
   - component: {fileID: 1116477543437352216}
   - component: {fileID: 5304670618740693245}
   - component: {fileID: 5928604790689590249}
+  - component: {fileID: -1585879274262765514}
   m_Layer: 0
   m_Name: Enemy 5
   m_TagString: Enemy
@@ -94,20 +94,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1116477543437352211
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116477543437352208}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1116477543437352223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +194,19 @@ MonoBehaviour:
   specialCooldown: 100
   CDcontrol: 0
   specialHitBox: {fileID: 8672951449124479736}
+--- !u!65 &-1585879274262765514
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116477543437352208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!1 &1116477543557590440
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +574,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &1116477545295552465
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -583,7 +582,7 @@ Animator:
   m_GameObject: {fileID: 1116477545295552471}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 84c54759ecec1ef448878b478b0359ce, type: 2}
+  m_Controller: {fileID: 9100000, guid: bedb705fc9dd0054590d242956bb447b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -592,7 +591,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8672951449124479736
 GameObject:
   m_ObjectHideFlags: 0

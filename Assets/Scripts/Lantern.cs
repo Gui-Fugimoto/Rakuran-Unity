@@ -5,16 +5,14 @@ using UnityEngine;
 public class Lantern : MonoBehaviour
 {
 
-    private GameObject attackPosRight;
-    private GameObject attackPosLeft;
+    public GameObject attackPosRight;
+    public GameObject attackPosLeft;
     private PlayerController controller;
     private bool cameraLock;
 
 
     void Start()
     {
-        attackPosRight = GameObject.Find("AttackPosRight");
-        attackPosLeft = GameObject.Find("AttackPosLeft");
         controller = FindObjectOfType<PlayerController>();
     }
 
