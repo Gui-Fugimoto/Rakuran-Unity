@@ -3870,9 +3870,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c08a8cc82eebce24693bf0a05f579325, type: 2}
   - {fileID: 11400000, guid: a02d2a8fbccad2842b56e99eb4186ed8, type: 2}
   - {fileID: 11400000, guid: eee265cf2f267314e98cefa315df18b5, type: 2}
-  questIndex: 0
-  questStageIndex: 0
+  - {fileID: 11400000, guid: f9cbb990097256b4b9c6e18d7228b98b, type: 2}
   currentStageIndex: 0
+  player: {fileID: 0}
 --- !u!4 &474689787
 Transform:
   m_ObjectHideFlags: 0

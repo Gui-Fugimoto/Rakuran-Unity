@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &183850206162880897
+--- !u!1 &4261399402396129257
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 183850206162880896}
-  - component: {fileID: 183850206162880901}
-  - component: {fileID: 183850206162880902}
-  - component: {fileID: 183850206162880903}
-  - component: {fileID: 183850206162880900}
-  - component: {fileID: 4070936687472967400}
-  - component: {fileID: 3033623305788794443}
+  - component: {fileID: 4261399402396129256}
+  - component: {fileID: 4261399402396129261}
+  - component: {fileID: 4261399402396129262}
+  - component: {fileID: 4261399402396129263}
+  - component: {fileID: 4261399402396129260}
+  - component: {fileID: 130742641375895680}
+  - component: {fileID: 5675682334511443261}
+  - component: {fileID: 1420668763169732643}
+  - component: {fileID: 4324039934474651051}
   m_Layer: 0
-  m_Name: NPC_SampleQuest_3
+  m_Name: NPC_DeliverTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &183850206162880896
+--- !u!4 &4261399402396129256
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183850206162880897}
+  m_GameObject: {fileID: 4261399402396129257}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -60.99631, y: -1.0000248, z: -3.2656374}
+  m_LocalPosition: {x: -143.13907, y: -5.34, z: -4.2}
   m_LocalScale: {x: 5.75, y: 5.75, z: 5.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &183850206162880901
+--- !u!212 &4261399402396129261
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183850206162880897}
+  m_GameObject: {fileID: 4261399402396129257}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -89,13 +91,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &183850206162880902
+--- !u!114 &4261399402396129262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183850206162880897}
+  m_GameObject: {fileID: 4261399402396129257}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff219d8f269145d41b8f3eec726e4369, type: 3}
@@ -103,26 +105,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScaleChange: {x: 0, y: 0.001, z: 0}
   Deflate: 0
---- !u!65 &183850206162880903
+--- !u!65 &4261399402396129263
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183850206162880897}
+  m_GameObject: {fileID: 4261399402396129257}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1642737, y: 0.25999996, z: 0.2}
   m_Center: {x: 0.003078199, y: 0.12999998, z: 0}
---- !u!114 &183850206162880900
+--- !u!114 &4261399402396129260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183850206162880897}
+  m_GameObject: {fileID: 4261399402396129257}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b1371c2e2f700043ac3101f26cfcaf1, type: 3}
@@ -130,12 +132,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - "Rakuran, voc\xEA \xE9 um verdadeiro her\xF3i!"
-    - "Gra\xE7as a voc\xEA recuperei o Andr\xE9!"
-    - Nunca mais irei perde-lo
+    - mim de papai
     names:
-    - Vico
-    - Vico
     - Vico
   Manager: {fileID: 0}
   Falando: 0
@@ -143,32 +141,63 @@ MonoBehaviour:
   MoveOn: 0
   Portrait: {fileID: 0}
   portraitChar: {fileID: 0}
-  qTrigger: {fileID: 0}
+  qTrigger: {fileID: 5675682334511443261}
   Dswitch: {fileID: 0}
   fabianoOnce: 1
---- !u!65 &4070936687472967400
+--- !u!65 &130742641375895680
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183850206162880897}
+  m_GameObject: {fileID: 4261399402396129257}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.090920836, y: 0.25999996, z: 0.018843362}
   m_Center: {x: -0.00020699398, y: 0.12999998, z: 0.00055865553}
---- !u!114 &3033623305788794443
+--- !u!114 &5675682334511443261
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183850206162880897}
+  m_GameObject: {fileID: 4261399402396129257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352c9ff73ad9ef64e9b41a10668debe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveType: 1
+  quest: {fileID: 11400000, guid: f9cbb990097256b4b9c6e18d7228b98b, type: 2}
+  stage: {fileID: 11400000, guid: b73f22a0f44305049abe4fd05a7d76ab, type: 2}
+  questManager: {fileID: 0}
+  playerInventory: {fileID: 0}
+--- !u!114 &1420668763169732643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4261399402396129257}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 601b5c1e4a8a030429e3362d3fb0a2f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scene: PocPocoes
+--- !u!114 &4324039934474651051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4261399402396129257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775169f5aa71a354eb97857d93923adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: f9cbb990097256b4b9c6e18d7228b98b, type: 2}
+  stageToDestroy: {fileID: 11400000, guid: e5148a28df30e21449d43e23a8869f48, type: 2}

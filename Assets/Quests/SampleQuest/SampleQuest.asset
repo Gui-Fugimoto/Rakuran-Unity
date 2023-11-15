@@ -18,15 +18,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c020434cbb6dcc74f92357073fdcd69f, type: 2}
   - {fileID: 11400000, guid: 951838a5f2fb7f44085f77dff54162f6, type: 2}
   - {fileID: 11400000, guid: 68a919c3285f4bf4588196ccf609e25b, type: 2}
-  stageIndex: 3
-  qDescription: "O cidad\xE3o Vico perdeu seu gatinho Andr\xE9, ele pediu minha ajuda
-    para encontr\xE1-lo. O cidad\xE3o Vico perdeu seu gatinho Andr\xE9, ele pediu
-    minha ajuda para encontr\xE1-lo. Encontrei Andr\xE9, o gato perdido. Agora devo
-    leva-lo de volta ao cidad\xE3o Vico. Trouxe o Andr\xE9 de volta para seu dono,
-    VicoTrouxe o Andr\xE9 de volta para seu dono, VicoTrouxe o Andr\xE9 de volta
-    para seu dono, VicoTrouxe o Andr\xE9 de volta para seu dono, VicoTrouxe o Andr\xE9
-    de volta para seu dono, VicoTrouxe o Andr\xE9 de volta para seu dono, VicoTrouxe
-    o Andr\xE9 de volta para seu dono, Vico"
+  stageIndex: 1
+  qDescription: 
   qSpawnList:
-  - {fileID: 183850206162880897, guid: 27beaa00e3f8019469b75d1d99611b20, type: 3}
-  - {fileID: 7598119971960453014, guid: 865d12a13084d5649ad8849aae26f2da, type: 3}
+  - {fileID: 2083538858669263259, guid: f34a37eedae516d45b9e94954d2f3433, type: 3}
+  - {fileID: 5429232214683726594, guid: 168092ed5c640d84cbcd88ec1617cd4f, type: 3}
+  qDeliverItems: []
+  qReceiveItems: []

@@ -11,15 +11,24 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] float Count;
     [SerializeField] float Resist;
     [SerializeField] NavMeshAgent Enemy;
+    private QuestObjectiveTrigger qTrigger;
+    private bool once = true;
     void Start()
     {
         Enemy = GetComponent<NavMeshAgent>();
+        qTrigger = GetComponent<QuestObjectiveTrigger>();
     }
     void Update()
     {
         if(vida <= 0)
         {
             Debug.Log("morreu");
+            if(once == true && qTrigger != null)
+            {
+                once = false;
+                qTrigger.OnDefeat();
+            }
+            
             Destroy(gameObject, 0.1f);
         }
     }

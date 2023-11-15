@@ -59,12 +59,12 @@ public class DialogueTrigger : MonoBehaviour
 
                 Debug.Log("am im being called twice");
             }
-
-            if (Dswitch != null && fabianoOnce)
-            {
-                Dswitch.carryOn();
-                fabianoOnce = false;
-            }
+            //
+            //if (Dswitch != null && fabianoOnce)
+            //{
+            //    Dswitch.carryOn();
+            //    fabianoOnce = false;
+            //}
 
             if (Portrait != null)
             {
@@ -77,10 +77,11 @@ public class DialogueTrigger : MonoBehaviour
 
     IEnumerator CooldownToStart()
     {
-        Manager.DialogoFim = false;
+        
         yield return new WaitForSeconds(0.1f);
+
+        Manager.DialogoFim = false;
         Manager = null;
-        yield return new WaitForSeconds(0.5f);
         Falando = false;
        
         

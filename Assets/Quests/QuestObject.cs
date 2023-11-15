@@ -12,7 +12,10 @@ public class QuestObject : ScriptableObject
     public int stageIndex;
     public string qDescription;
     public List<GameObject> qSpawnList;
+    public List<ItemParameter> qDeliverItems;
+    public List<ItemParameter> qReceiveItems;
 
+    
 }
 
 
