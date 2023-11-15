@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee5f8133daa5ae49bfff9d092e5edcf, type: 3}
   m_Name: Attack1
   m_EditorClassIdentifier: 
-  animatorOV: {fileID: 22100000, guid: a752594ba9b026c43bbc66ae29393a7e, type: 2}
+  animatorOV: {fileID: 22100000, guid: b27485242b7d4854e9b761548695625b, type: 2}
   damageMultiplier: 0.75
   kbForce: 1
   kbDuration: 0.6
