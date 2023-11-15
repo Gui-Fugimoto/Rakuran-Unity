@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77a5efe685e8b7540acb3bbb0cd41c73, type: 3}
-  m_Name: QuestMarombeiro
+  m_Name: RanhentaQuest
   m_EditorClassIdentifier: 
-  qName: Marombeiro
+  qName: 
   qStage:
-  - {fileID: 11400000, guid: 768f1bd29c05edb4d8fbf50461fee0d0, type: 2}
-  - {fileID: 11400000, guid: 30307c07072e1754194175ecee4df968, type: 2}
-  - {fileID: 11400000, guid: 1e2f404fb74fd0b40b48175b5c426672, type: 2}
+  - {fileID: 11400000, guid: 98bc3c16a662cdd4aa6a0b8561a189b9, type: 2}
+  - {fileID: 11400000, guid: 0aa77280cbbf46c4ab8174e20ccd647b, type: 2}
+  - {fileID: 11400000, guid: 3752616ffc6e80945954c2fd52f74b45, type: 2}
   stageIndex: 0
-  qDescription: '             '
+  qDescription: '    '
   qSpawnList:
-  - {fileID: 2311060350761919200, guid: adeec7acd2c9ed74dbe6e211c4b2d8fa, type: 3}
+  - {fileID: 3358984541528424613, guid: 870789fa1928df442a511af872544401, type: 3}
   qDeliverItems: []
   qReceiveItems: []

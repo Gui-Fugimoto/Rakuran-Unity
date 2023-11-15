@@ -131,9 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - 'dota 2
-
-'
+    - "Que jeitinho de acabar o inverno, hein\u2026"
     names:
     - Trabalhador Marombeiro
   Manager: {fileID: 0}
