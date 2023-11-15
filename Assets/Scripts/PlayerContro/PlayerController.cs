@@ -64,9 +64,6 @@ public class PlayerController : MonoBehaviour
 
     public float currentStamina;
 
-    public GameObject explorationCamera;
-    public GameObject combatCamera;
-
     public SaveFile currentSave;
     public Transform FirstSpawnPos;
 
@@ -140,20 +137,6 @@ public class PlayerController : MonoBehaviour
         {
             controller.Move(movement * Time.deltaTime);
         }
-
-        //Olá, Fernando aqui, como você está? Aqui é só a versão temporária do estado de combate, é para a camera se ajustar, no futuro isso vai ser um estado, mas por enquanto vou usar o botão K e L
-        if (Input.GetKey(KeyCode.K))
-        {
-            explorationCamera.SetActive(false);
-            combatCamera.SetActive(true);
-        }
-
-        if (Input.GetKey(KeyCode.L))
-        {
-            explorationCamera.SetActive(true);
-            combatCamera.SetActive(false);
-        }
-
 
     }
 

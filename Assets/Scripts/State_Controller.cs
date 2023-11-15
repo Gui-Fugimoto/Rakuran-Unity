@@ -21,7 +21,7 @@ public class State_Controller : MonoBehaviour
     public GameObject combatCamera;
     public GameObject inventoryCamera;
     public GameObject cutsceneCamera;
-    [HideInInspector]public GameObject fixedCamera;
+    public GameObject fixedCamera;
 
     private Inventory inventory_script;
     private PlayerHealthController phc_script;
@@ -62,22 +62,33 @@ public class State_Controller : MonoBehaviour
     {
         //ativar explorationCamera e desativar as outras
 
-        //explorationCamera.SetActive(true);
-        //combatCamera.SetActive(false);
-        
+        combatCamera.SetActive(false);
+        inventoryCamera.SetActive(false);
+        fixedCamera.SetActive(false);
+        cutsceneCamera.SetActive(false);
+        explorationCamera.SetActive(true);
     }
 
     void CombatCamera()
     {
         //ativar combatCamera e desativar as outras
 
-        //explorationCamera.SetActive(false);
-        //combatCamera.SetActive(true);
+        explorationCamera.SetActive(false);
+        inventoryCamera.SetActive(false);
+        fixedCamera.SetActive(false);
+        cutsceneCamera.SetActive(false);
+        combatCamera.SetActive(true);
     }
 
     void InventoryCamera()
     {
         //ativar inventoryCamera e desativar as outras
+
+        explorationCamera.SetActive(false);
+        combatCamera.SetActive(false);
+        fixedCamera.SetActive(false);
+        cutsceneCamera.SetActive(false);
+        inventoryCamera.SetActive(true);
     }
 
     void CutsceneCamera()
@@ -86,16 +97,27 @@ public class State_Controller : MonoBehaviour
         if(cutsceneCamera != null)
         {
             //ativar cutsceneCamera e desativar as outras (nesse caso é mais pra evitar bugs)
+
+            explorationCamera.SetActive(false);
+            combatCamera.SetActive(false);
+            inventoryCamera.SetActive(false);
+            fixedCamera.SetActive(false);
+            cutsceneCamera.SetActive(true);
         }
     }
 
     void FixedCamera()
     {
-        
-        if(fixedCamera != null)
+        if (fixedCamera != null)
         {
             //ativar fixedCamera e desativar as outras
             //a fixedcamera deve ser definida pelo gameobject que contem o script FixedCameraArea
+
+            inventoryCamera.SetActive(false);
+            explorationCamera.SetActive(false);
+            combatCamera.SetActive(false);
+            cutsceneCamera.SetActive(false);
+            fixedCamera.SetActive(true);
         }
     }
 

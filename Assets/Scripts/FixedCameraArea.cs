@@ -35,7 +35,7 @@ public class FixedCameraArea : MonoBehaviour
         fabianoOnce = true;
 
         //descomentar isso quando tiver tudo pronto:
-        //stateCtrl.fixedCamera = thisFixedCamera;
+        stateCtrl.fixedCamera = thisFixedCamera;
     }
 
     void ExitAreaTimer()
