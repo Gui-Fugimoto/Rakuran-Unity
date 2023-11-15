@@ -17,7 +17,7 @@ public class PlayerHealthController : MonoBehaviour
     [SerializeField] int resist;
     public bool inCombat;
     private float combatTimer;
-    public float combatEndDelay = 4f;
+    public float combatEndDelay = 3f;
     // Start is called before the first frame update
     void Awake()
     {

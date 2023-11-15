@@ -64,8 +64,9 @@ public class QuestManager : MonoBehaviour
 
         quest.qDescription = quest.qDescription + " " + currentStage.sDescription.ToString();
         quest.qSpawnList = currentStage.sSpawnList;
-        quest.qDeliverItems = currentStage.sDeliverItems;
+        quest.qDeliverItems = new List<ItemParameter>(currentStage.sDeliverItems);
         quest.qReceiveItems = currentStage.sReceiveItems;
+
         currentStage.addedDescription = true;
         SpawnQuestObjects(quest);
         GiveItemToPlayer(quest);

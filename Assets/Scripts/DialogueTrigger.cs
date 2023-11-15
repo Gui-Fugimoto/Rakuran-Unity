@@ -32,7 +32,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.E) && Falando == false && Conversando == true)
+        if (Input.GetKeyDown(KeyCode.E) && Falando == false && Conversando == true)
         {
             Manager = FindObjectOfType<DialogueManager>();
             TriggerDialogue();
