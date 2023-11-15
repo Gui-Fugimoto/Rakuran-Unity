@@ -15342,6 +15342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Save: {fileID: 11400000, guid: 8422ed53e4f7e454691406b63022998c, type: 2}
   ContinueButton: {fileID: 509727789}
+  firstWeapon: {fileID: 11400000, guid: e6191dd27874da048b0e19b8b9ba1684, type: 2}
 --- !u!1001 &1547156767
 PrefabInstance:
   m_ObjectHideFlags: 0
