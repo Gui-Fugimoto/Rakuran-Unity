@@ -128,11 +128,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
+    sentences:
+    - 'This space is itentionaly left blank '
+    - 'This space is itentionaly left blank '
+    - 'This space is itentionaly left blank '
+    names:
+    - NPC
+    - NPC
+    - NPC
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0
+  MoveOn: 0
   Portrait: {fileID: 0}
   portraitChar: {fileID: 0}
   qTrigger: {fileID: 0}
