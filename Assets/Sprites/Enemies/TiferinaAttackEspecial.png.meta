@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3b291ce7942aaea41b469b43f1243d0b
+guid: ac39d525a0bff8e47bb48bf9dd9b3eff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,169 +105,232 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: anao_atack_0
+      name: TiferinaAttackEspecial_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 18
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.46, y: 0.645}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee70e552269a9a04cbe08e7027d31eb6
-      internalID: 1215670026
+      spriteID: 950bc69d229044444a794a13df792164
+      internalID: 2088507950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anao_atack_1
+      name: TiferinaAttackEspecial_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 0
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 76
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.46, y: 0.645}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e0ac70876c18b54fba05596c1017e77
-      internalID: 695045640
+      spriteID: 148904cf802765e44b49f4c32bb3dd14
+      internalID: -1271516541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anao_atack_2
+      name: TiferinaAttackEspecial_2
       rect:
         serializedVersion: 2
-        x: 75
-        y: 0
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 134
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.46, y: 0.645}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f971b62f22ad444c9bd78a27da030a3
-      internalID: -1565040471
+      spriteID: a4cfad524302df541a32afd88c4ac057
+      internalID: 47471899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anao_atack_3
+      name: TiferinaAttackEspecial_3
       rect:
         serializedVersion: 2
-        x: 112
-        y: 0
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.46, y: 0.645}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5a6033f729bdcc41b282e644717a5e4
-      internalID: 255321938
+      spriteID: f7c92803e1fd34a4d91a1777ff245f5a
+      internalID: 1550415099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anao_atack_4
+      name: TiferinaAttackEspecial_4
       rect:
         serializedVersion: 2
-        x: 149
-        y: 0
-        width: 15
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 250
+        y: 1
+        width: 13
+        height: 31
+      alignment: 9
+      pivot: {x: 0.46, y: 0.645}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d58165ce79fb5d348919c4854296b098
-      internalID: -333052718
+      spriteID: e5820fef98f4aff4995283f03db916e4
+      internalID: -823420287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anao_atack_5
+      name: TiferinaAttackEspecial_5
       rect:
         serializedVersion: 2
-        x: 186
-        y: 0
-        width: 21
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 308
+        y: 1
+        width: 13
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4600032, y: 0.657382}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 711c8597d8d19ea4f991a851c872aa57
-      internalID: -1294768463
+      spriteID: 8468716029795b647b17ea45a1a840d4
+      internalID: 1963583259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anao_atack_6
+      name: TiferinaAttackEspecial_6
       rect:
         serializedVersion: 2
-        x: 223
-        y: 0
-        width: 34
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 362
+        y: 1
+        width: 24
+        height: 32
+      alignment: 9
+      pivot: {x: 0.45587412, y: 0.6553183}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60fe7bf21e9e07d48883da4c84cd49ee
-      internalID: 1623435303
+      spriteID: 60d108273eb60ca44836776933da4f5a
+      internalID: -1197638950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anao_atack_7
+      name: TiferinaAttackEspecial_7
       rect:
         serializedVersion: 2
-        x: 260
-        y: 0
-        width: 34
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 422
+        y: 1
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0.36744386, y: 0.6582362}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82fe21933042c7946bede63d1d5009af
-      internalID: 674889524
+      spriteID: fbfe7836ea41cdd4cb196ef1b797c0f1
+      internalID: 1053713914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiferinaAttackEspecial_8
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1
+        width: 28
+        height: 32
+      alignment: 9
+      pivot: {x: 0.32049343, y: 0.6582362}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99bb0f287ea6da84abaa0635e2a9fc79
+      internalID: 221173678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiferinaAttackEspecial_9
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1
+        width: 28
+        height: 32
+      alignment: 9
+      pivot: {x: 0.33703613, y: 0.65844864}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e01a12a611255e4f83d53a680634b19
+      internalID: -931811422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiferinaAttackEspecial_10
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1
+        width: 28
+        height: 32
+      alignment: 9
+      pivot: {x: 0.33826774, y: 0.6567535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54224d2440c640409f37576cd956f67
+      internalID: -1737109085
       vertices: []
       indices: 
       edges: []
@@ -275,7 +338,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1607ee1b78e45e645832ef9f2f189452
+    spriteID: b35e4dcecbb56b043896e584a515a866
     internalID: 0
     vertices: []
     indices: 
@@ -283,14 +346,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      anao_atack_4: -333052718
-      anao_atack_3: 255321938
-      anao_atack_1: 695045640
-      anao_atack_7: 674889524
-      anao_atack_0: 1215670026
-      anao_atack_2: -1565040471
-      anao_atack_6: 1623435303
-      anao_atack_5: -1294768463
+      TiferinaAttackEspecial_7: 1053713914
+      TiferinaAttackEspecial_11: -617445952
+      TiferinaAttackEspecial_5: 1963583259
+      TiferinaAttackEspecial_8: 221173678
+      TiferinaAttackEspecial_9: -931811422
+      TiferinaAttackEspecial_2: 47471899
+      TiferinaAttackEspecial_10: -1737109085
+      TiferinaAttackEspecial_3: 1550415099
+      TiferinaAttackEspecial_1: -1271516541
+      TiferinaAttackEspecial_0: 2088507950
+      TiferinaAttackEspecial_6: -1197638950
+      TiferinaAttackEspecial_4: -823420287
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
