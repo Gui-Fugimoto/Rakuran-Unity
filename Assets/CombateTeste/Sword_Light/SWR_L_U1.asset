@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SWR_L_U1
   m_EditorClassIdentifier: 
   animatorOV: {fileID: 22100000, guid: 43fe97906f12565408ecbddb809e2cf8, type: 2}
-  damageMultiplier: 0
-  kbForce: 0
-  kbDuration: 3
+  damageMultiplier: 1
+  kbForce: 3
+  kbDuration: 1
   kbDirection: {x: 1, y: 4, z: 0}
   animSpeed: 0
   endLag: 0.5
