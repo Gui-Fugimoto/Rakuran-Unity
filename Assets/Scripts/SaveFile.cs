@@ -18,4 +18,6 @@ public class SaveFile : ScriptableObject
     public ItemParameter QuickSlot2;
     public ItemParameter QuickSlot3;
 
+    public List<ItemParameter> ChestSaver = new List<ItemParameter>();
+
 }

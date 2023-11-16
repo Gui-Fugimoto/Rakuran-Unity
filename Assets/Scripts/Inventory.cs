@@ -15,6 +15,7 @@ public class Inventory : MonoBehaviour
     public GameObject Inspector;
     public bool Aberto;
     public bool isInventoryOpen;
+    
     public delegate void MudouItem();
     public MudouItem MudouItemCallback;
     public GameObject QuickSlots;

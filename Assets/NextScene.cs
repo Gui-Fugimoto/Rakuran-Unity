@@ -9,11 +9,13 @@ public class NextScene : MonoBehaviour
     public SaveFile save;
     public GameController controller;
     public int NextSceneIndex;
+    public Inventory inventory;
     
     void Start()
     {
         controller = FindObjectOfType<GameController>();
         save = controller.Save;
+        inventory = FindObjectOfType<Inventory>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,6 +23,7 @@ public class NextScene : MonoBehaviour
         if(other.tag == "Player")
         {
             Debug.Log("passouPlayer");
+            save.Invsave = new List<ItemParameter>(inventory.itens);
             SceneManager.LoadScene(NextSceneIndex);
             save.CPpos = new Vector3(0, 0, 0);
         }

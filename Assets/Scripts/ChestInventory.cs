@@ -15,22 +15,33 @@ public class ChestInventory : MonoBehaviour
     public bool Aberto;
     public bool PlayerPerto;
     [SerializeField] KeyCode Interact;
+    public GameController GameC;
+    public SaveFile SaveRef;
+
 
     #endregion
 
-    public delegate void MudouItem();
-    public MudouItem MudouItemCallback;
+    public delegate void MudouItemBau();
+    public MudouItemBau MudouItemBauCallback;
+
 
 
     // Update is called once per frame
     private void Start()
     {
+        GameC = FindObjectOfType<GameController>();
+        SaveRef = GameC.Save;
+        itens = SaveRef.ChestSaver;
         ChestUI.SetActive(false);
+       
+
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(Interact) && PlayerPerto == true) 
+        MudouItemBauCallback.Invoke();
+
+        if (Input.GetKeyDown(Interact) && PlayerPerto == true) 
         {
             ToggleInventory();
 
@@ -46,8 +57,8 @@ public class ChestInventory : MonoBehaviour
         
         itens.Add(item);
 
-        if (MudouItemCallback != null)
-            MudouItemCallback.Invoke();
+        if (MudouItemBauCallback != null)
+            MudouItemBauCallback.Invoke();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -80,8 +91,8 @@ public class ChestInventory : MonoBehaviour
     {
         itens.Remove(item);
 
-        if (MudouItemCallback != null)
-            MudouItemCallback.Invoke();
+        if (MudouItemBauCallback != null)
+            MudouItemBauCallback.Invoke();
     }
 }
 

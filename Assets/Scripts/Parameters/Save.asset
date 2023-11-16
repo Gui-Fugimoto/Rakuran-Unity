@@ -21,3 +21,7 @@ MonoBehaviour:
   QuickSlot1: {fileID: 0}
   QuickSlot2: {fileID: 0}
   QuickSlot3: {fileID: 0}
+  ChestSaver:
+  - {fileID: 11400000, guid: 1498ebbbca3e52e4097bbe6dda3a3996, type: 2}
+  - {fileID: 11400000, guid: 196bfccb8010def45a62ecbea158e3c5, type: 2}
+  - {fileID: 11400000, guid: 1546dbbf2666e534080f59008a4b0449, type: 2}

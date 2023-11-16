@@ -11,7 +11,7 @@ public class ChestUI : MonoBehaviour
     InventorySlot[] slots;
     void Start()
     {
-        inventory.MudouItemCallback += UpdateUI;
+        inventory.MudouItemBauCallback += UpdateUI;
 
         slots = itensParent.GetComponentsInChildren<InventorySlot>();
     }
