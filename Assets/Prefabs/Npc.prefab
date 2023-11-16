@@ -130,11 +130,7 @@ MonoBehaviour:
   dialogue:
     sentences:
     - 'This space is itentionaly left blank '
-    - 'This space is itentionaly left blank '
-    - 'This space is itentionaly left blank '
     names:
-    - NPC
-    - NPC
     - NPC
   Manager: {fileID: 0}
   Falando: 0
