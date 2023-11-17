@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ChestInventory : MonoBehaviour
@@ -12,11 +13,12 @@ public class ChestInventory : MonoBehaviour
     public int inventorySize = 25;
     public GameObject InventoryUI;
     public GameObject ChestUI;
-    public bool Aberto;
+    public bool Aberto = false;
     public bool PlayerPerto;
     [SerializeField] KeyCode Interact;
     public GameController GameC;
     public SaveFile SaveRef;
+    [SerializeField] Pause pauseRef;
 
 
     #endregion
@@ -30,6 +32,7 @@ public class ChestInventory : MonoBehaviour
     private void Start()
     {
         GameC = FindObjectOfType<GameController>();
+        pauseRef = FindObjectOfType<Pause>();
         SaveRef = GameC.Save;
         itens = SaveRef.ChestSaver;
         ChestUI.SetActive(false);
@@ -41,7 +44,7 @@ public class ChestInventory : MonoBehaviour
     {
         MudouItemBauCallback.Invoke();
 
-        if (Input.GetKeyDown(Interact) && PlayerPerto == true) 
+        if (Input.GetKeyDown(Interact) && PlayerPerto == true || (Input.GetKeyDown(KeyCode.Escape) && Aberto == true && PlayerPerto == true)) 
         {
             ToggleInventory();
 
@@ -76,15 +79,34 @@ public class ChestInventory : MonoBehaviour
        {
            InventoryUI.SetActive(false);
            ChestUI.SetActive(false);
-            PlayerPerto = false;
+           PlayerPerto = false;
+           pauseRef.IsMenuOverwritten = false;
        }
    }
 
     void ToggleInventory()
     {
-      InventoryUI.SetActive(true);
-      ChestUI.SetActive(true);
-     
+        if (Aberto == false && pauseRef.GameIsPaused == false)
+        {
+            Aberto = true;
+            pauseRef.IsMenuOverwritten = true;
+            InventoryUI.SetActive(true);
+            ChestUI.SetActive(true);
+        }
+        else
+        {
+            StartCoroutine(HoldOnSir());
+            InventoryUI.SetActive(false);
+            ChestUI.SetActive(false);
+            Aberto = false;
+        }
+
+    }
+
+    IEnumerator HoldOnSir()
+    {
+        yield return new WaitForSeconds(0.2f);
+        pauseRef.IsMenuOverwritten = false;
     }
 
     public void RemoveItem(ItemParameter item)

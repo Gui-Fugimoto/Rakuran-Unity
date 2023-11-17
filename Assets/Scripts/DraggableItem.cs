@@ -9,9 +9,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public ItemParameter Item;
     public Inventory inventory;
     [SerializeField] bool IsInvSlot;
+    [SerializeField] bool IsWeaponEquip;
     public ChestInventory chestInventory;
     [SerializeField] bool IsChestSlot;
     [SerializeField] bool onDestination;
+    public EquipWeapon WeaponEquipRef;
     public bool OnQuickSlot;
 
     private void Start()
@@ -24,6 +26,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (IsChestSlot == true)
         {
             chestInventory = FindObjectOfType<ChestInventory>();
+        }
+
+        if(IsWeaponEquip == true)
+        {
+            WeaponEquipRef = GetComponentInParent<EquipWeapon>();
         }
     }
 
@@ -81,7 +88,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                 collision.SendMessage("AddItem", Item);
                 onDestination = true;
                 StartCoroutine(Remove());
+
             }
+
 
         }
 
@@ -91,10 +100,17 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             {
                 collision.SendMessage("AddItem", Item);
                 onDestination = true;
+                if (WeaponEquipRef != null)
+                {
+                    WeaponEquipRef.ClearSlot();
+                }
                 StartCoroutine(ChestRemove());
+              
             }
 
+
         }
+
 
         if (collision.tag == "QuickSlot" && Item.Consumivel == true && OnQuickSlot == false && onDestination == false)
         {

@@ -5284,7 +5284,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &128823545
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5301,7 +5301,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &128823546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9165,8 +9165,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionUI: {fileID: 1210340745}
   inventoryUI: {fileID: 695078308}
+  pauseRef: {fileID: 0}
   Interact: 101
   Activate: 0
+  IsOpen: 0
 --- !u!4 &225524528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0cb8114486ef7514aacc055d5a81a710,
@@ -17303,10 +17305,15 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: IsWeaponEquip
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
@@ -17457,7 +17464,7 @@ PrefabInstance:
     - target: {fileID: 7141906031394074112, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7303999259389568422, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -17517,7 +17524,7 @@ PrefabInstance:
     - target: {fileID: 7452052655859850182, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ClearSlot
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7452052655859850182, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -18017,10 +18024,15 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1457585977}
+      objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
+        type: 3}
+      propertyPath: IsWeaponEquip
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4179791423898953274, guid: ecac14b5a45772545ace59784a9bd769,
@@ -18171,7 +18183,7 @@ PrefabInstance:
     - target: {fileID: 7141906031394074112, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7303999259389568422, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -32547,6 +32559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameIsPaused: 0
   pauseMenuUI: {fileID: 897230831}
+  IsMenuOverwritten: 0
 --- !u!114 &733430261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71938,6 +71951,7 @@ MonoBehaviour:
   Aberto: 0
   isInventoryOpen: 0
   QuickSlots: {fileID: 1856252945}
+  pauseRef: {fileID: 0}
 --- !u!114 &1457585978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75451,7 +75465,7 @@ RectTransform:
   m_GameObject: {fileID: 1525390089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.175, y: 0.175, z: 1}
+  m_LocalScale: {x: 0.175, y: 0.22223972, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1893133707}
@@ -75504,7 +75518,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &1525390093
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -75521,7 +75535,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &1528084467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82066,7 +82080,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0cb8114486ef7514aacc055d5a81a710,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -79.79246
+      value: -75.29237
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0cb8114486ef7514aacc055d5a81a710,
         type: 3}
@@ -89365,7 +89379,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh48510
+  m_Name: pb_Mesh31852
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -90322,8 +90336,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionUI: {fileID: 1146999387}
   inventoryUI: {fileID: 695078308}
+  pauseRef: {fileID: 0}
   Interact: 101
   Activate: 0
+  IsOpen: 0
 --- !u!65 &1816827329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92950,7 +92966,7 @@ RectTransform:
   m_GameObject: {fileID: 1893133706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.78743804, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1525390090}
@@ -92958,7 +92974,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -550, y: 180}
+  m_AnchoredPosition: {x: -550.0001, y: 184.08089}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1893133708
@@ -101398,7 +101414,7 @@ RectTransform:
   m_GameObject: {fileID: 2069281475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.78743804, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1525390090}
@@ -101406,7 +101422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 121.56295}
   m_SizeDelta: {x: 1500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2069281477

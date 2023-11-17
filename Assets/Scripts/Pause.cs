@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour
 
     public bool GameIsPaused;
     public GameObject pauseMenuUI;
+    public bool IsMenuOverwritten;
 
     private void Start()
     {
@@ -29,7 +30,7 @@ public class Pause : MonoBehaviour
            pauseMenuUI.SetActive(true);
        }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && IsMenuOverwritten == false)
         {
             GameIsPaused = !GameIsPaused;
         }

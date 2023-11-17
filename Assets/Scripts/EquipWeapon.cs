@@ -52,7 +52,6 @@ public class EquipWeapon : MonoBehaviour
 
     public void ClearSlot()
     {
-        inventory.AddItem(item);
         
         item = null;
 

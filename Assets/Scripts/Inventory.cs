@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
     public delegate void MudouItem();
     public MudouItem MudouItemCallback;
     public GameObject QuickSlots;
-
+    public Pause pauseRef;
     
     #endregion
 
@@ -28,6 +28,7 @@ public class Inventory : MonoBehaviour
     {
         saveFile = FindObjectOfType<GameController>().Save;
         itens = new List <ItemParameter>(saveFile.Invsave);
+        pauseRef = FindObjectOfType<Pause>(); 
         InventoryUI.SetActive(false);
         WeaponEquip.SetActive(false);
         MudouItemCallback.Invoke();
@@ -36,7 +37,7 @@ public class Inventory : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) || (Input.GetKeyDown(KeyCode.Escape) && Aberto == true))
         {
             ToggleInventory();
         }
@@ -60,6 +61,7 @@ public class Inventory : MonoBehaviour
         if(Aberto == false)
         {
             Aberto = true;
+            pauseRef.IsMenuOverwritten = true;
             InventoryUI.SetActive(true);
             WeaponEquip.SetActive(true);
             MudouItemCallback.Invoke();
@@ -67,6 +69,7 @@ public class Inventory : MonoBehaviour
         }
         else
         {
+            pauseRef.IsMenuOverwritten = false;
             InventoryUI.SetActive(false);
             WeaponEquip.SetActive(false);
             Inspector.SetActive(false);
