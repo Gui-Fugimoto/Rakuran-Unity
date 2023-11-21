@@ -18,9 +18,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c020434cbb6dcc74f92357073fdcd69f, type: 2}
   - {fileID: 11400000, guid: 951838a5f2fb7f44085f77dff54162f6, type: 2}
   - {fileID: 11400000, guid: 68a919c3285f4bf4588196ccf609e25b, type: 2}
-  stageIndex: 0
-  qDescription: Inicio.
+  stageIndex: 3
+  qDescription: "Trouxe o Andr\xE9 de volta para seu dono, Vico"
   qSpawnList:
-  - {fileID: 8008901642220995328, guid: 84611cad641900349bd2183b7da6bfb5, type: 3}
+  - {fileID: 183850206162880897, guid: 27beaa00e3f8019469b75d1d99611b20, type: 3}
+  - {fileID: 7598119971960453014, guid: 865d12a13084d5649ad8849aae26f2da, type: 3}
   qDeliverItems: []
-  qReceiveItems: []
+  qReceiveItems:
+  - {fileID: 11400000, guid: 61c8cee218efe914aa5090757af06f66, type: 2}

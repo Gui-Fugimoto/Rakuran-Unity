@@ -69,7 +69,10 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] GameObject AttackPosRight;
 
     [SerializeField] Animator anim;
-    [SerializeField] WeaponHitbox equippedWeapon;
+    private WeaponHitbox equippedWeapon;
+
+    public GameObject hitboxGameObj;
+    private Vector3 hbDefaultSize = new Vector3(1, 1, 0.55f);
 
     [SerializeField] PlayerController playerController;
 
@@ -83,12 +86,13 @@ public class PlayerCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        equippedWeapon = hitboxGameObj.GetComponent<WeaponHitbox>();
         anim = GetComponent<Animator>();
         equippedWeapon.weaponType = mainWeapon.item.weaponType;
         equippedWeapon.baseDamage = mainWeapon.item.damage;
         ChangeWeaponCombos();
+        hitboxGameObj.transform.localScale = hbDefaultSize;
         equippedWeapon.DisableTriggerBox();
-        
     }
 
     // Update is called once per frame
@@ -167,6 +171,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = basicLightCombo[basicComboCounter].kbDuration;
                 equippedWeapon.knockDirection = basicLightCombo[basicComboCounter].kbDirection;
                 equippedWeapon.audioClip = basicLightCombo[basicComboCounter].audioClip;
+                //hitboxGameObj.transform.localScale.x = hitboxGameObj.transform.localScale.x * new Vector3 (basicLightCombo[basicComboCounter].hboxXMultiplier, 1, 1);
                 FlipKnockback();
                 isAttacking = true;
                 equippedWeapon.EnableTriggerBox();
