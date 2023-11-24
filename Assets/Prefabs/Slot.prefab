@@ -31,7 +31,7 @@ RectTransform:
   m_GameObject: {fileID: 6146984695618213600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.50242877, y: 0.6921567, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7303999259389568422}
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 09f3bb0f8fb38794b977e5a18ee1716b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1effdbe7725bf4b459b0103f1b6021c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Icon: {fileID: 5668670982641236703}
+  item: {fileID: 0}
   child: {fileID: 3535733257409231948}
 --- !u!114 &2698233138430143350
 MonoBehaviour:
@@ -175,6 +176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e02965395f6bec44bbb7e3c3fc22b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StatsDisplayer: {fileID: 0}
+  InventorySlot: {fileID: 0}
+  Examiner: {fileID: 0}
 --- !u!1 &7074237445740045769
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +271,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Item: {fileID: 0}
   inventory: {fileID: 0}
+  IsInvSlot: 0
+  IsWeaponEquip: 0
   chestInventory: {fileID: 0}
+  IsChestSlot: 0
+  onDestination: 0
+  WeaponEquipRef: {fileID: 0}
   OnQuickSlot: 0
 --- !u!61 &7141906031394074112
 BoxCollider2D:
