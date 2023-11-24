@@ -19,5 +19,8 @@ MonoBehaviour:
   kbDirection: {x: 2, y: 0.5, z: 0}
   animSpeed: 0
   endLag: 0.5
-  startUp: 0.5
+  startUp: 0.3
+  hboxYPos: -0.25
+  hboxXScale: 2
+  hboxYScale: 1.3
   audioClip: {fileID: 8300000, guid: a2fd0f4c57590da42817c4c08ec07084, type: 3}

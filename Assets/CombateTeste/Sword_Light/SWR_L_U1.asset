@@ -20,4 +20,7 @@ MonoBehaviour:
   animSpeed: 0
   endLag: 0.5
   startUp: 0.5
+  hboxYPos: 0.2
+  hboxXScale: 0.8
+  hboxYScale: 1.7
   audioClip: {fileID: 8300000, guid: a2fd0f4c57590da42817c4c08ec07084, type: 3}

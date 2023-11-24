@@ -15,6 +15,8 @@ public class WeaponHitbox : MonoBehaviour
     public Vector3 knockDirection;
 
     public AudioClip audioClip;
+
+    public bool flipLeft;
     private void Start()
     {
         triggerBox = GetComponent<BoxCollider>();
@@ -29,7 +31,15 @@ public class WeaponHitbox : MonoBehaviour
             Debug.Log("atingiu inimigo");
             other.GetComponent<EnemyLife>().Damage(damage);
             
-            other.gameObject.GetComponent<EnemyNavMeshAgent>().Knockback(knockDirection, knockbackForce, knockDuration);
+            if (flipLeft == false)
+            {
+                other.gameObject.GetComponent<EnemyNavMeshAgent>().Knockback(knockDirection, knockbackForce, knockDuration);
+            }
+            else if(flipLeft == true)
+            {
+                other.gameObject.GetComponent<EnemyNavMeshAgent>().Knockback(-knockDirection, knockbackForce, knockDuration);
+            }
+            
         }
         
     }

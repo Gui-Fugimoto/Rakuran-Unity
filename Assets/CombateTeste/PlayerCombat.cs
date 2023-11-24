@@ -72,7 +72,9 @@ public class PlayerCombat : MonoBehaviour
     private WeaponHitbox equippedWeapon;
 
     public GameObject hitboxGameObj;
-    private Vector3 hbDefaultSize = new Vector3(1, 1, 0.55f);
+    private Vector3 hbDefaultScale = new Vector3(1, 1, 0.56f);
+    private float hbZDefault = 0.56f;
+    
 
     [SerializeField] PlayerController playerController;
 
@@ -91,7 +93,7 @@ public class PlayerCombat : MonoBehaviour
         equippedWeapon.weaponType = mainWeapon.item.weaponType;
         equippedWeapon.baseDamage = mainWeapon.item.damage;
         ChangeWeaponCombos();
-        hitboxGameObj.transform.localScale = hbDefaultSize;
+        hitboxGameObj.transform.localScale = hbDefaultScale;
         equippedWeapon.DisableTriggerBox();
     }
 
@@ -171,10 +173,10 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = basicLightCombo[basicComboCounter].kbDuration;
                 equippedWeapon.knockDirection = basicLightCombo[basicComboCounter].kbDirection;
                 equippedWeapon.audioClip = basicLightCombo[basicComboCounter].audioClip;
-                //hitboxGameObj.transform.localScale.x = hitboxGameObj.transform.localScale.x * new Vector3 (basicLightCombo[basicComboCounter].hboxXMultiplier, 1, 1);
-                FlipKnockback();
-                isAttacking = true;
-                equippedWeapon.EnableTriggerBox();
+                hitboxGameObj.transform.localScale = new Vector3 (basicLightCombo[basicComboCounter].hboxXScale, basicLightCombo[basicComboCounter].hboxYScale, hbZDefault);
+                hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, basicLightCombo[basicComboCounter].hboxYPos, 0);                
+                //isAttacking = true;
+                //equippedWeapon.EnableTriggerBox();
                 audioSource.clip = equippedWeapon.audioClip;
                 audioSource.Play();
                 //Knockback();
@@ -212,7 +214,8 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = upwardLightCombo[upwardComboCounter].kbDuration;
                 equippedWeapon.knockDirection = upwardLightCombo[upwardComboCounter].kbDirection;
                 equippedWeapon.audioClip = upwardLightCombo[upwardComboCounter].audioClip;
-                isAttacking = true;
+                hitboxGameObj.transform.localScale = new Vector3(upwardLightCombo[upwardComboCounter].hboxXScale, upwardLightCombo[upwardComboCounter].hboxYScale, hbZDefault);
+                hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, upwardLightCombo[upwardComboCounter].hboxYPos, 0);
                 equippedWeapon.EnableTriggerBox();
                 upwardComboCounter++;
                 lastClickedTime = Time.time;
@@ -249,7 +252,8 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = downwardLightCombo[downwardComboCounter].kbDuration;
                 equippedWeapon.knockDirection = downwardLightCombo[downwardComboCounter].kbDirection;
                 equippedWeapon.audioClip = downwardLightCombo[downwardComboCounter].audioClip;
-                isAttacking = true;
+                hitboxGameObj.transform.localScale = new Vector3(downwardLightCombo[downwardComboCounter].hboxXScale, downwardLightCombo[downwardComboCounter].hboxYScale, hbZDefault);
+                hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, downwardLightCombo[downwardComboCounter].hboxYPos, 0);
                 equippedWeapon.EnableTriggerBox();
                 downwardComboCounter++;
                 lastClickedTime = Time.time;
@@ -285,7 +289,8 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = jumpingLightCombo[jumpingComboCounter].kbDuration;
                 equippedWeapon.knockDirection = jumpingLightCombo[jumpingComboCounter].kbDirection;
                 equippedWeapon.audioClip = jumpingLightCombo[jumpingComboCounter].audioClip;
-                isAttacking = true;
+                hitboxGameObj.transform.localScale = new Vector3(jumpingLightCombo[jumpingComboCounter].hboxXScale, jumpingLightCombo[jumpingComboCounter].hboxYScale, hbZDefault);
+                hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, jumpingLightCombo[jumpingComboCounter].hboxYPos, 0);
                 equippedWeapon.EnableTriggerBox();
                 jumpingComboCounter++;
                 lastClickedTime = Time.time;
@@ -322,7 +327,8 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = basicHeavyCombo[basicHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = basicHeavyCombo[basicHeavyComboCounter].kbDirection;
                 equippedWeapon.audioClip = basicHeavyCombo[basicHeavyComboCounter].audioClip;
-                isAttacking = true;
+                hitboxGameObj.transform.localScale = new Vector3(basicHeavyCombo[basicHeavyComboCounter].hboxXScale, basicHeavyCombo[basicHeavyComboCounter].hboxYScale, hbZDefault);
+                hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, basicHeavyCombo[basicHeavyComboCounter].hboxYPos, 0);
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 basicHeavyComboCounter++;
@@ -360,7 +366,8 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = upwardHeavyCombo[upwardHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = upwardHeavyCombo[upwardHeavyComboCounter].kbDirection;
                 equippedWeapon.audioClip = upwardHeavyCombo[upwardHeavyComboCounter].audioClip;
-                isAttacking = true;
+                hitboxGameObj.transform.localScale = new Vector3(upwardHeavyCombo[upwardHeavyComboCounter].hboxXScale, upwardHeavyCombo[upwardHeavyComboCounter].hboxYScale, hbZDefault);
+                hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, upwardHeavyCombo[upwardHeavyComboCounter].hboxYPos, 0);
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 upwardHeavyComboCounter++;
@@ -398,7 +405,8 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = downwardHeavyCombo[downwardHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = downwardHeavyCombo[downwardHeavyComboCounter].kbDirection;
                 equippedWeapon.audioClip = downwardHeavyCombo[downwardHeavyComboCounter].audioClip;
-                isAttacking = true;
+                hitboxGameObj.transform.localScale = new Vector3(downwardHeavyCombo[downwardHeavyComboCounter].hboxXScale, downwardHeavyCombo[downwardHeavyComboCounter].hboxYScale, hbZDefault);
+                hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, downwardHeavyCombo[downwardHeavyComboCounter].hboxYPos, 0);
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 downwardHeavyComboCounter++;
@@ -436,7 +444,8 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.knockDuration = jumpingHeavyCombo[jumpingHeavyComboCounter].kbDuration;
                 equippedWeapon.knockDirection = jumpingHeavyCombo[jumpingHeavyComboCounter].kbDirection;
                 equippedWeapon.audioClip = jumpingHeavyCombo[jumpingHeavyComboCounter].audioClip;
-                isAttacking = true;
+                hitboxGameObj.transform.localScale = new Vector3(jumpingHeavyCombo[jumpingHeavyComboCounter].hboxXScale, jumpingHeavyCombo[jumpingHeavyComboCounter].hboxYScale, hbZDefault);
+                hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, jumpingHeavyCombo[jumpingHeavyComboCounter].hboxYPos, 0);
                 equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 jumpingHeavyComboCounter++;
@@ -456,7 +465,7 @@ public class PlayerCombat : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.9f && anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             Invoke("EndCombo", 1);
-            equippedWeapon.DisableTriggerBox();
+            DisableTriggerBoxEQPW();
             isAttacking = false;
         }
     }
@@ -471,24 +480,17 @@ public class PlayerCombat : MonoBehaviour
     {
         if (gameObject.GetComponent<SpriteRenderer>().flipX == true)
         {
-            equippedWeapon.transform.position = AttackPosLeft.transform.position;
-            // basicCombo[basicComboCounter].kbDirection.x = basicCombo[basicComboCounter].kbDirection.x * (-1);
+            hitboxGameObj.transform.position = new Vector3(AttackPosLeft.transform.position.x, hitboxGameObj.transform.position.y, hitboxGameObj.transform.position.z);
+            equippedWeapon.flipLeft = true;
         }
         else if (gameObject.GetComponent<SpriteRenderer>().flipX == false)
         {
-            equippedWeapon.transform.position = AttackPosRight.transform.position;
-            // basicCombo[basicComboCounter].kbDirection.x = basicCombo[basicComboCounter].kbDirection.x * (-1);
+            hitboxGameObj.transform.position = new Vector3 (AttackPosRight.transform.position.x, hitboxGameObj.transform.position.y, hitboxGameObj.transform.position.z);
+            equippedWeapon.flipLeft = false;
         }
     }
 
-    void FlipKnockback()
-    {
-        if (gameObject.GetComponent<SpriteRenderer>().flipX)
-        {
-            equippedWeapon.knockDirection.x = equippedWeapon.knockDirection.x * (-1);
-        }
-        
-    }
+    
     IEnumerator QuickWeaponChange()
     {
         
@@ -540,7 +542,14 @@ public class PlayerCombat : MonoBehaviour
     }
 
 
-
+    public void EnableTriggerBoxEQPW()
+    {
+        equippedWeapon.EnableTriggerBox();
+    }
+    public void DisableTriggerBoxEQPW()
+    {
+        equippedWeapon.DisableTriggerBox();
+    }
 
     void ChangeWeaponCombos()
     {

@@ -87,6 +87,8 @@ public class EnemyNavMeshAgent : MonoBehaviour
             case 5:
                 StartCoroutine(SpecialAttack());
                 break;
+            case 6:
+                break;
               
         }
 
@@ -308,6 +310,15 @@ public class EnemyNavMeshAgent : MonoBehaviour
             
         }
         
+    }
+
+    void FleeState()
+    {
+        //this stage goes to pursuit - pursuit goes to attack
+        //attackstate brings to this if player is too close
+        //attack range is big easily enters it
+        //need a flee range smaller than attack range to come here
+        //melee enemies should have flee range = 0
     }
 
 

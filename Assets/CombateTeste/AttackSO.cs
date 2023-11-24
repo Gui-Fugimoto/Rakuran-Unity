@@ -18,8 +18,9 @@ public class AttackSO : ScriptableObject
     public float endLag = 0.5f;
     public float startUp = 0.5f;
 
-    public float hboxXMultiplier;
-    public float hboxYMultiplier;
+    public float hboxYPos;
+    public float hboxXScale;
+    public float hboxYScale;
 
     public AudioClip audioClip;
     
