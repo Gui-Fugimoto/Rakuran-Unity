@@ -45,7 +45,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6012487352935047556}
-  m_Mesh: {fileID: -8676147885124491121, guid: 0bda61f155104ed43a71aabfd812397f, type: 3}
+  m_Mesh: {fileID: -8678823145569952518, guid: a3e0b97474ed3a2468c54786d5ef9b58, type: 3}
 --- !u!23 &5219769912412029009
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a87c16332167794eb4e3431c1a49507, type: 2}
+  - {fileID: 2100000, guid: f8fe9d85670031745a4c878a0d3c4e79, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,7 +114,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 0
-  m_Mesh: {fileID: -8676147885124491121, guid: 0bda61f155104ed43a71aabfd812397f, type: 3}
+  m_Mesh: {fileID: -8678823145569952518, guid: a3e0b97474ed3a2468c54786d5ef9b58, type: 3}
 --- !u!114 &6895517585237580666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,8 +142,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionUI: {fileID: 0}
   inventoryUI: {fileID: 0}
+  pauseRef: {fileID: 0}
   Interact: 101
   Activate: 0
+  IsOpen: 0
 --- !u!1 &6895517585590451724
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,14 +170,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6895517585590451724}
-  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0.064720154, y: -0.6079055, z: 0.25}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.06, y: 2.27, z: -0.12}
   m_LocalScale: {x: 3.4180708, y: 3.4180708, z: 3.4180708}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6357804804081236798}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!212 &6895517585590451726
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -5871,12 +5871,12 @@ PrefabInstance:
     - target: {fileID: 2158736160487057404, guid: 26f6a4372fc52404fba4722bad8a7bef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5099983
+      value: -0.7332772
       objectReference: {fileID: 0}
     - target: {fileID: 2158736160487057404, guid: 26f6a4372fc52404fba4722bad8a7bef,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.22
+      value: 6.04
       objectReference: {fileID: 0}
     - target: {fileID: 2158736160487057404, guid: 26f6a4372fc52404fba4722bad8a7bef,
         type: 3}
@@ -11510,8 +11510,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   save: {fileID: 0}
   controller: {fileID: 0}
-  NextSceneIndex: 1
+  NextSceneIndex: 2
   inventory: {fileID: 0}
+  NextSceneSpawnPos: {x: 68.92, y: 2.31, z: -87.01}
 --- !u!65 &543514457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11533,7 +11534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543514455}
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: -16.62, y: 12.811553, z: 1.1138213}
+  m_LocalPosition: {x: -16.62, y: 12.24, z: 1.1138213}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14276,7 +14277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600848335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.69, y: -0.1667211, z: 1.09}
+  m_LocalPosition: {x: -9.69, y: -0.39, z: 5.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20341,7 +20342,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &940690278
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -20358,7 +20359,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &941694232
 GameObject:
   m_ObjectHideFlags: 0
@@ -35227,7 +35228,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1555857056
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -35244,7 +35245,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &1555857057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44075,14 +44076,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90bb2ce965b45e34385a6cbcea1da2ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthMeter: {fileID: 487719799}
-  PoisonMeter: {fileID: 1983832079}
-  Vida: 0
-  Veneno: 0
-  ItemIcon: {fileID: 846685813}
   ItemSelf: {fileID: 0}
-  EffectSprite: {fileID: 139570616}
   Self: {fileID: 2010350229}
+  Name: {fileID: 0}
+  Description: {fileID: 0}
 --- !u!1 &2014510009
 GameObject:
   m_ObjectHideFlags: 0

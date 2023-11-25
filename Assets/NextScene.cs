@@ -10,6 +10,7 @@ public class NextScene : MonoBehaviour
     public GameController controller;
     public int NextSceneIndex;
     public Inventory inventory;
+    public Vector3 NextSceneSpawnPos;
     
     void Start()
     {
@@ -25,7 +26,7 @@ public class NextScene : MonoBehaviour
             Debug.Log("passouPlayer");
             save.Invsave = new List<ItemParameter>(inventory.itens);
             SceneManager.LoadScene(NextSceneIndex);
-            save.CPpos = new Vector3(0, 0, 0);
+            save.CPpos = NextSceneSpawnPos;
         }
     }
 }

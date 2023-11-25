@@ -46,7 +46,8 @@ public class ForgeWeapon : MonoBehaviour
         Box.enabled = true;
 
         Sword.ClearUnused();
-        Spear.ClearUnused();
         Hammer.ClearUnused();
+        Spear.ClearUnused();
     }
+
 }

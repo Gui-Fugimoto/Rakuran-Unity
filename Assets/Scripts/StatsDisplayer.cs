@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
@@ -7,14 +8,11 @@ using UnityEngine.UI;
 
 public class StatsDisplayer : MonoBehaviour
 {
-    public Image HealthMeter;
-    public Image PoisonMeter;
-    public float Vida;
-    public float Veneno;
-    public Image ItemIcon;
     public ItemParameter ItemSelf;
-    public Image EffectSprite;
     public GameObject Self;
+    public TMP_Text Name;
+    public TMP_Text Description;
+
     //[SerializeField] Effect effect;
 
     private void Start()
@@ -24,29 +22,19 @@ public class StatsDisplayer : MonoBehaviour
 
     public void OnInspect(ItemParameter Item)
     {
-        Vida = Item.Vida;
-        Veneno = Item.Veneno;
-        ItemIcon.sprite = Item.Icon;
-        EffectSprite.sprite = Item.EffectIcon;
-        EffectSprite.color = new Color(1f, 1f, 1f, 1f);
-       
-        if(Item.Effect == Effect.None)
-        {
-            EffectSprite.color = new Color(1f, 1f, 1f, 0f);
-        }
+        Name.text = $"{Item.name}";
+        Description.text = $"{Item.Desc}";
     }
 
     public void EndInspect()
     {
-        Vida = 0;
-        Veneno = 0;
-        EffectSprite.color = new Color(1f,1f,1f,0f);
-        ItemIcon.sprite = null;
+        Name.text = null;
+        Description.text = null;
     }
 
     private void Update()
     {
-        HealthMeter.fillAmount = Vida/10;
-        PoisonMeter.fillAmount = Veneno/10;
+
+
     }
 }

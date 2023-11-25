@@ -16,6 +16,9 @@ public class ItemParameter : ScriptableObject
     public WeaponType weaponType;
     public Forge Forge;
     public float damage;
+    
+    [TextArea(3,10)]
+    public string Desc;
     //add elemental type, damage type, base damage value, etc.
 
 }
