@@ -12,6 +12,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [SerializeField] bool IsWeaponEquip;
     public ChestInventory chestInventory;
     [SerializeField] bool IsChestSlot;
+    [SerializeField] bool MightOverlap;
     [SerializeField] bool onDestination;
     public EquipWeapon WeaponEquipRef;
     public bool OnQuickSlot;
@@ -72,7 +73,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "CraftingCanvas" && onDestination == false)
+        if (collision.tag == "CraftingCanvas" && onDestination == false && MightOverlap == false)
         {
             if(collision.GetComponent<PotionCrafting>().ingUsadsos < collision.GetComponent<PotionCrafting>().ingTotal)
             {
@@ -81,7 +82,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             }
         }
 
-        if(collision.tag == "Chest" && onDestination == false)
+        if(collision.tag == "Chest" && onDestination == false && MightOverlap == false)
         {
             if(chestInventory == null)
             {

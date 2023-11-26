@@ -41,11 +41,11 @@ public class PotionCrafting : MonoBehaviour
 
     private void Update()
     {
-      //  if (Input.GetKeyUp(FinishPotionKey))
-      //  {
-      //      FinishPotion();
-      //  }
-      //
+        //  if (Input.GetKeyUp(FinishPotionKey))
+        //  {
+        //      FinishPotion();
+        //  }
+        //
     }
 
     void NewItenAdded(ItemParameter Item)
@@ -78,209 +78,253 @@ public class PotionCrafting : MonoBehaviour
 
     public void FinishPotion()
     {
-        #region Sem Efeito
-        if (Effect == Effect.None)
+        if (ingUsadsos == ingTotal)
         {
-            if (vida == 1 && veneno <= 0)
+            #region Sem Efeito
+            if (Effect == Effect.None)
             {
-                inventory.AddItem(PotCuraSimples);
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearSlot();
-                Display2.ClearSlot();
-                Display3.ClearSlot();
-                ingUsadsos = 0;
-            }
-            if (veneno == 1 && vida <= 0)
-            {
-                inventory.AddItem(PotVenenoSimples);
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearSlot();
-                Display2.ClearSlot();
-                Display3.ClearSlot();
-                ingUsadsos = 0;
-            }
+                if (vida == 1 && veneno <= 0)
+                {
+                    inventory.AddItem(PotCuraSimples);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
+                if (veneno == 1 && vida <= 0)
+                {
+                    inventory.AddItem(PotVenenoSimples);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
 
-            if (vida >= 2 && veneno <= 0)
-            {
-                inventory.AddItem(PotCuraMed);
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearSlot();
-                Display2.ClearSlot();
-                Display3.ClearSlot();
-                ingUsadsos = 0;
-            }
-            if (veneno >= 2 && vida <= 0)
-            {
-                inventory.AddItem(PotVenenoMed);
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearSlot();
-                Display2.ClearSlot();
-                Display3.ClearSlot();
-                ingUsadsos = 0;
-            }
+                if (vida >= 2 && veneno <= 0)
+                {
+                    inventory.AddItem(PotCuraMed);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
+                if (veneno >= 2 && vida <= 0)
+                {
+                    inventory.AddItem(PotVenenoMed);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
 
-            if (veneno > 0 && vida > 0)
-            {
-                Debug.Log("poção Falhou");
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearUnused();
-                Display2.ClearUnused();
-                Display3.ClearUnused();
-                ingUsadsos = 0;
+                if (veneno > 0 && vida > 0)
+                {
+                    Debug.Log("poção Falhou");
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearUnused();
+                    Display2.ClearUnused();
+                    Display3.ClearUnused();
+                    ingUsadsos = 0;
+                }
             }
-        }
-        #endregion
-        #region Overtime
-        if (Effect == Effect.OverTime)
-        {
-            if (vida == 1 && veneno <= 0)
-            {
-                inventory.AddItem(PotRecuperaSimples);
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearSlot();
-                Display2.ClearSlot();
-                Display3.ClearSlot();
-                ingUsadsos = 0;
-            }
-            if (veneno == 1 && vida <= 0)
-            {
-                inventory.AddItem(PotVenenoOTSimples);
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearSlot();
-                Display2.ClearSlot();
-                Display3.ClearSlot();
-                ingUsadsos = 0;
-            }
-
-            if (vida >= 2 && veneno <= 0)
-            {
-                inventory.AddItem(PotRecuperaMed);
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearSlot();
-                Display2.ClearSlot();
-                Display3.ClearSlot();
-                ingUsadsos = 0;
-            }
-            if (veneno >= 2 && vida <= 0)
-            {
-                inventory.AddItem(PotVenenoOTMed);
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearSlot();
-                Display2.ClearSlot();
-                Display3.ClearSlot();
-                ingUsadsos = 0;
-            }
-
-            if (veneno > 0 && vida > 0)
-            {
-                Debug.Log("poção Falhou");
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearUnused();
-                Display2.ClearUnused();
-                Display3.ClearUnused();
-                ingUsadsos = 0;
-            }
-        }
-        #endregion
-        #region Resist
-        if (Effect == Effect.Resist)
-        {
-            if (vida >= 1 && veneno <= 0)
-            {
-                inventory.AddItem(PotResist);
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearSlot();
-                Display2.ClearSlot();
-                Display3.ClearSlot();
-                ingUsadsos = 0;
-            }
-            if (veneno >= 1 && vida <= 0)
-            {
-                inventory.AddItem(PotFraqueza);
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearSlot();
-                Display2.ClearSlot();
-                Display3.ClearSlot();
-                ingUsadsos = 0;
-            }
-
-            if (veneno > 0 && vida > 0)
-            {
-                Debug.Log("poção Falhou");
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearUnused();
-                Display2.ClearUnused();
-                Display3.ClearUnused();
-                ingUsadsos = 0;
-            }
-        }
-        #endregion
-        #region Speed
-        if (Effect == Effect.Speed)
-        {
-            if (vida >= 1 && veneno <= 0)
-            {
-                inventory.AddItem(PotSpeed);
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearSlot();
-                Display2.ClearSlot();
-                Display3.ClearSlot();
-                ingUsadsos = 0;
-            }
-            if (veneno >= 1 && vida <= 0)
-            {
-                inventory.AddItem(PotSlow);
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearSlot();
-                Display2.ClearSlot();
-                Display3.ClearSlot();
-                ingUsadsos = 0;
-            }
-
-            if (veneno > 0 && vida > 0)
-            {
-                Debug.Log("poção Falhou");
-                vida = 0;
-                veneno = 0;
-                Effect = Effect.None;
-                Display1.ClearUnused();
-                Display2.ClearUnused();
-                Display3.ClearUnused();
-                ingUsadsos = 0;
-            }
-        }
             #endregion
-            
+            #region Overtime
+            if (Effect == Effect.OverTime)
+            {
+                if (vida == 1 && veneno <= 0)
+                {
+                    inventory.AddItem(PotRecuperaSimples);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
+                if (veneno == 1 && vida <= 0)
+                {
+                    inventory.AddItem(PotVenenoOTSimples);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
+
+                if (vida >= 2 && veneno <= 0)
+                {
+                    inventory.AddItem(PotRecuperaMed);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
+                if (veneno >= 2 && vida <= 0)
+                {
+                    inventory.AddItem(PotVenenoOTMed);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
+
+                if (veneno > 0 && vida > 0)
+                {
+                    Debug.Log("poção Falhou");
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearUnused();
+                    Display2.ClearUnused();
+                    Display3.ClearUnused();
+                    ingUsadsos = 0;
+                }
+            }
+            #endregion
+            #region Resist
+            if (Effect == Effect.Resist)
+            {
+                if (vida >= 1 && veneno <= 0)
+                {
+                    inventory.AddItem(PotResist);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
+                if (veneno >= 1 && vida <= 0)
+                {
+                    inventory.AddItem(PotFraqueza);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
+
+                if (veneno > 0 && vida > 0)
+                {
+                    Debug.Log("poção Falhou");
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearUnused();
+                    Display2.ClearUnused();
+                    Display3.ClearUnused();
+                    ingUsadsos = 0;
+                }
+            }
+            #endregion
+            #region Speed
+            if (Effect == Effect.Speed)
+            {
+                if (vida >= 1 && veneno <= 0)
+                {
+                    inventory.AddItem(PotSpeed);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
+                if (veneno >= 1 && vida <= 0)
+                {
+                    inventory.AddItem(PotSlow);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
+
+                if (veneno > 0 && vida > 0)
+                {
+                    Debug.Log("poção Falhou");
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearUnused();
+                    Display2.ClearUnused();
+                    Display3.ClearUnused();
+                    ingUsadsos = 0;
+                }
+            }
+            #endregion
+
+            #region Invis
+            if (Effect == Effect.Invis)
+            {
+                if (vida >= 1 && veneno <= 0)
+                {
+                    Debug.Log(" kill me rn");
+                    inventory.AddItem(PotInvis);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
+                if (veneno >= 1 && vida <= 0)
+                {
+                    Debug.Log(" kill me rn");
+                    inventory.AddItem(PotStun);
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
+                    ingUsadsos = 0;
+                }
+
+                if (veneno > 0 && vida > 0)
+                {
+                    Debug.Log("poção Falhou");
+                    vida = 0;
+                    veneno = 0;
+                    Effect = Effect.None;
+                    Display1.ClearUnused();
+                    Display2.ClearUnused();
+                    Display3.ClearUnused();
+                    ingUsadsos = 0;
+                }
+                #endregion
+            }
+
             #region Invis
             if (Effect == Effect.Invis)
             {
@@ -324,3 +368,4 @@ public class PotionCrafting : MonoBehaviour
             }
         }
     }
+}

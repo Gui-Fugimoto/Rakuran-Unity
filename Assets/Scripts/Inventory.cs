@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
     public GameObject WeaponEquip;
     public GameObject Inspector;
     public bool Aberto;
+    public bool AbertoOutroMenu;
     public bool isInventoryOpen;
     
     public delegate void MudouItem();
@@ -61,6 +62,7 @@ public class Inventory : MonoBehaviour
         if (Aberto == false)
         {
             Aberto = true;
+            AbertoOutroMenu = true;
             pauseRef.IsMenuOverwritten = true;
             InventoryUI.SetActive(true);
             MudouItemCallback.Invoke();
@@ -69,6 +71,7 @@ public class Inventory : MonoBehaviour
         else
         {
             pauseRef.IsMenuOverwritten = false;
+            AbertoOutroMenu = false;
             InventoryUI.SetActive(false);
             Inspector.SetActive(false);
             Aberto = false;
@@ -89,12 +92,14 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            pauseRef.IsMenuOverwritten = false;
-            InventoryUI.SetActive(false);
-            WeaponEquip.SetActive(false);
-            Inspector.SetActive(false);
-            Aberto = false;
-            
+            if(AbertoOutroMenu == false)
+            {
+                pauseRef.IsMenuOverwritten = false;
+                InventoryUI.SetActive(false);
+                WeaponEquip.SetActive(false);
+                Inspector.SetActive(false);
+                Aberto = false;
+            }
         }
     }
 

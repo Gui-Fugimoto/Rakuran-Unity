@@ -2157,7 +2157,7 @@ MonoBehaviour:
   veneno: 0
   Effect: 0
   ingUsadsos: 0
-  ingTotal: 2
+  ingTotal: 3
   inventory: {fileID: 0}
   PotCuraSimples: {fileID: 11400000, guid: 1498ebbbca3e52e4097bbe6dda3a3996, type: 2}
   PotRecuperaSimples: {fileID: 11400000, guid: fe1058c7eb2c9694583b74fe90b97b13, type: 2}
