@@ -29,27 +29,23 @@ public class PotionCrafting : MonoBehaviour
     [SerializeField] ItemParameter PotStun;
     [SerializeField] ItemParameter PotInvis;
     #endregion
-    [SerializeField] Image HealthMeter;
-    [SerializeField] Image PoisonMeter;
-    [SerializeField] Image EffectIcon;
+    [SerializeField] IngridientDisplayer Display1;
+    [SerializeField] IngridientDisplayer Display2;
+    [SerializeField] IngridientDisplayer Display3;
     [SerializeField] KeyCode FinishPotionKey;
 
     private void Start()
     {
-        EffectIcon.enabled = false;
         inventory = FindObjectOfType<Inventory>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyUp(FinishPotionKey))
-        {
-            FinishPotion();
-        }
-
-        HealthMeter.fillAmount = vida / 10;
-        PoisonMeter.fillAmount = veneno / 10;
-
+      //  if (Input.GetKeyUp(FinishPotionKey))
+      //  {
+      //      FinishPotion();
+      //  }
+      //
     }
 
     void NewItenAdded(ItemParameter Item)
@@ -60,12 +56,24 @@ public class PotionCrafting : MonoBehaviour
 
         if (Item.Effect != Effect.None)
         {
-            EffectIcon.enabled = true;
             Effect = Item.Effect;
-            EffectIcon.sprite = Item.EffectIcon;
         }
 
-        ingUsadsos++;
+        switch (ingUsadsos)
+        {
+            case 0:
+                Display1.AddItem(Item);
+                ingUsadsos++;
+                break;
+            case 1:
+                Display2.AddItem(Item);
+                ingUsadsos++;
+                break;
+            case 2:
+                Display3.AddItem(Item);
+                ingUsadsos++;
+                break;
+        }
     }
 
     public void FinishPotion()
@@ -79,7 +87,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearSlot();
+                Display2.ClearSlot();
+                Display3.ClearSlot();
                 ingUsadsos = 0;
             }
             if (veneno == 1 && vida <= 0)
@@ -88,7 +98,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearSlot();
+                Display2.ClearSlot();
+                Display3.ClearSlot();
                 ingUsadsos = 0;
             }
 
@@ -98,7 +110,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearSlot();
+                Display2.ClearSlot();
+                Display3.ClearSlot();
                 ingUsadsos = 0;
             }
             if (veneno >= 2 && vida <= 0)
@@ -107,7 +121,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearSlot();
+                Display2.ClearSlot();
+                Display3.ClearSlot();
                 ingUsadsos = 0;
             }
 
@@ -117,7 +133,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearUnused();
+                Display2.ClearUnused();
+                Display3.ClearUnused();
                 ingUsadsos = 0;
             }
         }
@@ -131,7 +149,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearSlot();
+                Display2.ClearSlot();
+                Display3.ClearSlot();
                 ingUsadsos = 0;
             }
             if (veneno == 1 && vida <= 0)
@@ -140,7 +160,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearSlot();
+                Display2.ClearSlot();
+                Display3.ClearSlot();
                 ingUsadsos = 0;
             }
 
@@ -150,7 +172,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearSlot();
+                Display2.ClearSlot();
+                Display3.ClearSlot();
                 ingUsadsos = 0;
             }
             if (veneno >= 2 && vida <= 0)
@@ -159,7 +183,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearSlot();
+                Display2.ClearSlot();
+                Display3.ClearSlot();
                 ingUsadsos = 0;
             }
 
@@ -169,7 +195,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearUnused();
+                Display2.ClearUnused();
+                Display3.ClearUnused();
                 ingUsadsos = 0;
             }
         }
@@ -183,7 +211,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearSlot();
+                Display2.ClearSlot();
+                Display3.ClearSlot();
                 ingUsadsos = 0;
             }
             if (veneno >= 1 && vida <= 0)
@@ -192,7 +222,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearSlot();
+                Display2.ClearSlot();
+                Display3.ClearSlot();
                 ingUsadsos = 0;
             }
 
@@ -202,7 +234,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearUnused();
+                Display2.ClearUnused();
+                Display3.ClearUnused();
                 ingUsadsos = 0;
             }
         }
@@ -216,7 +250,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearSlot();
+                Display2.ClearSlot();
+                Display3.ClearSlot();
                 ingUsadsos = 0;
             }
             if (veneno >= 1 && vida <= 0)
@@ -225,7 +261,9 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearSlot();
+                Display2.ClearSlot();
+                Display3.ClearSlot();
                 ingUsadsos = 0;
             }
 
@@ -235,29 +273,39 @@ public class PotionCrafting : MonoBehaviour
                 vida = 0;
                 veneno = 0;
                 Effect = Effect.None;
-                EffectIcon.enabled = false;
+                Display1.ClearUnused();
+                Display2.ClearUnused();
+                Display3.ClearUnused();
                 ingUsadsos = 0;
             }
+        }
             #endregion
+            
             #region Invis
             if (Effect == Effect.Invis)
             {
                 if (vida >= 1 && veneno <= 0)
                 {
+                    Debug.Log(" kill me rn");
                     inventory.AddItem(PotInvis);
                     vida = 0;
                     veneno = 0;
                     Effect = Effect.None;
-                    EffectIcon.enabled = false;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
                     ingUsadsos = 0;
                 }
                 if (veneno >= 1 && vida <= 0)
                 {
+                    Debug.Log(" kill me rn");
                     inventory.AddItem(PotStun);
                     vida = 0;
                     veneno = 0;
                     Effect = Effect.None;
-                    EffectIcon.enabled = false;
+                    Display1.ClearSlot();
+                    Display2.ClearSlot();
+                    Display3.ClearSlot();
                     ingUsadsos = 0;
                 }
 
@@ -267,11 +315,12 @@ public class PotionCrafting : MonoBehaviour
                     vida = 0;
                     veneno = 0;
                     Effect = Effect.None;
-                    EffectIcon.enabled = false;
+                    Display1.ClearUnused();
+                    Display2.ClearUnused();
+                    Display3.ClearUnused();
                     ingUsadsos = 0;
                 }
                 #endregion
             }
         }
     }
-}

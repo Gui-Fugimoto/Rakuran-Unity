@@ -5,7 +5,7 @@ using UnityEngine;
 public class PotionEnabler : MonoBehaviour
 {
     public GameObject potionUI;
-    public GameObject inventoryUI;
+    public Inventory inventory;
     public Pause pauseRef;
     [SerializeField] KeyCode Interact;
     [SerializeField] bool Activate;
@@ -45,13 +45,13 @@ public class PotionEnabler : MonoBehaviour
             IsOpen = true;
             pauseRef.IsMenuOverwritten = true;
             potionUI.SetActive(true);
-            inventoryUI.SetActive(true);
+            inventory.ToggleJUSTInventory();
         }
         else
         {
             StartCoroutine(HoldOnSir());
             potionUI.SetActive(false);
-            inventoryUI.SetActive(false);
+            inventory.ToggleJUSTInventory();
             IsOpen = false;
             
         }
@@ -68,7 +68,10 @@ public class PotionEnabler : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         potionUI.SetActive(false);
-        inventoryUI.SetActive(false);
+        if(inventory.Aberto == true)
+        {
+            inventory.ToggleJUSTInventory();
+        }
         Activate = false;
         pauseRef.IsMenuOverwritten = false;
     }

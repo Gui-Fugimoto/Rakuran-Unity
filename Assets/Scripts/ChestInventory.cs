@@ -11,7 +11,7 @@ public class ChestInventory : MonoBehaviour
 
     public List<ItemParameter> itens = new List<ItemParameter>();
     public int inventorySize = 25;
-    public GameObject InventoryUI;
+    public Inventory Inventory;
     public GameObject ChestUI;
     public bool Aberto = false;
     public bool PlayerPerto;
@@ -33,11 +33,10 @@ public class ChestInventory : MonoBehaviour
     {
         GameC = FindObjectOfType<GameController>();
         pauseRef = FindObjectOfType<Pause>();
+        Inventory = FindObjectOfType<Inventory>();
         SaveRef = GameC.Save;
         itens = SaveRef.ChestSaver;
         ChestUI.SetActive(false);
-       
-
     }
 
     void Update()
@@ -47,7 +46,6 @@ public class ChestInventory : MonoBehaviour
         if (Input.GetKeyDown(Interact) && PlayerPerto == true || (Input.GetKeyDown(KeyCode.Escape) && Aberto == true && PlayerPerto == true)) 
         {
             ToggleInventory();
-
         }
     }
 
@@ -77,8 +75,12 @@ public class ChestInventory : MonoBehaviour
    {
        if(other.tag == "Player")
        {
-           InventoryUI.SetActive(false);
+           if(Inventory.Aberto == true)
+            {
+                Inventory.ToggleJUSTInventory();
+            }
            ChestUI.SetActive(false);
+           Aberto = false;
            PlayerPerto = false;
            pauseRef.IsMenuOverwritten = false;
        }
@@ -88,15 +90,16 @@ public class ChestInventory : MonoBehaviour
     {
         if (Aberto == false && pauseRef.GameIsPaused == false)
         {
+            Inventory.ToggleJUSTInventory();
             Aberto = true;
             pauseRef.IsMenuOverwritten = true;
-            InventoryUI.SetActive(true);
+            Inventory.Aberto = true;
             ChestUI.SetActive(true);
         }
         else
         {
             StartCoroutine(HoldOnSir());
-            InventoryUI.SetActive(false);
+            Inventory.ToggleJUSTInventory();
             ChestUI.SetActive(false);
             Aberto = false;
         }

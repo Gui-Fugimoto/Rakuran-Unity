@@ -38,7 +38,7 @@ public class ConsumableItem : MonoBehaviour
                     break;
                 }
                AddItem(saveFile.QuickSlot);
-                Debug.Log("meu item é" + saveFile.QuickSlot3);
+                Debug.Log("meu item é" + saveFile.QuickSlot);
                 break;
 
             case 1:
@@ -48,7 +48,7 @@ public class ConsumableItem : MonoBehaviour
                     break;
                 }
                 AddItem(saveFile.QuickSlot1);
-                Debug.Log("meu item é" + saveFile.QuickSlot3);
+                Debug.Log("meu item é" + saveFile.QuickSlot1);
                 break;
 
              case 2:
@@ -58,7 +58,7 @@ public class ConsumableItem : MonoBehaviour
                     break;
                 }
                 AddItem(saveFile.QuickSlot2);
-                Debug.Log("meu item é" + saveFile.QuickSlot3);
+                Debug.Log("meu item é" + saveFile.QuickSlot2);
                 break;
 
              case 3:

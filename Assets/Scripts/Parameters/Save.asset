@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f9e2791f9fd294abd1f1f06193b206, type: 3}
   m_Name: Save
   m_EditorClassIdentifier: 
-  CPpos: {x: 68.92, y: 2.31, z: -87.01}
+  CPpos: {x: 0, y: 0, z: 0}
   Invsave:
-  - {fileID: 11400000, guid: c2e9e2ffd25660341bb3a312662b7bac, type: 2}
-  - {fileID: 11400000, guid: 196bfccb8010def45a62ecbea158e3c5, type: 2}
+  - {fileID: 11400000, guid: 61c8cee218efe914aa5090757af06f66, type: 2}
+  - {fileID: 11400000, guid: 61c8cee218efe914aa5090757af06f66, type: 2}
   CScene: 0
   Arma1: {fileID: 11400000, guid: e6191dd27874da048b0e19b8b9ba1684, type: 2}
   Arma2: {fileID: 11400000, guid: 1e847db5870f9cc4485c223cc6f58fd1, type: 2}

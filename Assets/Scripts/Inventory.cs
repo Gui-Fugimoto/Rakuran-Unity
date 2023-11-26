@@ -56,6 +56,26 @@ public class Inventory : MonoBehaviour
             MudouItemCallback.Invoke();
     }
 
+    public void ToggleJUSTInventory()
+    {
+        if (Aberto == false)
+        {
+            Aberto = true;
+            pauseRef.IsMenuOverwritten = true;
+            InventoryUI.SetActive(true);
+            MudouItemCallback.Invoke();
+
+        }
+        else
+        {
+            pauseRef.IsMenuOverwritten = false;
+            InventoryUI.SetActive(false);
+            Inspector.SetActive(false);
+            Aberto = false;
+
+        }
+    }
+
     void ToggleInventory()
     {
         if(Aberto == false)
