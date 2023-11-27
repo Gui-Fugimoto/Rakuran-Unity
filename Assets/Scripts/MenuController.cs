@@ -14,21 +14,21 @@ public class MenuController : MonoBehaviour
     public ItemParameter secondWeapon;
     public void PlayGame()
     {
-        SceneManager.LoadScene(Save.CScene);
+        SceneManager.LoadScene(5);
     }
 
     public void NewGame()
     {
-        SceneManager.LoadScene(1);
-        Save.CPpos = new Vector3 (0,0,0);
+        Save.CPpos = new Vector3(0, 0, 0);
         Save.Invsave.Clear();
-        Save.CScene = 0;
+        Save.CScene = 1;
         Save.Arma1 = firstWeapon;
         Save.Arma2 = secondWeapon;
         Save.QuickSlot = null;
         Save.QuickSlot1 = null;
         Save.QuickSlot2 = null;
         Save.QuickSlot3 = null;
+        SceneManager.LoadScene(5);
     }
 
     public void QuitGame()
@@ -49,6 +49,19 @@ public class MenuController : MonoBehaviour
         {
             ContinueButton.GetComponent<Button>().interactable = true;
             ContinueButton.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0, 0, 0, 1);
+        }
+    }
+
+    IEnumerator LoadScene()
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(Save.CScene);
+
+        while (operation.isDone == false)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            Debug.Log(progress);
+
+            yield return null;
         }
     }
 }

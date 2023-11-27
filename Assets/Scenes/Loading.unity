@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 593754114}
   - component: {fileID: 593754113}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: RakuLoad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -826,6 +826,7 @@ GameObject:
   - component: {fileID: 1543164109}
   - component: {fileID: 1543164108}
   - component: {fileID: 1543164112}
+  - component: {fileID: 1543164113}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -936,6 +937,20 @@ MonoBehaviour:
   ContinueButton: {fileID: 0}
   firstWeapon: {fileID: 11400000, guid: e6191dd27874da048b0e19b8b9ba1684, type: 2}
   secondWeapon: {fileID: 11400000, guid: 1e847db5870f9cc4485c223cc6f58fd1, type: 2}
+--- !u!114 &1543164113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543164107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc61f0e59550eba4a9e3ba0a33044e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  save: {fileID: 11400000, guid: 8422ed53e4f7e454691406b63022998c, type: 2}
+  loadingSprite: {fileID: 593754113}
 --- !u!1 &1736900097
 GameObject:
   m_ObjectHideFlags: 0

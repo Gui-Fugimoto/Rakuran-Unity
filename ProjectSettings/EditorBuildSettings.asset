@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Arena Rei Rato.unity
     guid: 2b35c643865f92b4c886532604eb0b42
   - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: 4f550aa91d1d4da4482a6eed128066f3
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 4893a78bcdf6d564bbf9dfdcfd80b4e4
   m_configObjects: {}
