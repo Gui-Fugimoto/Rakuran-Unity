@@ -19,9 +19,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 451d04d0df9728749b9febbed7508f5a, type: 2}
   - {fileID: 11400000, guid: 451d04d0df9728749b9febbed7508f5a, type: 2}
   - {fileID: 11400000, guid: 451d04d0df9728749b9febbed7508f5a, type: 2}
-  CScene: 0
-  Arma1: {fileID: 11400000, guid: e6191dd27874da048b0e19b8b9ba1684, type: 2}
-  Arma2: {fileID: 11400000, guid: 1e847db5870f9cc4485c223cc6f58fd1, type: 2}
+  - {fileID: 11400000, guid: 7b182cb6dd29efc43be54b2b786b8958, type: 2}
+  - {fileID: 11400000, guid: 7b182cb6dd29efc43be54b2b786b8958, type: 2}
+  CScene: 3
+  Arma1: {fileID: 0}
+  Arma2: {fileID: 0}
   QuickSlot: {fileID: 0}
   QuickSlot1: {fileID: 0}
   QuickSlot2: {fileID: 0}
