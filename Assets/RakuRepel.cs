@@ -9,28 +9,26 @@ public class RakuRepel : MonoBehaviour
     [SerializeField] GameObject player;
     Collider thisCollider;
     public GameObject fadeOut;
-
+    public TeleportParkour FadeGrandOrder;
 
     private void Start()
     {
         thisCollider = GetComponent<Collider>();
+        FadeGrandOrder = fadeOut.GetComponent<TeleportParkour>();
     }
-    void FixedUpdate()
-    {
-      if (thisCollider.bounds.Contains(player.transform.position))
-      {
+     private void OnTriggerStay(Collider other)
+     {
+         if(other.gameObject.tag == "Player")
+         {
             fadeOut.SetActive(true);
-      }
-      
+            StartCoroutine(TeleportThisFucker());
+           
+        }
+     }
+    
+    IEnumerator TeleportThisFucker()
+    {
+        yield return new WaitForSeconds(0.5f);
+        FadeGrandOrder.Teleport();
     }
-
-    // private void OnTriggerStay(Collider other)
-    // {
-    //     if(other.gameObject.tag == "Player")
-    //     {
-    //         Debug.Log("entrei na agua");
-    //         player.transform.position = new Vector3 (save.CPpos.x, save.CPpos.y, save.CPpos.z);
-    //     }
-    // }
-    //
 }

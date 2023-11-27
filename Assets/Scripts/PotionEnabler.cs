@@ -40,12 +40,21 @@ public class PotionEnabler : MonoBehaviour
 
     void OpenMenu()
     {
-        if (IsOpen == false && pauseRef.GameIsPaused == false)
+        if (IsOpen == false && pauseRef.GameIsPaused == false )
         {
             IsOpen = true;
             pauseRef.IsMenuOverwritten = true;
             potionUI.SetActive(true);
-            inventory.ToggleJUSTInventory();
+            
+            if(inventory.Aberto == false)
+            {
+                inventory.ToggleJUSTInventory();
+            }
+
+            if(inventory.Aberto == true) 
+            {
+                inventory.DisableTheRest();
+            }
         }
         else
         {

@@ -57,6 +57,12 @@ public class Inventory : MonoBehaviour
             MudouItemCallback.Invoke();
     }
 
+    public void DisableTheRest()
+    {
+        WeaponEquip.SetActive(false);
+        AbertoOutroMenu = true;
+    }
+
     public void ToggleJUSTInventory()
     {
         if (Aberto == false)
