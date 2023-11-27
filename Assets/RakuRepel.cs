@@ -5,35 +5,32 @@ using UnityEngine;
 
 public class RakuRepel : MonoBehaviour
 {
-    [SerializeField] SaveFile save;
     [SerializeField] bool inWater;
     [SerializeField] GameObject player;
     Collider thisCollider;
+    public GameObject fadeOut;
 
 
     private void Start()
     {
-        save = FindObjectOfType<GameController>().Save;
         thisCollider = GetComponent<Collider>();
     }
-
     void FixedUpdate()
     {
       if (thisCollider.bounds.Contains(player.transform.position))
       {
-          player.transform.position = save.CPpos;
-      
+            fadeOut.SetActive(true);
       }
       
     }
 
-   // private void OnTriggerStay(Collider other)
-   // {
-   //     if(other.gameObject.tag == "Player")
-   //     {
-   //         Debug.Log("entrei na agua");
-   //         player.transform.position = new Vector3 (save.CPpos.x, save.CPpos.y, save.CPpos.z);
-   //     }
-   // }
-   //
+    // private void OnTriggerStay(Collider other)
+    // {
+    //     if(other.gameObject.tag == "Player")
+    //     {
+    //         Debug.Log("entrei na agua");
+    //         player.transform.position = new Vector3 (save.CPpos.x, save.CPpos.y, save.CPpos.z);
+    //     }
+    // }
+    //
 }
