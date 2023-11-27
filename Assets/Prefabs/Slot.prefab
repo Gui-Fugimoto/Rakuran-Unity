@@ -275,6 +275,7 @@ MonoBehaviour:
   IsWeaponEquip: 0
   chestInventory: {fileID: 0}
   IsChestSlot: 0
+  MightOverlap: 0
   onDestination: 0
   WeaponEquipRef: {fileID: 0}
   OnQuickSlot: 0
