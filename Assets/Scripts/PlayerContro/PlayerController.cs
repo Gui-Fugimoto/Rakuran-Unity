@@ -5,6 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     #region variáveis
+    public AudioSource audSource;
+    public AudioClip walkSound;
+    public AudioClip jumpSound;
+    public AudioClip dashSound;
+    public AudioClip runSound;
     private string moveInputAxis = "Vertical";
     private string turnInputAxis = "Horizontal";
 
@@ -70,6 +75,8 @@ public class PlayerController : MonoBehaviour
 
     private LayerMask Ground;
 
+    public bool stopWalkSound;
+
     #endregion
 
     private void Awake()
@@ -111,8 +118,9 @@ public void speedPotion()
         SpeedBonus = 1;
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        WalkSound();
         if (isSprinting == false)
         {
             //moveSpeedX = baseMoveSpeedX;
@@ -149,7 +157,7 @@ public void speedPotion()
 
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if(InInventory == false && !playerCombatScript.isAttacking)
         {
@@ -189,12 +197,23 @@ public void speedPotion()
 
         if (moveAxis != 0)
         {
-            anim.SetBool("animMove", true);
-            
+            anim.SetBool("animMove", true); 
+
+            stopWalkSound = false;
+
+
+
         }
         else if (moveAxis == 0)
         {
             anim.SetBool("animMove", false);
+            //audSource.Stop();
+            if(turnAxis == 0)
+            {
+                stopWalkSound = true;
+            }
+
+
         }
 
 
@@ -204,17 +223,38 @@ public void speedPotion()
             playerSprite.flipX = true;
             anim.SetBool("animMove", true);
             flipped = true;
+            stopWalkSound = false;
         }
         else if (turnAxis != 0 && turnAxis > 0 && !playerCombatScript.isAttacking)
         {
             playerSprite.flipX = false;
             anim.SetBool("animMove", true);
             flipped = false;
+            stopWalkSound = false;
+        }
+        else if (turnAxis == 0)
+        {           
+            if (moveAxis == 0)
+            {
+                stopWalkSound = true;
+            }
+            
         }
 
     }
 
-
+    void WalkSound()
+    {
+        if (stopWalkSound == true && audSource.isPlaying)
+        {
+            audSource.Stop();
+        }
+        else if (stopWalkSound == false && !audSource.isPlaying && grounded)
+        {
+            audSource.clip = walkSound;
+            audSource.Play(0);
+        }
+    }
 
     public bool Grounded()
     {
@@ -309,6 +349,11 @@ public void speedPotion()
                 }
 
                 anim.SetBool("Run", true);
+                if (!audSource.isPlaying && grounded)
+                {
+                    audSource.clip = runSound;
+                    audSource.Play();
+                }
                 //anim.SetBool("sprintCharge", false);
             }
         }
@@ -343,7 +388,8 @@ public void speedPotion()
                 verticalVelocity = jumpForce;
                 slopeNormal = Vector3.up;
                 anim.SetTrigger("Jump");
-                
+                audSource.clip = jumpSound;
+                audSource.Play();
             }
         }
         else
@@ -371,6 +417,8 @@ public void speedPotion()
 
         if (Input.GetKeyDown(dodgeKey) && !isRolling && UseStamina(staminaCost))
         {
+            audSource.clip = dashSound;
+            audSource.Play();
             // Calculate the direction of the roll based on the player's movement direction
             Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             if (movementDirection.magnitude > 0)
@@ -394,7 +442,7 @@ public void speedPotion()
                 // Move the player in the roll direction and apply a speed boost
                 Vector3 rollVelocity = rollDirection * rollDistance / rollDuration;
                 controller.Move((rollVelocity + rollDirection * rollSpeedBoost) * Time.deltaTime);
-                anim.Play("Raku_Dash");
+                anim.Play("Raku_Dash");      
                 // Rotate the player to face the roll direction
                 //transform.rotation = Quaternion.LookRotation(rollDirection);
                 invulnerable = true;
@@ -416,7 +464,6 @@ public void speedPotion()
         //    Physics.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("Enemy"), false);
         //}
     }
-
 
     
     public bool UseStamina(float amount)
