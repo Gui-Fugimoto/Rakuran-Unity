@@ -85,15 +85,15 @@ public class PlayerController : MonoBehaviour
         currentStamina = maxStamina;
         
     }
+
     void Start()
     {
+        currentSave = FindObjectOfType<GameController>().Save;
         baseMoveSpeedX = moveSpeedX;
         baseMoveSpeedY = moveSpeedY;
         playerCombatScript = GetComponentInChildren<PlayerCombat>();
         SpeedBonus = 1;
         Ground = LayerMask.GetMask("Ground");
-        currentSave = FindObjectOfType<GameController>().Save;
-
     }
     
     public void Spawn()
@@ -102,6 +102,10 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("spawnei");
             transform.position = currentSave.CPpos;
+        }
+        else
+        {
+            currentSave.CPpos = FirstSpawnPos.position;
         }
     }
     
