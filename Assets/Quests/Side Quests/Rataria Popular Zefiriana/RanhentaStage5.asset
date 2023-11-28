@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d03362aeee566548a48807fd631145f, type: 3}
   m_Name: RanhentaStage5
   m_EditorClassIdentifier: 
-  stageNo: 4
+  stageNo: 5
   sDescription: 
   sSpawnList:
-  - {fileID: 2786436248763124915, guid: d2f3a791bc8aa5f4fbfd2ab1cea6bf84, type: 3}
-  - {fileID: 2786436248763124915, guid: d2f3a791bc8aa5f4fbfd2ab1cea6bf84, type: 3}
-  - {fileID: 2786436248763124915, guid: d2f3a791bc8aa5f4fbfd2ab1cea6bf84, type: 3}
+  - {fileID: 2786436248763124915, guid: 646e5ddbea3355d45b7070d56848c2a1, type: 3}
+  - {fileID: 2786436248763124915, guid: 422af63ff06da6745ad252fe6246935e, type: 3}
+  - {fileID: 2786436248763124915, guid: f7078e810e0fcdf47895f0d6f3a4abcd, type: 3}
   sDeliverItems: []
   sReceiveItems: []
   addedDescription: 1

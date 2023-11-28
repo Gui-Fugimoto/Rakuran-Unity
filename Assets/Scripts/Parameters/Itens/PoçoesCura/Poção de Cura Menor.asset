@@ -19,6 +19,9 @@ MonoBehaviour:
   Consumivel: 1
   Effect: 3
   EffectIcon: {fileID: 0}
-  weaponType: 5
+  weaponType: 0
   Forge: 0
   damage: 0
+  Desc: "A primeira po\xE7\xE3o de todo alquimista, o gostinho de cereja s\xF3 surgiu
+    depois que os Sindicatos come\xE7aram a produzir ela em massa (para desespero
+    das Selassol). "

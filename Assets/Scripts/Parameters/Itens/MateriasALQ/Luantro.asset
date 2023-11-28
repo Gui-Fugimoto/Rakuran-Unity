@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f673aec2e978d8a4fb8a3d764eb642e9, type: 3}
   m_Name: Luantro
   m_EditorClassIdentifier: 
-  ItemMundo: {fileID: 1241942322034801684, guid: f7ebb7890d4514d4d8be46354341357e,
-    type: 3}
+  ItemMundo: {fileID: 79402216918874696, guid: aa0b537db61569f4a87e22873c1465f8, type: 3}
   Vida: -1
   Veneno: 1
   Icon: {fileID: -1551079206, guid: ebed7d7bb5eb6394f8307482b2ae7e03, type: 3}
@@ -23,3 +22,7 @@ MonoBehaviour:
   weaponType: 0
   Forge: 0
   damage: 0
+  Desc: "Nascido de um selassol, ele o mata e surge em seu lugar durante a noite.
+    Essa erva \xE9 dotada de uma potente subst\xE2ncia que se torna venenosa quando
+    em contato com a luz da lua. Muitos venenos fazem uso dele para aumentar sua
+    letalidade."
