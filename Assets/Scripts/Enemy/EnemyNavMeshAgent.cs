@@ -89,7 +89,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
                 StartCoroutine(CooldownState(Random.Range(3f, 5f)));
                 break;
             case 5:
-                StartCoroutine(SpecialAttack());
+                SpecialAttack();
                 break;
             case 6:
                 FleeState();
@@ -224,8 +224,8 @@ public class EnemyNavMeshAgent : MonoBehaviour
             timeSinceLastAttack = 0f;
             anim.SetTrigger("Attack");
             anim.SetBool("Walk", false);
-            hitBox.SetActive(true);
-            StartCoroutine(EndAttack(atkEndDelay));
+            //hitBox.SetActive(true);
+            //StartCoroutine(EndAttack(atkEndDelay));
             
 
 
@@ -291,7 +291,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
         }
     }
 
-    protected virtual IEnumerator SpecialAttack()
+    protected virtual void SpecialAttack()
     {
         if (!isAttacking && timeSinceLastAttack >= attackCooldown)
         {
@@ -299,18 +299,9 @@ public class EnemyNavMeshAgent : MonoBehaviour
             timeSinceLastAttack = 0;
             anim.SetTrigger("Special");
             anim.SetBool("Walk", false);
-            specialHitBox.SetActive(true);
-            CDcontrol = 0f;
-            yield return new WaitForSeconds(1f);
-            Vector3 directionToPlayer = (player.transform.position - transform.position).normalized; //usar lerp
-            rb.isKinematic = false;
-            navMeshAgent.enabled = false;
+            //specialHitBox.SetActive(true);
             
-            rb.AddForce(directionToPlayer * 20f, ForceMode.Impulse);
-            yield return new WaitForSeconds(2f);
-            navMeshAgent.enabled = true;
-            rb.isKinematic = true;
-            StartCoroutine(EndAttack(atkEndDelay));
+            //StartCoroutine(EndAttack(atkEndDelay));
             
         }
         
@@ -339,7 +330,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
       
     }
 
-
+    /*
     public IEnumerator EndAttack(float dur)
     {
         yield return new WaitForSeconds(dur);
@@ -348,7 +339,39 @@ public class EnemyNavMeshAgent : MonoBehaviour
         specialHitBox.SetActive(false);
         currentState = 4;
     }
+    */
 
+    public void EnableHitbox()
+    {
+        hitBox.SetActive(true);
+        isAttacking = true;
+    }
+    public void EnableSpecialHitbox()
+    {
+        hitBox.SetActive(true);
+        isAttacking = true;
+        CDcontrol = 0f;
+        Vector3 directionToPlayer = (player.transform.position - transform.position).normalized; //usar lerp
+        rb.isKinematic = false;
+        navMeshAgent.enabled = false;
+
+        rb.AddForce(directionToPlayer * 20f, ForceMode.Impulse);
+        
+    }
+    public void DisableHitbox()
+    {
+        hitBox.SetActive(false);
+        isAttacking = false;
+        specialHitBox.SetActive(false);
+        currentState = 4;
+    }
+    public void DisableSpecialHitbox()
+    {
+        specialHitBox.SetActive(false);
+        navMeshAgent.enabled = true;
+        rb.isKinematic = true;
+        currentState = 4;
+    }
     public void Knockback(Vector3 direction, float force, float duration)
     {
          
