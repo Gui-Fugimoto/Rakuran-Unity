@@ -36,7 +36,7 @@ public class potionThrow : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position = transform.position + new Vector3(throwspeed * Time.deltaTime, 0, 0);
-        transform.Rotate(0,0, 300 * Time.deltaTime);
+        transform.Rotate(0,0, 500 * Time.deltaTime);
 
     }
 

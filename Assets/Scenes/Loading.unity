@@ -290,7 +290,7 @@ PrefabInstance:
     - target: {fileID: 7292962799115469348, guid: eabe6d93a5115e74c93a1514206a764e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7292962799115469348, guid: eabe6d93a5115e74c93a1514206a764e,
         type: 3}
@@ -849,7 +849,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1543164111}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1187,7 +1187,7 @@ PrefabInstance:
     - target: {fileID: 3877801435344364646, guid: 8804a9f20fbe157428feecd7a23651e0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3877801435344364646, guid: 8804a9f20fbe157428feecd7a23651e0,
         type: 3}
@@ -1417,8 +1417,8 @@ GameObject:
   - component: {fileID: 1543164110}
   - component: {fileID: 1543164109}
   - component: {fileID: 1543164108}
-  - component: {fileID: 1543164112}
   - component: {fileID: 1543164113}
+  - component: {fileID: 1543164114}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1505,9 +1505,9 @@ RectTransform:
   - {fileID: 1815947172}
   - {fileID: 1080692372}
   - {fileID: 55237185}
+  - {fileID: 820359725}
   - {fileID: 1290502488}
   - {fileID: 186872240}
-  - {fileID: 820359725}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1516,23 +1516,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1543164112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543164107}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ad6a4eddfa2b44ca0912de9694b8c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Save: {fileID: 11400000, guid: 8422ed53e4f7e454691406b63022998c, type: 2}
-  FadeOut: {fileID: 0}
-  ContinueButton: {fileID: 432860359}
-  firstWeapon: {fileID: 11400000, guid: e6191dd27874da048b0e19b8b9ba1684, type: 2}
-  secondWeapon: {fileID: 11400000, guid: 1e847db5870f9cc4485c223cc6f58fd1, type: 2}
 --- !u!114 &1543164113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1550,6 +1533,22 @@ MonoBehaviour:
   loadButton: {fileID: 1080692373}
   Continue: {fileID: 432860359}
   FadeOut: {fileID: 186872239}
+--- !u!114 &1543164114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543164107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cbc719d73083547b8cb1a64e5df230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Image1: {fileID: 576479352}
+  Image2: {fileID: 1736900097}
+  Image3: {fileID: 793528033}
+  selector: 0
 --- !u!1 &1736900097
 GameObject:
   m_ObjectHideFlags: 0

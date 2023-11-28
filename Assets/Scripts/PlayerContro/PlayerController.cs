@@ -96,6 +96,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("spawnei");
             transform.position = currentSave.CPpos;
         }
+        else
+        {
+            currentSave.CPpos = FirstSpawnPos.position;
+        }
     }
     
 public void speedPotion()
