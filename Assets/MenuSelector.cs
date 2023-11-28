@@ -12,7 +12,7 @@ public class MenuSelector : MonoBehaviour
 
     void Start()
     {
-        selector = Random.Range(0, 2);
+        selector = Random.Range(0, 3);
 
         switch (selector) 
         {
