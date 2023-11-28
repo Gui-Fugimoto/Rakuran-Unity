@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: 411828c5d195730409b0808412f298ec
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hammer_strongAttack_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1
+        width: 30
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6345598, y: 0.46201912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f137b6bec7fd34da5cc11a7c0c964e
+      internalID: -101997048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_strongAttack_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1
+        width: 32
+        height: 31
+      alignment: 9
+      pivot: {x: 0.65243125, y: 0.489148}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929d1a09932c83443a34e641cd8971ff
+      internalID: -983787569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_strongAttack_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1
+        width: 32
+        height: 31
+      alignment: 9
+      pivot: {x: 0.65768766, y: 0.49457383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d42683f2b1a864395a9d96e986cd72
+      internalID: -176303424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_strongAttack_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1
+        width: 32
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6471753, y: 0.48914817}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e72d22e7c254540aa028d898e09f60
+      internalID: -1221010587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_strongAttack_4
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1
+        width: 32
+        height: 31
+      alignment: 9
+      pivot: {x: 0.64191914, y: 0.49999982}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9414b88f23d1949a2c19032e0fa8cd
+      internalID: 757472804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_strongAttack_5
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1
+        width: 53
+        height: 36
+      alignment: 9
+      pivot: {x: 0.42700714, y: 0.46729428}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f2a4ec92e2d26439f461897107a444
+      internalID: -1422090768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_strongAttack_6
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1
+        width: 53
+        height: 36
+      alignment: 9
+      pivot: {x: 0.42066005, y: 0.4252442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cda2b094ce02ce42bdde3a098ff9fad
+      internalID: -1497481427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_strongAttack_7
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1
+        width: 27
+        height: 29
+      alignment: 9
+      pivot: {x: 0.8239407, y: 0.46519983}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94babc2c5102dd242b405a5ffaf18bc2
+      internalID: -1351953595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_strongAttack_8
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 1
+        width: 25
+        height: 30
+      alignment: 9
+      pivot: {x: 0.82294434, y: 0.46075323}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ee4b89323590e43879b4c6bbf1007f
+      internalID: 1542805664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_strongAttack_9
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1
+        width: 51
+        height: 36
+      alignment: 9
+      pivot: {x: 0.37467447, y: 0.41589978}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc951066d2cb98e49a1b3dc648d57041
+      internalID: -32542985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_strongAttack_10
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1
+        width: 51
+        height: 36
+      alignment: 9
+      pivot: {x: 0.3680779, y: 0.3878664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6697520dfaa119040b8bbecba4178fc6
+      internalID: 1609033555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_strongAttack_11
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 1
+        width: 30
+        height: 31
+      alignment: 9
+      pivot: {x: 0.62895304, y: 0.44574168}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224ccbec4f20043418e6a7fbb4dd4e47
+      internalID: 635617728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_strongAttack_12
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 1
+        width: 30
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6337382, y: 0.4502219}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58f244c07c6df14bb727ac0ca7337dd
+      internalID: -1864823071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e91eaea4897ae1a489494928c1725e90
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Hammer_strongAttack_5: -1422090768
+      Hammer_strongAttack_3: -1221010587
+      Hammer_strongAttack_1: -983787569
+      Hammer_strongAttack_0: -101997048
+      Hammer_strongAttack_11: 635617728
+      Hammer_strongAttack_7: -1351953595
+      Hammer_strongAttack_4: 757472804
+      Hammer_strongAttack_2: -176303424
+      Hammer_strongAttack_6: -1497481427
+      Hammer_strongAttack_8: 1542805664
+      Hammer_strongAttack_12: -1864823071
+      Hammer_strongAttack_10: 1609033555
+      Hammer_strongAttack_9: -32542985
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

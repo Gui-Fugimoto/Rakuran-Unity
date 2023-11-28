@@ -33,16 +33,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
-  nPOTScale: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,18 +103,304 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1
+        width: 30
+        height: 33
+      alignment: 9
+      pivot: {x: 0.62710077, y: 0.49999994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11af742ade6155a498a7c8ab88a41095
+      internalID: 1784576301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1
+        width: 32
+        height: 33
+      alignment: 9
+      pivot: {x: 0.6605613, y: 0.49668735}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e08a9ee32fac4443ab360468d6021ab
+      internalID: 942715965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1
+        width: 32
+        height: 33
+      alignment: 9
+      pivot: {x: 0.657145, y: 0.49006197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdec5fcd397ff8743b2c4baf10ee295b
+      internalID: 419211905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1
+        width: 32
+        height: 33
+      alignment: 9
+      pivot: {x: 0.657145, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e9711a604ea084b8ce6d9cc66c3e3d
+      internalID: -1670923132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_4
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1
+        width: 32
+        height: 33
+      alignment: 9
+      pivot: {x: 0.65714455, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57863f1a5d81510498951d0576d14702
+      internalID: 730724830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_5
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1
+        width: 53
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4298706, y: 0.41657278}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad860fc40085db248b3b9e8d6713424e
+      internalID: 1627339868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_6
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1
+        width: 53
+        height: 38
+      alignment: 9
+      pivot: {x: 0.42368302, y: 0.42807996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6aa9b6851c999043bf4c1657dfb8ec7
+      internalID: -1438214663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_7
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1
+        width: 27
+        height: 31
+      alignment: 9
+      pivot: {x: 0.83605164, y: 0.4894208}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e310a9ce8636a454cb846938ebe0db2a
+      internalID: 1703751292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_8
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 1
+        width: 25
+        height: 32
+      alignment: 9
+      pivot: {x: 0.8017188, y: 0.48633522}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290ef52526c659a489f0a8bafb8a964e
+      internalID: 1126749583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_9
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 2
+        width: 51
+        height: 37
+      alignment: 9
+      pivot: {x: 0.37567618, y: 0.4113634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff60c3f1ef5b1d541922ae77ed592e98
+      internalID: -366235898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_10
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 2
+        width: 51
+        height: 37
+      alignment: 9
+      pivot: {x: 0.36710253, y: 0.4113634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbd2d1c83d1bd54b8df918688e4378f
+      internalID: 175277767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_11
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 1
+        width: 30
+        height: 33
+      alignment: 9
+      pivot: {x: 0.627537, y: 0.47018588}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041a6998b6f259749936ea91d258d4b8
+      internalID: 1945203859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_airstrongAttack_12
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 1
+        width: 30
+        height: 33
+      alignment: 9
+      pivot: {x: 0.627537, y: 0.47018588}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e20dfa80abaee7429ee8f69088c68dd
+      internalID: -811775744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 71441cbd9fb04874684614db4da47850
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hammer_airstrongAttack_2: 419211905
+      Hammer_airstrongAttack_0: 1784576301
+      Hammer_airstrongAttack_5: 1627339868
+      Hammer_airstrongAttack_9: -366235898
+      Hammer_airstrongAttack_11: 1945203859
+      Hammer_airstrongAttack_1: 942715965
+      Hammer_airstrongAttack_3: -1670923132
+      Hammer_airstrongAttack_8: 1126749583
+      Hammer_airstrongAttack_6: -1438214663
+      Hammer_airstrongAttack_4: 730724830
+      Hammer_airstrongAttack_12: -811775744
+      Hammer_airstrongAttack_10: 175277767
+      Hammer_airstrongAttack_7: 1703751292
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

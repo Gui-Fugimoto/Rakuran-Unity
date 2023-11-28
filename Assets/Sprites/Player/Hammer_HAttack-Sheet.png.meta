@@ -33,16 +33,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
-  nPOTScale: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,18 +103,216 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hammer_HAttack-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 31
+        height: 34
+      alignment: 9
+      pivot: {x: 0.74660707, y: 0.42216834}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634a1866f248eb24a814986203415a69
+      internalID: -1397841701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_HAttack-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1
+        width: 29
+        height: 35
+      alignment: 9
+      pivot: {x: 0.7433364, y: 0.41319075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ffeab41534b1041ad372c9c9b34b03
+      internalID: -1751149947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_HAttack-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1
+        width: 31
+        height: 40
+      alignment: 9
+      pivot: {x: 0.66124356, y: 0.3603351}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe51a155a08f72a4188b75efac5e0fc5
+      internalID: -1139025074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_HAttack-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1
+        width: 52
+        height: 45
+      alignment: 9
+      pivot: {x: 0.37371767, y: 0.3105131}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1554e3b1c816446b3d5c2bbc63135f
+      internalID: 404946465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_HAttack-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1
+        width: 44
+        height: 38
+      alignment: 9
+      pivot: {x: 0.25720146, y: 0.37103894}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064718cacfe6afd488c25661532b331f
+      internalID: -1885228895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_HAttack-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1
+        width: 42
+        height: 30
+      alignment: 9
+      pivot: {x: 0.27364314, y: 0.46079594}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a8586589d181c488b7cc04a382ceae
+      internalID: -462587263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_HAttack-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1
+        width: 42
+        height: 30
+      alignment: 9
+      pivot: {x: 0.26664224, y: 0.46732998}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8905cfd3bdf7219478bcb4ca4fa206ca
+      internalID: -1531714316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_HAttack-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1
+        width: 39
+        height: 30
+      alignment: 9
+      pivot: {x: 0.26377046, y: 0.47386402}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b28f7497ca06764497728764d7b8bf6
+      internalID: 492198947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hammer_HAttack-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 1
+        width: 40
+        height: 30
+      alignment: 9
+      pivot: {x: 0.2819275, y: 0.470597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6a93ca598776f419b57dfdd8ac6782
+      internalID: -588953535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cea4a8f5130b0504993214687c58e1be
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hammer_HAttack-Sheet_0: -1397841701
+      Hammer_HAttack-Sheet_2: -1139025074
+      Hammer_HAttack-Sheet_5: -462587263
+      Hammer_HAttack-Sheet_8: -588953535
+      Hammer_HAttack-Sheet_7: 492198947
+      Hammer_HAttack-Sheet_6: -1531714316
+      Hammer_HAttack-Sheet_3: 404946465
+      Hammer_HAttack-Sheet_1: -1751149947
+      Hammer_HAttack-Sheet_4: -1885228895
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
