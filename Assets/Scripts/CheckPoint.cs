@@ -11,12 +11,10 @@ public class CheckPoint : MonoBehaviour
     public Inventory pInv;
     public PlayerCombat WeaponFinder;
     public quickslotRef fodase;
-    public GameObject foguinho;
     [SerializeField] KeyCode Interact;
     
     private void Start()
     {
-        foguinho.SetActive(false);
         Save = FindObjectOfType<GameController>().Save;
     }
     private void OnTriggerStay(Collider other)
@@ -42,7 +40,7 @@ public class CheckPoint : MonoBehaviour
     {
         if (Input.GetKeyDown(Interact) && Activate == true)
         {
-            Save.CPpos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 1.5f);
+            Save.CPpos = gameObject.transform.position;
             Save.Invsave = new List<ItemParameter>(pInv.itens);
             Save.Arma1 = WeaponFinder.mainWeapon.item;
             Save.Arma2 = WeaponFinder.offhandWeapon.item;
@@ -52,22 +50,10 @@ public class CheckPoint : MonoBehaviour
             Save.QuickSlot1 = fodase.QuickSlot1.item;
             Save.QuickSlot2 = fodase.QuickSlot2.item;
             Save.QuickSlot3 = fodase.QuickSlot3.item;
-
-         
+            
+            
             Debug.Log("cena salva" + Save.CScene);
         }
-
-        if (Save.CPpos == new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 1.5f))
-        {
-            foguinho.SetActive(true);
-        }
-        else
-        {
-            foguinho.SetActive(false);
-        }
-
-
-
     }
 }
 
