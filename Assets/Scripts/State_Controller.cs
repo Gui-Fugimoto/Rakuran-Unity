@@ -26,6 +26,10 @@ public class State_Controller : MonoBehaviour
     private Inventory inventory_script;
     private PlayerHealthController phc_script;
     public bool inFixedArea = false;
+
+    public AudioSource audSourceST;
+    public AudioClip combatClip;
+    public AudioClip sceneClip;
     private void Start()
     {
         inventory_script = player.GetComponent<Inventory>();
@@ -54,7 +58,18 @@ public class State_Controller : MonoBehaviour
             
         }
                        
+        if(game_State != Game_States.In_Combat)
+        {
+            if (audSourceST.clip != sceneClip)
+            {
+                audSourceST.clip = sceneClip;
+                if (!audSourceST.isPlaying)
+                {
+                    audSourceST.Play();
+                }
 
+            }
+        }
     }
 
 
@@ -78,6 +93,17 @@ public class State_Controller : MonoBehaviour
         fixedCamera.SetActive(false);
         cutsceneCamera.SetActive(false);
         combatCamera.SetActive(true);
+
+        if (audSourceST.clip != combatClip)
+        {
+            audSourceST.clip = combatClip;
+            if (!audSourceST.isPlaying)
+            {
+                audSourceST.Play();
+            }
+            
+        }
+        
     }
 
     void InventoryCamera()
