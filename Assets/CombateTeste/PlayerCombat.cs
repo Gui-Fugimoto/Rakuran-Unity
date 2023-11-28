@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public bool isAttacking;
+    public bool fabianoOnce;
     #region Combos
     [HideInInspector] public List<AttackSO> basicLightCombo;
     [HideInInspector] public List<AttackSO> upwardLightCombo;
@@ -59,7 +60,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] int downwardHeavyComboCounter;
     [SerializeField] int jumpingHeavyComboCounter;
 
-    [SerializeField]bool mainHand;
+    public bool mainHand;
     
 
     public EquipWeapon mainWeapon;
@@ -88,11 +89,13 @@ public class PlayerCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        fabianoOnce = false;
         equippedWeapon = hitboxGameObj.GetComponent<WeaponHitbox>();
         anim = GetComponent<Animator>();
         equippedWeapon.weaponType = mainWeapon.item.weaponType;
         equippedWeapon.baseDamage = mainWeapon.item.damage;
-        ChangeWeaponCombos();
+       // ChangeWeaponCombos();
+        StartCoroutine(QuickWeaponChange());
         hitboxGameObj.transform.localScale = hbDefaultScale;
         equippedWeapon.DisableTriggerBox();
     }
@@ -493,8 +496,8 @@ public class PlayerCombat : MonoBehaviour
     
     IEnumerator QuickWeaponChange()
     {
-        
-        if(mainHand == false && mainWeapon.item != null && offhandWeapon.item == null)
+
+        if (mainHand == false && mainWeapon.item != null && fabianoOnce == false )
         {
             ExitAttack();
             equippedWeapon.weaponType = mainWeapon.item.weaponType;
@@ -503,6 +506,7 @@ public class PlayerCombat : MonoBehaviour
             ResetComboCounters();
             yield return new WaitForSeconds(0.5f);
             mainHand = true;
+            fabianoOnce = true;
         }
 
         if (Input.GetKey(changeWeaponKey) && mainHand == false && mainWeapon.item != null)
