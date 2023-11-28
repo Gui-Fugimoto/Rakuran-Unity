@@ -1,0 +1,329 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2786436248763124915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2786436248763124914}
+  - component: {fileID: 2786436248763124919}
+  - component: {fileID: 2786436248763124916}
+  - component: {fileID: 2786436248763124917}
+  - component: {fileID: 2786436248763124918}
+  - component: {fileID: 2042554580500921306}
+  - component: {fileID: 6002438691009459815}
+  - component: {fileID: 3824574556837878708}
+  - component: {fileID: -5208683945017923412}
+  m_Layer: 0
+  m_Name: Amonia_6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2786436248763124914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786436248763124915}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.467783, y: 0, z: -12.754692}
+  m_LocalScale: {x: 5.75, y: 5.75, z: 5.75}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2786436248763124919
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786436248763124915}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 114b7623b53f3ca468491929cc8e33bf, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 9035cfd24cd9ad648acb78a20dae5504, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &2786436248763124916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786436248763124915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff219d8f269145d41b8f3eec726e4369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScaleChange: {x: 0, y: 0.001, z: 0}
+  Deflate: 0
+--- !u!65 &2786436248763124917
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786436248763124915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.32770368, y: 0.25999996, z: 0.27019575}
+  m_Center: {x: -0.07863669, y: 0.12999998, z: -0.035097826}
+--- !u!114 &2786436248763124918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786436248763124915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1371c2e2f700043ac3101f26cfcaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - "Ent\xE3o voc\xEAs est\xE3o dando um jeito nos ratos?"
+    - 'E nos fagocitantes. '
+    - 'Sim, eu odeio aquelas gosmas. '
+    - "N\xE3o parecem estar indo muito bem, com todo o respeito."
+    - "Eles n\xE3o param de aparecer. \xC0s vezes tenho a sensa\xE7\xE3o de que estou
+      matando o mesmo, de novo e de novo."
+    - "\xC0s vezes tenho a sensa\xE7\xE3o de que estou matando o mesmo, de novo e
+      de novo."
+    - "J\xE1 os fagocitantes n\xE3o t\xEAm problema. Esse territ\xF3rio \xE9 deles.
+      Fazem bem pra biosfera da camada. "
+    - "N\xE3o concordo, essas gosmas grudam na roupa\u2026 "
+    - "Mas s\xE3o importantes, eles impedem outros bichos de se multiplicarem muito
+      r\xE1pido. "
+    - Querem vir comigo? Eu pretendo matar o Rei Rato.
+    - 'Oi!? '
+    - "\u2026 N\xE3o duvido que voc\xEA consiga, amigo. "
+    - "Tamb\xE9m n\xE3o duvido que voc\xEA morra miseravelmente. E de maneira bem
+      sarc\xE1stica\u2026 O rato fazendo o gato de sapato."
+    - "Mas voc\xEA n\xE3o vai conseguir chegar at\xE9 ele."
+    - Imagino que o Rei seja bem protegido.
+    - "Muito bem protegido\u2026 "
+    - "\xC9 a Corte dos Ratos. Eles travam o corredor que leva at\xE9 a C\xE2mara
+      Real. "
+    - "Isso tudo \xE9 meio chique demais pra um rato, voc\xEAs n\xE3o acham?"
+    - "N\xF3s conseguimos acabar com a Corte, mas sabe como \xE9."
+    - Eles renascem.
+    - "Fomos mordidos em cada cantinho das escamas. O Rei Rato nos venceu sem nem
+      fazer esfor\xE7o."
+    - "Voc\xEAs dois fizeram tudo isso? "
+    - "E o F\xF3sforo. Ele ficou preso em alguma antec\xE2mara, os ratos impedindo
+      a passagem dele."
+    - "Voc\xEA parece muito calmo pra algu\xE9m que abandonou um companheiro.\r"
+    - "Abandonar um companheiro? Voc\xEA n\xE3o conheceria um homem como o F\xF3sforo
+      nem se tivesse lutado na Guerra. "
+    - "Aposto a minha vida de que ele est\xE1 vivo, s\xF3 esperando o momento certo
+      pra tentar de novo."
+    - "\u2026  (N\xE3o sei explicar, mas esse draelix inspira muita confian\xE7a\u2026
+      Quase como o nosso comandante)"
+    - "O rato comeu sua l\xEDngua, gato?"
+    - "Ent\xE3o vamos tentar resgatar esse F\xF3sforo e matar o Rei de uma vez por
+      todas? "
+    - "E o que voc\xEA ganha com isso?"
+    - Nada
+    - "H\xE1! At\xE9 parece\u2026"
+    - "\xC9 s\xE9rio."
+    - Quer usar os corpos pra estudar?
+    - "N\xE3o, se fosse isso, ele teria a mesma opini\xE3o daquele hopouli. Ia insistir
+      pra mantermos os ratos vivos."
+    - "Os bairros afastados est\xE3o come\xE7ando a notar os ratos."
+    - "Por que voc\xEA quer matar o Rei Rato?"
+    - "Os bairros afastados est\xE3o come\xE7ando a notar os ratos."
+    - "(E eu prometi pra uma menininha\u2026 Talvez n\xF3s estejamos mesmo perdidos,
+      Acir)."
+    - "(E talvez n\xF3s possamos achar ingredientes!). "
+    - "Entendi. A \xE1gua bateu na sua bunda. "
+    - "Enxofre, n\xE3o t\xF4 achando nada aqui\u2026 "
+    - "Eu j\xE1 esperava. "
+    - O que vamos fazer?
+    - "Ei, gato, voc\xEA sabe se virar, n\xE9?"
+    - "Conhe\xE7o um truque ou outro."
+    - Na fuga do Rei Rato eu deixei meu martelo cair.
+    - "Traz ele de volta pra mim, em troca, eu e a Am\xF4nia vamos dar um jeito na
+      Corte dos Ratos, de novo."
+    - "O Rei fica pra voc\xEA, mano a mano, luta justa. "
+    - "(Nos deixando com o trabalho mais dif\xEDcil, como sempre, Acir\u2026) "
+    - O que acha?
+    - "\xC9 um bom trato, hein!"
+    - "Eu aceito. Onde voc\xEA perdeu o martelo?"
+    - "Vish\u2026 "
+    - "Vish\u2026 "
+    - "Sabe, quando voc\xEA t\xE1 correndo pela sua vida, tudo fica meio borrado."
+    - 'Tudo bem, eu dou um jeito. '
+    names:
+    - Rakuran
+    - Enxofre
+    - "Am\xF4nia"
+    - Rakuran
+    - Enxofre
+    - Enxofre
+    - Enxofre
+    - "Am\xF4nia"
+    - Enxofre
+    - Rakuran
+    - "Am\xF4nia"
+    - Enxofre
+    - Enxofre
+    - Enxofre
+    - Rakuran
+    - "Am\xF4nia"
+    - Enxofre
+    - Rakuran
+    - "Am\xF4nia"
+    - Enxofre
+    - "Am\xF4nia"
+    - Rakuran
+    - Enxofre
+    - Rakuran
+    - Enxofre
+    - Enxofre
+    - Rakuran
+    - "Am\xF4nia"
+    - Rakuran
+    - Enxofre
+    - Rakuran
+    - "Am\xF4nia"
+    - Rakuran
+    - "Am\xF4nia"
+    - Enxofre
+    - Rakuran
+    - Enxofre
+    - Rakuran
+    - Rakuran
+    - Rakuran
+    - Enxofre
+    - "Am\xF4nia"
+    - Enxofre
+    - "Am\xF4nia"
+    - Enxofre
+    - Rakuran
+    - Enxofre
+    - Enxofre
+    - Enxofre
+    - Rakuran
+    - Enxofre
+    - "Am\xF4nia"
+    - Rakuran
+    - Enxofre
+    - "Am\xF4nia"
+    - Enxofre
+    - Rakuran
+  Manager: {fileID: 0}
+  Falando: 0
+  Conversando: 0
+  MoveOn: 0
+  Portrait: {fileID: 0}
+  portraitChar: {fileID: 0}
+  qTrigger: {fileID: 6002438691009459815}
+  fabianoOnce: 1
+--- !u!65 &2042554580500921306
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786436248763124915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.090920836, y: 0.25999996, z: 0.018843362}
+  m_Center: {x: -0.00020699398, y: 0.12999998, z: 0.00055865553}
+--- !u!114 &6002438691009459815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786436248763124915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352c9ff73ad9ef64e9b41a10668debe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveType: 0
+  quest: {fileID: 11400000, guid: 092b7bc4715307b409d75ab891206247, type: 2}
+  stage: {fileID: 11400000, guid: d16e2ca60a3337445b3f6571620b23f6, type: 2}
+  questManager: {fileID: 0}
+  playerInventory: {fileID: 0}
+--- !u!114 &3824574556837878708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786436248763124915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601b5c1e4a8a030429e3362d3fb0a2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Esgoto
+--- !u!114 &-5208683945017923412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786436248763124915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775169f5aa71a354eb97857d93923adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 092b7bc4715307b409d75ab891206247, type: 2}
+  stageToDestroy: {fileID: 11400000, guid: 93926da86bad8564198a270e8e6a9989, type: 2}
