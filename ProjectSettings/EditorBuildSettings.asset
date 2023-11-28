@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/CentroComercial.unity
     guid: 5878ebc5dfeec254e8371fa131f17e56
   - enabled: 1
-    path: Assets/Scenes/Arena Rei Rato.unity
+    path: Assets/Scenes/Rato Caverna.unity
     guid: 2b35c643865f92b4c886532604eb0b42
   - enabled: 1
     path: Assets/Scenes/Loading.unity

@@ -9,16 +9,27 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
     public SaveFile Save;
+    public GameObject FadeOut;
+    private TeleportParkour FadeOutRef;
     public GameObject ContinueButton;
     public ItemParameter firstWeapon;
     public ItemParameter secondWeapon;
+
+    private void Start()
+    {
+        FadeOutRef =  FadeOut.GetComponent<TeleportParkour>();
+    }
+
     public void PlayGame()
     {
-        SceneManager.LoadScene(5);
+        FadeOut.SetActive(true);
+        FadeOutRef.IsSceneTrans = true;
+        StartCoroutine(WaitforFadeOut());
     }
 
     public void NewGame()
     {
+        #region saveReset
         Save.CPpos = new Vector3(0, 0, 0);
         Save.Invsave.Clear();
         Save.CScene = 1;
@@ -28,7 +39,12 @@ public class MenuController : MonoBehaviour
         Save.QuickSlot1 = null;
         Save.QuickSlot2 = null;
         Save.QuickSlot3 = null;
-        SceneManager.LoadScene(5);
+        #endregion
+
+        FadeOut.SetActive(true);
+        FadeOutRef.IsSceneTrans = true;
+        
+        StartCoroutine(WaitforFadeOut());
     }
 
     public void QuitGame()
@@ -52,16 +68,9 @@ public class MenuController : MonoBehaviour
         }
     }
 
-    IEnumerator LoadScene()
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(Save.CScene);
-
-        while (operation.isDone == false)
-        {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-            Debug.Log(progress);
-
-            yield return null;
-        }
+   IEnumerator WaitforFadeOut()
+   {
+        yield return new WaitForSeconds(0.6f);
+        SceneManager.LoadSceneAsync(5);
     }
 }

@@ -76,24 +76,29 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         currentStamina = maxStamina;
-        //knockbackScript = sphere.GetComponent<PlayerController>();
+        
     }
     void Start()
     {
         baseMoveSpeedX = moveSpeedX;
         baseMoveSpeedY = moveSpeedY;
         playerCombatScript = GetComponentInChildren<PlayerCombat>();
-        currentSave = FindObjectOfType<GameController>().Save;
         SpeedBonus = 1;
         Ground = LayerMask.GetMask("Ground");
-        
-        if(currentSave.CPpos != FirstSpawnPos.position)
+        currentSave = FindObjectOfType<GameController>().Save;
+
+    }
+    
+    public void Spawn()
+    {
+        if (currentSave.CPpos != new Vector3(0, 0, 0))
         {
+            Debug.Log("spawnei");
             transform.position = currentSave.CPpos;
         }
     }
-
-    public void speedPotion()
+    
+public void speedPotion()
     {
         StartCoroutine(SpeedBuff());
         Debug.Log("bebeuVeloz");
