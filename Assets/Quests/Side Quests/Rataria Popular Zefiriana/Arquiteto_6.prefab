@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6002438691009459815}
   - component: {fileID: 3824574556837878708}
   m_Layer: 0
-  m_Name: Maestro_6
+  m_Name: Arquiteto_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3c36b93e19669ab419b033e3a57fa940, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9317df3d51f4244984527174fd26e33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,66 +133,7 @@ MonoBehaviour:
     sentences:
     - "Seja bem-vindo ao inferno astral. Me chamo Heitor, em que posso te ajudar,
       senhor\u2026? "
-    - "Rakuran Tempestade, \xE9 um prazer. Alguns ratos est\xE3o come\xE7ando a aparecer
-      em Prometeus\r"
-    - "Entendo\u2026 Converse com a Hildegard, ela pode te ajudar."
-    - "Onde ela est\xE1?"
-    - "Isso eu n\xE3o sei. A paci\xEAncia dela \xE9 menor que a minha e a do Oscar."
-    - "Ah, sim\u2026 eu ouvi uma parte da conversa.\r"
-    - "O que voc\xEA acha?\r"
-    - "Sobre o qu\xEA?\r"
-    - "Sobre tudo isso, acad\xEAmicos paralisados, discutindo, enquanto a popula\xE7\xE3o
-      tem que fazer o trabalho sujo.\r"
-    - "Est\xE1 falando dos draelix?"
-    - "Ah, ent\xE3o voc\xEA os conheceu. Sinceramente, sem eles para ajudar na conten\xE7\xE3o
-      dos n\xFAmeros, Prometeus j\xE1 estaria em quarentena."
-    - "E por que voc\xEAs n\xE3o fazem nada?\r"
-    - "Micael est\xE1 com a jurisdi\xE7\xE3o, ele pode dificultar muito a nossa vida
-      dentro da academia.\r"
-    - "Ah sim, a burocracia. \r(A Academia \xE9 o ganha p\xE3o dessa gente, at\xE9
-      parece que eles v\xE3o se arriscar)\r\n"
-    - "Pois \xE9. Mas ent\xE3o, o que acha?"
-    - "Sou um homem curioso. N\xE3o me entenda mal. At\xE9 consigo entender esse
-      tal de Micael."
-    - "Mas eu n\xE3o quero ver cad\xE1veres se empilhando por conta de ratos grotescos."
-    - "N\xE3o se esque\xE7a dos fagocitantes. Desde que os ratos aumentaram, eles
-      est\xE3o maiores.\r"
-    - "Por qu\xEA?"
-    - Mais comida, mais tamanho.
-    - "Ent\xE3o temos dois problemas.\r"
-    - "Sim, pelo menos descobrimos porque o port\xE3o do teatro quebrou no andar
-      acima.\n"
-    - Foram os ratos?
-    - "N\xE3o, as engrenagens estavam todas gosmentas, azuladas. Deve ter sido alguma
-      coisa grande, que ainda n\xE3o topamos com."
-    - "Entendido. Obrigado pelas informa\xE7\xF5es."
-    - 'De nada, colega. '
     names:
-    - Heitor, o Maestro
-    - Rakuran
-    - Heitor, o Maestro
-    - Rakuran
-    - Heitor, o Maestro
-    - Rakuran
-    - Heitor, o Maestro
-    - Rakuran
-    - Heitor, o Maestro
-    - Rakuran
-    - Heitor, o Maestro
-    - Rakuran
-    - Heitor, o Maestro
-    - Rakuran
-    - Heitor, o Maestro
-    - Rakuran
-    - Rakuran
-    - Heitor, o Maestro
-    - Rakuran
-    - Heitor, o Maestro
-    - Rakuran
-    - Heitor, o Maestro
-    - Rakuran
-    - Heitor, o Maestro
-    - Rakuran
     - Heitor, o Maestro
   Manager: {fileID: 0}
   Falando: 0

@@ -22,4 +22,4 @@ MonoBehaviour:
   weaponType: 0
   Forge: 0
   damage: 0
-  Desc: 
+  Desc: "Se eles n\xE3o podem te pegar, n\xE3o podem te acertar."
