@@ -9,12 +9,13 @@ public class EnemyDamage : MonoBehaviour
     public float knockTime = 1f;
     public float damage;
     public SpriteRenderer enemySpriteRend;
+
     
     //variaveis que definem a posicao da hitbox estao no EnemyAi script.
     //tem que criar uma função takedamage no player.
-    void Start()
+    void Update()
     {
-        
+        transform.rotation = Quaternion.Euler(0, 0, 0);
     }
     private void OnTriggerEnter(Collider other)
     {

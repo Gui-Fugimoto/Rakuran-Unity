@@ -25,7 +25,7 @@ public class QuestObjectiveTrigger : MonoBehaviour
         questManager = FindObjectOfType<QuestManager>();
         playerInventory = FindObjectOfType<Inventory>();
         dTrigger = GetComponent<DialogueTrigger>();
-        if(objectiveType == ObjectiveType.Defeat)
+        if (objectiveType == ObjectiveType.Defeat)
         {
             enemyHPcontrol = GetComponent<EnemyLife>();
         }
@@ -33,7 +33,7 @@ public class QuestObjectiveTrigger : MonoBehaviour
     private void Awake()
     {
         questManager = FindObjectOfType<QuestManager>();
-        
+
     }
 
     // Update is called once per frame
@@ -58,13 +58,13 @@ public class QuestObjectiveTrigger : MonoBehaviour
                 //Defeat();
                 break;
         }
-            
+
 
     }
 
     public void Talk()
     {
-        if(stage.isDone == false)
+        if (stage.isDone == false)
         {
             if (objectiveType == ObjectiveType.Deliver)
             {
@@ -76,10 +76,10 @@ public class QuestObjectiveTrigger : MonoBehaviour
                 questManager.AdvanceQuestStage(quest);
                 Debug.Log("Quest avançou stage");
             }
-            
-            
+
+
         }
-        
+
 
         //this.enabled = false;
     }
@@ -87,35 +87,35 @@ public class QuestObjectiveTrigger : MonoBehaviour
     public void OnDefeat()
     {
         if (stage.isDone == false)
-        {           
+        {
             stage.isDone = true;
             questManager.AdvanceQuestStage(quest);
             Debug.Log("Quest avançou stage");
-            
+
         }
     }
 
     public void OnDeliver()
     {
-        for(int i = 0; i < quest.qDeliverItems.Count; i++)
+        for (int i = 0; i < quest.qDeliverItems.Count; i++)
         {
             if (playerInventory.itens.Contains(quest.qDeliverItems[i]))
             {
                 playerInventory.RemoveItem(quest.qDeliverItems[i]);
                 quest.qDeliverItems[i] = null;
-                
+
             }
-            
+
         }
         for (int i = 0; i < quest.qDeliverItems.Count; i++)
         {
-            if(quest.qDeliverItems[i] == null)
+            if (quest.qDeliverItems[i] == null)
             {
                 quest.qDeliverItems.Remove(quest.qDeliverItems[i]);
             }
         }
         playerInventory.saveFile.Invsave = new List<ItemParameter>(playerInventory.itens);
-        if(quest.qDeliverItems.Count <= 1 && (quest.qDeliverItems[0] == null || quest.qDeliverItems == null))
+        if (quest.qDeliverItems.Count <= 1 && (quest.qDeliverItems[0] == null || quest.qDeliverItems == null))
         {
             stage.isDone = true;
             questManager.AdvanceQuestStage(quest);
@@ -123,6 +123,35 @@ public class QuestObjectiveTrigger : MonoBehaviour
         else
         {
             dTrigger.fabianoOnce = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (objectiveType == ObjectiveType.WalkRegion)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                if (stage.isDone == false)
+                {
+                    stage.isDone = true;
+                    questManager.AdvanceQuestStage(quest);
+                    Debug.Log("Quest avançou stage");
+
+                }
+            }
+        }
+        
+    }
+
+    public void OnUseItem()
+    {
+        if (stage.isDone == false)
+        {
+            stage.isDone = true;
+            questManager.AdvanceQuestStage(quest);
+            Debug.Log("Quest avançou stage");
+
         }
     }
 }

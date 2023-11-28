@@ -11,7 +11,9 @@ public class EnemyNavMeshAgent : MonoBehaviour
     public float attackRange = 2f;
     public float pursuitRange = 8f;
     public float wanderRange = 10f;
+    public float fleeRange = 0f;
     public float attackCooldown = 2f;
+    public float atkEndDelay = 1f;
 
     private Vector3 wanderTarget;
     private Vector3 initialPosition;
@@ -20,9 +22,10 @@ public class EnemyNavMeshAgent : MonoBehaviour
     public bool isAttacking = false;
 
     public Animator anim;
-    private SpriteRenderer spriteRend;
+    string attackAnim;
+    [HideInInspector]public SpriteRenderer spriteRend;
 
-    private NavMeshAgent navMeshAgent;
+    public NavMeshAgent navMeshAgent;
     private Rigidbody rb;
     [SerializeField] private bool grounded;
     private LayerMask Ground;
@@ -37,7 +40,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
     float pauseDuration = 2f;
     float pauseTimer = 0f;
     bool isPaused = false;
-    float pursuitTimer;
+    public float pursuitTimer;
     [SerializeField] float specialCooldown = 100f;
     public float CDcontrol = 0f;
     public GameObject specialHitBox;
@@ -58,6 +61,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
         wanderTarget.y = transform.position.y;
         Ground = LayerMask.GetMask("Ground");
         Phc = player.GetComponent<PlayerHealthController>();
+        attackAnim = "Attack";
     }
 
     void FixedUpdate()
@@ -88,6 +92,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
                 StartCoroutine(SpecialAttack());
                 break;
             case 6:
+                FleeState();
                 break;
               
         }
@@ -97,11 +102,11 @@ public class EnemyNavMeshAgent : MonoBehaviour
 
         if (spriteRend.flipX == false)
         {
-            hitBox.transform.position = hitBoxPosRight.transform.position;
+            hitBox.transform.position = hitBoxPosLeft.transform.position;
         }
         if (spriteRend.flipX == true)
         {
-            hitBox.transform.position = hitBoxPosLeft.transform.position;
+            hitBox.transform.position = hitBoxPosRight.transform.position;
         }
     }
 
@@ -121,11 +126,11 @@ public class EnemyNavMeshAgent : MonoBehaviour
 
                 if (wanderTarget.x > initialPosition.x)
                 {
-                    spriteRend.flipX = true;
+                    spriteRend.flipX = false;
                 }
                 else if (wanderTarget.x < initialPosition.x)
                 {
-                    spriteRend.flipX = false;
+                    spriteRend.flipX = true;
                 }
                         
 
@@ -145,8 +150,8 @@ public class EnemyNavMeshAgent : MonoBehaviour
         else
         {
             Vector3 direction = wanderTarget - transform.position;
-            bool isMovingRight = direction.x > 0f;
-            spriteRend.flipX = isMovingRight;
+            bool isMovingLeft = direction.x < 0f;
+            spriteRend.flipX = isMovingLeft;
            
             navMeshAgent.SetDestination(wanderTarget);
         }
@@ -170,7 +175,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
         Vector3 directionToPlayer = player.transform.position - transform.position;
 
        if(Phc.IsInv == false)
-        {
+       {
             if (distanceToPlayer < attackRange && Mathf.Abs(directionToPlayer.z) < Mathf.Abs(directionToPlayer.x))
             {
                 currentState = 2;
@@ -182,11 +187,11 @@ public class EnemyNavMeshAgent : MonoBehaviour
 
             if (directionToPlayer.x > 0)
             {
-                spriteRend.flipX = true;
+                spriteRend.flipX = false;
             }
             else if (directionToPlayer.x <= 0)
             {
-                spriteRend.flipX = false;
+                spriteRend.flipX = true;
             }
 
             if (Time.time - pursuitTimer > Random.Range(3f, 8f))
@@ -211,18 +216,19 @@ public class EnemyNavMeshAgent : MonoBehaviour
         }
     }
 
-    void AttackState()
+    protected virtual void AttackState()
     {
         navMeshAgent.isStopped = true;
         if (!isAttacking && timeSinceLastAttack >= attackCooldown)
         {
-            isAttacking = true;
             timeSinceLastAttack = 0f;
-            anim.SetBool("Attack", true);
+            anim.SetTrigger("Attack");
             anim.SetBool("Walk", false);
             hitBox.SetActive(true);
-            StartCoroutine(EndAttack());
+            StartCoroutine(EndAttack(atkEndDelay));
             
+
+
         }
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
@@ -262,7 +268,6 @@ public class EnemyNavMeshAgent : MonoBehaviour
     IEnumerator CooldownState(float duration)
     {
         Debug.Log("stopped");
-        anim.SetBool("Attack", false);
         anim.SetBool("Walk", false);
         navMeshAgent.isStopped = true;
         yield return new WaitForSeconds(duration);
@@ -292,7 +297,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
         {
             isAttacking = true;
             timeSinceLastAttack = 0;
-            anim.SetBool("Attack", true);
+            anim.SetTrigger("Special");
             anim.SetBool("Walk", false);
             specialHitBox.SetActive(true);
             CDcontrol = 0f;
@@ -302,31 +307,43 @@ public class EnemyNavMeshAgent : MonoBehaviour
             navMeshAgent.enabled = false;
             
             rb.AddForce(directionToPlayer * 20f, ForceMode.Impulse);
-            anim.SetBool("Attack", false);
             yield return new WaitForSeconds(2f);
             navMeshAgent.enabled = true;
             rb.isKinematic = true;
-            StartCoroutine(EndAttack());
+            StartCoroutine(EndAttack(atkEndDelay));
             
         }
         
     }
 
-    void FleeState()
+    public void FleeState()
     {
         //this stage goes to pursuit - pursuit goes to attack
+        navMeshAgent.isStopped = false;
+        anim.SetBool("Walk", true);
+
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        Vector3 directionToPlayer = player.transform.position - transform.position;
+        Vector3 awayFromPlayerDestination = transform.position - directionToPlayer.normalized * distanceToPlayer;
+        navMeshAgent.SetDestination(awayFromPlayerDestination);
         //attackstate brings to this if player is too close
         //attack range is big easily enters it
         //need a flee range smaller than attack range to come here
         //melee enemies should have flee range = 0
+
+        if (distanceToPlayer > fleeRange)
+        {
+            pursuitTimer = Time.time;
+            currentState = 1;
+        }
+      
     }
 
 
-    public IEnumerator EndAttack()
+    public IEnumerator EndAttack(float dur)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(dur);
         isAttacking = false;
-        anim.SetBool("Attack", false);
         hitBox.SetActive(false);
         specialHitBox.SetActive(false);
         currentState = 4;
@@ -334,15 +351,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
 
     public void Knockback(Vector3 direction, float force, float duration)
     {
-        /*
-        Vector3 horizontal = direction.x * transform.forward;
-        Vector3 vertical = direction.y * transform.up;
-        Vector3 newDirection = new Vector3(horizontal.x, -vertical.y, 0);
-        Vector3 knockbackVector = (newDirection.normalized * force);
-        Debug.Log("lançado");
-        StartCoroutine(MoveOverTime(knockbackVector, duration));
-        */
-        
+         
         navMeshAgent.enabled = false;
         rb.isKinematic = false;
         direction.Normalize();
@@ -351,22 +360,24 @@ public class EnemyNavMeshAgent : MonoBehaviour
         rb.AddForce(direction * force, ForceMode.Impulse);        
         StartCoroutine(ResetKnockback(duration));
         
+        
     }
     IEnumerator ResetKnockback(float dur)
     {
-       
         yield return new WaitForSeconds(dur);
-        
+
         while (grounded)
         {
             yield return new WaitForEndOfFrame();
             navMeshAgent.enabled = true;
             rb.isKinematic = true;
             Debug.Log("chegou aqui");
-        }
-        
-        
-        
+            if (fleeRange != 0)
+            {
+                currentState = 6;
+            }
+            break;
+        }   
     }
 
     void CheckGrounded()
@@ -396,6 +407,15 @@ public class EnemyNavMeshAgent : MonoBehaviour
         {
             Phc.EnterCombat();           
         }
+    }
+
+    public bool IsPlaying(Animator anim, string stateName)
+    {
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag(stateName) &&
+            anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+            return true;
+        else
+            return false;
     }
 }
 

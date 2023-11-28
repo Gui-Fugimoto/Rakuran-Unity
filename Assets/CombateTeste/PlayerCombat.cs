@@ -163,7 +163,7 @@ public class PlayerCombat : MonoBehaviour
         {
             CancelInvoke("EndCombo");
 
-            if (Time.time - lastClickedTime >= basicLightCombo[basicComboCounter].startUp)
+            if (Time.time - lastClickedTime >= basicLightCombo[basicComboCounter].startUp && isAttacking == false)
             {
                 anim.runtimeAnimatorController = basicLightCombo[basicComboCounter].animatorOV;
                 //animationSpeed = basicLightCombo[basicComboCounter].animSpeed;
@@ -201,11 +201,11 @@ public class PlayerCombat : MonoBehaviour
         upwardHeavyComboCounter = 0;
         downwardHeavyComboCounter = 0;
         jumpingHeavyComboCounter = 0;
-        if (Time.time - lastComboEnd > 0.5f && upwardComboCounter <= upwardLightCombo.Count)
+        if (Time.time - lastComboEnd > upwardLightCombo[upwardComboCounter].endLag && upwardComboCounter <= upwardLightCombo.Count)
         {
             CancelInvoke("EndCombo");
 
-            if (Time.time - lastClickedTime >= 0.5f)
+            if (Time.time - lastClickedTime >= 0.5f && isAttacking == false)
             {
                 anim.runtimeAnimatorController = upwardLightCombo[upwardComboCounter].animatorOV;
                 anim.Play("Attack", 0, 0);
@@ -216,7 +216,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.audioClip = upwardLightCombo[upwardComboCounter].audioClip;
                 hitboxGameObj.transform.localScale = new Vector3(upwardLightCombo[upwardComboCounter].hboxXScale, upwardLightCombo[upwardComboCounter].hboxYScale, hbZDefault);
                 hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, upwardLightCombo[upwardComboCounter].hboxYPos, 0);
-                equippedWeapon.EnableTriggerBox();
+                //equippedWeapon.EnableTriggerBox();
                 upwardComboCounter++;
                 lastClickedTime = Time.time;
                 audioSource.clip = equippedWeapon.audioClip;
@@ -239,11 +239,11 @@ public class PlayerCombat : MonoBehaviour
         upwardHeavyComboCounter = 0;
         downwardHeavyComboCounter = 0;
         jumpingHeavyComboCounter = 0;
-        if (Time.time - lastComboEnd > 0.5f && downwardComboCounter <= downwardLightCombo.Count)
+        if (Time.time - lastComboEnd > downwardLightCombo[downwardComboCounter].endLag && downwardComboCounter <= downwardLightCombo.Count)
         {
             CancelInvoke("EndCombo");
 
-            if (Time.time - lastClickedTime >= 0.5f)
+            if (Time.time - lastClickedTime >= 0.5f && isAttacking == false)
             {
                 anim.runtimeAnimatorController = downwardLightCombo[downwardComboCounter].animatorOV;
                 anim.Play("Attack", 0, 0);
@@ -254,7 +254,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.audioClip = downwardLightCombo[downwardComboCounter].audioClip;
                 hitboxGameObj.transform.localScale = new Vector3(downwardLightCombo[downwardComboCounter].hboxXScale, downwardLightCombo[downwardComboCounter].hboxYScale, hbZDefault);
                 hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, downwardLightCombo[downwardComboCounter].hboxYPos, 0);
-                equippedWeapon.EnableTriggerBox();
+                //equippedWeapon.EnableTriggerBox();
                 downwardComboCounter++;
                 lastClickedTime = Time.time;
                 audioSource.clip = equippedWeapon.audioClip;
@@ -276,11 +276,11 @@ public class PlayerCombat : MonoBehaviour
         upwardHeavyComboCounter = 0;
         downwardHeavyComboCounter = 0;
         jumpingHeavyComboCounter = 0;
-        if (Time.time - lastComboEnd > 0.5f && jumpingComboCounter <= jumpingLightCombo.Count)
+        if (Time.time - lastComboEnd > jumpingLightCombo[jumpingComboCounter].endLag && jumpingComboCounter <= jumpingLightCombo.Count)
         {
             CancelInvoke("EndCombo");
 
-            if (Time.time - lastClickedTime >= 0.5f)
+            if (Time.time - lastClickedTime >= 0.5f && isAttacking == false)
             {
                 anim.runtimeAnimatorController = jumpingLightCombo[jumpingComboCounter].animatorOV;
                 anim.Play("Attack", 0, 0);
@@ -291,7 +291,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.audioClip = jumpingLightCombo[jumpingComboCounter].audioClip;
                 hitboxGameObj.transform.localScale = new Vector3(jumpingLightCombo[jumpingComboCounter].hboxXScale, jumpingLightCombo[jumpingComboCounter].hboxYScale, hbZDefault);
                 hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, jumpingLightCombo[jumpingComboCounter].hboxYPos, 0);
-                equippedWeapon.EnableTriggerBox();
+                //equippedWeapon.EnableTriggerBox();
                 jumpingComboCounter++;
                 lastClickedTime = Time.time;
                 audioSource.clip = equippedWeapon.audioClip;
@@ -314,11 +314,11 @@ public class PlayerCombat : MonoBehaviour
         upwardHeavyComboCounter = 0;
         downwardHeavyComboCounter = 0;
         jumpingHeavyComboCounter = 0;
-        if (Time.time - lastComboEnd > 0.5f && basicHeavyComboCounter <= basicHeavyCombo.Count)
+        if (Time.time - lastComboEnd > basicHeavyCombo[basicHeavyComboCounter].endLag && basicHeavyComboCounter <= basicHeavyCombo.Count)
         {
             CancelInvoke("EndCombo");
 
-            if (Time.time - lastClickedTime >= 0.5f)
+            if (Time.time - lastClickedTime >= 0.5f && isAttacking == false)
             {
                 anim.runtimeAnimatorController = basicHeavyCombo[basicHeavyComboCounter].animatorOV;
                 anim.Play("Attack", 0, 0);
@@ -329,7 +329,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.audioClip = basicHeavyCombo[basicHeavyComboCounter].audioClip;
                 hitboxGameObj.transform.localScale = new Vector3(basicHeavyCombo[basicHeavyComboCounter].hboxXScale, basicHeavyCombo[basicHeavyComboCounter].hboxYScale, hbZDefault);
                 hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, basicHeavyCombo[basicHeavyComboCounter].hboxYPos, 0);
-                equippedWeapon.EnableTriggerBox();
+                //equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 basicHeavyComboCounter++;
                 lastClickedTime = Time.time;
@@ -353,11 +353,11 @@ public class PlayerCombat : MonoBehaviour
         basicHeavyComboCounter = 0;
         downwardHeavyComboCounter = 0;
         jumpingHeavyComboCounter = 0;
-        if (Time.time - lastComboEnd > 0.5f && upwardHeavyComboCounter <= upwardHeavyCombo.Count)
+        if (Time.time - lastComboEnd > upwardHeavyCombo[upwardHeavyComboCounter].endLag && upwardHeavyComboCounter <= upwardHeavyCombo.Count)
         {
             CancelInvoke("EndCombo");
 
-            if (Time.time - lastClickedTime >= 0.5f)
+            if (Time.time - lastClickedTime >= 0.5f && isAttacking == false)
             {
                 anim.runtimeAnimatorController = upwardHeavyCombo[upwardHeavyComboCounter].animatorOV;
                 anim.Play("Attack", 0, 0);
@@ -368,7 +368,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.audioClip = upwardHeavyCombo[upwardHeavyComboCounter].audioClip;
                 hitboxGameObj.transform.localScale = new Vector3(upwardHeavyCombo[upwardHeavyComboCounter].hboxXScale, upwardHeavyCombo[upwardHeavyComboCounter].hboxYScale, hbZDefault);
                 hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, upwardHeavyCombo[upwardHeavyComboCounter].hboxYPos, 0);
-                equippedWeapon.EnableTriggerBox();
+                //equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 upwardHeavyComboCounter++;
                 lastClickedTime = Time.time;
@@ -392,11 +392,11 @@ public class PlayerCombat : MonoBehaviour
         basicHeavyComboCounter = 0;
         upwardHeavyComboCounter = 0;
         jumpingHeavyComboCounter = 0;
-        if (Time.time - lastComboEnd > 0.5f && downwardHeavyComboCounter <= downwardHeavyCombo.Count)
+        if (Time.time - lastComboEnd > downwardHeavyCombo[downwardHeavyComboCounter].endLag && downwardHeavyComboCounter <= downwardHeavyCombo.Count)
         {
             CancelInvoke("EndCombo");
 
-            if (Time.time - lastClickedTime >= 0.5f)
+            if (Time.time - lastClickedTime >= 0.5f && isAttacking == false)
             {
                 anim.runtimeAnimatorController = downwardHeavyCombo[downwardHeavyComboCounter].animatorOV;
                 anim.Play("Attack", 0, 0);
@@ -407,7 +407,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.audioClip = downwardHeavyCombo[downwardHeavyComboCounter].audioClip;
                 hitboxGameObj.transform.localScale = new Vector3(downwardHeavyCombo[downwardHeavyComboCounter].hboxXScale, downwardHeavyCombo[downwardHeavyComboCounter].hboxYScale, hbZDefault);
                 hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, downwardHeavyCombo[downwardHeavyComboCounter].hboxYPos, 0);
-                equippedWeapon.EnableTriggerBox();
+                //equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 downwardHeavyComboCounter++;
                 lastClickedTime = Time.time;
@@ -431,11 +431,11 @@ public class PlayerCombat : MonoBehaviour
         basicHeavyComboCounter = 0;
         upwardHeavyComboCounter = 0;
         downwardHeavyComboCounter = 0;
-        if (Time.time - lastComboEnd > 0.5f && jumpingHeavyComboCounter <= jumpingHeavyCombo.Count)
+        if (Time.time - lastComboEnd > jumpingHeavyCombo[jumpingHeavyComboCounter].endLag && jumpingHeavyComboCounter <= jumpingHeavyCombo.Count)
         {
             CancelInvoke("EndCombo");
 
-            if (Time.time - lastClickedTime >= 0.5f)
+            if (Time.time - lastClickedTime >= 0.5f && isAttacking == false)
             {
                 anim.runtimeAnimatorController = jumpingHeavyCombo[jumpingHeavyComboCounter].animatorOV;
                 anim.Play("Attack", 0, 0);
@@ -446,7 +446,7 @@ public class PlayerCombat : MonoBehaviour
                 equippedWeapon.audioClip = jumpingHeavyCombo[jumpingHeavyComboCounter].audioClip;
                 hitboxGameObj.transform.localScale = new Vector3(jumpingHeavyCombo[jumpingHeavyComboCounter].hboxXScale, jumpingHeavyCombo[jumpingHeavyComboCounter].hboxYScale, hbZDefault);
                 hitboxGameObj.transform.localPosition = new Vector3(hitboxGameObj.transform.localPosition.x, jumpingHeavyCombo[jumpingHeavyComboCounter].hboxYPos, 0);
-                equippedWeapon.EnableTriggerBox();
+                //equippedWeapon.EnableTriggerBox();
                 //Knockback();
                 jumpingHeavyComboCounter++;
                 lastClickedTime = Time.time;

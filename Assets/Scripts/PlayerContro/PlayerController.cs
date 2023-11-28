@@ -151,7 +151,7 @@ public void speedPotion()
 
     private void FixedUpdate()
     {
-        if(InInventory == false)
+        if(InInventory == false && !playerCombatScript.isAttacking)
         {
             Jump();
             grounded = Grounded();
@@ -199,13 +199,13 @@ public void speedPotion()
 
 
         //Controla a dire��o do sprite quando o player est� se movendo
-        if (turnAxis != 0 && turnAxis < 0)
+        if (turnAxis != 0 && turnAxis < 0 && !playerCombatScript.isAttacking)
         {
             playerSprite.flipX = true;
             anim.SetBool("animMove", true);
             flipped = true;
         }
-        else if (turnAxis != 0 && turnAxis > 0)
+        else if (turnAxis != 0 && turnAxis > 0 && !playerCombatScript.isAttacking)
         {
             playerSprite.flipX = false;
             anim.SetBool("animMove", true);
