@@ -5,6 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     #region variáveis
+
+    public AudioSource audSource;
+    public AudioClip walkSound;
+    public AudioClip runSound;
+    public AudioClip jumpSound;
+    public AudioClip dashSound;
+    private bool playWalkSound = false;
+
     private string moveInputAxis = "Vertical";
     private string turnInputAxis = "Horizontal";
 
@@ -151,11 +159,12 @@ public void speedPotion()
             controller.Move(movement * Time.deltaTime);
         }
 
+        
+        WalkSound();
     }
-
     private void FixedUpdate()
     {
-        if(InInventory == false && !playerCombatScript.isAttacking)
+        if (InInventory == false && !playerCombatScript.isAttacking)
         {
             Jump();
             grounded = Grounded();
@@ -194,11 +203,15 @@ public void speedPotion()
         if (moveAxis != 0)
         {
             anim.SetBool("animMove", true);
-            
+            playWalkSound = true;
         }
         else if (moveAxis == 0)
         {
             anim.SetBool("animMove", false);
+            if(turnAxis == 0)
+            {
+                playWalkSound = false;
+            }
         }
 
 
@@ -208,14 +221,48 @@ public void speedPotion()
             playerSprite.flipX = true;
             anim.SetBool("animMove", true);
             flipped = true;
+            playWalkSound = true;
         }
         else if (turnAxis != 0 && turnAxis > 0 && !playerCombatScript.isAttacking)
         {
             playerSprite.flipX = false;
             anim.SetBool("animMove", true);
             flipped = false;
+            playWalkSound = true;
+        }
+        else if (turnAxis == 0)
+        {
+            if(moveAxis == 0)
+            {
+                playWalkSound = false;
+            }
         }
 
+    }
+
+    void WalkSound()
+    {
+        switch (isSprinting)
+        {
+            case true:
+                if (!audSource.isPlaying && grounded)
+                {
+                    audSource.clip = runSound;
+                    audSource.Play();
+                }
+                break;
+            case false:
+                if (playWalkSound == false && audSource.isPlaying)
+                {
+                    audSource.Stop();
+                }
+                else if (playWalkSound == true && !audSource.isPlaying && grounded)
+                {
+                    audSource.clip = walkSound;
+                    audSource.Play(0);
+                }
+                break;
+        }        
     }
 
 
@@ -314,6 +361,7 @@ public void speedPotion()
 
                 anim.SetBool("Run", true);
                 //anim.SetBool("sprintCharge", false);
+                
             }
         }
         else if (Input.GetKeyUp(KeyCode.LeftControl))
@@ -347,7 +395,9 @@ public void speedPotion()
                 verticalVelocity = jumpForce;
                 slopeNormal = Vector3.up;
                 anim.SetTrigger("Jump");
-                
+                audSource.clip = jumpSound;
+                audSource.Play();
+
             }
         }
         else
@@ -375,6 +425,8 @@ public void speedPotion()
 
         if (Input.GetKeyDown(dodgeKey) && !isRolling && UseStamina(staminaCost))
         {
+            audSource.clip = dashSound;
+            audSource.Play();
             // Calculate the direction of the roll based on the player's movement direction
             Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             if (movementDirection.magnitude > 0)
