@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class CheckPoint : MonoBehaviour
@@ -11,6 +12,7 @@ public class CheckPoint : MonoBehaviour
     public Inventory pInv;
     public PlayerCombat WeaponFinder;
     public quickslotRef fodase;
+    public GameObject foguinho;
     [SerializeField] KeyCode Interact;
     
     private void Start()
@@ -40,7 +42,7 @@ public class CheckPoint : MonoBehaviour
     {
         if (Input.GetKeyDown(Interact) && Activate == true)
         {
-            Save.CPpos = gameObject.transform.position;
+            Save.CPpos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1.2f, gameObject.transform.position.z - 1.5f);
             Save.Invsave = new List<ItemParameter>(pInv.itens);
             Save.Arma1 = WeaponFinder.mainWeapon.item;
             Save.Arma2 = WeaponFinder.offhandWeapon.item;
@@ -53,6 +55,17 @@ public class CheckPoint : MonoBehaviour
             
             
             Debug.Log("cena salva" + Save.CScene);
+        }
+
+        if(Save.CPpos == new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1.2f, gameObject.transform.position.z - 1.5f)) 
+        {
+            foguinho.SetActive(true);
+
+         
+        }
+        else
+        {
+            foguinho.SetActive(false);
         }
     }
 }
