@@ -136,8 +136,20 @@ public void speedPotion()
                 DodgeRoll();
             }
            
-        }       
-       
+        }
+        if (InInventory == false && !playerCombatScript.isAttacking)
+        {
+            Jump();
+            grounded = Grounded();
+            if (!grounded)
+            {
+                isJumping = true;
+            }
+            else
+            {
+                isJumping = false;
+            }
+        }
 
         if (Input.GetAxis(turnInputAxis) == 0 && Input.GetAxis(moveInputAxis) == 0)
         {
@@ -163,19 +175,7 @@ public void speedPotion()
 
     private void Update()
     {
-        if(InInventory == false && !playerCombatScript.isAttacking)
-        {
-            Jump();
-            grounded = Grounded();
-            if (!grounded)
-            {
-                isJumping = true;
-            }
-            else
-            {
-                isJumping = false;
-            }
-        }
+        
     }
 
     private void Move(bool canmove)
