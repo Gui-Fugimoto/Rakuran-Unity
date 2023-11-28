@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77a5efe685e8b7540acb3bbb0cd41c73, type: 3}
+  m_Name: SampleQuest
+  m_EditorClassIdentifier: 
+  qName: "Lost Andr\xE9"
+  qStage:
+  - {fileID: 11400000, guid: 7f9e9a200c3b376459dd069d50c68d10, type: 2}
+  - {fileID: 11400000, guid: c020434cbb6dcc74f92357073fdcd69f, type: 2}
+  - {fileID: 11400000, guid: 951838a5f2fb7f44085f77dff54162f6, type: 2}
+  - {fileID: 11400000, guid: 68a919c3285f4bf4588196ccf609e25b, type: 2}
+  stageIndex: 3
+  qDescription: "Trouxe o Andr\xE9 de volta para seu dono, Vico"
+  qSpawnList:
+  - {fileID: 183850206162880897, guid: 27beaa00e3f8019469b75d1d99611b20, type: 3}
+  - {fileID: 7598119971960453014, guid: 865d12a13084d5649ad8849aae26f2da, type: 3}
+  qDeliverItems: []
+  qReceiveItems:
+  - {fileID: 11400000, guid: 61c8cee218efe914aa5090757af06f66, type: 2}
