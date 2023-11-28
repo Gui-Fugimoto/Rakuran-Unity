@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77a5efe685e8b7540acb3bbb0cd41c73, type: 3}
+  m_Name: Test2_Q
+  m_EditorClassIdentifier: 
+  qName: Test 2
+  qStage:
+  - {fileID: 11400000, guid: 0f8254c962b84674ea25b89a146dd7f6, type: 2}
+  - {fileID: 11400000, guid: d6d00383993fda64c84297a6e87a9707, type: 2}
+  stageIndex: 0
+  qDescription: 
+  qSpawnList:
+  - {fileID: 4639956093964706647, guid: 126aac8d8991ca94188e2ac0fa8884f4, type: 3}
