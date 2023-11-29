@@ -27,7 +27,7 @@ public class AnimEventHitbox : MonoBehaviour
         }
         if (enGranadier != null)
         {
-            enGranadier.EnableHitbox();
+            enGranadier.InstTiro();
         }
 
     }
@@ -43,7 +43,7 @@ public class AnimEventHitbox : MonoBehaviour
         }
         if (enGranadier != null)
         {
-            enGranadier.EnableSpecialHitbox();
+            enGranadier.InstRocketPrefab();
         }
     }
     public void AnimDisableHitbox()
@@ -74,7 +74,7 @@ public class AnimEventHitbox : MonoBehaviour
         }
         if (enGranadier != null)
         {
-            enGranadier.DisableSpecialHitbox();
+            enGranadier.SpecialExit();
         }
     }
 

@@ -48,15 +48,14 @@ public class EnemyGranadier : EnemyNavMeshAgent
         CDcontrol = 0f;
         anim.SetTrigger("Special");
         anim.SetBool("Walk", false);
-        yield return new WaitForSeconds(1f);
-        GameObject followObject = Instantiate(rocketTargetPrefab, player.transform.position, Quaternion.identity);
-        Debug.Log("Instanciou");
         yield return new WaitForSeconds(5f);
-        StartCoroutine(SpecialExit());
         //animação nova
     }
-
-    IEnumerator SpecialExit()
+    public void InstRocketPrefab()
+    {
+        GameObject followObject = Instantiate(rocketTargetPrefab, player.transform.position, Quaternion.identity);
+    }
+    public IEnumerator SpecialExit()
     {
         //StartCoroutine(EndAttack(atkEndDelay));
         yield return new WaitForSeconds(0.5f);
@@ -70,5 +69,11 @@ public class EnemyGranadier : EnemyNavMeshAgent
             once = false;
             GameObject tiroObject = Instantiate(projetilBasico, transform.position, Quaternion.identity);
         }
+    }
+
+    public void SairAttack()
+    {
+        isAttacking = false;
+        currentState = 1;
     }
 }

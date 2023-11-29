@@ -5,7 +5,7 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour
 {
     public List<QuestObject> Quests;
-    public int currentStageIndex = 0;
+    public int currentStageIndex;
     public GameObject player;
     private Inventory inventory;
 
