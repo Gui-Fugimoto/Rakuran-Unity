@@ -367,6 +367,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
     }
     public void DisableSpecialHitbox()
     {
+        isAttacking = true;
         specialHitBox.SetActive(false);
         navMeshAgent.enabled = true;
         rb.isKinematic = true;

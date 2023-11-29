@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: HMR_H_D1
   m_EditorClassIdentifier: 
   animatorOV: {fileID: 0}
-  damageMultiplier: 0
+  damageMultiplier: 1.2
   kbForce: 0
   kbDuration: 0
   kbDirection: {x: 0, y: 0, z: 0}
   animSpeed: 0
   endLag: 0.5
   startUp: 0.5
+  hboxYPos: 0
+  hboxXScale: 0
+  hboxYScale: 0
   audioClip: {fileID: 8300000, guid: a2fd0f4c57590da42817c4c08ec07084, type: 3}
