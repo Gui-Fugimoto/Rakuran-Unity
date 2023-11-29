@@ -10,6 +10,7 @@ public class levelloader : MonoBehaviour
     public SaveFile save;
     public int ScenetoLoad;
     public Button loadButton;
+    public float progress;
     public GameObject Continue;
     public AsyncOperation asyncLoad;
     public GameObject FadeOut;
@@ -25,6 +26,9 @@ public class levelloader : MonoBehaviour
 
     private void Update()
     {
+
+        progress = Mathf.Clamp01(asyncLoad.progress / .9f);
+
         if (asyncLoad.progress >= 0.7)
         {
             Continue.SetActive(true);
