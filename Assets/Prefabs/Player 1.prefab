@@ -574,12 +574,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 32ccc6a7b7c554240b30eedb3dc3488e, type: 2}
   swordHeavyBasicCombo:
   - {fileID: 11400000, guid: a332318e2ae0bbd47b770fa54c545d65, type: 2}
+  - {fileID: 11400000, guid: 83a6cbe812a49b74ea5e75928426540c, type: 2}
   swordHeavyUpwardCombo:
   - {fileID: 11400000, guid: b58f962549daf93459c05a5a2f0134d0, type: 2}
   swordHeavyDownwardCombo:
   - {fileID: 11400000, guid: 89b608e4b752cf4469f24b5648c52450, type: 2}
   swordHeavyJumpingCombo:
   - {fileID: 11400000, guid: e0f830de33a8bf449bd177af26f80ab2, type: 2}
+  - {fileID: 11400000, guid: deeaf7d3d11dade429b3bbfbe635fb74, type: 2}
   hammerLightBasicCombo:
   - {fileID: 11400000, guid: 83f9ea84626640e4cb9cb80ed41c239d, type: 2}
   - {fileID: 11400000, guid: e345127089bfac54abe409e073b7fc93, type: 2}
@@ -590,14 +592,15 @@ MonoBehaviour:
   hammerLightJumpingCombo:
   - {fileID: 11400000, guid: 0738b3dd1cdd3694485a1c891f6fb8f4, type: 2}
   hammerHeavyBasicCombo:
-  - {fileID: 11400000, guid: 83f9ea84626640e4cb9cb80ed41c239d, type: 2}
-  - {fileID: 11400000, guid: e345127089bfac54abe409e073b7fc93, type: 2}
+  - {fileID: 11400000, guid: e0f171ec31e3adf41865698ec8915042, type: 2}
+  - {fileID: 11400000, guid: 65c23d41edfb1aa4ab76a29f09186520, type: 2}
   hammerHeavyUpwardCombo:
-  - {fileID: 11400000, guid: e94ea326d8ba5724db0e110a72b1cbc8, type: 2}
+  - {fileID: 11400000, guid: c674c590762bc864f9221a54bdaedd60, type: 2}
   hammerHeavyDownwardCombo:
-  - {fileID: 11400000, guid: 453ec67c3ff77d348a71ae0f708e07fa, type: 2}
+  - {fileID: 11400000, guid: dabcebb10dcc76243b96b3bff4020c15, type: 2}
   hammerHeavyJumpingCombo:
-  - {fileID: 11400000, guid: 0738b3dd1cdd3694485a1c891f6fb8f4, type: 2}
+  - {fileID: 11400000, guid: d93b48e320ec3874d893115790d138c7, type: 2}
+  - {fileID: 11400000, guid: 670cf05f982fcc74f84f4d7439f90dfe, type: 2}
   polearmLightBasicCombo: []
   polearmLightUpwardCombo: []
   polearmLightDownwardCombo: []

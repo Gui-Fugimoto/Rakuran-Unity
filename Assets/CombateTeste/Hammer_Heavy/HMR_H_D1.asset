@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee5f8133daa5ae49bfff9d092e5edcf, type: 3}
   m_Name: HMR_H_D1
   m_EditorClassIdentifier: 
-  animatorOV: {fileID: 0}
+  animatorOV: {fileID: 22100000, guid: 479675bf19600264a867aed1150bdee1, type: 2}
   damageMultiplier: 1.2
   kbForce: 0
   kbDuration: 0
@@ -20,7 +20,7 @@ MonoBehaviour:
   animSpeed: 0
   endLag: 0.5
   startUp: 0.5
-  hboxYPos: 0
-  hboxXScale: 0
-  hboxYScale: 0
+  hboxYPos: -0.1
+  hboxXScale: 1.75
+  hboxYScale: 2
   audioClip: {fileID: 8300000, guid: a2fd0f4c57590da42817c4c08ec07084, type: 3}
