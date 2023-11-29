@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee5f8133daa5ae49bfff9d092e5edcf, type: 3}
   m_Name: SWR_H_B2
   m_EditorClassIdentifier: 
-  animatorOV: {fileID: 22100000, guid: 8adb0940cbadc4f4ca0dcdd14bb6f5c6, type: 2}
+  animatorOV: {fileID: 22100000, guid: 172deee5f59b90e418be2b2b4827f719, type: 2}
   damageMultiplier: 0.75
   kbForce: 2
   kbDuration: 0.4
