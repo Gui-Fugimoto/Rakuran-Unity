@@ -1126,7 +1126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ad6a4eddfa2b44ca0912de9694b8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Save: {fileID: 0}
+  Save: {fileID: 11400000, guid: 8422ed53e4f7e454691406b63022998c, type: 2}
   FadeOut: {fileID: 867159279}
   AlqGuide: []
   ContinueButton: {fileID: 0}
