@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageNo: 4
   sDescription: 
-  sSpawnList: []
+  sSpawnList:
+  - {fileID: 3406626349666786834, guid: 533472a137ee1194181fe1e5d466d4ff, type: 3}
   sDeliverItems: []
   sReceiveItems: []
   addedDescription: 0

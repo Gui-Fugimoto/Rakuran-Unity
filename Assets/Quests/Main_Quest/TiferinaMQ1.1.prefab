@@ -521,7 +521,7 @@ Animator:
   m_GameObject: {fileID: 5597574609684328766}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ed6a73fc27ff0004e92d8d87ff519500, type: 2}
+  m_Controller: {fileID: 9100000, guid: a5fbd9cf8ebe8e946953b0931108d0cc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -544,6 +544,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enNavMeshAgent: {fileID: 0}
+  enSimples: {fileID: 0}
+  enGranadier: {fileID: 0}
 --- !u!1 &5597574610010370338
 GameObject:
   m_ObjectHideFlags: 0

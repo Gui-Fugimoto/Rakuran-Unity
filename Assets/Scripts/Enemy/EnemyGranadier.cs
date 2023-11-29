@@ -16,7 +16,7 @@ public class EnemyGranadier : EnemyNavMeshAgent
             isAttacking = true;
             timeSinceLastAttack = 0f;
             anim.SetTrigger("Attack");
-            InstTiro();
+            
             //StartCoroutine(EndAttack(atkEndDelay));         
         }
 
@@ -63,7 +63,7 @@ public class EnemyGranadier : EnemyNavMeshAgent
         once = true;
     }
 
-    void InstTiro()
+    public void InstTiro()
     {
         if (once)
         {
