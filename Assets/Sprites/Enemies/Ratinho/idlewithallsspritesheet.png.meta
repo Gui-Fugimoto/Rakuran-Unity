@@ -1,0 +1,1025 @@
+fileFormatVersion: 2
+guid: 9cdb057724ab0e84bab3404e2510d921
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 1918
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90c581ae265b4745a89f5468dfa348b
+      internalID: 418045709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1918
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed9397b65279eb488a425bf3a934a2e
+      internalID: -345576821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 1918
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b56b4a4ccabb94eb30c2f6757ec7ae
+      internalID: 1713286621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1918
+        width: 25
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6e7cdb6ebfea94eb9e732aef16c20f
+      internalID: -1773188285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1918
+        width: 25
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08259ba7406a0154cab12b49a955b325
+      internalID: -645957726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1918
+        width: 25
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81710d6e4eea18042bffc9acef2eae15
+      internalID: -67204104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 1918
+        width: 25
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d917bddd912c3445a296d2be1f33c6a
+      internalID: -1753556353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1918
+        width: 24
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d34084286bc6944cb205760d7e73430
+      internalID: -1172189474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1662
+        width: 24
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140ed424ade6c234cba650a6a1c7b877
+      internalID: 1792735921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1662
+        width: 24
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0cce469a97a3e44bb9146af63fbf38
+      internalID: 1825246008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1662
+        width: 24
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2f7b0a84bdeb24f82f11bd796a26b3
+      internalID: 832662017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 1662
+        width: 24
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a37e16a2819b1a4db95b32e12104ae8
+      internalID: -1417017222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1662
+        width: 25
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbf2b552d1c17a4e8784f21899f7fd5
+      internalID: 1688271647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1662
+        width: 25
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce988d9c1ff7004ea01a4ce132bbe9d
+      internalID: -909920077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 1662
+        width: 24
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bda71372f9d101439644c4b6bcb00b7
+      internalID: -754832565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 1662
+        width: 25
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c2231394fed56409e94c81db406c2a
+      internalID: -1316940938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 1406
+        width: 24
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebef312dd5f73b149b902c36c9927533
+      internalID: 63048018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1406
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca7ec48f66cc464f8207bdcf1d4aa5a
+      internalID: -966460315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 1406
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5462856ca07e4a04cbe2ad43ce634a02
+      internalID: -279352197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 1406
+        width: 25
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b787479dce6224cafe7a7afecd73c8
+      internalID: -1900654724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 1406
+        width: 25
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55267ace0e1d58a4d962674ea89ca524
+      internalID: 1104939114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 1406
+        width: 25
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eedf677fc3db6894a9c13faea49024ce
+      internalID: -574381038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1406
+        width: 25
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3e78efde4fa1b42b6f8410cc9cda1b
+      internalID: 1785816087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1907
+        y: 1406
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5bd673c4fad914c9f020ab3a66f87b
+      internalID: 401473607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 1150
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74f940b762c3f6408a485a02f265d32
+      internalID: 1435774186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1150
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd691670194f5e4ca6e9b06e7e5eb6c
+      internalID: -1752546037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 1150
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54429ff0e0a20f64db670d1dd68b7666
+      internalID: -61245557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 1150
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e83f259a9a81b43bc6d404b18e9338
+      internalID: 1228426503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 1150
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff32ec819926ff14d9ac5d63a3b0c573
+      internalID: -446095415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 1150
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b1b66d03f7d78489486f4999be8dd4
+      internalID: 18832098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1150
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905230fbe9d74354bb1745319b6b1343
+      internalID: -1814675971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 1907
+        y: 1150
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d890cfd7605dbbf4b81c63b5fe80f808
+      internalID: 311856935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 894
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3229b6d4b8719d4ab7387b05238c032
+      internalID: -691789966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 894
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14ebaf138b0f1748ac5aca0600d6833
+      internalID: -870779234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 894
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47abbd17c892ae648883982716d419de
+      internalID: -2080004191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 894
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb87e1e1ff07e64408babd186d6b305f
+      internalID: 603883258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 894
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2274a4608d16424cb0668afe2ab1e95
+      internalID: 1716209246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 894
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95117ba6506a064c80fe2a57ee2b8e1
+      internalID: 582495950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 894
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be961b0fcff0614ea5d450eb64d0b79
+      internalID: -1902914379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 1907
+        y: 894
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942bc7a126c286248a5519c870857843
+      internalID: 270099424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlewithallsspritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 638
+        width: 26
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61edd76df7c0bb843800190e4a25e414
+      internalID: -1544863310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8f8909c24aa1e6b4db3d84ec2085633f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      idlewithallsspritesheet_4: -645957726
+      idlewithallsspritesheet_29: 18832098
+      idlewithallsspritesheet_20: 1104939114
+      idlewithallsspritesheet_14: -754832565
+      idlewithallsspritesheet_10: 832662017
+      idlewithallsspritesheet_12: 1688271647
+      idlewithallsspritesheet_37: 582495950
+      idlewithallsspritesheet_23: 401473607
+      idlewithallsspritesheet_19: -1900654724
+      idlewithallsspritesheet_0: 418045709
+      idlewithallsspritesheet_38: -1902914379
+      idlewithallsspritesheet_39: 270099424
+      idlewithallsspritesheet_32: -691789966
+      idlewithallsspritesheet_6: -1753556353
+      idlewithallsspritesheet_5: -67204104
+      idlewithallsspritesheet_30: -1814675971
+      idlewithallsspritesheet_9: 1825246008
+      idlewithallsspritesheet_11: -1417017222
+      idlewithallsspritesheet_2: 1713286621
+      idlewithallsspritesheet_8: 1792735921
+      idlewithallsspritesheet_35: 603883258
+      idlewithallsspritesheet_13: -909920077
+      idlewithallsspritesheet_21: -574381038
+      idlewithallsspritesheet_16: 63048018
+      idlewithallsspritesheet_3: -1773188285
+      idlewithallsspritesheet_31: 311856935
+      idlewithallsspritesheet_40: -1544863310
+      idlewithallsspritesheet_36: 1716209246
+      idlewithallsspritesheet_33: -870779234
+      idlewithallsspritesheet_28: -446095415
+      idlewithallsspritesheet_1: -345576821
+      idlewithallsspritesheet_17: -966460315
+      idlewithallsspritesheet_7: -1172189474
+      idlewithallsspritesheet_15: -1316940938
+      idlewithallsspritesheet_27: 1228426503
+      idlewithallsspritesheet_22: 1785816087
+      idlewithallsspritesheet_24: 1435774186
+      idlewithallsspritesheet_25: -1752546037
+      idlewithallsspritesheet_34: -2080004191
+      idlewithallsspritesheet_26: -61245557
+      idlewithallsspritesheet_18: -279352197
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
