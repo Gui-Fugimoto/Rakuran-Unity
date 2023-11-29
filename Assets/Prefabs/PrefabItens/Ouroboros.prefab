@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7769855078679536235}
   - component: {fileID: 4593780132229428127}
   m_Layer: 0
-  m_Name: Speed Flower
+  m_Name: Ouroboros
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
