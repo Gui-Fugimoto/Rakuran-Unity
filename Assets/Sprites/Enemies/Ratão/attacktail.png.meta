@@ -1,0 +1,1531 @@
+fileFormatVersion: 2
+guid: 75c85f25fffc383458ee0a9d0839457d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: attacktail_0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1917
+        width: 94
+        height: 58
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175afb13970a791499da53cad7310df3
+      internalID: -1523302156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_1
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1917
+        width: 93
+        height: 59
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00bcfbff683ecf74893c829d5d077c5e
+      internalID: -260055669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_2
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1917
+        width: 93
+        height: 60
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cccc18c30277fc4f8748dfbb45bdf7d
+      internalID: 530556361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_3
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1917
+        width: 93
+        height: 61
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44dc2b85ae8e384f84377fa7ebfe35b
+      internalID: 151258943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_4
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 1917
+        width: 92
+        height: 62
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd20340abb873ed44a7a23911a70cd72
+      internalID: 734189329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_5
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 1917
+        width: 92
+        height: 63
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a506727ebf96214ba0efd671b4890c3
+      internalID: 1563441144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_6
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 1917
+        width: 92
+        height: 64
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e94aad799f3da48bcc4da73498e15d
+      internalID: 1240754706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_7
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 1917
+        width: 92
+        height: 65
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16ecf074d95ee54aa30fbf64288264c
+      internalID: -394134587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_8
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1661
+        width: 91
+        height: 66
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5032b7fc9e4dd4c9ec1b054865d85e
+      internalID: -1948235371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_9
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1661
+        width: 91
+        height: 67
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499fad2dc9982714dbab2cf20ac86cc7
+      internalID: 565493985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_10
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1661
+        width: 91
+        height: 67
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037d774c8797bbb4bb46eb48d2d0afa8
+      internalID: -1760104934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_11
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1661
+        width: 90
+        height: 68
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1c7af98d3d0b941a2e34e33e572a8a
+      internalID: 2102612301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_12
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1661
+        width: 90
+        height: 69
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8078144425c8c824ca124c2cdec98b94
+      internalID: -1066698197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_13
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1661
+        width: 90
+        height: 70
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ce2ea8c71ea31459a7c09fd1fcf8d3
+      internalID: -1642460298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_14
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 1661
+        width: 90
+        height: 71
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3ea0093b66bc54bbf454e4e7310015
+      internalID: -906987795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_15
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 1661
+        width: 89
+        height: 72
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579b0efd6c068c04998f0e37299ae2d2
+      internalID: 194714040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_16
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1405
+        width: 89
+        height: 72
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089fba1687b8f5d43a904c3ba4df4f7f
+      internalID: -970994379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_17
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1405
+        width: 89
+        height: 73
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b2a70cc6789c7438b7666f80d84321
+      internalID: 24307406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_18
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1405
+        width: 88
+        height: 74
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983c73b2daa81f74f85a36818ad89c51
+      internalID: 1479656227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_19
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1405
+        width: 88
+        height: 75
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff198781a3fe7ba42a9c6bdfb2fbead5
+      internalID: -7728128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_20
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1405
+        width: 89
+        height: 76
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37db9044451d464db8e73d6ca1c7513
+      internalID: 1507830168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_21
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1405
+        width: 90
+        height: 76
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec3d75004400f44c8e61f5f18496aea
+      internalID: -699775769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_22
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1405
+        width: 91
+        height: 76
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e95a8ef6ed2ab46b192fbd68cc1691
+      internalID: 267568026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_23
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 1405
+        width: 93
+        height: 75
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30f82e818f4ae042b8f5321e41bb941
+      internalID: -579368337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_24
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1149
+        width: 98
+        height: 75
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feab21f782c404c4aae1048d5460fe1d
+      internalID: -1786380252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_25
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1149
+        width: 103
+        height: 73
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaec552980bb8e64f94444292de0c639
+      internalID: -1988740521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_26
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 1149
+        width: 108
+        height: 71
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3397812246510244b94e27098908a6e9
+      internalID: 772242372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_27
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1149
+        width: 112
+        height: 69
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42db47cded2bca4280a1a930df0b808
+      internalID: -1924449757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_28
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 1149
+        width: 116
+        height: 66
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab72841a2a632f9439c90eacb69f6750
+      internalID: 1055741644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_29
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 1149
+        width: 120
+        height: 63
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e56040c0e96c543acbd94e7e95444a
+      internalID: -1354538247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_30
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 1149
+        width: 124
+        height: 59
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74dc449176d095c41b472e8a7f2f1688
+      internalID: -832535378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_31
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1149
+        width: 127
+        height: 55
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342ae1fa57244c24e9503853dc49e9ec
+      internalID: -629677399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_32
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 893
+        width: 130
+        height: 51
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83181f771a8679641b2ae23dd16dee72
+      internalID: 1276948761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_33
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 893
+        width: 132
+        height: 46
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e0dc0e5c4009e47a590abe356ec301
+      internalID: -1852049319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_34
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 893
+        width: 135
+        height: 42
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e8d992b1b4d3e4c8f8e02d8fa8ae2f
+      internalID: -561668094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_35
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 893
+        width: 136
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1643bd272f9ecf4479ddec7148b4a819
+      internalID: 337411504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_36
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 893
+        width: 138
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ca3901364369b4fba3093b830360b5
+      internalID: 983127333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_37
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 893
+        width: 139
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae5ee7068408c747af304d706dc8916
+      internalID: -1010704725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_38
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 893
+        width: 139
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5ce8190b01cf044bc3d0eb992a929b
+      internalID: 662665305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_39
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 893
+        width: 139
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd69fbe02ff360b4bb9b63a51b969e40
+      internalID: 756275432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_40
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 637
+        width: 137
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c07371d1671fe24cbf3bb98b5ad93e0
+      internalID: -1209111315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_41
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 637
+        width: 132
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056dc5b85f90d6848a130c464b9b93ce
+      internalID: 1103313601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_42
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 637
+        width: 123
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2ac0e3cb2c1034abd2473f8fc1e91c
+      internalID: 714132659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_43
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 637
+        width: 112
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df04939bc575842428b9ae977730b1e0
+      internalID: -464652400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_44
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 637
+        width: 98
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0930e50d30477e4eba1766ad7ded1e3
+      internalID: 2007633418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_45
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 637
+        width: 84
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14dec983aef9e994485f05b37bf2d4c6
+      internalID: -935768636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_46
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 637
+        width: 74
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9daa946fd4202be4a9f012670a073fd1
+      internalID: -476341846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_47
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 637
+        width: 74
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ab4f9557b65ea4cbeb37adf78b4e59
+      internalID: -311997923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_48
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 381
+        width: 74
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3146738ef85e88e45948461488890bf5
+      internalID: 1265454241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_49
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 381
+        width: 74
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984e771619902de4195fe2fae6c11e84
+      internalID: 344890031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_50
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 381
+        width: 74
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce9f3ca17acd054da0e631a1c84cbde
+      internalID: -1218917254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_51
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 381
+        width: 74
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1d75995e66e494aaabcf4929981aa3
+      internalID: 793816517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_52
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 381
+        width: 74
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143f9b999d3a6f644a17254e581c3bb0
+      internalID: -1214470235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_53
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 381
+        width: 74
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93325b534d8ad949a7023b916e58e8f
+      internalID: 1066760830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_54
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 381
+        width: 74
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498e4557c53e0a646b42da20ac98e956
+      internalID: 1342886204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_55
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 381
+        width: 84
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc4fe3e8efeeb14b9987a56c5a57335
+      internalID: -1801868180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_56
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 125
+        width: 93
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd15db2f366e474b87feb39b57e4728
+      internalID: -453059105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_57
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 125
+        width: 103
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb56407d2f620545ad397cc01e9edb6
+      internalID: -991270632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_58
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 125
+        width: 112
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978a59947d240064694311e9eec5c2c8
+      internalID: -1826103486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_59
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 125
+        width: 120
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bcf69a8aeb07a641bf9a9c01f45031d
+      internalID: 1489666747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_60
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 125
+        width: 127
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964f6bc4c95a20945b6367abccdffe42
+      internalID: -2064154292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_61
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 125
+        width: 132
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d885ca45dba959a40bb82f416f7a53a2
+      internalID: 198497490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_62
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 125
+        width: 136
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccd6e1610690ba4ca8636ab2ab6a6ca
+      internalID: -1006249654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attacktail_63
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 125
+        width: 138
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f3f4210a20508409b3ecdddbc1b243
+      internalID: 348690821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0e61b4cc128b8e543acd7f68d490d47a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      attacktail_15: 194714040
+      attacktail_1: -260055669
+      attacktail_43: -464652400
+      attacktail_6: 1240754706
+      attacktail_56: -453059105
+      attacktail_24: -1786380252
+      attacktail_9: 565493985
+      attacktail_19: -7728128
+      attacktail_10: -1760104934
+      attacktail_30: -832535378
+      attacktail_57: -991270632
+      attacktail_41: 1103313601
+      attacktail_58: -1826103486
+      attacktail_54: 1342886204
+      attacktail_39: 756275432
+      attacktail_2: 530556361
+      attacktail_8: -1948235371
+      attacktail_53: 1066760830
+      attacktail_55: -1801868180
+      attacktail_59: 1489666747
+      attacktail_0: -1523302156
+      attacktail_40: -1209111315
+      attacktail_62: -1006249654
+      attacktail_27: -1924449757
+      attacktail_34: -561668094
+      attacktail_32: 1276948761
+      attacktail_46: -476341846
+      attacktail_20: 1507830168
+      attacktail_21: -699775769
+      attacktail_38: 662665305
+      attacktail_37: -1010704725
+      attacktail_26: 772242372
+      attacktail_29: -1354538247
+      attacktail_36: 983127333
+      attacktail_13: -1642460298
+      attacktail_52: -1214470235
+      attacktail_61: 198497490
+      attacktail_51: 793816517
+      attacktail_18: 1479656227
+      attacktail_12: -1066698197
+      attacktail_49: 344890031
+      attacktail_25: -1988740521
+      attacktail_7: -394134587
+      attacktail_28: 1055741644
+      attacktail_4: 734189329
+      attacktail_17: 24307406
+      attacktail_60: -2064154292
+      attacktail_22: 267568026
+      attacktail_16: -970994379
+      attacktail_63: 348690821
+      attacktail_44: 2007633418
+      attacktail_23: -579368337
+      attacktail_11: 2102612301
+      attacktail_42: 714132659
+      attacktail_50: -1218917254
+      attacktail_35: 337411504
+      attacktail_14: -906987795
+      attacktail_5: 1563441144
+      attacktail_47: -311997923
+      attacktail_3: 151258943
+      attacktail_48: 1265454241
+      attacktail_33: -1852049319
+      attacktail_45: -935768636
+      attacktail_31: -629677399
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
