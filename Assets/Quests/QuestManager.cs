@@ -23,6 +23,7 @@ public class QuestManager : MonoBehaviour
     {
         foreach (QuestObject quest in Quests)
         {
+            //currentStageIndex = quest.stageIndex;
             QuestStage currentStage = quest.qStage[quest.stageIndex];
             quest.qSpawnList = currentStage.sSpawnList;
             quest.qReceiveItems = currentStage.sReceiveItems;
