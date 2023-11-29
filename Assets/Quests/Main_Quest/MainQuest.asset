@@ -25,10 +25,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 098fdb84839d8174b91f04ab30828dd2, type: 2}
   - {fileID: 11400000, guid: 80987e33c5afc5d4983fb8293aed77eb, type: 2}
   - {fileID: 11400000, guid: 3af2f972a7be02e42a6211be8b9f155c, type: 2}
-  stageIndex: 0
-  qDescription: 
+  - {fileID: 11400000, guid: 24df9817f508a34418422ebe9f7bd61b, type: 2}
+  stageIndex: 6
+  qDescription: '      '
   qSpawnList:
-  - {fileID: 7665459779429783733, guid: 0e602d9220425434bbaeb0b25324bb73, type: 3}
+  - {fileID: 164644563579101239, guid: 22caeba4ae265c84998acfb043ceb297, type: 3}
   - {fileID: 2176658684090211273, guid: e27192fc119a51647a4bde3b292a24e7, type: 3}
   qDeliverItems: []
   qReceiveItems: []
