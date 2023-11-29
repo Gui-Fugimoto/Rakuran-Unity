@@ -14,13 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CPpos: {x: 0, y: 0, z: 0}
   Invsave:
-  - {fileID: 11400000, guid: 61c8cee218efe914aa5090757af06f66, type: 2}
-  - {fileID: 11400000, guid: 61c8cee218efe914aa5090757af06f66, type: 2}
-  - {fileID: 11400000, guid: d739b987009c5cf4cab68734f3a2a210, type: 2}
-  - {fileID: 11400000, guid: 1546dbbf2666e534080f59008a4b0449, type: 2}
-  - {fileID: 11400000, guid: 1546dbbf2666e534080f59008a4b0449, type: 2}
-  - {fileID: 11400000, guid: 1546dbbf2666e534080f59008a4b0449, type: 2}
-  CScene: 3
+  - {fileID: 11400000, guid: b7bc18763605e0b4bb8a2f3e4ca89d3d, type: 2}
+  CScene: 6
   Arma1: {fileID: 11400000, guid: e6191dd27874da048b0e19b8b9ba1684, type: 2}
   Arma2: {fileID: 11400000, guid: 1e847db5870f9cc4485c223cc6f58fd1, type: 2}
   QuickSlot: {fileID: 0}
