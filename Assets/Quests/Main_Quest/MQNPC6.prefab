@@ -1,0 +1,323 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &557727791456800955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 557727791456800954}
+  - component: {fileID: 557727791456800959}
+  - component: {fileID: 557727791456800956}
+  - component: {fileID: 557727791456800957}
+  - component: {fileID: 557727791456800958}
+  - component: {fileID: 4417617716256679890}
+  - component: {fileID: 8240155024010046063}
+  - component: {fileID: 3591489335174563263}
+  - component: {fileID: 1442705706019489724}
+  m_Layer: 0
+  m_Name: MQNPC6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &557727791456800954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557727791456800955}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.16, y: 1.86, z: -9.191}
+  m_LocalScale: {x: 5.75, y: 5.75, z: 5.75}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &557727791456800959
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557727791456800955}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 114b7623b53f3ca468491929cc8e33bf, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 1a81db2093ab15341950c2bc59cf0625, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &557727791456800956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557727791456800955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff219d8f269145d41b8f3eec726e4369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScaleChange: {x: 0, y: 0.001, z: 0}
+  Deflate: 0
+--- !u!65 &557727791456800957
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557727791456800955}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1642737, y: 0.25999996, z: 0.2}
+  m_Center: {x: 0.003078199, y: 0.12999998, z: 0}
+--- !u!114 &557727791456800958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557727791456800955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1371c2e2f700043ac3101f26cfcaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - "Voc\xEA est\xE1 atrasado, Rakuran."
+    - "Mas tudo bem, sou um bom anfitri\xE3o e n\xE3o guardo m\xE1goas. "
+    - "N\xE3o me apresentei formalmente da \xFAltima vez, n\xE3o \xE9?"
+    - Aqueles que trabalham comigo me chamam de Fornecedor.
+    - "E n\xF3s, Rakuran, podemos trabalhar juntos."
+    - Pensei muito nisso tudo.
+    - "Voc\xEA e Acir s\xE3o elementos preciosos."
+    - "Pe\xE7o desculpas pela viol\xEAncia da primeira impress\xE3o que causei."
+    - "Eu sei bem, \xE9 ela a que fica."
+    - "Mas todas as virtudes giram em torno do perd\xE3o, concorda?"
+    - "Acir era um grande homem, eu entendo seu interesse em mant\xEA-lo seguro."
+    - Posso te ajudar nisso.
+    - "E quero deixar claro que essa benevol\xEAncia surge do respeito e considera\xE7\xE3o\u2026"
+    - "Eu estava de olho em voc\xEA, antes que chegasse."
+    - "Realmente, ter um aliado como voc\xEA neste mercado \xE9 uma ben\xE7\xE3o."
+    - "Eu trago almas ferramentas, ingredientes alqu\xEDmicos."
+    - "Voc\xEA cria os artefatos, como fez com a alma de Acir."
+    - "N\xF3s dois lucramos."
+    - Sim, eu sei.
+    - "Voc\xEA n\xE3o tem nenhum motivo para confiar."
+    - Entrei no seu caminho, ameacei seus segredos.
+    - "Voc\xEA n\xE3o sabe nada sobre mim\u2026"
+    - "Mas estou disposto a fazer concess\xF5es."
+    - "Pedir perd\xE3o genuinamente."
+    - "Pensei numa quantia de dinheiro, mas nenhuma amizade comprada \xE9 boa."
+    - "Mas isso tamb\xE9m seria complicado."
+    - "Voc\xEA e Acir n\xE3o gostam de se envolver muito."
+    - "Ent\xE3o pensei em fazermos nosso neg\xF3cio a dist\xE2ncia, voc\xEA recebe
+      o dinheiro e gasta como bem quiser."
+    - "Se precisar de algo, \xE9 s\xF3 pedir."
+    - "\u2026 "
+    - "Voc\xEA \xE9 um bom ouvinte, Raku."
+    - "Vou te dar um tempo para pensar, fique \xE0 vontade."
+    - "Voc\xEA sabe onde me encontrar."
+    - "(Voc\xEA sabe muito bem que isso \xE9 invi\xE1vel)"
+    - "(Esse tipo de gente n\xE3o ama nada, nem a si mesma)."
+    - "(Esse tipo de gente mal sabe que est\xE1 viva)."
+    - (E por isso nega a vida aos outros).
+    - "(Eu sei, Rakuran, voc\xEA j\xE1 foi assim)."
+    - "(Mas n\xE3o desonre a minha alma presa ao seu peito)."
+    - "Voc\xEA est\xE1 ouvindo isso?"
+    - O que?
+    - "Abra seus ouvidinhos de gato e preste aten\xE7\xE3o."
+    - Eu sei que nos ajudaria, principalmente o dinheiro.
+    - "Mas voc\xEA quer mais sangue nas suas m\xE3os?"
+    - "Roubar almas alheias e transform\xE1-las em ferramentas?"
+    - "N\xE3o me apaixonei por este homem."
+    - "E se voc\xEA for este homem\u2026"
+    - Significa que nunca amei de verdade.
+    - "Do que est\xE1 falando, Raku?"
+    - "Me deixa pensar\u2026"
+    - "Pensando, voc\xEA est\xE1 PENSANDO!?"
+    - "Fa\xE7a o que quiser, Rakuran\u2026"
+    - "Mas n\xE3o justifique suas maldades com a minha morte."
+    - "As pernas s\xE3o suas, n\xE3o minhas."
+    - Volte depois, pense bem na proposta.
+    - "N\xE3o, n\xE3o precisa."
+    - "Estou indo embora, n\xE3o estou nem a\xED pro que voc\xEA faz nesse lugar."
+    - "Apenas n\xE3o me incomode de novo\u2026"
+    - "N\xE3o gosto de insist\xEAncia."
+    - "\u2026"
+    - "Meninas\u2026 voc\xEAs estavam certas\u2026"
+    names:
+    - ???
+    - ???
+    - ???
+    - ???
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Rakuran
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - Rakuran
+    - Fornecedor
+    - Fornecedor
+    - Fornecedor
+    - ???
+    - ???
+    - ???
+    - ???
+    - ???
+    - ???
+    - Rakuran
+    - Fornecedor
+    - Acir
+    - Acir
+    - Acir
+    - Acir
+    - Acir
+    - Acir
+    - Acir
+    - Fornecedor
+    - Rakuran
+    - Acir
+    - Acir
+    - Acir
+    - Acir
+    - Fornecedor
+    - Rakuran
+    - Rakuran
+    - Rakuran
+    - Rakuran
+    - Fornecedor
+    - Fornecedor
+  Manager: {fileID: 0}
+  Falando: 0
+  Conversando: 0
+  MoveOn: 0
+  Portrait: {fileID: 0}
+  portraitChar: {fileID: 0}
+  qTrigger: {fileID: 8240155024010046063}
+  fabianoOnce: 1
+--- !u!65 &4417617716256679890
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557727791456800955}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.090920836, y: 0.25999996, z: 0.018843362}
+  m_Center: {x: -0.00020699398, y: 0.12999998, z: 0.00055865553}
+--- !u!114 &8240155024010046063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557727791456800955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352c9ff73ad9ef64e9b41a10668debe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveType: 0
+  quest: {fileID: 11400000, guid: b49a27cfa73a55e4e8783a5816b0e871, type: 2}
+  stage: {fileID: 11400000, guid: ee117bb78b721a04788936383caedc13, type: 2}
+  questManager: {fileID: 0}
+  playerInventory: {fileID: 0}
+--- !u!114 &3591489335174563263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557727791456800955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775169f5aa71a354eb97857d93923adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: b49a27cfa73a55e4e8783a5816b0e871, type: 2}
+  stageToDestroy: {fileID: 11400000, guid: bd07251642053704cb3758df801bc8d9, type: 2}
+--- !u!114 &1442705706019489724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557727791456800955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601b5c1e4a8a030429e3362d3fb0a2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Teatro
