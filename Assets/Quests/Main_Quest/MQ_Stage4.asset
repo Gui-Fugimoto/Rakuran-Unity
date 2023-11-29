@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d03362aeee566548a48807fd631145f, type: 3}
   m_Name: MQ_Stage4
   m_EditorClassIdentifier: 
-  stageNo: 0
+  stageNo: 4
   sDescription: 
   sSpawnList: []
   sDeliverItems: []

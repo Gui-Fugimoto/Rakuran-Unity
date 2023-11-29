@@ -12,10 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a5efe685e8b7540acb3bbb0cd41c73, type: 3}
   m_Name: MainQuest
   m_EditorClassIdentifier: 
-  qName: 
-  qStage: []
+  qName: MainQuest
+  qStage:
+  - {fileID: 11400000, guid: 5bc46c91e1910554dbe9a7568b33cbb2, type: 2}
+  - {fileID: 11400000, guid: df6ea4972b9ba9847b27a736f0dbbf4d, type: 2}
+  - {fileID: 11400000, guid: 33290b962eb22ae4589da3465d3f3f56, type: 2}
+  - {fileID: 11400000, guid: 89d2e7d88d19f1940bf6e133ec796e8c, type: 2}
+  - {fileID: 11400000, guid: 4b6e322045fa6354d93cd73cc488fd29, type: 2}
+  - {fileID: 11400000, guid: ac05276817560b345baa2716184452dd, type: 2}
+  - {fileID: 11400000, guid: ee117bb78b721a04788936383caedc13, type: 2}
+  - {fileID: 11400000, guid: bd07251642053704cb3758df801bc8d9, type: 2}
   stageIndex: 0
-  qDescription: 
+  qDescription: '                           '
   qSpawnList: []
   qDeliverItems: []
   qReceiveItems: []

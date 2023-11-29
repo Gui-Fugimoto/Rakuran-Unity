@@ -1,0 +1,239 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7665459779429783733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7665459779429783732}
+  - component: {fileID: 7665459779429783729}
+  - component: {fileID: 7665459779429783730}
+  - component: {fileID: 7665459779429783731}
+  - component: {fileID: 7665459779429783728}
+  - component: {fileID: 5805943244879704028}
+  - component: {fileID: 2271701115874927201}
+  - component: {fileID: 6632630117606526385}
+  - component: {fileID: 8780286738618191794}
+  m_Layer: 0
+  m_Name: MQNPC3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7665459779429783732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665459779429783733}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.88794, y: -0.485, z: 0.02788639}
+  m_LocalScale: {x: 5.75, y: 5.75, z: 5.75}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &7665459779429783729
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665459779429783733}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 114b7623b53f3ca468491929cc8e33bf, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 397dd6964fcf4994ea45c21b2cf72500, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &7665459779429783730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665459779429783733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff219d8f269145d41b8f3eec726e4369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScaleChange: {x: 0, y: 0.001, z: 0}
+  Deflate: 0
+--- !u!65 &7665459779429783731
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665459779429783733}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1642737, y: 0.25999996, z: 0.2}
+  m_Center: {x: 0.003078199, y: 0.12999998, z: 0}
+--- !u!114 &7665459779429783728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665459779429783733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1371c2e2f700043ac3101f26cfcaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - "Os tr\xEAs n\xFAcleos est\xE3o chegando e voc\xEA agiu bem, estou encantada\u2026"
+    - "Mas ainda \xE9 cedo para desacelerar\u2026 precisamos ter certeza de que o
+      leil\xE3o da pra\xE7a do bombardeio correr\xE1 bem."
+    - O lugar do evento mudou, meu mensageiro deve ter te contado.
+    - "Espero que j\xE1 esteja familiarizado para escalar o po\xE7o do elevador."
+    - "\xC9 importante que o homem respons\xE1vel por capturar as tr\xEAs almas esteja
+      presente."
+    - "Quanto aos nossos competidores e outros artigos, nenhum deles \xE9 digno de
+      nota."
+    - "Alguns insanos tentaram obter artefatos de extremo poder, rel\xEDquias religiosas,
+      ferramentas anteriores \xE0 primeira era\u2026"
+    - Morreram de fome tentando obter um banquete.
+    - "N\xF3s, que optamos por uma refei\xE7\xE3o mais \u201Csimples\u201D, teremos
+      um verdadeiro lucro."
+    - "Gananciosos malditos. Passaram a m\xE3o em todos os n\xFAcleos por causa da
+      Guerra."
+    - "Quanto a sua ideia de obter aquele artefato do gato, n\xE3o tenho obje\xE7\xF5es.
+      Apenas aja com discri\xE7\xE3o."
+    - "Voc\xEA foi capaz de obter tr\xEAs n\xFAcleos, n\xE3o ter\xE1 dificuldade
+      em lidar com um ex-soldado raso."
+    - "Por ora \xE9 apenas isso, se prepare e n\xE3o deixe nenhum engra\xE7adinho
+      nos atrapalhar."
+    - "Somos novos no peda\xE7o, mas n\xE3o somos bobos."
+    - 'PS: Queime a carta depois, como sempre.'
+    names:
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - Bilhete Misterioso
+    - K
+  Manager: {fileID: 0}
+  Falando: 0
+  Conversando: 0
+  MoveOn: 0
+  Portrait: {fileID: 0}
+  portraitChar: {fileID: 0}
+  qTrigger: {fileID: 2271701115874927201}
+  fabianoOnce: 1
+--- !u!65 &5805943244879704028
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665459779429783733}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.090920836, y: 0.25999996, z: 0.018843362}
+  m_Center: {x: -0.00020699398, y: 0.12999998, z: 0.00055865553}
+--- !u!114 &2271701115874927201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665459779429783733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352c9ff73ad9ef64e9b41a10668debe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveType: 0
+  quest: {fileID: 11400000, guid: b49a27cfa73a55e4e8783a5816b0e871, type: 2}
+  stage: {fileID: 11400000, guid: 89d2e7d88d19f1940bf6e133ec796e8c, type: 2}
+  questManager: {fileID: 0}
+  playerInventory: {fileID: 0}
+--- !u!114 &6632630117606526385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665459779429783733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775169f5aa71a354eb97857d93923adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: b49a27cfa73a55e4e8783a5816b0e871, type: 2}
+  stageToDestroy: {fileID: 11400000, guid: 4b6e322045fa6354d93cd73cc488fd29, type: 2}
+--- !u!114 &8780286738618191794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665459779429783733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601b5c1e4a8a030429e3362d3fb0a2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: PocPocoes
