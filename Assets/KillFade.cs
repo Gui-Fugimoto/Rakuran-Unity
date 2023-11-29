@@ -19,7 +19,10 @@ public class KillFade : MonoBehaviour
 
     public void SetplayerPosition()
     {
-        controller.Spawn();
+       if(controller != null)
+        {
+            controller.Spawn();
+        }
     }
 
 }
