@@ -7764,7 +7764,7 @@ PrefabInstance:
     - target: {fileID: 6752957704888970204, guid: 8b66d24b768a59741a616e2ee80b9b56,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6752957704888970204, guid: 8b66d24b768a59741a616e2ee80b9b56,
         type: 3}
@@ -12838,7 +12838,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &674341007
 MonoBehaviour:
@@ -14200,7 +14200,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &838716642
 GameObject:
@@ -17019,7 +17019,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &943222890
 MonoBehaviour:
@@ -17034,6 +17034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Save: {fileID: 11400000, guid: 8422ed53e4f7e454691406b63022998c, type: 2}
+  Fadein: {fileID: 486392621}
   Name: Corte do Rei Rato
   HaiKai: "Vida longa ao Rei\r\nEsses s\xFAditos rasteiros\r\ns\xE3o sempre leais"
 --- !u!114 &943222891
@@ -17660,7 +17661,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 627eb52f355184a43a185c49f42a167e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 627eb52f355184a43a185c49f42a167e,
         type: 3}
@@ -30440,7 +30441,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 11b40a9fe560db14bb094978b1d306a2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11b40a9fe560db14bb094978b1d306a2,
         type: 3}
@@ -32182,7 +32183,7 @@ Transform:
   - {fileID: 1130674798}
   - {fileID: 5793568}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1885857176
 PrefabInstance:
@@ -32589,7 +32590,7 @@ PrefabInstance:
     - target: {fileID: 8872406168325301567, guid: 2cbd8b3e56859cf4db20eb59f15a37a5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8872406168325301567, guid: 2cbd8b3e56859cf4db20eb59f15a37a5,
         type: 3}
@@ -33021,7 +33022,7 @@ PrefabInstance:
     - target: {fileID: 5163536743805247037, guid: d6405fa8a0e2d594ab809ccaa101b2c8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5163536743805247037, guid: d6405fa8a0e2d594ab809ccaa101b2c8,
         type: 3}
@@ -39515,7 +39516,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4246658551749793641
 GameObject:

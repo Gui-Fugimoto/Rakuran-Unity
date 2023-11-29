@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public SaveFile Save;
+    public GameObject Fadein;
 
     public string Name;
     [TextArea(3, 7)]
@@ -13,6 +14,13 @@ public class GameController : MonoBehaviour
    
     public void GameOver()
     {
+        Fadein.SetActive(true);
+        StartCoroutine(PlayerIsDead());
+    }
+
+    IEnumerator PlayerIsDead()
+    {
+        yield return new WaitForSeconds(0.6f);
         SceneManager.LoadScene("GameOver");
     }
 }
