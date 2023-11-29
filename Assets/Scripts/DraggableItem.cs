@@ -67,6 +67,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             transform.SetParent(parentAfterDrag);
 
         }
+        
+        transform.SetParent(parentAfterDrag);
 
         onDestination = false;
         
