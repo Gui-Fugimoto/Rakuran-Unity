@@ -46,8 +46,8 @@ public class EnemyNavMeshAgent : MonoBehaviour
     public float CDcontrol = 0f;
     public GameObject specialHitBox;
 
-    
-
+    public bool bossBawn;
+    private CapsuleCollider capCollidier;
     void Start()
     {
         initialPosition = transform.position;
@@ -65,6 +65,13 @@ public class EnemyNavMeshAgent : MonoBehaviour
         player = playerCont.gameObject;
         Phc = player.GetComponent<PlayerHealthController>();
         attackAnim = "Attack";
+        capCollidier = GetComponent<CapsuleCollider>();
+        if (bossBawn == true)
+        {
+            anim.SetTrigger("Spawn");
+            Debug.Log("bossbawn");
+            currentState = 7;
+        }
     }
 
     void FixedUpdate()
@@ -97,7 +104,9 @@ public class EnemyNavMeshAgent : MonoBehaviour
             case 6:
                 FleeState();
                 break;
-              
+            case 7:
+                SpawningState();
+                break;
         }
 
         hitBoxPosLeft.transform.position = new Vector3(transform.position.x + 0.95f, transform.position.y, transform.position.z);
@@ -198,7 +207,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
                 spriteRend.flipX = true;
             }
 
-            if (Time.time - pursuitTimer > Random.Range(3f, 8f))
+            if (Time.time - pursuitTimer > Random.Range(2f, 4f))
             {
 
                 if (CDcontrol == 100f)
@@ -452,5 +461,21 @@ public class EnemyNavMeshAgent : MonoBehaviour
         else
             return false;
     }
+
+    public void EndSpawning()
+    {
+        currentState = 1;
+        navMeshAgent.enabled = true;
+        capCollidier.enabled = true;
+        Debug.Log("finished spawning");
+    }
+
+    public void SpawningState()
+    {
+        navMeshAgent.enabled = false;
+        capCollidier.enabled = false;
+    }
+
+
 }
 

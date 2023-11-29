@@ -35,21 +35,20 @@ public class EnemyGranadier : EnemyNavMeshAgent
 
             if (once)
             {
-                StartCoroutine(GranadierSpecial());
+                GranadierSpecial();
             }
 
         }
 
 
     }
-    IEnumerator GranadierSpecial()
+    void GranadierSpecial()
     {
         once = false;
         CDcontrol = 0f;
         anim.SetTrigger("Special");
         anim.SetBool("Walk", false);
-        yield return new WaitForSeconds(5f);
-        //animação nova
+        
     }
     public void InstRocketPrefab()
     {

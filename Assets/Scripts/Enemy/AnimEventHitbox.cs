@@ -93,4 +93,9 @@ public class AnimEventHitbox : MonoBehaviour
             enGranadier.KeepDisableHitbox();
         }
     }
+
+    public void EndSpawnAnim()
+    {
+        enNavMeshAgent.EndSpawning();
+    }
 }
