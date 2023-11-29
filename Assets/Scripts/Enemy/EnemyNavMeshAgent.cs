@@ -7,6 +7,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
     
     //public Transform player;
     public GameObject player;
+    public PlayerController playerCont;
     public PlayerHealthController Phc;
     public float attackRange = 2f;
     public float pursuitRange = 8f;
@@ -60,6 +61,8 @@ public class EnemyNavMeshAgent : MonoBehaviour
         wanderTarget = initialPosition + Random.insideUnitSphere * wanderRange;
         wanderTarget.y = transform.position.y;
         Ground = LayerMask.GetMask("Ground");
+        playerCont = FindObjectOfType<PlayerController>();
+        player = playerCont.gameObject;
         Phc = player.GetComponent<PlayerHealthController>();
         attackAnim = "Attack";
     }
