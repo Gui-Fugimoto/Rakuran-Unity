@@ -11,6 +11,7 @@ public class MenuController : MonoBehaviour
     public SaveFile Save;
     public GameObject FadeOut;
     private TeleportParkour FadeOutRef;
+    public List<ItemParameter> AlqGuide =  new List<ItemParameter>();
     public GameObject ContinueButton;
     public ItemParameter firstWeapon;
     public ItemParameter secondWeapon;
@@ -32,7 +33,7 @@ public class MenuController : MonoBehaviour
     {
         #region saveReset
         Save.CPpos = new Vector3(0, 0, 0);
-        Save.Invsave.Clear();
+        Save.Invsave = new List<ItemParameter>(AlqGuide);
         Save.CScene = 1;
         Save.Arma1 = firstWeapon;
         Save.Arma2 = secondWeapon;

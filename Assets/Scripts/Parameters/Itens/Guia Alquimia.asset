@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f673aec2e978d8a4fb8a3d764eb642e9, type: 3}
+  m_Name: Guia Alquimia
+  m_EditorClassIdentifier: 
+  ItemMundo: {fileID: 0}
+  Vida: 0
+  Veneno: 0
+  Icon: {fileID: 0}
+  Consumivel: 0
+  Effect: 0
+  EffectIcon: {fileID: 0}
+  weaponType: 0
+  Forge: 0
+  damage: 0
+  Desc: "A alquimia se baseia na combina\xE7\xE3o de ingredientes que geram um consum\xEDvel
+    com base nos materiais utilizados. Cada ingrediente no Rakuran possui um valor
+    de Cura, Veneno e Pot\xEAncia, e em alguns casos, um Efeito, a combina\xE7\xE3o
+    desses valores e efeitos geram uma po\xE7\xE3o, tendo mais de uma maneira de
+    obter o mesmo resultado.\r\nEu tenho que anotar algumas receitas para n\xE3o
+    esquecer depois..."
