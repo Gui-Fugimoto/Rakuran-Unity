@@ -15,8 +15,8 @@ MonoBehaviour:
   stageNo: 6
   sDescription: 
   sSpawnList:
-  - {fileID: 557727791456800955, guid: b7e230746fbb3cf458b0164f6fd94c4a, type: 3}
-  - {fileID: 8703108472701925230, guid: 20e26ac549368b141a3e5710f41111dc, type: 3}
+  - {fileID: 164644563579101239, guid: 22caeba4ae265c84998acfb043ceb297, type: 3}
+  - {fileID: 2176658684090211273, guid: e27192fc119a51647a4bde3b292a24e7, type: 3}
   sDeliverItems: []
   sReceiveItems: []
   addedDescription: 0

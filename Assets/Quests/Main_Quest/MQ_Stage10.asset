@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d03362aeee566548a48807fd631145f, type: 3}
+  m_Name: MQ_Stage10
+  m_EditorClassIdentifier: 
+  stageNo: 10
+  sDescription: 
+  sSpawnList:
+  - {fileID: 8793159246708688888, guid: b3e9662a1675f4e40ab90d9a1bf1a8a3, type: 3}
+  - {fileID: 5998797792665186497, guid: 055a3d63f97310045b3206fdb20ecca0, type: 3}
+  sDeliverItems: []
+  sReceiveItems: []
+  addedDescription: 0
+  isDone: 0
+  deliveredItem: 0
