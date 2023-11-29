@@ -271,10 +271,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audSource: {fileID: 0}
-  walkSound: {fileID: 8300000, guid: d57d589a337003a4cab6ef42cb23bf8c, type: 3}
-  runSound: {fileID: 8300000, guid: d57d589a337003a4cab6ef42cb23bf8c, type: 3}
-  jumpSound: {fileID: 8300000, guid: ce9022fcc60c8314eab3372184029c14, type: 3}
-  dashSound: {fileID: 8300000, guid: 4eb10d61e7083fd4a956ca35520059ad, type: 3}
+  walkSound: {fileID: 8300000, guid: 60451e7febc3748429d3c9f4f30df6f3, type: 3}
+  runSound: {fileID: 8300000, guid: a6e60f2e9b851524ab7950f4dd6e6069, type: 3}
+  jumpSound: {fileID: 8300000, guid: f12fcad9798338f4495ebee0cb4ae5c9, type: 3}
+  dashSound: {fileID: 8300000, guid: 4b92512bdef79964887f972775cd62ed, type: 3}
   moveSpeedX: 4
   moveSpeedY: 4
   flipped: 0
