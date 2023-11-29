@@ -111,6 +111,7 @@ public class EnemyNavMeshAgent : MonoBehaviour
         {
             hitBox.transform.position = hitBoxPosRight.transform.position;
         }
+
     }
 
     void WanderState()
@@ -375,6 +376,13 @@ public class EnemyNavMeshAgent : MonoBehaviour
         navMeshAgent.enabled = true;
         rb.isKinematic = true;
         currentState = 4;
+    }
+
+    public void KeepDisableHitbox()
+    {
+        hitBox.SetActive(false);
+        specialHitBox.SetActive(false);
+        isAttacking = false;
     }
     public void Knockback(Vector3 direction, float force, float duration)
     {

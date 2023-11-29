@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 7359360684524996454}
   - component: {fileID: 7359360684524996455}
   - component: {fileID: 7592846750737629079}
+  - component: {fileID: 2168680091069266152}
   m_Layer: 0
   m_Name: spriteEnemy
   m_TagString: Untagged
@@ -233,6 +234,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enNavMeshAgent: {fileID: 0}
+  enSimples: {fileID: 0}
+  enGranadier: {fileID: 0}
+--- !u!114 &2168680091069266152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7359360684524996449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ba75a30ffda0b4480db70b1b1eb898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7359360684599379837
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  playerCont: {fileID: 0}
   Phc: {fileID: 0}
   attackRange: 2
   pursuitRange: 7
