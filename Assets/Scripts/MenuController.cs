@@ -17,6 +17,7 @@ public class MenuController : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         FadeOutRef =  FadeOut.GetComponent<TeleportParkour>();
     }
 

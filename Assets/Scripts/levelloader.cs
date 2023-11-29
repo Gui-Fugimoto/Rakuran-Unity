@@ -29,7 +29,7 @@ public class levelloader : MonoBehaviour
 
         progress = Mathf.Clamp01(asyncLoad.progress / .9f);
 
-        if (asyncLoad.progress >= 0.7)
+        if (progress >= 0.9)
         {
             Continue.SetActive(true);
         }
@@ -48,7 +48,7 @@ public class levelloader : MonoBehaviour
 
     public void TransitionToLoadedScene()
     {
-        if (asyncLoad.progress <= 0.9)
+        if (progress >= 0.9)
         {
             FadeOut.SetActive(true);   
             StartCoroutine(waitforfade());
