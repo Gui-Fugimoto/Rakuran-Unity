@@ -202,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveType: 0
   quest: {fileID: 11400000, guid: 092b7bc4715307b409d75ab891206247, type: 2}
-  stage: {fileID: 0}
+  stage: {fileID: 11400000, guid: 3752616ffc6e80945954c2fd52f74b45, type: 2}
   questManager: {fileID: 0}
   playerInventory: {fileID: 0}
 --- !u!114 &1799038903787640225
