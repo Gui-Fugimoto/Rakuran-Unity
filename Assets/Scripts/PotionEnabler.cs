@@ -31,7 +31,7 @@ public class PotionEnabler : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(Interact) && Activate == true || (Input.GetKeyDown(KeyCode.Escape) && IsOpen == true) && Activate == true)
+        if(Input.GetKeyDown(Interact) && Activate == true || (Input.GetKeyDown(KeyCode.Escape) && IsOpen == true && Activate == true))
         {
             OpenMenu();
         }
@@ -69,7 +69,8 @@ public class PotionEnabler : MonoBehaviour
 
     IEnumerator HoldOnSir()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1f);
+        Debug.Log("aaa");
         pauseRef.IsMenuOverwritten = false;
     }
 
@@ -82,6 +83,7 @@ public class PotionEnabler : MonoBehaviour
             inventory.ToggleJUSTInventory();
         }
         Activate = false;
+        IsOpen = false;
         pauseRef.IsMenuOverwritten = false;
     }
 

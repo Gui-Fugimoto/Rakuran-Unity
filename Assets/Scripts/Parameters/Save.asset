@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f9e2791f9fd294abd1f1f06193b206, type: 3}
   m_Name: Save
   m_EditorClassIdentifier: 
-  CPpos: {x: 0, y: 0, z: 3}
+  CPpos: {x: 0, y: 0, z: 0}
   Invsave:
   - {fileID: 11400000, guid: b7bc18763605e0b4bb8a2f3e4ca89d3d, type: 2}
   CScene: 6
