@@ -332,7 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 0
   knockTime: 0
-  damage: 1
+  damage: 2
   enemySpriteRend: {fileID: 7359360684524996454}
 --- !u!65 &7554635580782117621
 BoxCollider:
@@ -595,7 +595,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
