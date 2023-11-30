@@ -129,7 +129,7 @@ public class PotionCrafting : MonoBehaviour
                     ingUsadsos = 0;
                 }
 
-                if (veneno > 0 && vida > 0)
+                if (veneno > 0 && vida > 0 || veneno < 0 && vida < 0)
                 {
                     Debug.Log("poção Falhou");
                     vida = 0;
@@ -191,7 +191,7 @@ public class PotionCrafting : MonoBehaviour
                     ingUsadsos = 0;
                 }
 
-                if (veneno > 0 && vida > 0)
+                if (veneno > 0 && vida > 0 || veneno < 0 && vida < 0)
                 {
                     Debug.Log("poção Falhou");
                     vida = 0;
@@ -230,7 +230,7 @@ public class PotionCrafting : MonoBehaviour
                     ingUsadsos = 0;
                 }
 
-                if (veneno > 0 && vida > 0)
+                if (veneno > 0 && vida > 0 || veneno < 0 && vida < 0)
                 {
                     Debug.Log("poção Falhou");
                     vida = 0;
@@ -269,7 +269,7 @@ public class PotionCrafting : MonoBehaviour
                     ingUsadsos = 0;
                 }
 
-                if (veneno > 0 && vida > 0)
+                if (veneno > 0 && vida > 0 || veneno < 0 && vida < 0)
                 {
                     Debug.Log("poção Falhou");
                     vida = 0;
@@ -311,7 +311,7 @@ public class PotionCrafting : MonoBehaviour
                     ingUsadsos = 0;
                 }
 
-                if (veneno > 0 && vida > 0)
+                if (veneno > 0 && vida > 0 || veneno < 0 && vida < 0)
                 {
                     Debug.Log("poção Falhou");
                     vida = 0;
@@ -353,7 +353,7 @@ public class PotionCrafting : MonoBehaviour
                     ingUsadsos = 0;
                 }
 
-                if (veneno > 0 && vida > 0)
+                if (veneno > 0 && vida > 0 || veneno < 0 && vida < 0)
                 {
                     Debug.Log("poção Falhou");
                     vida = 0;
@@ -364,6 +364,7 @@ public class PotionCrafting : MonoBehaviour
                     Display3.ClearUnused();
                     ingUsadsos = 0;
                 }
+
                 #endregion
             }
         }
