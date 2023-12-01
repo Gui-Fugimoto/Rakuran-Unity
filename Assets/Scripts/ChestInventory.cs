@@ -41,7 +41,8 @@ public class ChestInventory : MonoBehaviour
 
     void Update()
     {
-        MudouItemBauCallback.Invoke();
+        if (MudouItemBauCallback != null)
+            MudouItemBauCallback.Invoke();
 
         if (Input.GetKeyDown(Interact) && PlayerPerto == true || (Input.GetKeyDown(KeyCode.Escape) && Aberto == true && PlayerPerto == true)) 
         {

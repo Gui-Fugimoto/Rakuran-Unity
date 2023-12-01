@@ -2677,7 +2677,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 10.861633, y: -49.495636}
+  m_Offset: {x: 4.948181, y: 23.725403}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2688,7 +2688,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 596.266, y: 479.469}
+  m_Size: {x: 696.2643, y: 689.40393}
   m_EdgeRadius: 0
 --- !u!50 &6752957702944550283
 Rigidbody2D:
@@ -4751,7 +4751,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0018157959, y: -0.35316658}
+  m_Offset: {x: -0.21899414, y: 6.504608}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4762,7 +4762,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 85.31468, y: 120.368576}
+  m_Size: {x: 630.4374, y: 725.5025}
   m_EdgeRadius: 0
 --- !u!50 &6752957704869619588
 Rigidbody2D:
@@ -7057,7 +7057,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -7534,7 +7534,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -7769,7 +7769,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -8004,7 +8004,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -8239,7 +8239,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -8716,7 +8716,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -9366,7 +9366,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -9601,7 +9601,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -10970,7 +10970,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -11205,7 +11205,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -11440,7 +11440,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -11675,7 +11675,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -12334,7 +12334,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -13004,7 +13004,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -13239,7 +13239,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -14403,7 +14403,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -15299,7 +15299,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -15534,7 +15534,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -15769,7 +15769,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
@@ -17068,7 +17068,7 @@ PrefabInstance:
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}
       propertyPath: OnQuickSlot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3535733257409231948, guid: ecac14b5a45772545ace59784a9bd769,
         type: 3}

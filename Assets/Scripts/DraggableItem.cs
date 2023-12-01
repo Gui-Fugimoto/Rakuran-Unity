@@ -103,10 +103,12 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             {
                 collision.SendMessage("AddItem", Item);
                 onDestination = true;
+               
                 if (WeaponEquipRef != null)
                 {
                     WeaponEquipRef.ClearSlot();
                 }
+               
                 StartCoroutine(ChestRemove());
               
             }
