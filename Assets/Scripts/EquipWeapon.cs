@@ -17,7 +17,7 @@ public class EquipWeapon : MonoBehaviour
     public bool IsFirstWeapon;
     public SaveFile saveFile;
    
-    void Start()
+    void Awake()
     {
         Icon.enabled = false;
         Arma.text = null;
