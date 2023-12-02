@@ -2309,7 +2309,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh398686
+  m_Name: pb_Mesh60592
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2473,7 +2473,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh76694
+  m_Name: pb_Mesh60824
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2657,7 +2657,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh398558
+  m_Name: pb_Mesh60464
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2952,7 +2952,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-637806
+  m_Name: pb_Mesh-44396
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4639,7 +4639,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh398216
+  m_Name: pb_Mesh60126
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5467,7 +5467,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh398710
+  m_Name: pb_Mesh60616
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8727,7 +8727,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-640462
+  m_Name: pb_Mesh-47052
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9501,7 +9501,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-641546
+  m_Name: pb_Mesh-48274
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10257,6 +10257,8 @@ MonoBehaviour:
   save: {fileID: 0}
   controller: {fileID: 0}
   FadeOut: {fileID: 486392621}
+  WeaponFinder: {fileID: 0}
+  fodase: {fileID: 0}
   NextSceneIndex: 2
   inventory: {fileID: 0}
   NextSceneSpawnPos: {x: 68.92, y: 2.31, z: -87.01}
@@ -12251,7 +12253,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh398390
+  m_Name: pb_Mesh60300
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12766,7 +12768,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh398488
+  m_Name: pb_Mesh60398
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18639,7 +18641,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-638280
+  m_Name: pb_Mesh-44870
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31670,7 +31672,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh398786
+  m_Name: pb_Mesh60690
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32791,7 +32793,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh397862
+  m_Name: pb_Mesh59772
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -43886,9 +43888,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       minColor: {r: 0.7264151, g: 0.4008989, b: 0.62419784, a: 1}
-      maxColor: {r: 1, g: 0.6556604, b: 0.9001701, a: 1}
+      maxColor: {r: 0.9245283, g: 0.52040416, b: 0.17880027, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.9245283, g: 0.61489856, b: 0.8305717, a: 1}
@@ -44532,7 +44534,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 15
+      scalar: 20
       minScalar: 10
       maxCurve:
         serializedVersion: 2

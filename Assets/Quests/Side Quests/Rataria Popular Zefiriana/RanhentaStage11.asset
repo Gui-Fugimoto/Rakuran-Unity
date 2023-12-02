@@ -18,6 +18,7 @@ MonoBehaviour:
   - {fileID: 2786436248763124915, guid: bee7e06c06294be4798e62488fe733fb, type: 3}
   - {fileID: 2786436248763124915, guid: c57bfa54548cd714995396415822b467, type: 3}
   - {fileID: 2786436248763124915, guid: 123014011d683e648ba3cd5aa0fcbec3, type: 3}
+  - {fileID: 1862510852220715293, guid: 8ef3c0949b70cb9458e4b1fb6b83d800, type: 3}
   sDeliverItems: []
   sReceiveItems:
   - {fileID: 11400000, guid: 4876070bdc968b54eb5f8a74c86130bb, type: 2}

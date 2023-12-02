@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 85255
+  controlID: 73
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 85256
+  controlID: 74
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 85257
+  controlID: 75
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -405,10 +405,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 140}
-      m_SelectedIDs: dac60000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 10b00000
       m_LastClickedID: 0
-      m_ExpandedIDs: ec1fedff0a3bedfffe3eedffbe3fedffde3fedffe459edff085aedffa86cedff2693edff6eb9edff90dcedff16e0edff1801eeff281eeeffe81eeeff9a21eeffa63beeffd23beeff784eeefffc74eeff549beeffccbeeeff6cc2eeff16c5eeffaa07efff0863effff263efff2067efff4281efff8481efff4094efffdabaefff48e1efffd804f0ff7808f0ffcec0f0ff18c5f0fffad9f0ffd0fef0ff4812f1ff2c3bf1ff064ff1ffe472f1ffd696f1ff5003f4ffcaecf4ff0014f5ffe055f5ffda7cf5fff0a3f5ff90c6f5ff7042f6ffac44f6ff92f5f6ff7673f7ff12aff7ff8084f8ffbc36f9ff20befaff4ae0faffee6afbff4492fbff723bfcffe46efcff2adffdff1073fffffef9ffff44da0000a2da00002a5c0200905f0200a8fc020026fd0200d2000300d20303003804030084060300a0b7030008b90300e6970400a06f05000673050024130600ca1606005e7b06003a8e0600307d0b00
+      m_ExpandedIDs: e8f9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -724,9 +724,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 29.887777, y: -0.16627365, z: 19.47716}
+    m_Target: {x: 58.514973, y: 1.6537395, z: 17.70347}
     speed: 2
-    m_Value: {x: 29.887777, y: -0.16627148, z: 19.477156}
+    m_Value: {x: 58.514973, y: 1.6537395, z: 17.70347}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -773,13 +773,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.3581617, y: 0.0083980365, z: -0.003220919, w: 0.9336251}
+    m_Target: {x: 0.1768607, y: 0.50060695, z: -0.10529244, w: 0.8408584}
     speed: 2
-    m_Value: {x: 0.18428086, y: 0.21521235, z: -0.04091443, w: 0.9581494}
+    m_Value: {x: 0.17779972, y: 0.49301505, z: -0.10369561, w: 0.84532285}
   m_Size:
-    m_Target: 1.7651253
+    m_Target: 16.628914
     speed: 2
-    m_Value: 1.7651274
+    m_Value: 15.912837
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -979,24 +979,24 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 0
+    m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Parameters/Itens
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Parameters/Itens
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Fernando\Documents\GitHub\Rakuran-Unity
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 748}
-    m_SelectedIDs: d09c0000
-    m_LastClickedID: 40144
-    m_ExpandedIDs: 00000000aa9c0000ac9c0000ae9c0000b09c0000b29c0000b49c0000b69c0000b89c0000ba9c0000bc9c0000be9c0000c09c0000c29c0000c49c0000c69c0000c89c0000ca9c0000cc9c0000ce9c0000d09c0000d29c0000d49c0000d69c0000d89c0000fc9c000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 46b00000
+    m_LastClickedID: 45126
+    m_ExpandedIDs: 00000000f2af0000f4af0000f6af0000f8af0000faaf0000fcaf0000feaf000000b0000002b0000004b0000006b0000008b000000ab000000cb000000eb0000010b0000012b0000014b0000016b0000018b000001ab000001cb000001eb0000020b0000046b0000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1024,7 +1024,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aa9c0000ac9c0000ae9c0000b09c0000b29c0000b49c0000b69c0000b89c0000ba9c0000bc9c0000be9c0000c09c0000c29c0000c49c0000c69c0000c89c0000ca9c0000cc9c0000ce9c0000d09c0000d29c0000d49c0000d69c0000d89c000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000f2af0000f4af0000f6af0000f8af0000faaf0000fcaf0000feaf000000b0000002b0000004b0000006b0000008b000000ab000000cb000000eb0000010b0000012b0000014b0000016b0000018b000001ab000001cb000001eb0000020b00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c262c1329a02fa49b5cb4c297106f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 136, y: 30}
+  m_MinSize: {x: 129, y: 28}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: ProBuilder
