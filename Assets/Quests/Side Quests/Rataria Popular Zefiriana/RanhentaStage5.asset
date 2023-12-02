@@ -16,6 +16,7 @@ MonoBehaviour:
   sDescription: 
   sSpawnList:
   - {fileID: 647459179226875746, guid: de6c65f1863a4bb4c98913c7af540208, type: 3}
+  - {fileID: 2786436248763124915, guid: c09316ec60c467e4ca3850fa22232103, type: 3}
   sDeliverItems: []
   sReceiveItems: []
   addedDescription: 0

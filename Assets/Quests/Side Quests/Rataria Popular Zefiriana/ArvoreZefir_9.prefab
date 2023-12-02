@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 5043877339154005023}
   - component: {fileID: 8930040167470239718}
   - component: {fileID: -6610470289581428070}
+  - component: {fileID: 2729441867203100192}
   m_Layer: 0
   m_Name: ArvoreZefir_9
   m_TagString: Untagged
@@ -263,3 +264,16 @@ MonoBehaviour:
   stage: {fileID: 11400000, guid: 6d4581b6adb8f764892009d76c964bf6, type: 2}
   questManager: {fileID: 0}
   playerInventory: {fileID: 0}
+--- !u!65 &2729441867203100192
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640719548672233067}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.449597, y: 0.32068202, z: 0.29635268}
+  m_Center: {x: 0, y: -0.02583591, z: 2.8656537e-13}

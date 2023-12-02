@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: 092b7bc4715307b409d75ab891206247, type: 2}
-  stageToDestroy: {fileID: 11400000, guid: 5c0c6b6bcfb992844bca3b643919d3fa, type: 2}
+  stageToDestroy: {fileID: 11400000, guid: d16e2ca60a3337445b3f6571620b23f6, type: 2}
 --- !u!1 &7960297335293430729
 GameObject:
   m_ObjectHideFlags: 0
