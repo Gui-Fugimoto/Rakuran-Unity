@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a5efe685e8b7540acb3bbb0cd41c73, type: 3}
   m_Name: RanhentaQuest
   m_EditorClassIdentifier: 
-  qName: 
+  qName: Rataria Popular Zefiriana
   qStage:
   - {fileID: 11400000, guid: 98bc3c16a662cdd4aa6a0b8561a189b9, type: 2}
   - {fileID: 11400000, guid: 0aa77280cbbf46c4ab8174e20ccd647b, type: 2}
@@ -32,5 +32,6 @@ MonoBehaviour:
   - {fileID: 3358984541528424613, guid: 870789fa1928df442a511af872544401, type: 3}
   - {fileID: 2043528706114879498, guid: dcf3aad0ed246f4459cd3f67f4a7e666, type: 3}
   - {fileID: 6640719548672233067, guid: a0df183473e2dc7438a92718b6656828, type: 3}
+  - {fileID: 2231556309484037704, guid: 89fe77446ee92194e9f846121b137714, type: 3}
   qDeliverItems: []
   qReceiveItems: []
