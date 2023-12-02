@@ -16,9 +16,8 @@ GameObject:
   - component: {fileID: 2042554580500921306}
   - component: {fileID: 6002438691009459815}
   - component: {fileID: 3824574556837878708}
-  - component: {fileID: -6920065316638354369}
   m_Layer: 0
-  m_Name: Arquiteto_5
+  m_Name: Maestro_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2786436248763124915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.891607, y: -1.0000048, z: -10.866}
+  m_LocalPosition: {x: -37.94986, y: -1.0000038, z: -13.121948}
   m_LocalScale: {x: 5.75, y: 5.75, z: 5.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9317df3d51f4244984527174fd26e33, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c36b93e19669ab419b033e3a57fa940, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,10 +113,10 @@ BoxCollider:
   m_GameObject: {fileID: 2786436248763124915}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32770368, y: 0.25999996, z: 0.27019575}
-  m_Center: {x: -0.07863669, y: 0.12999998, z: -0.035097826}
+  m_Size: {x: 0.5, y: 0.25, z: 0.5}
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!114 &2786436248763124918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,14 +124,76 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2786436248763124915}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b1371c2e2f700043ac3101f26cfcaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences: []
-    names: []
+    sentences:
+    - "Seja bem-vindo ao inferno astral. Me chamo Heitor, em que posso te ajudar,
+      senhor\u2026? "
+    - "Rakuran Tempestade, \xE9 um prazer. Alguns ratos est\xE3o come\xE7ando a aparecer
+      em Prometeus\r"
+    - "Entendo\u2026 Converse com a Hildegard, ela pode te ajudar."
+    - "Onde ela est\xE1?"
+    - "Isso eu n\xE3o sei. A paci\xEAncia dela \xE9 menor que a minha e a do Oscar."
+    - "Ah, sim\u2026 eu ouvi uma parte da conversa.\r"
+    - "O que voc\xEA acha?\r"
+    - "Sobre o qu\xEA?\r"
+    - "Sobre tudo isso, acad\xEAmicos paralisados, discutindo, enquanto a popula\xE7\xE3o
+      tem que fazer o trabalho sujo.\r"
+    - "Est\xE1 falando dos draelix?"
+    - "Ah, ent\xE3o voc\xEA os conheceu. Sinceramente, sem eles para ajudar na conten\xE7\xE3o
+      dos n\xFAmeros, Prometeus j\xE1 estaria em quarentena."
+    - "E por que voc\xEAs n\xE3o fazem nada?\r"
+    - "Micael est\xE1 com a jurisdi\xE7\xE3o, ele pode dificultar muito a nossa vida
+      dentro da academia.\r"
+    - "Ah sim, a burocracia. \r(A Academia \xE9 o ganha p\xE3o dessa gente, at\xE9
+      parece que eles v\xE3o se arriscar)\r\n"
+    - "Pois \xE9. Mas ent\xE3o, o que acha?"
+    - "Sou um homem curioso. N\xE3o me entenda mal. At\xE9 consigo entender esse
+      tal de Micael."
+    - "Mas eu n\xE3o quero ver cad\xE1veres se empilhando por conta de ratos grotescos."
+    - "N\xE3o se esque\xE7a dos fagocitantes. Desde que os ratos aumentaram, eles
+      est\xE3o maiores.\r"
+    - "Por qu\xEA?"
+    - Mais comida, mais tamanho.
+    - "Ent\xE3o temos dois problemas.\r"
+    - "Sim, pelo menos descobrimos porque o port\xE3o do teatro quebrou no andar
+      acima.\n"
+    - Foram os ratos?
+    - "N\xE3o, as engrenagens estavam todas gosmentas, azuladas. Deve ter sido alguma
+      coisa grande, que ainda n\xE3o topamos com."
+    - "Entendido. Obrigado pelas informa\xE7\xF5es."
+    - 'De nada, colega. '
+    names:
+    - Heitor, o Maestro
+    - Rakuran
+    - Heitor, o Maestro
+    - Rakuran
+    - Heitor, o Maestro
+    - Rakuran
+    - Heitor, o Maestro
+    - Rakuran
+    - Heitor, o Maestro
+    - Rakuran
+    - Heitor, o Maestro
+    - Rakuran
+    - Heitor, o Maestro
+    - Rakuran
+    - Heitor, o Maestro
+    - Rakuran
+    - Rakuran
+    - Heitor, o Maestro
+    - Rakuran
+    - Heitor, o Maestro
+    - Rakuran
+    - Heitor, o Maestro
+    - Rakuran
+    - Heitor, o Maestro
+    - Rakuran
+    - Heitor, o Maestro
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0
@@ -183,18 +244,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 601b5c1e4a8a030429e3362d3fb0a2f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Esgoto
---- !u!114 &-6920065316638354369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2786436248763124915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 775169f5aa71a354eb97857d93923adc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 092b7bc4715307b409d75ab891206247, type: 2}
-  stageToDestroy: {fileID: 11400000, guid: 5c0c6b6bcfb992844bca3b643919d3fa, type: 2}
+  scene: Esgotos

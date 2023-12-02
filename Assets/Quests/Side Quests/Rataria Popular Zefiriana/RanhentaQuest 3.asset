@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77a5efe685e8b7540acb3bbb0cd41c73, type: 3}
+  m_Name: RanhentaQuest 3
+  m_EditorClassIdentifier: 
+  qName: 
+  qStage:
+  - {fileID: 11400000, guid: 98bc3c16a662cdd4aa6a0b8561a189b9, type: 2}
+  - {fileID: 11400000, guid: 0aa77280cbbf46c4ab8174e20ccd647b, type: 2}
+  - {fileID: 11400000, guid: 3752616ffc6e80945954c2fd52f74b45, type: 2}
+  - {fileID: 11400000, guid: c4e76d396bad9c94c9c83d5cec9aaae4, type: 2}
+  - {fileID: 11400000, guid: 1a3b3ad925dfa5b42b9cc877506562c2, type: 2}
+  - {fileID: 11400000, guid: d16e2ca60a3337445b3f6571620b23f6, type: 2}
+  - {fileID: 11400000, guid: 5c0c6b6bcfb992844bca3b643919d3fa, type: 2}
+  - {fileID: 11400000, guid: 93926da86bad8564198a270e8e6a9989, type: 2}
+  - {fileID: 11400000, guid: addf6f83dc2cff44bbf9a04c75665fc6, type: 2}
+  - {fileID: 11400000, guid: 6d4581b6adb8f764892009d76c964bf6, type: 2}
+  - {fileID: 11400000, guid: c1b614b4de03af14ba486a8f79b3f34c, type: 2}
+  - {fileID: 11400000, guid: 5a962ef7b2941bc4eab53c3c79ea536e, type: 2}
+  stageIndex: 0
+  qDescription: 
+  qSpawnList:
+  - {fileID: 3358984541528424613, guid: 870789fa1928df442a511af872544401, type: 3}
+  - {fileID: 2043528706114879498, guid: dcf3aad0ed246f4459cd3f67f4a7e666, type: 3}
+  - {fileID: 6640719548672233067, guid: a0df183473e2dc7438a92718b6656828, type: 3}
+  qDeliverItems: []
+  qReceiveItems: []

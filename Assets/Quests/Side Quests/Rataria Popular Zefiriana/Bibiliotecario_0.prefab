@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2786436248763124915
+--- !u!1 &2231556309484037704
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2786436248763124914}
-  - component: {fileID: 2786436248763124919}
-  - component: {fileID: 2786436248763124916}
-  - component: {fileID: 2786436248763124917}
-  - component: {fileID: 2786436248763124918}
-  - component: {fileID: 2042554580500921306}
-  - component: {fileID: 6002438691009459815}
-  - component: {fileID: 3824574556837878708}
-  - component: {fileID: -6920065316638354369}
+  - component: {fileID: 6088899793668901871}
+  - component: {fileID: 4942376313371186798}
+  - component: {fileID: 7813727363381054258}
+  - component: {fileID: 2936302065152269428}
+  - component: {fileID: 6423365022514838073}
+  - component: {fileID: 5474934760186479391}
+  - component: {fileID: 6271087661343220331}
+  - component: {fileID: 384471545855001371}
+  - component: {fileID: 1192788589816118119}
   m_Layer: 0
-  m_Name: Maestro_5
+  m_Name: Bibiliotecario_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2786436248763124914
+--- !u!4 &6088899793668901871
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2786436248763124915}
+  m_GameObject: {fileID: 2231556309484037704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.65, y: -1.0000036, z: -12.314327}
+  m_LocalPosition: {x: 32.036, y: -0.9862981, z: -14.8}
   m_LocalScale: {x: 5.75, y: 5.75, z: 5.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2786436248763124919
+--- !u!212 &4942376313371186798
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2786436248763124915}
+  m_GameObject: {fileID: 2231556309484037704}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3c36b93e19669ab419b033e3a57fa940, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ff5b0960d82a664ca10edfc21aa1fe5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,13 +91,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2786436248763124916
+--- !u!114 &7813727363381054258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2786436248763124915}
+  m_GameObject: {fileID: 2231556309484037704}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff219d8f269145d41b8f3eec726e4369, type: 3}
@@ -105,62 +105,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScaleChange: {x: 0, y: 0.001, z: 0}
   Deflate: 0
---- !u!65 &2786436248763124917
+--- !u!65 &2936302065152269428
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2786436248763124915}
+  m_GameObject: {fileID: 2231556309484037704}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32770368, y: 0.25999996, z: 0.27019575}
-  m_Center: {x: -0.07863669, y: 0.12999998, z: -0.035097826}
---- !u!114 &2786436248763124918
+  m_Size: {x: 0.1642737, y: 0.25999996, z: 0.2}
+  m_Center: {x: 0.003078199, y: 0.12999998, z: 0}
+--- !u!114 &6423365022514838073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2786436248763124915}
-  m_Enabled: 0
+  m_GameObject: {fileID: 2231556309484037704}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b1371c2e2f700043ac3101f26cfcaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences: []
-    names: []
+    sentences:
+    - "Quem vem l\xE1?"
+    - "Por que esse acesso est\xE1 bloqueado?"
+    - "Quest\xF5es da Acad\xEAmia Opala, agora se retire."
+    - "(Eu at\xE9 poderia usar minha posi\xE7\xE3o na academia para passar, mas agora
+      isso n\xE3o tem por que)."
+    names:
+    - "Bibliotec\xE1rio"
+    - Rakuran
+    - "Bibliotec\xE1rio"
+    - Rakuran
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0
   MoveOn: 0
   Portrait: {fileID: 0}
   portraitChar: {fileID: 0}
-  qTrigger: {fileID: 6002438691009459815}
+  qTrigger: {fileID: 6271087661343220331}
   fabianoOnce: 1
---- !u!65 &2042554580500921306
+--- !u!65 &5474934760186479391
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2786436248763124915}
+  m_GameObject: {fileID: 2231556309484037704}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.090920836, y: 0.25999996, z: 0.018843362}
-  m_Center: {x: -0.00020699398, y: 0.12999998, z: 0.00055865553}
---- !u!114 &6002438691009459815
+  m_Size: {x: 0.59608585, y: 0.5932347, z: 0.33092383}
+  m_Center: {x: 0.25237545, y: 0.29661736, z: 0.14447396}
+--- !u!114 &6271087661343220331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2786436248763124915}
+  m_GameObject: {fileID: 2231556309484037704}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 352c9ff73ad9ef64e9b41a10668debe9, type: 3}
@@ -168,33 +177,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveType: 0
   quest: {fileID: 11400000, guid: 092b7bc4715307b409d75ab891206247, type: 2}
-  stage: {fileID: 11400000, guid: 5c0c6b6bcfb992844bca3b643919d3fa, type: 2}
+  stage: {fileID: 11400000, guid: 0aa77280cbbf46c4ab8174e20ccd647b, type: 2}
   questManager: {fileID: 0}
   playerInventory: {fileID: 0}
---- !u!114 &3824574556837878708
+--- !u!114 &384471545855001371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2786436248763124915}
+  m_GameObject: {fileID: 2231556309484037704}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 601b5c1e4a8a030429e3362d3fb0a2f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Esgoto
---- !u!114 &-6920065316638354369
+  scene: PocPocoes
+--- !u!114 &1192788589816118119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2786436248763124915}
-  m_Enabled: 0
+  m_GameObject: {fileID: 2231556309484037704}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 775169f5aa71a354eb97857d93923adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: 092b7bc4715307b409d75ab891206247, type: 2}
-  stageToDestroy: {fileID: 11400000, guid: 5c0c6b6bcfb992844bca3b643919d3fa, type: 2}
+  stageToDestroy: {fileID: 11400000, guid: 3752616ffc6e80945954c2fd52f74b45, type: 2}

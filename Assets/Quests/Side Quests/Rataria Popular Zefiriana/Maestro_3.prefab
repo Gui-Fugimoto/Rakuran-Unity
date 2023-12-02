@@ -16,8 +16,9 @@ GameObject:
   - component: {fileID: 2042554580500921306}
   - component: {fileID: 6002438691009459815}
   - component: {fileID: 3824574556837878708}
+  - component: {fileID: -6920065316638354369}
   m_Layer: 0
-  m_Name: Ranhenta_2
+  m_Name: Maestro_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2786436248763124915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.03, y: 0, z: 18.4}
+  m_LocalPosition: {x: -26.65, y: -1.0000036, z: -12.314327}
   m_LocalScale: {x: 5.75, y: 5.75, z: 5.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0fe8a056004d10e49be5bc43ef3f8453, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c36b93e19669ab419b033e3a57fa940, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,10 +114,10 @@ BoxCollider:
   m_GameObject: {fileID: 2786436248763124915}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.1642737, y: 0.25999996, z: 0.2}
-  m_Center: {x: 0.003078199, y: 0.12999998, z: 0}
+  m_Size: {x: 0.32770368, y: 0.25999996, z: 0.27019575}
+  m_Center: {x: -0.07863669, y: 0.12999998, z: -0.035097826}
 --- !u!114 &2786436248763124918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,17 +125,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2786436248763124915}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b1371c2e2f700043ac3101f26cfcaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - "Gato, gatinho, gat\xE3o, pega o rato pelo rabo e d\xE1 logo um safan\xE3o!
-      Ele matou todos os ratos, n\xE3o posso mais dizer: gato \xE9 tudo safado!"
-    names:
-    - Ranhenta
+    sentences: []
+    names: []
   Manager: {fileID: 0}
   Falando: 0
   Conversando: 0
@@ -163,14 +161,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2786436248763124915}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 352c9ff73ad9ef64e9b41a10668debe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveType: 0
   quest: {fileID: 11400000, guid: 092b7bc4715307b409d75ab891206247, type: 2}
-  stage: {fileID: 11400000, guid: 3752616ffc6e80945954c2fd52f74b45, type: 2}
+  stage: {fileID: 11400000, guid: 5c0c6b6bcfb992844bca3b643919d3fa, type: 2}
   questManager: {fileID: 0}
   playerInventory: {fileID: 0}
 --- !u!114 &3824574556837878708
@@ -185,4 +183,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 601b5c1e4a8a030429e3362d3fb0a2f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: CentroComercial
+  scene: Esgotos
+--- !u!114 &-6920065316638354369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786436248763124915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775169f5aa71a354eb97857d93923adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 092b7bc4715307b409d75ab891206247, type: 2}
+  stageToDestroy: {fileID: 11400000, guid: 1a3b3ad925dfa5b42b9cc877506562c2, type: 2}
