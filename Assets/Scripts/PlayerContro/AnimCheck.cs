@@ -21,8 +21,7 @@ public class AnimCheck : MonoBehaviour
     {
         if(IsPlaying(anim, attackAnim))
         {
-            combatScript.isAttacking = true;
-            combatScript.EnableTriggerBoxEQPW();
+            combatScript.isAttacking = true;           
         }
         else if(!IsPlaying(anim, attackAnim))
         {            
@@ -38,6 +37,16 @@ public class AnimCheck : MonoBehaviour
             return true;
         else
             return false;
+    }
+
+    public void AttackEvent()
+    {
+        combatScript.EnableTriggerBoxEQPW();
+    }
+
+    public void EndAttackEvent()
+    {
+        combatScript.DisableTriggerBoxEQPW();
     }
 }
 

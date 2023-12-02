@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Raku_LightAttack1
+  m_Name: Sword_H_J2
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1716133232, guid: fca384019351ac2489f95292ec7181b5, type: 3}
+      value: {fileID: -1227970604, guid: 5e30264591f47344a97fd78206422483, type: 3}
     - time: 0.1
-      value: {fileID: 1610104348, guid: fca384019351ac2489f95292ec7181b5, type: 3}
+      value: {fileID: -1346020146, guid: 5e30264591f47344a97fd78206422483, type: 3}
+    - time: 0.2
+      value: {fileID: -1314459264, guid: 5e30264591f47344a97fd78206422483, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,14 +44,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1716133232, guid: fca384019351ac2489f95292ec7181b5, type: 3}
-    - {fileID: 1610104348, guid: fca384019351ac2489f95292ec7181b5, type: 3}
+    - {fileID: -1227970604, guid: 5e30264591f47344a97fd78206422483, type: 3}
+    - {fileID: -1346020146, guid: 5e30264591f47344a97fd78206422483, type: 3}
+    - {fileID: -1314459264, guid: 5e30264591f47344a97fd78206422483, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.2
+    m_StopTime: 0.3
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -68,4 +71,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.1
+    functionName: AttackEvent
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
