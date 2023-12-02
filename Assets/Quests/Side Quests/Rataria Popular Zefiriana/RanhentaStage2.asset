@@ -18,8 +18,11 @@ MonoBehaviour:
   - {fileID: 2786436248763124915, guid: d2f3a791bc8aa5f4fbfd2ab1cea6bf84, type: 3}
   - {fileID: 2786436248763124915, guid: e80ebbd90774a154ea7d4622b1c23f74, type: 3}
   - {fileID: 2786436248763124915, guid: bcab70ff5ae4eef44863a23204d00473, type: 3}
+  - {fileID: 6640719548672233067, guid: a0df183473e2dc7438a92718b6656828, type: 3}
+  - {fileID: 2043528706114879498, guid: dcf3aad0ed246f4459cd3f67f4a7e666, type: 3}
+  - {fileID: 3358984541528424613, guid: cc7be6a985c4a6943a81335fe002a9c5, type: 3}
   sDeliverItems: []
   sReceiveItems: []
-  addedDescription: 1
-  isDone: 1
+  addedDescription: 0
+  isDone: 0
   deliveredItem: 0
