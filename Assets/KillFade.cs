@@ -21,7 +21,7 @@ public class KillFade : MonoBehaviour
     {
        if(controller != null)
         {
-            controller.Spawn();
+           // controller.Spawn();
         }
     }
 
