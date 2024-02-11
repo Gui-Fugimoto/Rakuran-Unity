@@ -39,8 +39,9 @@ public class EnemyLife : MonoBehaviour
             damageCD = true;
             vida -= (str - Resist) ;
             Debug.Log("tomou dano, vida atual " + (vida));
-            GetComponentInParent<SimpleFlash>().Flash();
             StartCoroutine(ResetCooldown());
+            GetComponentInParent<SimpleFlash>().Flash();
+            
         }
         
     }
