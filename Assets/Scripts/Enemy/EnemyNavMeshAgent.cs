@@ -47,6 +47,9 @@ public class EnemyNavMeshAgent : MonoBehaviour
     public GameObject specialHitBox;
 
     public bool bossBawn;
+    public string bossName;
+    public EnemyLife enemyLife;
+    public BossPanelScript bossPS;
     private CapsuleCollider capCollidier;
     void Start()
     {
@@ -66,14 +69,17 @@ public class EnemyNavMeshAgent : MonoBehaviour
         Phc = player.GetComponent<PlayerHealthController>();
         attackAnim = "Attack";
         capCollidier = GetComponent<CapsuleCollider>();
+        enemyLife = GetComponent<EnemyLife>();
         if (bossBawn == true)
         {
             anim.SetTrigger("Spawn");
-            Debug.Log("bossbawn");
             currentState = 7;
+            bossPS = FindObjectOfType<BossPanelScript>();           
+            Debug.Log("tem um boss aqui");
         }
-    }
 
+    }
+    
     void FixedUpdate()
     {
         CDcontrol = Mathf.Clamp(CDcontrol + 4f * Time.deltaTime, 0f, specialCooldown);
@@ -449,7 +455,13 @@ public class EnemyNavMeshAgent : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
         if (distanceToPlayer < pursuitRange && Phc.IsInv == false)
         {
-            Phc.EnterCombat();           
+            Phc.EnterCombat();
+            if (bossBawn == true)
+            {
+                bossPS.Spawn();
+                bossPS.enemyLife = enemyLife;
+                bossPS.bossName = bossName;
+            }
         }
     }
 

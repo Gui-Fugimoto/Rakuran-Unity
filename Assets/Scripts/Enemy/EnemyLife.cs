@@ -6,7 +6,8 @@ using UnityEngine.Rendering;
 
 public class EnemyLife : MonoBehaviour
 {
-    [SerializeField] float vida;
+    public float vida;
+    public float vidaMax;
     [SerializeField] bool damageCD = false;
     [SerializeField] float Count;
     [SerializeField] float Resist;
@@ -17,6 +18,7 @@ public class EnemyLife : MonoBehaviour
     {
         Enemy = GetComponent<NavMeshAgent>();
         qTrigger = GetComponent<QuestObjectiveTrigger>();
+        vidaMax = vida;
     }
     void Update()
     {
@@ -30,6 +32,10 @@ public class EnemyLife : MonoBehaviour
             }
             
             Destroy(gameObject, 0.1f);
+        }
+        if(vida > vidaMax)
+        {
+            vida = vidaMax;
         }
     }
     public void Damage(float str)
