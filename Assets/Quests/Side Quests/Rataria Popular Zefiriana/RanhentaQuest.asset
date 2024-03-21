@@ -32,6 +32,5 @@ MonoBehaviour:
   - {fileID: 3358984541528424613, guid: 870789fa1928df442a511af872544401, type: 3}
   - {fileID: 2043528706114879498, guid: dcf3aad0ed246f4459cd3f67f4a7e666, type: 3}
   - {fileID: 6640719548672233067, guid: a0df183473e2dc7438a92718b6656828, type: 3}
-  - {fileID: 2231556309484037704, guid: 89fe77446ee92194e9f846121b137714, type: 3}
   qDeliverItems: []
   qReceiveItems: []

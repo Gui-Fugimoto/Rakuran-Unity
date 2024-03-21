@@ -18,8 +18,9 @@ MonoBehaviour:
   - {fileID: 2961978265757258417, guid: 58f2c22baf801fa4cb902c71b92910a3, type: 3}
   - {fileID: 7181305561089658312, guid: d803c017b624bc4449e73a8dbdf85441, type: 3}
   - {fileID: 2176658684090211273, guid: e27192fc119a51647a4bde3b292a24e7, type: 3}
+  - {fileID: 4861906800520907449, guid: e4c1a2855a25ff541a50f2393cc08b0e, type: 3}
   sDeliverItems: []
   sReceiveItems: []
-  addedDescription: 0
-  isDone: 0
-  deliveredItem: 0
+  addedDescription: 1
+  isDone: 1
+  deliveredItem: 1

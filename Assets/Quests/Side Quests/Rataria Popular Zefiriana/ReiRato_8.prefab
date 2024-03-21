@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 35
+  vidaMax: 0
   damageCD: 0
   Count: 0
   Resist: 0
@@ -330,7 +331,10 @@ MonoBehaviour:
   specialCooldown: 40
   CDcontrol: 0
   specialHitBox: {fileID: 3671482303781139190}
-  bossBawn: 0
+  bossBawn: 1
+  bossName: Rei dos Ratos
+  enemyLife: {fileID: 0}
+  bossPS: {fileID: 0}
 --- !u!114 &-1000605482559370045
 MonoBehaviour:
   m_ObjectHideFlags: 0

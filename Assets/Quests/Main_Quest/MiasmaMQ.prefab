@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 50
+  vidaMax: 0
   damageCD: 0
   Count: 0
   Resist: 0
@@ -300,6 +301,9 @@ MonoBehaviour:
   CDcontrol: 0
   specialHitBox: {fileID: 8460832508837789663}
   bossBawn: 1
+  bossName: Miasma
+  enemyLife: {fileID: 0}
+  bossPS: {fileID: 0}
 --- !u!114 &4654024630259683402
 MonoBehaviour:
   m_ObjectHideFlags: 0

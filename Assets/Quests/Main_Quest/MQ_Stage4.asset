@@ -17,8 +17,9 @@ MonoBehaviour:
   sSpawnList:
   - {fileID: 3406626349666786834, guid: 533472a137ee1194181fe1e5d466d4ff, type: 3}
   - {fileID: 2176658684090211273, guid: e27192fc119a51647a4bde3b292a24e7, type: 3}
+  - {fileID: 4861906800520907449, guid: e4c1a2855a25ff541a50f2393cc08b0e, type: 3}
   sDeliverItems: []
   sReceiveItems: []
-  addedDescription: 0
-  isDone: 0
-  deliveredItem: 0
+  addedDescription: 1
+  isDone: 1
+  deliveredItem: 1
