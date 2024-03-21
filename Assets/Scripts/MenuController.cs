@@ -15,11 +15,13 @@ public class MenuController : MonoBehaviour
     public GameObject ContinueButton;
     public ItemParameter firstWeapon;
     public ItemParameter secondWeapon;
+    public REALSaver REALSaver;
 
     private void Start()
     {
         Time.timeScale = 1f;
         FadeOutRef =  FadeOut.GetComponent<TeleportParkour>();
+        REALSaver.LoadGame();
     }
 
     public void PlayGame()
